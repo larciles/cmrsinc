@@ -68,6 +68,20 @@ if(isset($_POST['codclien'])){
         <div class="tab-content">
           <div id="home" class="tab-pane fade in active">
           <!-- tabs -->          
+              <div class="alert alert-danger alert-dismissible" id="danger-alert" style="display: none;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <strong>ES NECESARIO!</strong> que coloque una nota o referencia para la compra.
+              </div>
+              <div class="alert alert-danger alert-dismissible" id="producto-alert" style="display: none;">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                      <strong>ELIJA UN PRODUCTO</strong> debe elegir un producto para a agregar.
+              </div> 
+
+              <div class="alert alert-danger alert-dismissible" id="cantidad-alert" style="display: none;">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                      <strong>SIN CANTIDAD</strong> debe colocar  una cantidad al producto para agregar.
+              </div>                
+
               <form name="add_name" id="add_name" action='compras.php' method='get'>  
                    
 
@@ -154,9 +168,7 @@ if(isset($_POST['codclien'])){
 
                     <div class="row no-print">
                   <div class="col-xs-12">
-                    <div class="col-sm-2"> 
-                        <input type="button" name="savecompra" id="savecompra" class="btn btn-info" value="Guardar" />  
-                    </div>
+                    
                     <div class="col-sm-2"> 
                         <input type="button" name="saveinv" id="saveinv" class="btn btn-info" value="Guardar y Transferir al Inventario" />  
                     </div>
@@ -205,7 +217,7 @@ if(isset($_POST['codclien'])){
 <script src="../../js/jquery.confirm.min.js"></script>
 <script src="../../js/bootstrap-switch.min.js"></script>
 <script src="../../js/jquery.bootpag.min.js"></script>
-<script src="../../js/compras.js?v=20190310"></script>
+<script src="../../js/compras.js?v=20200813"></script>
 <script src="../../js/listacompras.js"></script>
 <script src="../../js/sweetalert2.js"></script>
 

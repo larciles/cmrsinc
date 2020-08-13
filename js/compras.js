@@ -60,6 +60,30 @@
   //-----------------------------------------------------------------------------------     
       
  $('#saveinv').click(function(){  
+
+            document.getElementById("danger-alert").style.display = "none";
+            document.getElementById("producto-alert").style.display = "none";
+            document.getElementById("cantidad-alert").style.display = "none"; 
+
+
+            var nota =$('#idnota').val()
+            if (nota.trim()=='') {
+               document.getElementById("danger-alert").style.display = "block";
+               return; 
+            }
+ 
+            var codprod = $("select[name='serv[]']")[$("select[name='serv[]']").parent().parent().index()].value;
+            if (codprod.trim()=='') {               
+               document.getElementById("producto-alert").style.display = "block";
+               return;
+            }
+
+            var qty = $("input[name='cantidad[]']")[$("input[name='cantidad[]']").parent().parent().index()].value;
+            if (qty.trim()=='' || qty.trim()==0) {
+               document.getElementById("cantidad-alert").style.display = "block";  
+               return;
+            }
+
              $('#transfer').val('1');
              let dts = $('#add_name').serialize();
                $.ajax({  
@@ -82,6 +106,7 @@
                                 title: "Actualización existosa!" ,  
                                 showConfirmButton: true
                               })
+                          setTimeout(location.reload.bind(location), 2000);
                     }  
                }); 
  })
@@ -114,7 +139,7 @@
 
   function setProductos(id){
            
-    var serv= getData("../../clases/getprodcompras.php");
+    var serv= getData("../../clases/getpcompras.php");
     items= jQuery.parseJSON(serv);
     var options;
      options+="<option value=''>Elija Producto</option>"; 

@@ -16546,3 +16546,7 @@ union
 select 'Celulas Madres' as Descripcion, 7 as id  
 order by id
 
+[2020-08-12 20:41:33.000000 ::1  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' and activo=1 
+
+[2020-08-12 20:41:34.000000 ::1  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+
