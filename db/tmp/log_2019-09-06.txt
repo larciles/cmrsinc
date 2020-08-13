@@ -1,0 +1,1792 @@
+[2019-09-06 07:08:35.000000 192.130.74.39  - [query->log-in] ] Select * from loginpass WHERE login = 'RRIVERA' and passwork ='2017rr' and activo=1 
+
+[2019-09-06 07:08:35.000000 192.130.74.39  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'RRIVERA' 
+
+[2019-09-06 07:08:50.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 07:08:50.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 07:08:50.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 07:08:52.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 07:08:52.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 07:08:52.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 07:08:57.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.citados, a.asistido,a.activa,a.usuario, a.fecha_cita, a.hora, convert(varchar(10), cast(a.UltimaAsistida as date), 101)   UltimaAsistida, a.observacion, a.fallecido FROM VIEW_repconsultas4 a Where (a.fecha_cita between '09/07/2019' and '09/07/2019') and a.activa<>'0' and a.citados=1 and a.usuario='RRIVERA' and a.fallecido<>'1'  order by Medicos
+
+[2019-09-06 07:08:59.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.citados, a.asistido,a.activa,a.usuario, a.fecha_cita, a.hora, convert(varchar(10), cast(a.UltimaAsistida as date), 101)   UltimaAsistida, a.observacion, a.fallecido FROM VIEW_repconsultas4 a Where (a.fecha_cita between '09/07/2019' and '09/07/2019') and a.activa<>'0' and a.citados=1 and a.usuario='RRIVERA' and a.fallecido<>'1'  order by Medicos
+
+[2019-09-06 07:30:22.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 07:38:19.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%939-405-7231%'  Order  by nombres 
+
+[2019-09-06 07:38:19.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='123134'  and activa='1' order by forder desc  
+
+[2019-09-06 07:42:55.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-224-6858%'  Order  by nombres 
+
+[2019-09-06 08:20:33.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 08:23:58.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '09/05/2019' and '09/05/2019') and a.asistido=3 and a.activa<>'0' and a.usuario='RRIVERA' 
+
+[2019-09-06 08:35:16.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 08:35:16.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 08:35:16.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 08:35:19.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 08:35:19.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 08:35:20.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 08:35:22.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 08:35:22.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 08:35:22.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 08:35:26.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 08:35:26.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 08:35:26.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 08:35:53.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 08:35:53.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 08:35:53.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 08:35:57.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 08:35:58.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 08:35:58.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 08:37:20.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 08:40:02.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 08:45:41.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%939-535-5469%'  Order  by nombres 
+
+[2019-09-06 08:45:42.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127796'  and activa='1' order by forder desc  
+
+[2019-09-06 08:47:19.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-340-8867%'  Order  by nombres 
+
+[2019-09-06 08:47:20.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='128110'  and activa='1' order by forder desc  
+
+[2019-09-06 08:48:48.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='ROSE MARIE $10 INICIAL CITA ABIERTA ESTA ENFERMA 9/6/19' where codclien='128110'  and fecha_cita='09/07/2019' 
+
+[2019-09-06 08:51:58.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 08:52:26.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 08:54:47.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79791'  Order  by nombres 
+
+[2019-09-06 08:54:47.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127461'  and activa='1' order by forder desc  
+
+[2019-09-06 08:57:07.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 08:58:19.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-514-1153%'  Order  by nombres 
+
+[2019-09-06 08:58:19.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127461'  and activa='1' order by forder desc  
+
+[2019-09-06 08:58:30.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78919'  Order  by nombres 
+
+[2019-09-06 08:58:30.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='96300'  and activa='1' order by forder desc  
+
+[2019-09-06 09:00:13.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='ROSE MARIE***787-903-3260 $10 INICIAL P.M CITA ABIERTA LLAMARA PARA COORDINAR NUEVA 9/6/19' where codclien='96300'  and fecha_cita='09/07/2019' 
+
+[2019-09-06 09:00:24.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78899'  Order  by nombres 
+
+[2019-09-06 09:00:24.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126125'  and activa='1' order by forder desc  
+
+[2019-09-06 09:02:57.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '63528'  Order  by nombres 
+
+[2019-09-06 09:02:58.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='97437'  and activa='1' order by forder desc  
+
+[2019-09-06 09:11:08.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '64182'  Order  by nombres 
+
+[2019-09-06 09:11:08.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='98928'  and activa='1' order by forder desc  
+
+[2019-09-06 09:17:00.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-247-3102%'  Order  by nombres 
+
+[2019-09-06 09:17:00.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='128311'  and activa='1' order by forder desc  
+
+[2019-09-06 09:28:12.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79717'  Order  by nombres 
+
+[2019-09-06 09:28:13.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='116547'  and activa='1' order by forder desc  
+
+[2019-09-06 09:38:27.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 09:38:56.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79509'  Order  by nombres 
+
+[2019-09-06 09:38:56.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127268'  and activa='1' order by forder desc  
+
+[2019-09-06 09:40:08.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78352'  Order  by nombres 
+
+[2019-09-06 09:40:08.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='84597'  and activa='1' order by forder desc  
+
+[2019-09-06 09:41:52.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79697'  Order  by nombres 
+
+[2019-09-06 09:41:53.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127531'  and activa='1' order by forder desc  
+
+[2019-09-06 09:43:41.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78742'  Order  by nombres 
+
+[2019-09-06 09:43:41.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='125620'  and activa='1' order by forder desc  
+
+[2019-09-06 09:51:45.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '76346'  Order  by nombres 
+
+[2019-09-06 09:51:45.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='120722'  and activa='1' order by forder desc  
+
+[2019-09-06 09:52:46.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79409'  Order  by nombres 
+
+[2019-09-06 09:52:46.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127046'  and activa='1' order by forder desc  
+
+[2019-09-06 09:53:41.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-515-4264%'  Order  by nombres 
+
+[2019-09-06 09:53:41.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127837'  and activa='1' order by forder desc  
+
+[2019-09-06 09:53:44.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='88229'  and activa='1' order by forder desc  
+
+[2019-09-06 09:53:47.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127837'  and activa='1' order by forder desc  
+
+[2019-09-06 09:53:54.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='88229'  and activa='1' order by forder desc  
+
+[2019-09-06 09:55:05.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='CRISTINA / AM' where codclien='88229'  and fecha_cita='09/07/2019' 
+
+[2019-09-06 09:57:50.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79409'  Order  by nombres 
+
+[2019-09-06 09:57:50.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127046'  and activa='1' order by forder desc  
+
+[2019-09-06 09:59:04.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79409'  Order  by nombres 
+
+[2019-09-06 09:59:05.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127046'  and activa='1' order by forder desc  
+
+[2019-09-06 10:01:10.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '76346'  Order  by nombres 
+
+[2019-09-06 10:01:11.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='120722'  and activa='1' order by forder desc  
+
+[2019-09-06 10:04:20.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78031'  Order  by nombres 
+
+[2019-09-06 10:04:20.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='124350'  and activa='1' order by forder desc  
+
+[2019-09-06 10:05:17.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78420'  Order  by nombres 
+
+[2019-09-06 10:05:18.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='95199'  and activa='1' order by forder desc  
+
+[2019-09-06 10:07:42.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '74654'  Order  by nombres 
+
+[2019-09-06 10:07:42.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='117484'  and activa='1' order by forder desc  
+
+[2019-09-06 10:12:04.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%PAGAN%QUIÑONES%EDNA%'  Order  by nombres 
+
+[2019-09-06 10:12:04.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='93983'  and activa='1' order by forder desc  
+
+[2019-09-06 10:12:22.000000 192.130.74.141  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-09-06 10:12:22.000000 192.130.74.141  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-09-06 10:12:22.000000 192.130.74.141  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-09-06 10:14:20.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='SHATZIRA' where codclien='93983'  and fecha_cita='07/21/2017' 
+
+[2019-09-06 10:14:39.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79395'  Order  by nombres 
+
+[2019-09-06 10:14:39.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126823'  and activa='1' order by forder desc  
+
+[2019-09-06 10:20:06.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78190'  Order  by nombres 
+
+[2019-09-06 10:20:06.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='124662'  and activa='1' order by forder desc  
+
+[2019-09-06 10:22:40.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79005'  Order  by nombres 
+
+[2019-09-06 10:22:41.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126208'  and activa='1' order by forder desc  
+
+[2019-09-06 10:23:50.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79573'  Order  by nombres 
+
+[2019-09-06 10:23:50.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127198'  and activa='1' order by forder desc  
+
+[2019-09-06 10:24:26.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79573'  Order  by nombres 
+
+[2019-09-06 10:24:26.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127198'  and activa='1' order by forder desc  
+
+[2019-09-06 10:24:30.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 10:26:14.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79573'  Order  by nombres 
+
+[2019-09-06 10:26:14.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127198'  and activa='1' order by forder desc  
+
+[2019-09-06 10:28:33.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79779'  Order  by nombres 
+
+[2019-09-06 10:28:33.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127349'  and activa='1' order by forder desc  
+
+[2019-09-06 10:28:34.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79779'  Order  by nombres 
+
+[2019-09-06 10:28:35.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127349'  and activa='1' order by forder desc  
+
+[2019-09-06 10:29:59.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79779'  Order  by nombres 
+
+[2019-09-06 10:29:59.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127349'  and activa='1' order by forder desc  
+
+[2019-09-06 10:33:06.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '56813'  Order  by nombres 
+
+[2019-09-06 10:33:06.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='85022'  and activa='1' order by forder desc  
+
+[2019-09-06 10:35:14.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79942'  Order  by nombres 
+
+[2019-09-06 10:35:14.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='38742'  and activa='1' order by forder desc  
+
+[2019-09-06 10:36:28.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79381'  Order  by nombres 
+
+[2019-09-06 10:36:28.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126935'  and activa='1' order by forder desc  
+
+[2019-09-06 10:37:29.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79196'  Order  by nombres 
+
+[2019-09-06 10:37:29.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='57172'  and activa='1' order by forder desc  
+
+[2019-09-06 10:38:10.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79196'  Order  by nombres 
+
+[2019-09-06 10:38:10.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='57172'  and activa='1' order by forder desc  
+
+[2019-09-06 10:38:10.000000 192.130.74.141  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-09-06 10:38:10.000000 192.130.74.141  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-09-06 10:40:39.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78906'  Order  by nombres 
+
+[2019-09-06 10:40:39.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='125559'  and activa='1' order by forder desc  
+
+[2019-09-06 10:41:53.000000 192.130.74.141  - [query->LA] ] SELECT * from MInventario where prod_serv in( 'P','I','h')   and activo in('1','3')   order by cod_grupo DESC, desitems 
+
+[2019-09-06 10:46:10.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79407'  Order  by nombres 
+
+[2019-09-06 10:46:10.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='119938'  and activa='1' order by forder desc  
+
+[2019-09-06 10:47:19.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-406-5332%'  Order  by nombres 
+
+[2019-09-06 10:48:29.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79407'  Order  by nombres 
+
+[2019-09-06 10:48:29.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='119938'  and activa='1' order by forder desc  
+
+[2019-09-06 10:49:02.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-239-3455%'  Order  by nombres 
+
+[2019-09-06 10:49:02.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='70164'  and activa='1' order by forder desc  
+
+[2019-09-06 10:50:32.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 10:50:32.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 10:50:32.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 10:50:36.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 10:50:36.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 10:50:36.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 10:50:44.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 10:50:44.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 10:50:44.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 10:50:54.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 10:50:54.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 10:50:54.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 10:53:41.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%DIAZ%DIAZ%NOELIA%'  Order  by nombres 
+
+[2019-09-06 10:53:41.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='93546'  and activa='1' order by forder desc  
+
+[2019-09-06 10:59:43.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%OYOLA%CORTES%JUAN%BAUTISTA%'  Order  by nombres 
+
+[2019-09-06 10:59:44.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='114937'  and activa='1' order by forder desc  
+
+[2019-09-06 11:02:22.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79407'  Order  by nombres 
+
+[2019-09-06 11:02:23.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='119938'  and activa='1' order by forder desc  
+
+[2019-09-06 11:03:06.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79407'  Order  by nombres 
+
+[2019-09-06 11:03:06.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='119938'  and activa='1' order by forder desc  
+
+[2019-09-06 11:04:19.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79577'  Order  by nombres 
+
+[2019-09-06 11:04:19.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126723'  and activa='1' order by forder desc  
+
+[2019-09-06 11:04:50.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '30124'  Order  by nombres 
+
+[2019-09-06 11:04:50.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='41400'  and activa='1' order by forder desc  
+
+[2019-09-06 11:06:23.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '80006'  Order  by nombres 
+
+[2019-09-06 11:06:24.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='128119'  and activa='1' order by forder desc  
+
+[2019-09-06 11:55:50.000000 192.130.74.20  - [query->log-in] ] Select * from loginpass WHERE login = 'JOLALDE' and passwork ='olalde29' and activo=1 
+
+[2019-09-06 11:55:50.000000 192.130.74.20  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'JOLALDE' 
+
+[2019-09-06 11:56:49.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 11:56:49.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 11:56:50.000000 192.130.74.20  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2'
+
+[2019-09-06 11:56:51.000000 192.130.74.20  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-09-06 11:56:51.000000 192.130.74.20  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-09-06 11:56:51.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-09-06 11:56:51.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '09-06-2019' and '09-06-2019' and d.coditems like 'TD%' 
+
+[2019-09-06 11:56:52.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-09-06 11:56:52.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '09-06-2019' and '09-06-2019') and d.coditems like 'LI%' 
+
+[2019-09-06 12:15:27.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-803-0375%'  Order  by nombres 
+
+[2019-09-06 12:15:27.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='36392'  and activa='1' order by forder desc  
+
+[2019-09-06 12:16:11.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '63528'  Order  by nombres 
+
+[2019-09-06 12:16:11.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='97437'  and activa='1' order by forder desc  
+
+[2019-09-06 12:19:58.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-642-2295%'  Order  by nombres 
+
+[2019-09-06 12:19:58.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126434'  and activa='1' order by forder desc  
+
+[2019-09-06 12:23:30.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '24753'  Order  by nombres 
+
+[2019-09-06 12:23:30.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='33158'  and activa='1' order by forder desc  
+
+[2019-09-06 12:24:42.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '77832'  Order  by nombres 
+
+[2019-09-06 12:24:42.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='123986'  and activa='1' order by forder desc  
+
+[2019-09-06 12:27:43.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '77166'  Order  by nombres 
+
+[2019-09-06 12:27:43.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='122637'  and activa='1' order by forder desc  
+
+[2019-09-06 12:27:46.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 12:27:54.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '09/06/2019' and '09/06/2019') and a.asistido=3 and a.activa<>'0' and a.usuario='RRIVERA' 
+
+[2019-09-06 12:30:25.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '09/06/2019' and '09/06/2019') and a.asistido=3 and a.activa<>'0' and a.usuario='RRIVERA' 
+
+[2019-09-06 12:30:27.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '09/06/2019' and '09/06/2019') and a.asistido=3 and a.activa<>'0' and a.usuario='RRIVERA' 
+
+[2019-09-06 12:31:41.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79621'  Order  by nombres 
+
+[2019-09-06 12:31:41.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127484'  and activa='1' order by forder desc  
+
+[2019-09-06 12:34:48.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78660'  Order  by nombres 
+
+[2019-09-06 12:34:48.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='125021'  and activa='1' order by forder desc  
+
+[2019-09-06 12:38:23.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78508'  Order  by nombres 
+
+[2019-09-06 12:38:23.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111110'  and activa='1' order by forder desc  
+
+[2019-09-06 12:38:56.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78184'  Order  by nombres 
+
+[2019-09-06 12:38:56.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='124625'  and activa='1' order by forder desc  
+
+[2019-09-06 12:39:40.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79513'  Order  by nombres 
+
+[2019-09-06 12:39:40.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127273'  and activa='1' order by forder desc  
+
+[2019-09-06 12:41:46.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79513'  Order  by nombres 
+
+[2019-09-06 12:41:46.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KAROLA / AM TARIFA ESPECIAL CITA ABIERTA CANCELO EL TRATAMIENTO POR EL MOMENTO 9/6/19 ' where codclien='127273'  and fecha_cita='09/16/2019' 
+
+[2019-09-06 12:41:47.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127273'  and activa='1' order by forder desc  
+
+[2019-09-06 12:43:25.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78587'  Order  by nombres 
+
+[2019-09-06 12:43:26.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='124957'  and activa='1' order by forder desc  
+
+[2019-09-06 12:46:31.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79790'  Order  by nombres 
+
+[2019-09-06 12:46:32.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127646'  and activa='1' order by forder desc  
+
+[2019-09-06 12:48:07.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79932'  Order  by nombres 
+
+[2019-09-06 12:48:07.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='124100'  and activa='1' order by forder desc  
+
+[2019-09-06 12:48:37.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79932'  Order  by nombres 
+
+[2019-09-06 12:48:37.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='124100'  and activa='1' order by forder desc  
+
+[2019-09-06 12:50:03.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 12:50:04.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 12:50:05.000000 192.130.74.20  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2'
+
+[2019-09-06 12:50:05.000000 192.130.74.20  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-09-06 12:50:05.000000 192.130.74.20  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-09-06 12:50:05.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-09-06 12:50:06.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '09-06-2019' and '09-06-2019' and d.coditems like 'TD%' 
+
+[2019-09-06 12:50:06.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-09-06 12:50:06.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '09-06-2019' and '09-06-2019') and d.coditems like 'LI%' 
+
+[2019-09-06 12:50:26.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79932'  Order  by nombres 
+
+[2019-09-06 12:50:26.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='124100'  and activa='1' order by forder desc  
+
+[2019-09-06 12:52:29.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '77716'  Order  by nombres 
+
+[2019-09-06 12:52:29.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='90297'  and activa='1' order by forder desc  
+
+[2019-09-06 12:54:29.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '76076'  Order  by nombres 
+
+[2019-09-06 12:54:29.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='120419'  and activa='1' order by forder desc  
+
+[2019-09-06 12:54:55.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79590'  Order  by nombres 
+
+[2019-09-06 12:54:55.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127217'  and activa='1' order by forder desc  
+
+[2019-09-06 12:55:58.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '77877'  Order  by nombres 
+
+[2019-09-06 12:55:59.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='123830'  and activa='1' order by forder desc  
+
+[2019-09-06 12:56:51.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79151'  Order  by nombres 
+
+[2019-09-06 12:56:51.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='125923'  and activa='1' order by forder desc  
+
+[2019-09-06 12:56:52.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79151'  Order  by nombres 
+
+[2019-09-06 12:56:52.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='125923'  and activa='1' order by forder desc  
+
+[2019-09-06 12:58:01.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79569'  Order  by nombres 
+
+[2019-09-06 12:58:01.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127439'  and activa='1' order by forder desc  
+
+[2019-09-06 12:58:41.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-461-5724%'  Order  by nombres 
+
+[2019-09-06 12:58:41.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='128458'  and activa='1' order by forder desc  
+
+[2019-09-06 13:01:43.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79569'  Order  by nombres 
+
+[2019-09-06 13:01:43.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127439'  and activa='1' order by forder desc  
+
+[2019-09-06 13:02:51.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79568'  Order  by nombres 
+
+[2019-09-06 13:02:51.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127385'  and activa='1' order by forder desc  
+
+[2019-09-06 13:04:02.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79929'  Order  by nombres 
+
+[2019-09-06 13:04:02.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127422'  and activa='1' order by forder desc  
+
+[2019-09-06 13:06:02.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79543'  Order  by nombres 
+
+[2019-09-06 13:06:03.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127352'  and activa='1' order by forder desc  
+
+[2019-09-06 13:08:07.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 13:08:08.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 13:08:08.000000 192.130.74.20  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2'
+
+[2019-09-06 13:08:08.000000 192.130.74.20  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-09-06 13:08:08.000000 192.130.74.20  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-09-06 13:08:09.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-09-06 13:08:09.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '09-06-2019' and '09-06-2019' and d.coditems like 'TD%' 
+
+[2019-09-06 13:08:09.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-09-06 13:08:09.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '09-06-2019' and '09-06-2019') and d.coditems like 'LI%' 
+
+[2019-09-06 13:09:35.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78664'  Order  by nombres 
+
+[2019-09-06 13:09:35.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='125720'  and activa='1' order by forder desc  
+
+[2019-09-06 13:10:36.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 13:10:37.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 13:10:37.000000 192.130.74.20  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2'
+
+[2019-09-06 13:10:37.000000 192.130.74.20  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-09-06 13:10:38.000000 192.130.74.20  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-09-06 13:10:38.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-09-06 13:10:38.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '09-06-2019' and '09-06-2019' and d.coditems like 'TD%' 
+
+[2019-09-06 13:10:39.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-09-06 13:10:39.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '09-06-2019' and '09-06-2019') and d.coditems like 'LI%' 
+
+[2019-09-06 13:11:29.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-675-2382%'  Order  by nombres 
+
+[2019-09-06 13:11:30.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126250'  and activa='1' order by forder desc  
+
+[2019-09-06 13:14:45.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79945'  Order  by nombres 
+
+[2019-09-06 13:14:46.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127891'  and activa='1' order by forder desc  
+
+[2019-09-06 13:15:56.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79945'  Order  by nombres 
+
+[2019-09-06 13:15:56.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127891'  and activa='1' order by forder desc  
+
+[2019-09-06 13:16:42.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79945'  Order  by nombres 
+
+[2019-09-06 13:16:42.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127891'  and activa='1' order by forder desc  
+
+[2019-09-06 13:17:41.000000 192.130.74.141  - [query->LA] ] SELECT * from MInventario where prod_serv in( 'P','I','h')   and activo in('1','3')   order by cod_grupo DESC, desitems 
+
+[2019-09-06 13:18:59.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '67923'  Order  by nombres 
+
+[2019-09-06 13:18:59.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='104606'  and activa='1' order by forder desc  
+
+[2019-09-06 13:21:06.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 13:22:09.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.citados, a.asistido,a.activa,a.usuario, a.fecha_cita, a.hora, convert(varchar(10), cast(a.UltimaAsistida as date), 101)   UltimaAsistida, a.observacion, a.fallecido FROM VIEW_repconsultas4 a Where (a.fecha_cita between '09/09/2019' and '09/09/2019') and a.activa<>'0' and a.citados=1 and a.usuario='RRIVERA' and a.fallecido<>'1'  order by Medicos
+
+[2019-09-06 13:24:52.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79944'  Order  by nombres 
+
+[2019-09-06 13:24:52.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127543'  and activa='1' order by forder desc  
+
+[2019-09-06 13:26:32.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79944'  Order  by nombres 
+
+[2019-09-06 13:26:32.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127543'  and activa='1' order by forder desc  
+
+[2019-09-06 13:28:29.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '56135'  Order  by nombres 
+
+[2019-09-06 13:28:29.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='84952'  and activa='1' order by forder desc  
+
+[2019-09-06 13:32:47.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%CARRASQUILLO%OSORIO%'  Order  by nombres 
+
+[2019-09-06 13:33:51.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-887-2671%'  Order  by nombres 
+
+[2019-09-06 13:33:56.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-887-2617%'  Order  by nombres 
+
+[2019-09-06 13:34:00.000000 192.130.74.39  - [query->RRIVERA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-09-06 13:34:00.000000 192.130.74.39  - [query->RRIVERA] ] Select COD,PAIS from Pais order by PAIS
+
+[2019-09-06 13:34:00.000000 192.130.74.39  - [query->RRIVERA] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+
+[2019-09-06 13:34:31.000000 192.130.74.39  - [query->RRIVERA] ] Select UltimoCliente from Empresa Where id=1
+
+[2019-09-06 13:34:31.000000 192.130.74.39  - [query->RRIVERA] ] Update Empresa Set UltimoCliente='128498' Where id=1
+
+[2019-09-06 13:34:31.000000 192.130.74.39  - [query->RRIVERA] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('RUTH','CARRASQUILLO OSORIO','CARRASQUILLO OSORIO RUTH','787-887-2617','787-887-2617','000','','','ROSE MARIE ','ROSE','00960','160','64','','ROSE','ROSE','0', '0','0','0','128498','2019-09-06','787-887-2617','ROSE MARIE ')
+
+[2019-09-06 13:34:31.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 13:34:40.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 100 * from Mclientes where  codclien = '128498' 
+
+[2019-09-06 13:34:40.000000 192.130.74.39  - [query->RRIVERA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-09-06 13:34:40.000000 192.130.74.39  - [query->RRIVERA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-09-06 13:34:40.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where  codclien='128498'  and  asistido=0
+
+[2019-09-06 13:34:40.000000 192.130.74.39  - [query->RRIVERA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='128498' and codconsulta<>'07' group by codclien
+
+[2019-09-06 13:34:40.000000 192.130.74.39  - [query->RRIVERA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='128498' and codconsulta<>'07' group by codclien
+
+[2019-09-06 13:34:41.000000 192.130.74.39  - [query->RRIVERA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-09-06 13:34:42.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:42.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:43.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:43.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:43.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:43.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:55.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:55.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:55.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='128498' and asistido=0 
+
+[2019-09-06 13:34:55.000000 192.130.74.39  - [query->RRIVERA] ] Select count(*) cant from mconsultas where codclien='128498' 
+
+[2019-09-06 13:34:55.000000 192.130.74.39  - [query->RRIVERA] ] Select *  from loginpass where login ='RRIVERA' 
+
+[2019-09-06 13:34:55.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='128498' and asistido=0 
+
+[2019-09-06 13:34:55.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='codclien' and fecha_cita='09/11/2019'  
+
+[2019-09-06 13:34:55.000000 192.130.74.39  - [query->RRIVERA] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('128498','9/6/2019','1','09/11/2019' ,'000','RRIVERA','9/6/2019','ROSE MARIE $10 INICIAL A.M','1','0','0','0','0','0','01')
+
+[2019-09-06 13:34:56.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:56.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 13:34:56.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/11/2019' and activo = 1 
+
+[2019-09-06 13:34:56.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='128498' and asistido=0 
+
+[2019-09-06 13:34:56.000000 192.130.74.39  - [query->RRIVERA] ] Select count(*) cant from mconsultas where codclien='128498' 
+
+[2019-09-06 13:34:56.000000 192.130.74.39  - [query->RRIVERA] ] Select *  from loginpass where login ='RRIVERA' 
+
+[2019-09-06 13:34:56.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='128498' and asistido=0 
+
+[2019-09-06 13:34:56.000000 192.130.74.39  - [query->RRIVERA] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='128498' AND ASISTIDO=0
+
+[2019-09-06 13:34:56.000000 192.130.74.39  - [query->RRIVERA] ] UPDATE MCONSULTAS SET FECHA_CITA='09/11/2019',usuario = 'RRIVERA',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'ROSE MARIE $10 INICIAL A.M' WHERE CODCLIEN='128498' AND ASISTIDO='0' and ID='284491' 
+
+[2019-09-06 13:34:57.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 13:35:35.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 13:35:35.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 13:35:35.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 13:35:41.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 13:35:41.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 13:35:41.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 13:35:51.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '76683'  Order  by nombres 
+
+[2019-09-06 13:35:51.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='120706'  and activa='1' order by forder desc  
+
+[2019-09-06 13:37:31.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '76683'  Order  by nombres 
+
+[2019-09-06 13:37:31.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='120706'  and activa='1' order by forder desc  
+
+[2019-09-06 13:40:13.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '76683'  Order  by nombres 
+
+[2019-09-06 13:40:14.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='120706'  and activa='1' order by forder desc  
+
+[2019-09-06 13:45:32.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78833'  Order  by nombres 
+
+[2019-09-06 13:45:32.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112884'  and activa='1' order by forder desc  
+
+[2019-09-06 13:47:31.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '67966'  Order  by nombres 
+
+[2019-09-06 13:47:31.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='105228'  and activa='1' order by forder desc  
+
+[2019-09-06 13:48:31.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79012'  Order  by nombres 
+
+[2019-09-06 13:48:32.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126478'  and activa='1' order by forder desc  
+
+[2019-09-06 13:51:22.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78874'  Order  by nombres 
+
+[2019-09-06 13:51:22.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126265'  and activa='1' order by forder desc  
+
+[2019-09-06 13:52:10.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%321-900-3850%'  Order  by nombres 
+
+[2019-09-06 13:52:10.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127999'  and activa='1' order by forder desc  
+
+[2019-09-06 13:56:56.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KEILA $10.00 PAGARA TRATAMIENTO' where codclien='127999'  and fecha_cita='09/16/2019' 
+
+[2019-09-06 13:57:04.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KEILA $10.00 PAGARA TRATAMIENTO EL 9/7/19' where codclien='127999'  and fecha_cita='09/16/2019' 
+
+[2019-09-06 13:57:43.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KEILA $10.00 PAGARA TRATAMIENTO CON WALDE EL 9/7/19' where codclien='127999'  and fecha_cita='09/16/2019' 
+
+[2019-09-06 13:57:50.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KEILA $10.00 PAGARA EL TRATAMIENTO CON WALDE EL 9/7/19' where codclien='127999'  and fecha_cita='09/16/2019' 
+
+[2019-09-06 13:58:00.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KEILA $10.00 PAGARA EL TRATAMIENTO CON WALDEMAR EL 9/7/19' where codclien='127999'  and fecha_cita='09/16/2019' 
+
+[2019-09-06 13:58:17.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78874'  Order  by nombres 
+
+[2019-09-06 13:58:17.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126265'  and activa='1' order by forder desc  
+
+[2019-09-06 14:00:07.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KATIIRIA TARIFA ESPECIAL 10.00 YA TERMINO TRATAMIENTO 9/6/19' where codclien='126265'  and fecha_cita='09/18/2019' 
+
+[2019-09-06 14:02:11.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79834'  Order  by nombres 
+
+[2019-09-06 14:02:12.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127573'  and activa='1' order by forder desc  
+
+[2019-09-06 14:04:45.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79460'  Order  by nombres 
+
+[2019-09-06 14:04:45.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127103'  and activa='1' order by forder desc  
+
+[2019-09-06 14:13:11.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:13:11.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:13:11.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:13:13.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:13:14.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:13:14.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:13:19.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:13:19.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:13:19.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:13:24.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:13:25.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:13:25.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:13:32.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:13:32.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:13:32.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:13:37.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:13:38.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:13:38.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:13:58.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-562-8609%'  Order  by nombres 
+
+[2019-09-06 14:13:58.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127103'  and activa='1' order by forder desc  
+
+[2019-09-06 14:14:01.000000 192.130.74.39  - [query->RRIVERA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-09-06 14:14:01.000000 192.130.74.39  - [query->RRIVERA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-09-06 14:14:01.000000 192.130.74.39  - [query->RRIVERA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-09-06 14:14:01.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79460'  Order  by nombres 
+
+[2019-09-06 14:14:01.000000 192.130.74.39  - [query->RRIVERA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-09-06 14:14:01.000000 192.130.74.39  - [query->RRIVERA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='127103' and codconsulta<>'07' group by codclien
+
+[2019-09-06 14:14:01.000000 192.130.74.39  - [query->RRIVERA] ] Select observacion from VIEW_mconsultas_02 where codclien='127103'  and fecha_cita='2019/09/03' and codconsulta<>'07'
+
+[2019-09-06 14:14:01.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where  codclien='127103'  and  asistido=0
+
+[2019-09-06 14:14:09.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/07/2019' and activo = 1 
+
+[2019-09-06 14:14:10.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/07/2019' and activo = 1 
+
+[2019-09-06 14:14:10.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='09/07/2019' and activo = 1 
+
+[2019-09-06 14:14:10.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='127103' and asistido=0 
+
+[2019-09-06 14:14:10.000000 192.130.74.39  - [query->RRIVERA] ] Select count(*) cant from mconsultas where codclien='127103' 
+
+[2019-09-06 14:14:10.000000 192.130.74.39  - [query->RRIVERA] ] Select *  from loginpass where login ='RRIVERA' 
+
+[2019-09-06 14:14:10.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='127103' and asistido=0 
+
+[2019-09-06 14:14:11.000000 192.130.74.39  - [query->RRIVERA] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='127103' AND ASISTIDO=0
+
+[2019-09-06 14:14:11.000000 192.130.74.39  - [query->RRIVERA] ] UPDATE MCONSULTAS SET FECHA_CITA='09/07/2019',usuario = 'RRIVERA',confirmado='0',noasistido='0',activa='1',codmedico = '327', observacion = 'ROSE MARIE $10 INICIAL PRIORIDAD ANDADOR A.M***' WHERE CODCLIEN='127103' AND ASISTIDO='0' and ID='281934' 
+
+[2019-09-06 14:14:11.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:14:11.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:14:11.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:14:14.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:14:15.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:14:15.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:15:05.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:15:05.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:15:05.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:15:19.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:15:19.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:15:20.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:15:24.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set confirmado='2',  usuario='RRIVERA'  where codclien='127103'  and fecha_cita='09/07/2019' 
+
+[2019-09-06 14:17:04.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79848'  Order  by nombres 
+
+[2019-09-06 14:17:04.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127729'  and activa='1' order by forder desc  
+
+[2019-09-06 14:18:32.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '80048'  Order  by nombres 
+
+[2019-09-06 14:18:32.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='84126'  and activa='1' order by forder desc  
+
+[2019-09-06 14:20:07.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:20:07.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:20:07.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:20:09.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:20:10.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:20:10.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:20:12.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:20:12.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:20:12.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:20:21.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:20:21.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:20:21.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:20:26.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set confirmado='2',  usuario='RRIVERA'  where codclien='84126'  and fecha_cita='09/04/2019' 
+
+[2019-09-06 14:20:26.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set confirmado='0',  usuario='RRIVERA'  where codclien='84126'  and fecha_cita='09/04/2019' 
+
+[2019-09-06 14:20:43.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '80048'  Order  by nombres 
+
+[2019-09-06 14:20:43.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='84126'  and activa='1' order by forder desc  
+
+[2019-09-06 14:20:49.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:20:49.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:20:49.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:20:56.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:20:57.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:20:57.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:21:00.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:21:00.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:21:00.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:21:13.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:21:14.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:21:14.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:21:16.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set confirmado='2',  usuario='RRIVERA'  where codclien='84126'  and fecha_cita='09/18/2019' 
+
+[2019-09-06 14:21:16.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set confirmado='0',  usuario='RRIVERA'  where codclien='84126'  and fecha_cita='09/18/2019' 
+
+[2019-09-06 14:21:20.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:21:20.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:21:20.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:21:27.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:21:27.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:21:28.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:21:34.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '80048'  Order  by nombres 
+
+[2019-09-06 14:21:35.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='84126'  and activa='1' order by forder desc  
+
+[2019-09-06 14:21:57.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KEILA $10.00 ' where codclien='84126'  and fecha_cita='09/04/2019' 
+
+[2019-09-06 14:22:02.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KEILA $10.00 CANCELO' where codclien='84126'  and fecha_cita='09/18/2019' 
+
+[2019-09-06 14:22:04.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KEILA $10.00 CANCELO' where codclien='84126'  and fecha_cita='09/04/2019' 
+
+[2019-09-06 14:24:33.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='ROSE MARIE $10.00 ' where codclien='84126'  and fecha_cita='09/18/2019' 
+
+[2019-09-06 14:24:40.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-452-0222%'  Order  by nombres 
+
+[2019-09-06 14:25:01.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%VELEZ%SANTIAGO%MIGDALIA%'  Order  by nombres 
+
+[2019-09-06 14:25:04.000000 192.130.74.39  - [query->RRIVERA] ] Select COD,PAIS from Pais order by PAIS
+
+[2019-09-06 14:25:04.000000 192.130.74.39  - [query->RRIVERA] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+
+[2019-09-06 14:25:04.000000 192.130.74.39  - [query->RRIVERA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-09-06 14:25:45.000000 192.130.74.39  - [query->RRIVERA] ] Select UltimoCliente from Empresa Where id=1
+
+[2019-09-06 14:25:45.000000 192.130.74.39  - [query->RRIVERA] ] Update Empresa Set UltimoCliente='128508' Where id=1
+
+[2019-09-06 14:25:45.000000 192.130.74.39  - [query->RRIVERA] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('MIGDALIA','VELEZ SANTIAGO ','VELEZ SANTIAGO  MIGDALIA','787-452-0222','787-452-0222','000','','','ROSE MARIE ','ROSE','00960','160','64','','ROSE','ROSE','0', '0','0','0','128508','2019-09-06','787-452-0222','ROSE MARIE ')
+
+[2019-09-06 14:25:46.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:25:57.000000 192.130.74.39  - [query->RRIVERA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-09-06 14:25:57.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 100 * from Mclientes where  codclien = '128508' 
+
+[2019-09-06 14:25:57.000000 192.130.74.39  - [query->RRIVERA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-09-06 14:25:57.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where  codclien='128508'  and  asistido=0
+
+[2019-09-06 14:25:57.000000 192.130.74.39  - [query->RRIVERA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='128508' and codconsulta<>'07' group by codclien
+
+[2019-09-06 14:25:57.000000 192.130.74.39  - [query->RRIVERA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='128508' and codconsulta<>'07' group by codclien
+
+[2019-09-06 14:25:58.000000 192.130.74.39  - [query->RRIVERA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-09-06 14:26:02.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:02.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:02.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:03.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:03.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:03.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='128508' and asistido=0 
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] Select count(*) cant from mconsultas where codclien='128508' 
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] Select *  from loginpass where login ='RRIVERA' 
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='128508' and asistido=0 
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/04/2019'  
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('128508','9/6/2019','1','10/04/2019' ,'000','RRIVERA','9/6/2019','ROSE MARIE $10 INICIAL CABO ROJO','1','0','0','0','0','0','01')
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:18.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:26:19.000000 192.130.74.39  - [query->RRIVERA] ] select * from Feriado where FECHA='10/04/2019' and activo = 1 
+
+[2019-09-06 14:26:19.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='128508' and asistido=0 
+
+[2019-09-06 14:26:19.000000 192.130.74.39  - [query->RRIVERA] ] Select count(*) cant from mconsultas where codclien='128508' 
+
+[2019-09-06 14:26:19.000000 192.130.74.39  - [query->RRIVERA] ] Select *  from loginpass where login ='RRIVERA' 
+
+[2019-09-06 14:26:19.000000 192.130.74.39  - [query->RRIVERA] ] Select * from mconsultas where codclien='128508' and asistido=0 
+
+[2019-09-06 14:26:19.000000 192.130.74.39  - [query->RRIVERA] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='128508' AND ASISTIDO=0
+
+[2019-09-06 14:26:19.000000 192.130.74.39  - [query->RRIVERA] ] UPDATE MCONSULTAS SET FECHA_CITA='10/04/2019',usuario = 'RRIVERA',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'ROSE MARIE $10 INICIAL CABO ROJO' WHERE CODCLIEN='128508' AND ASISTIDO='0' and ID='284509' 
+
+[2019-09-06 14:26:19.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:30:15.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-09-06 14:30:15.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-09-06 14:30:15.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-09-06 14:30:19.000000 192.130.74.39  - [query->RRIVERA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-09-06 14:30:19.000000 192.130.74.39  - [query->RRIVERA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-09-06' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-09-06') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-09-06')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-09-06' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-09-06 14:30:20.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-09-06 14:30:53.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '80048'  Order  by nombres 
+
+[2019-09-06 14:30:54.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='84126'  and activa='1' order by forder desc  
+
+[2019-09-06 14:33:08.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '56135'  Order  by nombres 
+
+[2019-09-06 14:33:08.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='84952'  and activa='1' order by forder desc  
+
+[2019-09-06 14:34:19.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78009'  Order  by nombres 
+
+[2019-09-06 14:34:19.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='78545'  and activa='1' order by forder desc  
+
+[2019-09-06 14:35:04.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '78009'  Order  by nombres 
+
+[2019-09-06 14:35:04.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='78545'  and activa='1' order by forder desc  
+
+[2019-09-06 14:38:04.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79717'  Order  by nombres 
+
+[2019-09-06 14:38:04.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='116547'  and activa='1' order by forder desc  
+
+[2019-09-06 14:40:14.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-221-0060%'  Order  by nombres 
+
+[2019-09-06 14:40:14.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='83078'  and activa='1' order by forder desc  
+
+[2019-09-06 14:43:05.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='KEILA MCS $10.00 EXONERADA REACCION A MEDICAMENTO' where codclien='83078'  and fecha_cita='09/16/2019' 
+
+[2019-09-06 14:54:21.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '79560'  Order  by nombres 
+
+[2019-09-06 14:54:21.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='127324'  and activa='1' order by forder desc  
+
+[2019-09-06 15:16:09.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 15:17:28.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '09/06/2019' and '09/06/2019') and a.asistido=3 and a.activa<>'0' and a.usuario='RRIVERA' 
+
+[2019-09-06 15:21:11.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 15:22:31.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 15:22:53.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '09/06/2019' and '09/06/2019') and a.asistido=3 and a.activa<>'0' and a.usuario='RRIVERA' 
+
+[2019-09-06 15:22:54.000000 192.130.74.39  - [query->RRIVERA] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '09/06/2019' and '09/06/2019') and a.asistido=3 and a.activa<>'0' and a.usuario='RRIVERA' 
+
+[2019-09-06 15:26:34.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 15:46:55.000000 192.130.74.39  - [query->RRIVERA] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='09/06/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='09/06/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+
+[2019-09-06 16:02:08.000000 192.130.74.141  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' and activo=1 
+
+[2019-09-06 16:02:08.000000 192.130.74.141  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+
+[2019-09-06 16:03:07.000000 192.130.74.141  - [query->LA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 16:03:08.000000 192.130.74.141  - [query->LA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-09-02' and '09/06/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-09-06 16:03:09.000000 192.130.74.141  - [query->LA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2'
+
+[2019-09-06 16:03:09.000000 192.130.74.141  - [query->LA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-09-06 16:03:09.000000 192.130.74.141  - [query->LA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '09-06-2019' and '09-06-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-09-06 16:03:09.000000 192.130.74.141  - [query->LA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-09-06 16:03:09.000000 192.130.74.141  - [query->LA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '09-06-2019' and '09-06-2019' and d.coditems like 'TD%' 
+
+[2019-09-06 16:03:10.000000 192.130.74.141  - [query->LA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-06-2019' and '09-06-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-09-06 16:03:10.000000 192.130.74.141  - [query->LA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '09-06-2019' and '09-06-2019') and d.coditems like 'LI%' 
+
+[2019-09-06 16:24:40.000000 192.130.74.69  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2609' and activo=1 
+
+[2019-09-06 16:24:47.000000 192.130.74.69  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' and activo=1 
+
+[2019-09-06 16:24:47.000000 192.130.74.69  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+
+[2019-09-06 16:46:56.000000 192.130.74.69  - [query->LA] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' and activo=1 
+
+[2019-09-06 16:46:56.000000 192.130.74.69  - [query->LA] ] Select * from Vestaciones WHERE usuario = 'LA' 
+

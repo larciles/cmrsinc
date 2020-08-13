@@ -1,0 +1,58 @@
+@import url(../css/font-awesome.min.css);
+h1 {
+  /*color: yellowgreen;*/
+   }
+
+body {
+  /*padding: 50px; */
+}
+
+label {
+  cursor: pointer;
+  color: #666; }
+  label input[type="checkbox"] {
+    display: none; }
+  label input[type="checkbox"]
+  + .label-text:before {
+    content: "\f096";
+    font-family: "FontAwesome";
+    speak-as: none;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    width: 1em;
+    display: inline-block;
+    margin-right: 5px; }
+  label input[type="checkbox"]:checked + .label-text::before {
+    content: "\f14a";
+    color: #06a3e9;
+    animation: tick 180ms ease-in; }
+  label input[type="checkbox"]:disabled + .label-text::before {
+    content: "\f0c8";
+    color: #ccc; }
+  label input[type="checkbox"]:checked + .label-text.citado::before  {
+    color: #42f542; }  
+  label input[type="checkbox"]:disabled + .label-text {
+    color: #ccc; }
+
+@keyframes tick {
+  0% {
+    transform: scale(0); }
+  90% {
+    transform: scale(1.4); }
+  100% {
+    transform: scale(1); } }
+footer {
+  background: #444; }
+  footer h4 {
+    color: rebeccapurple; }
+    footer h4 a {
+      color: blue; }
+  footer p {
+    background: #f9ed69; }
+
+/*# sourceMappingURL=estilos.css.map */

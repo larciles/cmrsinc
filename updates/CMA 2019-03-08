@@ -1,0 +1,48 @@
+CMA 2019-03-08
+
+VENTAS DE CELULAS MADRES Y EXOSOMAS  
+
+
+---------------------------------
+NUEVOS
+
+\js
+
+ventascmexoxmed.js
+
+\clases
+
+repventascmexoxmed.php
+
+
+\vistas\reportes
+
+ventascmexocmed.php
+
+
+---------------------------------
+ACTUALIZACIONES
+
+\vistas\layouts
+
+agregar esta linea
+
+echo '    <li><a href="http://'.$curserver.'/cma/vistas/reportes/ventascmexocmed.php"><img src="http://'.$curserver.'/cma/img/new2.png" alt="new" >Ventas Células Madre y Exosomas por Médico </a></li> ';
+
+actualizar Madres por Madre
+
+
+
+
+---------------------------------
+DATABASES
+---------------------------------------------------------------------------------------------------
+
+Actualizacion de impresion de factura de suero para que aparezca el protocolo de 10 Laser IV o 10mls o hilt
+
+\clases
+
+printconsultaspdf.php
+
+
+

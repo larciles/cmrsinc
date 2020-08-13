@@ -1,0 +1,2139 @@
+[26/Jul/2018:14:56:31] (index) OK EDGARDO
+[26/Jul/2018:14:57:42] (index) OK KBLASINI
+[26/Jul/2018:16:58:29] (index) OK CCBAY1
+[27/Jul/2018:09:50:50] (index) OK LA
+[28/Jul/2018:08:12:29] (index) OK CHUERTAS
+[28/Jul/2018:10:38:31] (index) Failed JOLALDE
+[28/Jul/2018:10:38:41] (index) OK JOLALDE
+[28/Jul/2018:11:14:41] (index) OK BORTIZ
+[28/Jul/2018:13:25:30] (index) OK ATENCION
+[28/Jul/2018:13:25:50] (index) OK ADMINCITAS
+[28/Jul/2018:16:30:52] (index) OK CHUERTAS
+[30/Jul/2018:07:03:33] (index) OK CCBAY1
+[30/Jul/2018:07:57:36] (index) OK LA
+[30/Jul/2018:08:44:56] (index) OK CCBAY2
+[30/Jul/2018:10:19:51] (index) OK LA
+[30/Jul/2018:11:22:10] (index) OK CCBAY1
+[30/Jul/2018:13:48:00] (index) Failed JOLALDE
+[30/Jul/2018:13:48:11] (index) OK JOLALDE
+[31/Jul/2018:07:07:23] (index) OK KBLASINI
+[31/Jul/2018:07:07:30] (index) OK CCBAY1
+[31/Jul/2018:07:07:53] (index) OK KBLASINI
+[31/Jul/2018:07:23:57] (index) OK CCBAY1
+[31/Jul/2018:08:47:50] (index) OK BORTIZ
+[31/Jul/2018:13:48:43] (index) OK CCBAY1
+[31/Jul/2018:16:49:09] (index) OK KBLASINI
+[01/Aug/2018:07:08:09] (index) Failed CCBAY1
+[01/Aug/2018:07:08:17] (index) OK CCBAY1
+[01/Aug/2018:08:46:14] (index) OK LA
+[01/Aug/2018:08:54:59] (index) OK CCBAY1
+[01/Aug/2018:08:58:31] (index) OK LA
+[01/Aug/2018:09:30:41] (index) OK KBLASINI
+[01/Aug/2018:09:30:49] (index) OK CCBAY1
+[01/Aug/2018:09:32:04] (index) OK KBLASINI
+[01/Aug/2018:09:37:02] (index) OK CCBAY1
+[01/Aug/2018:09:37:50] (index) OK CCBAY1
+[01/Aug/2018:09:42:52] (index) OK KBLASINI
+[01/Aug/2018:10:02:01] (index) OK CCBAY1
+[01/Aug/2018:10:21:24] (index) OK KBLASINI
+[01/Aug/2018:10:26:28] (index) OK CCBAY1
+[01/Aug/2018:10:34:41] (index) OK KBLASINI
+[01/Aug/2018:10:39:31] (index) OK CCBAY1
+[01/Aug/2018:11:12:25] (index) OK JOLALDE
+[01/Aug/2018:11:12:49] (index) OK JOLALDE
+[01/Aug/2018:11:15:59] (index) OK LA
+[01/Aug/2018:11:31:20] (index) OK KBLASINI
+[01/Aug/2018:12:10:15] (index) OK CCBAY1
+[01/Aug/2018:12:27:11] (index) OK KBLASINI
+[01/Aug/2018:12:47:15] (index) Failed CCBAY1
+[01/Aug/2018:12:47:23] (index) OK CCBAY1
+[01/Aug/2018:13:34:58] (index) OK KBLASINI
+[01/Aug/2018:16:59:43] (index) OK LA
+[02/Aug/2018:07:10:35] (index) OK KBLASINI
+[02/Aug/2018:07:10:44] (index) OK CCBAY1
+[02/Aug/2018:07:11:13] (index) OK CCBAY2
+[02/Aug/2018:07:13:00] (index) OK KBLASINI
+[02/Aug/2018:07:18:42] (index) OK CCBAY1
+[02/Aug/2018:08:12:49] (index) Failed CCBAY2
+[02/Aug/2018:08:12:55] (index) OK CCBAY2
+[02/Aug/2018:08:17:11] (index) OK KBLASINI
+[02/Aug/2018:08:32:19] (index) Failed CCBAY1
+[02/Aug/2018:08:32:24] (index) OK CCBAY1
+[02/Aug/2018:08:39:27] (index) OK KBLASINI
+[02/Aug/2018:08:41:11] (index) OK CCBAY1
+[02/Aug/2018:08:44:40] (index) OK KBLASINI
+[02/Aug/2018:08:45:13] (index) Failed RRIVERA
+[02/Aug/2018:08:45:24] (index) OK RRIVERA
+[02/Aug/2018:10:43:48] (index) OK CCBAY1
+[02/Aug/2018:10:55:08] (index) OK KBLASINI
+[02/Aug/2018:11:37:54] (index) OK CCBAY1
+[02/Aug/2018:11:47:05] (index) OK KBLASINI
+[02/Aug/2018:12:35:01] (index) OK LA
+[02/Aug/2018:12:38:54] (index) OK CCBAY1
+[02/Aug/2018:15:03:50] (index) OK JOLALDE
+[02/Aug/2018:15:22:36] (index) OK KBLASINI
+[02/Aug/2018:15:48:14] (index) OK KBLASINI
+[02/Aug/2018:16:26:07] (index) OK CCBAY1
+[03/Aug/2018:07:01:28] (index) OK KBLASINI
+[03/Aug/2018:07:01:35] (index) OK CCBAY1
+[03/Aug/2018:07:01:56] (index) OK CCBAY2
+[03/Aug/2018:07:10:35] (index) OK KBLASINI
+[03/Aug/2018:07:20:18] (index) OK CCBAY1
+[03/Aug/2018:07:28:46] (index) OK KBLASINI
+[03/Aug/2018:07:44:44] (index) OK CCBAY1
+[03/Aug/2018:08:12:14] (index) OK KBLASINI
+[03/Aug/2018:08:13:33] (index) OK CCBAY2
+[03/Aug/2018:08:27:44] (index) OK CCBAY1
+[03/Aug/2018:08:33:28] (index) OK KBLASINI
+[03/Aug/2018:08:43:55] (index) OK CCBAY1
+[03/Aug/2018:08:44:36] (index) OK KBLASINI
+[03/Aug/2018:09:08:09] (index) Failed K SANTIAGO
+[03/Aug/2018:09:08:21] (index) Failed K SANTIAGO
+[03/Aug/2018:09:08:36] (index) Failed K SANTIAGO
+[03/Aug/2018:09:09:36] (index) Failed K SANTIAGO 
+[03/Aug/2018:09:10:26] (index) Failed KSANTIAGO
+[03/Aug/2018:09:10:36] (index) OK KSANTIAGO
+[03/Aug/2018:09:30:50] (index) OK CCBAY2
+[03/Aug/2018:09:31:31] (index) Failed KSANTIAGO
+[03/Aug/2018:09:31:39] (index) OK KSANTIAGO
+[03/Aug/2018:10:23:11] (index) OK CCBAY1
+[03/Aug/2018:10:47:38] (index) OK CCBAY2
+[03/Aug/2018:10:48:41] (index) Failed KSANTIAGO
+[03/Aug/2018:10:48:51] (index) OK KSANTIAGO
+[03/Aug/2018:11:44:54] (index) OK CCBAY2
+[03/Aug/2018:12:18:56] (index) OK CCBAY2
+[03/Aug/2018:12:19:47] (index) OK KSANTIAGO
+[03/Aug/2018:12:26:05] (index) OK CCBAY1
+[03/Aug/2018:13:27:04] (index) OK CCBAY1
+[03/Aug/2018:14:15:19] (index) OK CCBAY2
+[03/Aug/2018:14:16:11] (index) OK KSANTIAGO
+[03/Aug/2018:14:48:13] (index) OK CCBAY2
+[03/Aug/2018:14:49:19] (index) OK KSANTIAGO
+[03/Aug/2018:14:51:48] (index) OK CCBAY2
+[03/Aug/2018:14:52:37] (index) OK KSANTIAGO
+[03/Aug/2018:14:53:23] (index) OK CCBAY2
+[03/Aug/2018:14:55:06] (index) OK KSANTIAGO
+[03/Aug/2018:15:58:53] (index) OK CCBAY2
+[03/Aug/2018:15:59:38] (index) OK KSANTIAGO
+[03/Aug/2018:16:00:16] (index) OK CCBAY2
+[03/Aug/2018:16:01:27] (index) OK KSANTIAGO
+[04/Aug/2018:04:04:56] (index) OK JOLALDE
+[04/Aug/2018:08:12:43] (index) OK KSANTIAGO
+[04/Aug/2018:08:14:40] (index) Failed CCBAY2
+[04/Aug/2018:08:14:46] (index) OK CCBAY2
+[04/Aug/2018:08:16:04] (index) OK KSANTIAGO
+[04/Aug/2018:08:26:10] (index) OK CCBAY2
+[04/Aug/2018:08:27:05] (index) OK KSANTIAGO
+[04/Aug/2018:10:01:36] (index) OK VMORA
+[04/Aug/2018:11:34:03] (index) OK CCBAY2
+[04/Aug/2018:11:49:36] (index) OK KSANTIAGO
+[04/Aug/2018:14:17:35] (index) OK KSANTIAGO
+[04/Aug/2018:16:27:44] (index) Failed 
+[04/Aug/2018:16:27:44] (index) Failed 
+[04/Aug/2018:16:27:44] (index) Failed 
+[04/Aug/2018:16:27:55] (index) OK VMORA
+[06/Aug/2018:07:17:05] (index) OK CCBAY1
+[06/Aug/2018:07:46:35] (index) OK CCBAY1
+[06/Aug/2018:09:09:33] (index) OK LA
+[06/Aug/2018:09:12:20] (index) OK CCBAY1
+[06/Aug/2018:10:14:50] (index) OK CCBAY1
+[06/Aug/2018:10:32:54] (index) OK CCBAY2
+[06/Aug/2018:11:14:02] (index) OK CCBAY1
+[06/Aug/2018:15:29:59] (index) OK CCBAY1
+[06/Aug/2018:15:45:24] (index) OK CCBAY1
+[06/Aug/2018:20:20:19] (index) OK LA
+[07/Aug/2018:07:04:23] (index) OK CCBAY2
+[07/Aug/2018:07:04:46] (index) OK KBLASINI
+[07/Aug/2018:07:04:53] (index) OK CCBAY1
+[07/Aug/2018:07:06:10] (index) OK KBLASINI
+[07/Aug/2018:07:10:56] (index) OK CCBAY1
+[07/Aug/2018:08:18:16] (index) OK CHUERTAS
+[07/Aug/2018:08:20:53] (index) OK CHUERTAS
+[07/Aug/2018:08:22:49] (index) OK BORTIZ
+[07/Aug/2018:08:30:40] (index) OK JOLALDE
+[07/Aug/2018:08:35:06] (index) OK KBLASINI
+[07/Aug/2018:09:04:21] (index) OK CCBAY1
+[07/Aug/2018:09:58:04] (index) OK KBLASINI
+[07/Aug/2018:09:58:11] (index) OK CCBAY1
+[07/Aug/2018:10:24:52] (index) OK KBLASINI
+[07/Aug/2018:10:32:20] (index) OK CCBAY1
+[07/Aug/2018:10:47:41] (index) OK KBLASINI
+[07/Aug/2018:16:44:27] (index) OK CCBAY1
+[08/Aug/2018:07:09:14] (index) OK KBLASINI
+[08/Aug/2018:07:09:20] (index) OK CCBAY1
+[08/Aug/2018:07:16:39] (index) OK KBLASINI
+[08/Aug/2018:07:24:35] (index) OK CCBAY1
+[08/Aug/2018:07:25:00] (index) OK CCBAY2
+[08/Aug/2018:08:09:21] (index) OK KBLASINI
+[08/Aug/2018:08:12:21] (index) OK CCBAY1
+[08/Aug/2018:08:31:35] (index) OK KBLASINI
+[08/Aug/2018:08:38:15] (index) OK CCBAY1
+[08/Aug/2018:08:42:58] (index) OK KBLASINI
+[08/Aug/2018:09:07:00] (index) OK CCBAY1
+[08/Aug/2018:09:10:45] (index) OK KBLASINI
+[08/Aug/2018:09:49:38] (index) OK CCBAY1
+[08/Aug/2018:09:53:53] (index) OK KBLASINI
+[08/Aug/2018:09:56:06] (index) OK CCBAY1
+[08/Aug/2018:09:57:52] (index) OK KBLASINI
+[08/Aug/2018:10:09:15] (index) OK CCBAY1
+[08/Aug/2018:10:18:29] (index) OK VMORA
+[08/Aug/2018:10:32:23] (index) OK KBLASINI
+[08/Aug/2018:11:30:51] (index) OK CCBAY2
+[08/Aug/2018:11:30:51] (index) OK CCBAY2
+[08/Aug/2018:12:02:49] (index) OK LA
+[08/Aug/2018:13:11:07] (index) OK CCBAY1
+[08/Aug/2018:14:36:33] (index) OK YFELICIANO
+[08/Aug/2018:14:49:50] (index) OK KBLASINI
+[08/Aug/2018:14:54:48] (index) OK CCBAY1
+[08/Aug/2018:14:57:49] (index) OK LA
+[08/Aug/2018:15:06:50] (index) OK KBLASINI
+[08/Aug/2018:15:23:33] (index) OK JOLALDE
+[08/Aug/2018:15:52:34] (index) OK CCBAY1
+[08/Aug/2018:16:15:16] (index) OK YFELICIANO 
+[09/Aug/2018:07:12:01] (index) OK KBLASINI
+[09/Aug/2018:07:12:13] (index) OK CCBAY1
+[09/Aug/2018:07:18:11] (index) OK KBLASINI
+[09/Aug/2018:07:23:03] (index) Failed CCBAY1
+[09/Aug/2018:07:23:09] (index) OK CCBAY1
+[09/Aug/2018:07:23:31] (index) OK CCBAY1
+[09/Aug/2018:08:18:49] (index) OK LA
+[09/Aug/2018:08:18:50] (index) OK LA
+[09/Aug/2018:08:22:51] (index) OK KBLASINI
+[09/Aug/2018:09:27:39] (index) OK CCBAY1
+[09/Aug/2018:09:49:49] (index) OK KBLASINI
+[09/Aug/2018:10:59:56] (index) OK CCBAY1
+[09/Aug/2018:11:05:42] (index) OK CCBAY2
+[09/Aug/2018:11:18:22] (index) OK CCBAY2
+[09/Aug/2018:11:21:59] (index) OK KBLASINI
+[09/Aug/2018:11:22:33] (index) OK LA
+[09/Aug/2018:12:57:33] (index) OK CCBAY1
+[09/Aug/2018:12:58:31] (index) Failed KBLASINI
+[09/Aug/2018:12:58:38] (index) OK KBLASINI
+[09/Aug/2018:13:24:56] (index) OK LA
+[09/Aug/2018:14:16:02] (index) OK JOLALDE
+[09/Aug/2018:14:57:54] (index) OK CCBAY1
+[09/Aug/2018:15:35:56] (index) OK KBLASINI
+[09/Aug/2018:15:46:14] (index) OK CCBAY1
+[09/Aug/2018:15:47:45] (index) OK CCBAY1
+[10/Aug/2018:07:13:07] (index) OK CCBAY2
+[10/Aug/2018:07:13:16] (index) OK KBLASINI
+[10/Aug/2018:07:13:22] (index) OK CCBAY1
+[10/Aug/2018:07:16:37] (index) OK KBLASINI
+[10/Aug/2018:07:50:38] (index) OK CCBAY1
+[10/Aug/2018:08:47:28] (index) OK KBLASINI
+[10/Aug/2018:08:51:57] (index) OK CCBAY1
+[10/Aug/2018:08:56:36] (index) OK LA
+[10/Aug/2018:09:01:22] (index) OK KBLASINI
+[10/Aug/2018:09:17:20] (index) OK CCBAY1
+[10/Aug/2018:09:40:40] (index) OK KBLASINI
+[10/Aug/2018:10:07:52] (index) OK LA
+[10/Aug/2018:10:08:28] (index) OK CCBAY1
+[10/Aug/2018:10:41:21] (index) OK JOLALDE
+[10/Aug/2018:10:48:10] (index) OK KBLASINI
+[10/Aug/2018:11:42:35] (index) OK CCBAY1
+[10/Aug/2018:12:13:30] (index) OK LA
+[10/Aug/2018:12:15:21] (index) OK CHUERTAS
+[10/Aug/2018:13:01:08] (index) OK CHUERTAS
+[10/Aug/2018:13:04:10] (index) OK KBLASINI
+[10/Aug/2018:15:05:01] (index) OK CCBAY1
+[10/Aug/2018:15:12:45] (index) OK KBLASINI
+[10/Aug/2018:15:35:14] (index) OK CCBAY1
+[10/Aug/2018:15:37:37] (index) OK KBLASINI
+[10/Aug/2018:15:39:51] (index) OK CCBAY1
+[10/Aug/2018:15:40:37] (index) OK KBLASINI
+[10/Aug/2018:16:57:15] (index) OK JOLALDE
+[11/Aug/2018:08:02:50] (index) OK VMORA
+[11/Aug/2018:10:02:59] (index) OK VMORA
+[11/Aug/2018:10:16:00] (index) OK LA
+[11/Aug/2018:11:25:03] (index) OK LA
+[11/Aug/2018:13:17:33] (index) OK JOLALDE
+[11/Aug/2018:13:19:14] (index) OK VMORA
+[11/Aug/2018:16:16:14] (index) OK VMORA
+[13/Aug/2018:07:16:53] (index) OK KBLASINI
+[13/Aug/2018:07:17:19] (index) OK KBLASINI
+[13/Aug/2018:07:17:39] (index) OK CCBAY1
+[13/Aug/2018:07:18:10] (index) OK KBLASINI
+[13/Aug/2018:07:19:15] (index) OK KBLASINI
+[13/Aug/2018:07:19:22] (index) OK CCBAY1
+[13/Aug/2018:07:24:06] (index) OK KBLASINI
+[13/Aug/2018:07:25:43] (index) OK CCBAY1
+[13/Aug/2018:08:07:15] (index) OK CCBAY2
+[13/Aug/2018:08:13:49] (index) OK IMATOS
+[13/Aug/2018:08:35:25] (index) OK BORTIZ
+[13/Aug/2018:09:55:47] (index) OK IMATOS
+[13/Aug/2018:09:56:24] (index) OK IMATOS
+[13/Aug/2018:09:57:34] (index) OK IMATOS
+[13/Aug/2018:12:54:44] (index) OK JOLALDE
+[13/Aug/2018:12:58:46] (index) OK LA
+[14/Aug/2018:07:16:10] (index) OK CCBAY1
+[14/Aug/2018:07:56:27] (index) OK CCBAY2
+[14/Aug/2018:08:13:22] (index) OK CCBAY1
+[14/Aug/2018:08:21:24] (index) OK CCBAY2
+[14/Aug/2018:08:47:51] (index) Failed CCBAY1
+[14/Aug/2018:08:47:56] (index) OK CCBAY1
+[14/Aug/2018:08:51:09] (index) OK LA
+[14/Aug/2018:08:58:02] (index) OK CCBAY2
+[14/Aug/2018:09:55:16] (index) OK CCBAY2
+[14/Aug/2018:10:35:21] (index) OK CCBAY1
+[14/Aug/2018:10:46:39] (index) Failed CCBAY2
+[14/Aug/2018:10:46:44] (index) OK CCBAY2
+[14/Aug/2018:11:26:10] (index) OK CCBAY2
+[14/Aug/2018:15:08:17] (index) OK CCBAY1
+[14/Aug/2018:15:11:16] (index) OK CCBAY1
+[14/Aug/2018:15:24:19] (index) OK JOLALDE
+[15/Aug/2018:07:14:54] (index) OK KBLASINI
+[15/Aug/2018:07:15:00] (index) OK CCBAY1
+[15/Aug/2018:07:15:05] (index) OK CCBAY2
+[15/Aug/2018:07:19:10] (index) OK KBLASINI
+[15/Aug/2018:07:21:05] (index) OK CCBAY1
+[15/Aug/2018:07:23:15] (index) OK KBLASINI
+[15/Aug/2018:08:07:47] (index) OK CCBAY1
+[15/Aug/2018:08:17:50] (index) OK KBLASINI
+[15/Aug/2018:08:34:14] (index) Failed JOLALDE
+[15/Aug/2018:08:34:21] (index) OK JOLALDE
+[15/Aug/2018:10:07:07] (index) OK CCBAY1
+[15/Aug/2018:10:10:24] (index) OK RRIVERA
+[15/Aug/2018:10:38:00] (index) OK KBLASINI
+[15/Aug/2018:11:24:55] (index) OK CCBAY2
+[15/Aug/2018:11:41:06] (index) OK KBLASINI
+[15/Aug/2018:13:09:14] (index) OK HANCE
+[15/Aug/2018:13:09:14] (index)  ok HANCE
+[15/Aug/2018:16:16:03] (index) OK CCBAY1
+[15/Aug/2018:16:32:58] (index) OK KBLASINI
+[16/Aug/2018:07:25:09] (index) OK KBLASINI
+[16/Aug/2018:07:26:43] (index) OK CCBAY2
+[16/Aug/2018:07:28:38] (index) OK CCBAY1
+[16/Aug/2018:07:40:06] (index) OK KBLASINI
+[16/Aug/2018:07:53:32] (index) OK CCBAY1
+[16/Aug/2018:08:25:31] (index) OK KBLASINI
+[16/Aug/2018:08:29:09] (index) OK CCBAY1
+[16/Aug/2018:08:34:08] (index) OK KBLASINI
+[16/Aug/2018:13:13:28] (index) OK JOLALDE
+[17/Aug/2018:13:47:26] (index) OK LA
+[18/Aug/2018:08:37:48] (index) OK VMORA
+[18/Aug/2018:10:42:38] (index) OK JOLALDE
+[18/Aug/2018:11:02:52] (index) OK LA
+[18/Aug/2018:11:35:42] (index) OK VMORA
+[18/Aug/2018:13:28:22] (index) Failed 
+[18/Aug/2018:13:28:22] (index) Failed 
+[18/Aug/2018:13:31:29] (index) OK VMORA
+[20/Aug/2018:16:16:48] (index) OK LA
+[21/Aug/2018:07:30:36] (index) OK LA
+[21/Aug/2018:08:51:53] (index) OK LA
+[21/Aug/2018:09:27:12] (index) OK LA
+[21/Aug/2018:11:25:32] (index) OK LA
+[21/Aug/2018:11:26:17] (index) Failed MSEGURA
+[21/Aug/2018:11:26:31] (index) Failed MSEGURA
+[21/Aug/2018:11:28:20] (index) OK MSEGURA
+[21/Aug/2018:11:28:20] (index)  ok MSEGURA
+[21/Aug/2018:13:29:34] (index) OK DCAMPOS
+[21/Aug/2018:14:17:02] (index) OK CHUERTAS
+[21/Aug/2018:17:39:54] (index) OK JOLALDE
+[21/Aug/2018:18:22:06] (index) Failed JOLALDE
+[21/Aug/2018:18:22:14] (index) OK JOLALDE
+[21/Aug/2018:18:36:28] (index) OK HANCE
+[21/Aug/2018:18:36:28] (index)  ok HANCE
+[22/Aug/2018:11:06:24] (index) OK LA
+[22/Aug/2018:15:08:47] (index) OK LA
+[22/Aug/2018:19:44:22] (index) OK LA
+[22/Aug/2018:19:55:41] (index) OK LA
+[22/Aug/2018:21:08:34] (index) OK LA
+[22/Aug/2018:21:13:07] (index) OK LA
+[22/Aug/2018:21:17:02] (index) OK LA
+[23/Aug/2018:09:18:56] (index) OK KSANTIAGO
+[23/Aug/2018:09:34:28] (index) OK CCBAY2
+[23/Aug/2018:09:51:25] (index) OK KSANTIAGO
+[23/Aug/2018:10:01:15] (index) OK CCBAY2
+[23/Aug/2018:10:02:23] (index) OK KSANTIAGO
+[23/Aug/2018:10:49:37] (index) OK CCBAY2
+[23/Aug/2018:11:03:07] (index) OK KSANTIAGO
+[23/Aug/2018:11:44:59] (index) OK CCBAY2
+[23/Aug/2018:11:54:31] (index) OK KSANTIAGO
+[23/Aug/2018:12:31:57] (index) OK LA
+[23/Aug/2018:13:15:20] (index) OK LA
+[23/Aug/2018:13:42:59] (index) OK LA
+[23/Aug/2018:14:16:45] (index) OK JOLALDE
+[23/Aug/2018:14:37:33] (index) OK LA
+[23/Aug/2018:14:45:10] (index) OK KSANTIAGO
+[23/Aug/2018:17:14:37] (index) OK LA
+[24/Aug/2018:23:01:01] (index) OK LA
+[24/Aug/2018:23:03:17] (index) OK LA
+[25/Aug/2018:08:06:00] (index) OK CHUERTAS
+[25/Aug/2018:13:24:15] (index) OK LA
+[25/Aug/2018:14:28:13] (index) OK LA
+[25/Aug/2018:16:37:45] (index) OK LA
+[27/Aug/2018:07:11:09] (index) OK RRIVERA
+[27/Aug/2018:08:05:15] (index) OK CHUERTAS
+[27/Aug/2018:10:10:30] (index) OK LA
+[27/Aug/2018:10:30:09] (index) OK CHUERTAS
+[27/Aug/2018:12:20:24] (index) OK CHUERTAS
+[27/Aug/2018:13:45:41] (index) OK LA
+[27/Aug/2018:13:53:44] (index) OK LA
+[27/Aug/2018:13:55:20] (index) OK RANGELYS
+[27/Aug/2018:16:46:35] (index) Failed JOLALDE
+[27/Aug/2018:16:46:57] (index) OK JOLALDE
+[27/Aug/2018:17:00:10] (index) OK LA
+[28/Aug/2018:08:06:49] (index) OK CHUERTAS
+[28/Aug/2018:08:47:54] (index) OK SBURGOS
+[28/Aug/2018:09:37:22] (index) OK SDAVILA
+[28/Aug/2018:09:38:12] (index) OK CCBAY2
+[28/Aug/2018:09:39:19] (index) OK SDAVILA
+[28/Aug/2018:09:49:54] (index) OK ADMINCITAS
+[28/Aug/2018:10:39:14] (index) OK CHUERTAS
+[28/Aug/2018:12:09:29] (index) OK LA
+[28/Aug/2018:13:37:29] (index) OK JOLALDE
+[28/Aug/2018:14:05:22] (index) OK LA
+[28/Aug/2018:14:26:39] (index) OK LA
+[28/Aug/2018:16:18:27] (index) OK CHUERTAS
+[29/Aug/2018:08:04:48] (index) OK CHUERTAS
+[29/Aug/2018:08:44:03] (index) OK EORTIZ
+[29/Aug/2018:09:23:12] (index) OK CCBAY2
+[29/Aug/2018:11:01:42] (index) OK LA
+[29/Aug/2018:11:02:50] (index) OK LA
+[29/Aug/2018:12:56:10] (index) OK LA
+[29/Aug/2018:12:57:13] (index) OK LA
+[29/Aug/2018:12:58:33] (index) OK LA
+[29/Aug/2018:14:04:24] (index) OK KSANTIAGO
+[29/Aug/2018:14:09:40] (index) OK JOLALDE
+[29/Aug/2018:14:22:32] (index) OK SBURGOS
+[29/Aug/2018:14:52:55] (index) OK CCBAY2
+[29/Aug/2018:14:53:44] (index) OK KSANTIAGO
+[29/Aug/2018:16:01:50] (index) OK CCBAY2
+[29/Aug/2018:16:09:47] (index) OK KSANTIAGO
+[30/Aug/2018:08:06:06] (index) OK CHUERTAS
+[30/Aug/2018:08:20:10] (index) OK KSANTIAGO
+[30/Aug/2018:08:55:50] (index) OK CCBAY2
+[30/Aug/2018:09:36:28] (index) OK KSANTIAGO
+[30/Aug/2018:09:53:48] (index) OK CCBAY2
+[30/Aug/2018:09:54:28] (index) OK KSANTIAGO
+[30/Aug/2018:09:55:25] (index) OK CCBAY2
+[30/Aug/2018:09:56:16] (index) OK KSANTIAGO
+[30/Aug/2018:09:57:12] (index) OK CCBAY2
+[30/Aug/2018:09:58:27] (index) OK KSANTIAGO
+[30/Aug/2018:10:03:03] (index) OK CCBAY2
+[30/Aug/2018:10:03:40] (index) OK KSANTIAGO
+[30/Aug/2018:13:31:24] (index) OK KSANTIAGO
+[30/Aug/2018:14:06:54] (index) OK CHUERTAS
+[30/Aug/2018:14:37:02] (index) OK CCBAY2
+[30/Aug/2018:14:37:36] (index) OK KSANTIAGO
+[30/Aug/2018:17:25:25] (index) OK JOLALDE
+[31/Aug/2018:08:45:55] (index) OK CCBAY2
+[01/Sep/2018:08:14:05] (index) OK CHUERTAS
+[01/Sep/2018:10:19:48] (index) OK LA
+[01/Sep/2018:11:21:09] (index) OK LA
+[01/Sep/2018:13:01:06] (index) OK JOLALDE
+[03/Sep/2018:08:08:31] (index) OK CHUERTAS
+[03/Sep/2018:17:31:01] (index) Failed JOLALDE
+[03/Sep/2018:17:31:12] (index) Failed JOLALDE
+[03/Sep/2018:17:31:29] (index) OK JOLALDE
+[04/Sep/2018:08:07:24] (index) Failed CHUERTAS
+[04/Sep/2018:08:08:35] (index) OK CHUERTAS
+[04/Sep/2018:08:10:06] (index) Failed CHUERTAS
+[04/Sep/2018:08:10:18] (index) OK CHUERTAS
+[05/Sep/2018:08:02:44] (index) OK CHUERTAS
+[05/Sep/2018:17:35:14] (index) OK JOLALDE
+[05/Sep/2018:17:35:16] (index) OK JOLALDE
+[05/Sep/2018:17:35:17] (index) OK JOLALDE
+[05/Sep/2018:17:49:30] (index) OK LA
+[06/Sep/2018:06:58:17] (index) OK CCBAY2
+[06/Sep/2018:08:06:26] (index) OK CHUERTAS
+[06/Sep/2018:08:08:56] (index) OK KSANTIAGO
+[06/Sep/2018:10:08:06] (index) OK CHUERTAS
+[06/Sep/2018:10:26:22] (index) OK CCBAY2
+[06/Sep/2018:10:34:09] (index) OK KSANTIAGO
+[06/Sep/2018:10:45:12] (index) OK CHUERTAS
+[06/Sep/2018:11:43:34] (index) OK KSANTIAGO
+[06/Sep/2018:12:30:04] (index) OK JOLALDE
+[06/Sep/2018:13:34:02] (index) OK JOLALDE
+[07/Sep/2018:09:04:08] (index) OK CCBAY2
+[07/Sep/2018:09:04:08] (index) OK CCBAY2
+[08/Sep/2018:08:15:39] (index) OK CHUERTAS
+[08/Sep/2018:18:15:06] (index) OK JOLALDE
+[10/Sep/2018:08:07:44] (index) OK CHUERTAS
+[10/Sep/2018:13:39:07] (index) OK JOLALDE
+[11/Sep/2018:08:13:50] (index) OK CHUERTAS
+[11/Sep/2018:15:09:58] (index) OK LA
+[12/Sep/2018:07:10:42] (index) OK CCBAY2
+[12/Sep/2018:08:11:46] (index) OK CHUERTAS
+[12/Sep/2018:21:06:35] (index) OK JOLALDE
+[13/Sep/2018:07:21:35] (index) OK CCBAY2
+[13/Sep/2018:08:09:07] (index) OK CHUERTAS
+[13/Sep/2018:08:15:38] (index) OK CHUERTAS
+[13/Sep/2018:11:18:30] (index) Failed CCBAY2
+[13/Sep/2018:11:18:37] (index) OK CCBAY2
+[13/Sep/2018:11:42:29] (index) OK LA
+[13/Sep/2018:14:37:54] (index) OK CCBAY2
+[13/Sep/2018:23:02:28] (index) OK JOLALDE
+[14/Sep/2018:07:08:16] (index) Failed CCBAY2
+[14/Sep/2018:07:08:24] (index) OK CCBAY2
+[14/Sep/2018:09:08:40] (index) OK CCBAY2
+[14/Sep/2018:09:12:19] (index) OK CCBAY2
+[14/Sep/2018:10:32:33] (index) Failed LA
+[14/Sep/2018:10:32:41] (index) OK LA
+[14/Sep/2018:15:12:46] (index) Failed CCBY2
+[14/Sep/2018:15:13:08] (index) OK CCBAY2
+[15/Sep/2018:08:12:58] (index) OK CHUERTAS
+[15/Sep/2018:18:58:39] (index) OK LA
+[17/Sep/2018:08:04:58] (index) OK CHUERTAS
+[17/Sep/2018:10:12:00] (index) OK LA
+[17/Sep/2018:10:12:25] (index) OK LA
+[17/Sep/2018:18:29:26] (index) OK JOLALDE
+[18/Sep/2018:08:14:01] (index) OK CHUERTAS
+[18/Sep/2018:12:50:04] (index) OK CHUERTAS
+[19/Sep/2018:07:10:39] (index) OK RRIVERA
+[19/Sep/2018:08:11:20] (index) OK CHUERTAS
+[20/Sep/2018:08:11:40] (index) OK CHUERTAS
+[20/Sep/2018:08:16:43] (index) OK KSANTIAGO
+[20/Sep/2018:12:20:43] (index) OK KSANTIAGO
+[20/Sep/2018:13:47:07] (index) OK KSANTIAGO
+[21/Sep/2018:13:57:15] (index) OK DCAMPOS
+[21/Sep/2018:15:00:42] (index) OK KDOLIVEIRA
+[22/Sep/2018:08:11:07] (index) OK CHUERTAS
+[22/Sep/2018:11:43:37] (index) OK JOLALDE
+[24/Sep/2018:08:08:40] (index) OK CHUERTAS
+[24/Sep/2018:08:29:02] (index) OK LA
+[25/Sep/2018:07:30:10] (index) OK SBURGOS
+[25/Sep/2018:07:31:20] (index) OK SDAVILA
+[25/Sep/2018:07:31:38] (index) OK CCBAY2
+[25/Sep/2018:07:32:26] (index) OK IMATOS
+[25/Sep/2018:07:34:30] (index) Failed CDIAZ 
+[25/Sep/2018:07:34:37] (index) OK CDIAZ
+[25/Sep/2018:07:35:46] (index) OK KSANTIAGO
+[25/Sep/2018:07:36:48] (index) Failed RRIVERA
+[25/Sep/2018:07:36:53] (index) OK RRIVERA
+[25/Sep/2018:07:37:40] (index) OK ADMINCITAS
+[25/Sep/2018:08:11:43] (index) OK CHUERTAS
+[25/Sep/2018:10:48:58] (index) OK LA
+[25/Sep/2018:12:44:16] (index) OK CHUERTAS
+[25/Sep/2018:12:58:38] (index) OK JOLALDE
+[25/Sep/2018:17:07:05] (index) OK JOLALDE
+[26/Sep/2018:08:09:13] (index) OK CHUERTAS
+[27/Sep/2018:08:08:26] (index) OK CHUERTAS
+[27/Sep/2018:19:04:21] (index) Failed JOLALDEOLALDE29
+[27/Sep/2018:19:04:30] (index) OK JOLALDE
+[27/Sep/2018:19:47:23] (index) OK CHUERTAS
+[28/Sep/2018:05:16:47] (index) OK JOLALDE
+[28/Sep/2018:09:55:11] (index) OK RRIVERA
+[28/Sep/2018:10:51:42] (index) OK ATENCION
+[28/Sep/2018:10:54:30] (index) OK RRIVERA
+[28/Sep/2018:13:15:53] (index) OK ATENCION
+[28/Sep/2018:13:20:28] (index) OK DCAMPOS
+[29/Sep/2018:08:14:18] (index) OK CHUERTAS
+[30/Sep/2018:09:13:56] (index) OK JOLALDE
+[01/Oct/2018:08:07:55] (index) OK CHUERTAS
+[01/Oct/2018:11:32:50] (index) OK CHUERTAS
+[02/Oct/2018:08:15:03] (index) OK CHUERTAS
+[02/Oct/2018:08:17:27] (index) OK BORTIZ
+[02/Oct/2018:11:34:40] (index) OK CHUERTAS
+[03/Oct/2018:08:12:55] (index) OK CHUERTAS
+[04/Oct/2018:08:11:43] (index) OK CHUERTAS
+[04/Oct/2018:10:57:48] (index) OK CHUERTAS
+[04/Oct/2018:13:52:31] (index) OK JOLALDE
+[05/Oct/2018:07:16:40] (index) OK ATENCION
+[05/Oct/2018:14:15:13] (index) OK ADMINCITAS
+[06/Oct/2018:06:53:18] (index) OK ATENCION
+[06/Oct/2018:07:48:26] (index) OK RRIVERA
+[06/Oct/2018:07:56:55] (index) OK ATENCION
+[06/Oct/2018:08:13:07] (index) OK CHUERTAS
+[06/Oct/2018:09:06:51] (index) OK JOLALDE
+[08/Oct/2018:11:38:54] (index) OK LA
+[08/Oct/2018:13:15:04] (index) OK JOLALDE
+[11/Oct/2018:07:05:15] (index) OK ATENCION
+[11/Oct/2018:08:34:28] (index) OK RRIVERA
+[11/Oct/2018:10:04:10] (index) OK CHUERTAS
+[11/Oct/2018:14:58:13] (index) OK JOLALDE
+[12/Oct/2018:08:30:22] (index) OK ATENCION
+[12/Oct/2018:14:58:28] (index) OK ATENCION
+[12/Oct/2018:15:03:55] (index) OK RRIVERA
+[13/Oct/2018:08:08:25] (index) OK CHUERTAS
+[13/Oct/2018:13:24:06] (index) OK JOLALDE
+[14/Oct/2018:13:41:46] (index) OK LA
+[15/Oct/2018:13:59:15] (index) OK EORTIZ
+[15/Oct/2018:14:32:31] (index) OK CHUERTAS
+[15/Oct/2018:14:41:39] (index) OK LA
+[18/Oct/2018:13:27:00] (index) OK KSANTIAGO
+[18/Oct/2018:13:41:46] (index) OK KSANTIAGO
+[18/Oct/2018:13:59:06] (index) OK KSANTIAGO
+[19/Oct/2018:09:24:32] (index) OK LA
+[19/Oct/2018:10:11:00] (index) OK LA
+[19/Oct/2018:10:36:33] (index) OK CCBAY2
+[19/Oct/2018:15:29:06] (index) OK KSANTIAGO
+[19/Oct/2018:20:51:28] (index) OK LA
+[22/Oct/2018:08:13:38] (index) OK CHUERTAS
+[22/Oct/2018:13:26:33] (index) OK JOLALDE
+[23/Oct/2018:13:19:39] (index) OK LA
+[24/Oct/2018:08:13:39] (index) OK CHUERTAS
+[25/Oct/2018:14:11:51] (index) OK CHUERTAS
+[25/Oct/2018:14:22:17] (index) OK RRIVERA
+[26/Oct/2018:13:49:34] (index) OK RRIVERA
+[27/Oct/2018:07:31:30] (index) OK ATENCION
+[27/Oct/2018:08:07:43] (index) OK CHUERTAS
+[27/Oct/2018:12:51:07] (index) OK ATENCION 
+[29/Oct/2018:07:06:06] (index) OK RRIVERA
+[29/Oct/2018:07:52:27] (index) Failed RRIVERA
+[29/Oct/2018:07:52:38] (index) OK RRIVERA
+[29/Oct/2018:09:29:32] (index) OK RRIVERA
+[29/Oct/2018:12:58:00] (index) OK CHUERTAS
+[29/Oct/2018:13:16:34] (index) Failed ATENCION
+[29/Oct/2018:13:16:50] (index) Failed CCBAY1
+[29/Oct/2018:13:17:27] (index) Failed CCBAY1
+[31/Oct/2018:10:00:12] (index) Failed RRIVERA
+[31/Oct/2018:10:00:22] (index) OK RRIVERA
+[01/Nov/2018:08:19:52] (index) OK RRIVERA
+[01/Nov/2018:08:42:25] (index) Failed RRIVERA
+[01/Nov/2018:08:42:40] (index) Failed RRIVERA
+[01/Nov/2018:08:42:53] (index) OK RRIVERA
+[01/Nov/2018:11:51:00] (index) OK LA
+[01/Nov/2018:13:56:33] (index) OK RRIVERA
+[02/Nov/2018:06:21:24] (index) OK ADMINCITAS
+[02/Nov/2018:14:57:10] (index) OK RRIVERA
+[02/Nov/2018:15:18:46] (index) Failed CHUERTAS
+[02/Nov/2018:15:18:55] (index) OK CHUERTAS
+[02/Nov/2018:15:19:18] (index) OK RRIVERA
+[05/Nov/2018:08:05:39] (index) OK CHUERTAS
+[05/Nov/2018:09:32:35] (index) OK LA
+[05/Nov/2018:09:38:56] (index) OK LA
+[05/Nov/2018:16:41:42] (index) OK LA
+[05/Nov/2018:16:45:10] (index) OK LA
+[05/Nov/2018:17:24:00] (index) Failed CCBAY1
+[05/Nov/2018:17:24:32] (index) OK CCBAY2
+[05/Nov/2018:18:29:59] (index) Failed JOLALDE
+[05/Nov/2018:18:32:06] (index) OK JOLALDE
+[06/Nov/2018:08:25:51] (index) OK CHUERTAS
+[06/Nov/2018:08:31:08] (index) OK CHUERTAS
+[06/Nov/2018:08:37:41] (index) OK CHUERTAS
+[06/Nov/2018:09:10:23] (index) OK CHUERTAS
+[06/Nov/2018:09:16:37] (index) OK CHUERTAS
+[06/Nov/2018:09:59:50] (index) OK BORTIZ
+[06/Nov/2018:10:07:40] (index) OK LA
+[06/Nov/2018:17:10:41] (index) OK JOLALDE
+[06/Nov/2018:18:25:04] (index) OK LA
+[07/Nov/2018:08:05:45] (index) OK CHUERTAS
+[07/Nov/2018:09:32:51] (index) OK CHUERTAS
+[07/Nov/2018:16:38:21] (index) OK CHUERTAS
+[08/Nov/2018:08:12:29] (index) OK CHUERTAS
+[08/Nov/2018:17:57:18] (index) OK JOLALDE
+[10/Nov/2018:09:00:51] (index) OK CHUERTAS
+[10/Nov/2018:09:02:58] (index) OK JOLALDE
+[10/Nov/2018:09:47:58] (index) OK CHUERTAS
+[10/Nov/2018:14:06:20] (index) OK CHUERTAS
+[10/Nov/2018:14:14:40] (index) OK JOLALDE
+[13/Nov/2018:09:25:37] (index) OK DCAMPOS
+[14/Nov/2018:06:18:43] (index) OK BORTIZ
+[14/Nov/2018:08:23:03] (index) OK BORTIZ
+[15/Nov/2018:07:19:20] (index) OK RRIVERA
+[15/Nov/2018:08:12:33] (index) OK CHUERTAS
+[15/Nov/2018:08:45:35] (index) OK CHUERTAS
+[15/Nov/2018:15:37:06] (index) OK JOLALDE
+[15/Nov/2018:16:29:41] (index) Failed KDO2018
+[15/Nov/2018:16:30:22] (index) Failed KDO2018
+[15/Nov/2018:16:46:15] (index) Failed KDEOLIVEIRA
+[15/Nov/2018:16:46:43] (index) Failed KDOLIVEIRA
+[15/Nov/2018:16:47:04] (index) Failed KDEOLIVEIRA
+[15/Nov/2018:16:47:54] (index) Failed KOLIVEIRA
+[15/Nov/2018:16:48:12] (index) Failed KDEOLIVEIRA
+[15/Nov/2018:16:48:21] (index) OK DCAMPOS
+[15/Nov/2018:18:38:01] (index) OK JOLALDE
+[16/Nov/2018:12:08:31] (index) OK RRIVERA
+[17/Nov/2018:07:21:55] (index) OK RRIVERA
+[17/Nov/2018:08:29:30] (index) OK CHUERTAS
+[19/Nov/2018:07:02:37] (index) OK RRIVERA
+[19/Nov/2018:10:46:57] (index) OK CHUERTAS
+[20/Nov/2018:18:13:32] (index) OK HANCE
+[20/Nov/2018:18:13:32] (index)  ok HANCE
+[20/Nov/2018:18:15:53] (index) OK HANCE
+[20/Nov/2018:18:15:53] (index)  ok HANCE
+[21/Nov/2018:07:13:14] (index) OK RRIVERA
+[21/Nov/2018:08:17:16] (index) OK CHUERTAS
+[21/Nov/2018:08:36:40] (index) OK RRIVERA
+[21/Nov/2018:11:03:08] (index) OK JOLALDE
+[22/Nov/2018:08:32:52] (index) Failed JOLALDEOLALDE29
+[22/Nov/2018:08:33:01] (index) OK JOLALDE
+[23/Nov/2018:07:05:12] (index) OK RRIVERA
+[23/Nov/2018:08:01:58] (index) OK RRIVERA
+[23/Nov/2018:11:18:44] (index) OK JOLALDE
+[24/Nov/2018:06:54:07] (index) OK RRIVERA
+[26/Nov/2018:07:52:14] (index) OK RRIVERA
+[28/Nov/2018:07:13:04] (index) OK RRIVERA
+[28/Nov/2018:16:21:02] (index) OK JOLALDE
+[29/Nov/2018:08:11:48] (index) OK RRIVERA
+[29/Nov/2018:12:21:33] (index) OK JOLALDE
+[30/Nov/2018:07:33:38] (index) OK RRIVERA
+[30/Nov/2018:08:11:18] (index) OK CHUERTAS
+[30/Nov/2018:16:11:01] (index) OK JOLALDE
+[01/Dec/2018:11:33:43] (index) OK JOLALDE
+[04/Dec/2018:10:57:03] (index) OK ADMINCITAS
+[04/Dec/2018:15:17:01] (index) OK CHUERTAS
+[04/Dec/2018:16:19:48] (index) OK JOLALDE
+[05/Dec/2018:07:36:03] (index) OK RRIVERA
+[05/Dec/2018:14:10:34] (index) OK JOLALDE
+[05/Dec/2018:15:38:03] (index) OK JOLALDE
+[06/Dec/2018:08:56:49] (index) OK CCBAY2
+[07/Dec/2018:06:04:05] (index) OK ADMINCITAS
+[07/Dec/2018:06:21:45] (index) OK ADMINCITAS
+[08/Dec/2018:07:08:19] (index) OK RRIVERA
+[08/Dec/2018:10:47:18] (index) OK CHUERTAS
+[08/Dec/2018:13:03:58] (index) OK JOLALDE
+[10/Dec/2018:07:33:26] (index) OK RRIVERA
+[10/Dec/2018:12:06:18] (index) OK JOLALDE
+[10/Dec/2018:12:46:51] (index) OK CCBAY2
+[10/Dec/2018:13:52:12] (index) OK LA
+[11/Dec/2018:08:07:47] (index) OK CHUERTAS
+[11/Dec/2018:08:37:11] (index) OK BORTIZ
+[11/Dec/2018:14:11:18] (index) OK JOLALDE
+[11/Dec/2018:14:39:45] (index) OK BORTIZ
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:51] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:52] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:53] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:54] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:55] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:56] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:57] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:58] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:10:59] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:00] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:01] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:02] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:03] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:04] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:05] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:06] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:07] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:08] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:09] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:10] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:11] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:12] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:13] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:14] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:15] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:16] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:17] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:18] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:19] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:20] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:21] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:22] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:23] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:24] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:25] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:26] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:27] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:11:28] (index) Failed 
+[12/Dec/2018:07:27:55] (index) Failed RRIVERA
+[12/Dec/2018:07:28:24] (index) OK RRIVERA
+[12/Dec/2018:08:11:06] (index) OK CHUERTAS
+[12/Dec/2018:09:01:56] (index) OK LA
+[12/Dec/2018:14:29:58] (index) OK JOLALDE
+[13/Dec/2018:15:06:42] (index) OK JOLALDE
+[15/Dec/2018:07:08:32] (index) OK RRIVERA
+[15/Dec/2018:07:18:51] (index) Failed CCBAY
+[15/Dec/2018:07:19:00] (index) OK CCBAY2
+[15/Dec/2018:07:19:45] (index) Failed DSANTOS
+[15/Dec/2018:07:19:57] (index) OK DSANTOS
+[15/Dec/2018:07:20:28] (index) Failed IMATOS
+[15/Dec/2018:07:20:50] (index) OK KSANTIAGO
+[15/Dec/2018:07:21:30] (index) Failed KMELENDEZ
+[15/Dec/2018:07:21:43] (index) Failed KMELENDEZ
+[15/Dec/2018:07:22:01] (index) Failed KMELENDEZ
+[15/Dec/2018:07:22:14] (index) OK CHUERTAS
+[15/Dec/2018:07:22:58] (index) Failed KMELENDEZ
+[15/Dec/2018:08:15:58] (index) OK CHUERTAS
+[15/Dec/2018:15:32:59] (index) OK JOLALDE
+[17/Dec/2018:07:09:41] (index) OK RRIVERA
+[17/Dec/2018:08:45:23] (index) OK CCBAY2
+[17/Dec/2018:10:40:02] (index) OK HANCE
+[17/Dec/2018:10:40:02] (index)  ok HANCE
+[17/Dec/2018:12:26:05] (index) OK RRIVERA
+[17/Dec/2018:14:29:25] (index) OK CDIAZ
+[19/Dec/2018:07:38:51] (index) OK RRIVERA
+[19/Dec/2018:09:42:12] (index) OK RRIVERA
+[19/Dec/2018:12:20:07] (index) OK RRIVERA
+[19/Dec/2018:16:21:02] (index) OK CHUERTAS
+[21/Dec/2018:07:52:13] (index) OK RRIVERA
+[22/Dec/2018:07:19:05] (index) OK RRIVERA
+[22/Dec/2018:08:44:15] (index) OK CHUERTAS
+[22/Dec/2018:08:50:53] (index) Failed KBLASINI
+[22/Dec/2018:08:51:05] (index) OK KBLASINI
+[22/Dec/2018:08:54:54] (index) OK RRIVERA
+[22/Dec/2018:09:11:14] (index) OK KBLASINI
+[22/Dec/2018:09:34:36] (index) Failed KMELENDEZ
+[22/Dec/2018:09:34:47] (index) Failed KMELENDEZ
+[22/Dec/2018:09:35:03] (index) Failed KMELENDEZ
+[22/Dec/2018:09:35:17] (index) Failed KMELENDEZ
+[22/Dec/2018:09:35:30] (index) Failed KMELENDEZ
+[22/Dec/2018:09:35:44] (index) OK DSANTOS
+[22/Dec/2018:09:36:31] (index) Failed CHUERTAS
+[22/Dec/2018:09:36:42] (index) OK CHUERTAS
+[22/Dec/2018:13:41:46] (index) OK KBLASINI
+[22/Dec/2018:13:42:36] (index) Failed KMELENDEZ
+[22/Dec/2018:13:44:06] (index) Failed CCBAY2
+[22/Dec/2018:13:44:13] (index) OK CCBAY2
+[22/Dec/2018:13:44:49] (index) OK KSANTIAGO
+[22/Dec/2018:13:45:30] (index) Failed IMATOS
+[22/Dec/2018:13:45:44] (index) Failed IMATOS
+[22/Dec/2018:13:46:18] (index) Failed CHUERTAS
+[22/Dec/2018:13:46:32] (index) OK CHUERTAS
+[25/Dec/2018:17:11:47] (index) OK JOLALDE
+[26/Dec/2018:07:09:33] (index) OK RRIVERA
+[26/Dec/2018:08:11:48] (index) OK CHUERTAS
+[26/Dec/2018:14:22:34] (index) OK JOLALDE
+[27/Dec/2018:07:32:49] (index) OK RRIVERA
+[27/Dec/2018:08:48:26] (index) OK CHUERTAS
+[27/Dec/2018:16:11:08] (index) Failed CHUERTAS
+[27/Dec/2018:16:11:34] (index) OK CHUERTAS
+[28/Dec/2018:07:09:49] (index) OK RRIVERA
+[28/Dec/2018:08:14:34] (index) OK CHUERTAS
+[30/Dec/2018:16:51:37] (index) Failed JOLALDE
+[30/Dec/2018:16:51:45] (index) OK JOLALDE
+[02/Jan/2019:07:09:42] (index) OK RRIVERA
+[02/Jan/2019:08:13:50] (index) OK CHUERTAS
+[02/Jan/2019:09:02:40] (index) OK CCBAY2
+[02/Jan/2019:09:07:55] (index) OK CHUERTAS
+[03/Jan/2019:08:15:08] (index) Failed RRIVERA
+[03/Jan/2019:08:15:16] (index) OK RRIVERA
+[03/Jan/2019:14:18:43] (index) OK CHUERTAS
+[04/Jan/2019:07:03:45] (index) Failed RRIVERA
+[04/Jan/2019:07:03:51] (index) OK RRIVERA
+[04/Jan/2019:07:18:08] (index) OK DSANTOS
+[04/Jan/2019:07:18:45] (index) OK KSANTIAGO
+[04/Jan/2019:07:19:21] (index) Failed CHUERTAS
+[04/Jan/2019:07:19:31] (index) OK CHUERTAS
+[04/Jan/2019:08:09:36] (index) OK CCBAY2
+[05/Jan/2019:07:09:14] (index) OK RRIVERA
+[05/Jan/2019:08:17:11] (index) OK CHUERTAS
+[05/Jan/2019:08:30:40] (index) OK CCBAY2
+[05/Jan/2019:10:51:21] (index) OK CCBAY2
+[05/Jan/2019:10:54:41] (index) OK CHUERTAS
+[05/Jan/2019:12:28:07] (index) OK JOLALDE
+[07/Jan/2019:07:03:30] (index) OK RRIVERA
+[07/Jan/2019:07:17:08] (index) OK RRIVERA
+[07/Jan/2019:09:47:27] (index) OK RRIVERA
+[07/Jan/2019:17:02:14] (index) OK JOLALDE
+[08/Jan/2019:08:07:48] (index) OK RRIVERA
+[08/Jan/2019:12:56:21] (index) OK CCBAY2
+[08/Jan/2019:12:58:33] (index) OK RRIVERA
+[08/Jan/2019:13:15:31] (index) OK CCBAY2
+[08/Jan/2019:14:11:49] (index) OK CCBAY1
+[08/Jan/2019:14:29:59] (index) OK RRIVERA
+[09/Jan/2019:06:37:53] (index) OK ADMINCITAS
+[09/Jan/2019:07:50:10] (index) Failed RRIVERA
+[09/Jan/2019:07:50:20] (index) OK RRIVERA
+[09/Jan/2019:08:34:00] (index) OK ADMINCITAS
+[09/Jan/2019:16:07:39] (index) OK JOLALDE
+[10/Jan/2019:07:23:07] (index) OK RRIVERA
+[11/Jan/2019:07:06:54] (index) OK RRIVERA
+[11/Jan/2019:07:52:34] (index) OK CCBAY1
+[12/Jan/2019:07:03:35] (index) OK RRIVERA
+[12/Jan/2019:08:16:14] (index) OK CHUERTAS
+[12/Jan/2019:19:34:48] (index) OK JOLALDE
+[14/Jan/2019:08:48:54] (index) OK CHUERTAS
+[14/Jan/2019:16:33:13] (index) OK FABIOLA
+[14/Jan/2019:18:29:02] (index) OK JOLALDE
+[15/Jan/2019:08:11:07] (index) OK CHUERTAS
+[15/Jan/2019:16:21:53] (index) OK FABIOLA
+[16/Jan/2019:07:09:10] (index) OK RRIVERA
+[16/Jan/2019:07:58:42] (index) OK CCBAY1
+[16/Jan/2019:08:12:37] (index) OK CHUERTAS
+[17/Jan/2019:07:07:51] (index) OK RRIVERA
+[17/Jan/2019:07:49:18] (index) OK CCBAY1
+[17/Jan/2019:14:15:35] (index) OK JOLALDE
+[18/Jan/2019:07:05:29] (index) OK RRIVERA
+[18/Jan/2019:12:37:40] (index) OK RRIVERA
+[18/Jan/2019:14:20:25] (index) Failed CHUERTAS
+[18/Jan/2019:14:20:35] (index) OK CHUERTAS
+[19/Jan/2019:07:04:15] (index) OK RRIVERA
+[19/Jan/2019:07:56:34] (index) OK CCBAY2
+[19/Jan/2019:08:06:34] (index) OK RRIVERA
+[19/Jan/2019:08:17:17] (index) OK CHUERTAS
+[19/Jan/2019:09:16:01] (index) OK HANCEADM
+[19/Jan/2019:09:17:30] (index) OK CHUERTAS
+[19/Jan/2019:12:25:31] (index) OK JOLALDE
+[19/Jan/2019:14:30:51] (index) OK JOLALDE
+[21/Jan/2019:07:04:06] (index) OK RRIVERA
+[21/Jan/2019:08:00:36] (index) OK CCBAY1
+[21/Jan/2019:08:19:08] (index) OK CHUERTAS
+[21/Jan/2019:11:00:46] (index) OK JOLALDE
+[23/Jan/2019:07:06:29] (index) OK RRIVERA
+[23/Jan/2019:10:09:18] (index) OK JOLALDE
+[23/Jan/2019:11:25:49] (index) OK CCBAY1
+[24/Jan/2019:07:13:09] (index) OK RRIVERA
+[24/Jan/2019:07:45:31] (index) OK CCBAY1
+[24/Jan/2019:12:24:38] (index) OK CHUERTAS
+[24/Jan/2019:14:40:44] (index) OK CCBAY1
+[24/Jan/2019:15:49:42] (index) OK CCBAY2
+[24/Jan/2019:15:51:59] (index) OK CHUERTAS
+[25/Jan/2019:06:24:54] (index) OK BORTIZ
+[25/Jan/2019:07:07:55] (index) OK RRIVERA
+[26/Jan/2019:07:07:13] (index) OK RRIVERA
+[26/Jan/2019:08:12:24] (index) OK CHUERTAS
+[28/Jan/2019:07:11:14] (index) Failed RRIVERA
+[28/Jan/2019:07:11:23] (index) OK RRIVERA
+[28/Jan/2019:07:51:34] (index) OK CCBAY1
+[28/Jan/2019:08:18:45] (index) OK CCBAY2
+[28/Jan/2019:12:05:25] (index) OK RRIVERA
+[28/Jan/2019:14:12:00] (index) OK CHUERTAS
+[28/Jan/2019:16:40:01] (index) OK CHUERTAS
+[28/Jan/2019:23:25:53] (index) OK JOLALDE
+[29/Jan/2019:06:30:53] (index) OK ADMINCITAS
+[29/Jan/2019:08:48:10] (index) Failed RRIVERA
+[29/Jan/2019:08:48:17] (index) OK RRIVERA
+[29/Jan/2019:08:53:33] (index) OK ADMINCITAS
+[29/Jan/2019:08:57:26] (index) OK CCBAY1
+[29/Jan/2019:11:27:50] (index) OK JOLALDE
+[29/Jan/2019:13:26:53] (index) OK ADMINCITAS
+[29/Jan/2019:15:46:51] (index) OK CHUERTAS
+[30/Jan/2019:08:23:53] (index) OK CHUERTAS
+[30/Jan/2019:11:58:31] (index) OK JOLALDE
+[31/Jan/2019:07:00:37] (index) OK RRIVERA
+[31/Jan/2019:10:28:17] (index) OK RRIVERA
+[31/Jan/2019:14:52:06] (index) OK JOLALDE
+[01/Feb/2019:07:06:17] (index) OK RRIVERA
+[01/Feb/2019:14:38:44] (index) OK RRIVERA
+[02/Feb/2019:09:57:13] (index) OK CCBAY2
+[02/Feb/2019:10:34:16] (index) OK CHUERTAS
+[04/Feb/2019:07:11:26] (index) OK RRIVERA
+[05/Feb/2019:07:05:17] (index) OK RRIVERA
+[05/Feb/2019:08:26:05] (index) OK CCBAY2
+[05/Feb/2019:10:20:31] (index) OK CCBAY1
+[05/Feb/2019:15:11:25] (index) OK JOLALDE
+[06/Feb/2019:07:11:27] (index) OK RRIVERA
+[06/Feb/2019:07:46:29] (index) OK CCBAY1
+[06/Feb/2019:08:14:15] (index) OK CCBAY2
+[06/Feb/2019:08:33:08] (index) Failed BORTIZ
+[06/Feb/2019:10:31:08] (index) OK CHUERTAS
+[06/Feb/2019:14:41:55] (index) OK CCBAY1
+[06/Feb/2019:16:46:21] (index) OK CCBAY2
+[07/Feb/2019:07:05:33] (index) OK RRIVERA
+[07/Feb/2019:14:21:00] (index) OK JOLALDE
+[08/Feb/2019:07:08:44] (index) OK RRIVERA
+[10/Feb/2019:13:37:27] (index) OK JOLALDE
+[11/Feb/2019:07:08:42] (index) OK RRIVERA
+[11/Feb/2019:09:25:21] (index) OK JOLALDE
+[11/Feb/2019:16:53:45] (index) OK CCBAY2
+[12/Feb/2019:07:11:09] (index) OK RRIVERA
+[12/Feb/2019:08:08:27] (index) OK CHUERTAS
+[12/Feb/2019:10:41:55] (index) OK CCBAY2
+[12/Feb/2019:11:18:15] (index) OK CHUERTAS
+[13/Feb/2019:07:07:17] (index) OK RRIVERA
+[13/Feb/2019:08:34:29] (index) OK CCBAY2
+[13/Feb/2019:10:55:30] (index) OK CHUERTAS
+[14/Feb/2019:07:29:42] (index) OK RRIVERA
+[15/Feb/2019:16:35:43] (index) OK CHUERTAS
+[16/Feb/2019:16:35:25] (index) OK CHUERTAS
+[18/Feb/2019:07:08:08] (index) OK RRIVERA
+[18/Feb/2019:07:32:59] (index) OK CCBAY1
+[19/Feb/2019:07:07:39] (index) OK RRIVERA
+[20/Feb/2019:07:06:19] (index) OK RRIVERA
+[20/Feb/2019:13:34:53] (index) OK JOLALDE
+[20/Feb/2019:21:50:32] (index) OK LA
+[21/Feb/2019:07:05:46] (index) Failed RRIVERA
+[21/Feb/2019:07:06:38] (index) OK RRIVERA
+[21/Feb/2019:16:18:09] (index) OK CHUERTAS
+[22/Feb/2019:07:03:22] (index) OK RRIVERA
+[22/Feb/2019:13:58:01] (index) OK JOLALDE
+[23/Feb/2019:16:19:04] (index) OK CHUERTAS
+[25/Feb/2019:07:04:37] (index) OK RRIVERA
+[27/Feb/2019:07:10:02] (index) Failed RRIVERA
+[27/Feb/2019:07:10:10] (index) OK RRIVERA
+[01/Mar/2019:07:05:32] (index) OK RRIVERA
+[01/Mar/2019:08:05:58] (index) Failed CCBAY1
+[01/Mar/2019:08:06:06] (index) OK CCBAY1
+[02/Mar/2019:08:23:03] (index) OK CHUERTAS
+[02/Mar/2019:17:31:03] (index) Failed HANCE
+[02/Mar/2019:17:31:13] (index) OK HANCE
+[02/Mar/2019:17:31:13] (index)  ok HANCE
+[02/Mar/2019:17:36:04] (index) OK HANCE
+[02/Mar/2019:17:36:04] (index)  ok HANCE
+[04/Mar/2019:08:03:59] (index) Failed CCBAY1
+[04/Mar/2019:08:04:05] (index) OK CCBAY1
+[04/Mar/2019:12:59:05] (index) OK LA
+[04/Mar/2019:13:24:17] (index) OK LA
+[04/Mar/2019:17:33:21] (index) OK JOLALDE
+[05/Mar/2019:07:45:25] (index) OK CCBAY1
+[05/Mar/2019:14:25:39] (index) OK LA
+[05/Mar/2019:14:26:04] (index) OK LA
+[06/Mar/2019:07:32:55] (index) OK RRIVERA
+[06/Mar/2019:07:47:36] (index) OK CCBAY1
+[06/Mar/2019:08:18:47] (index) OK CHUERTAS
+[06/Mar/2019:13:36:51] (index) OK JOLALDE
+[06/Mar/2019:15:09:59] (index) OK CCBAY1
+[07/Mar/2019:07:08:26] (index) OK RRIVERA
+[07/Mar/2019:08:10:52] (index) OK CHUERTAS
+[07/Mar/2019:12:31:52] (index) OK JOLALDE
+[07/Mar/2019:12:34:42] (index) OK LA
+[08/Mar/2019:10:31:55] (index) OK LA
+[09/Mar/2019:07:04:59] (index) OK RRIVERA
+[09/Mar/2019:16:48:49] (index) OK JOLALDE
+[11/Mar/2019:07:07:21] (index) OK RRIVERA
+[12/Mar/2019:07:06:38] (index) OK RRIVERA
+[12/Mar/2019:14:29:31] (index) OK LA
+[12/Mar/2019:14:32:48] (index) OK YFELICIANO
+[12/Mar/2019:14:33:29] (index) OK BORTIZ
+[12/Mar/2019:14:33:45] (index) OK WILMA
+[12/Mar/2019:14:34:23] (index) OK BORTIZ
+[12/Mar/2019:14:34:38] (index) OK EDGARDO
+[12/Mar/2019:14:36:54] (index) OK JMATTA
+[12/Mar/2019:14:39:49] (index) OK KSANTIAGO
+[12/Mar/2019:14:40:31] (index) Failed ADMINCITAS
+[12/Mar/2019:14:40:32] (index) Failed 
+[12/Mar/2019:14:40:39] (index) OK ADMINCITAS
+[12/Mar/2019:14:41:31] (index) OK KDOLIVEIRA
+[12/Mar/2019:14:42:56] (index) Failed EORTIZ
+[12/Mar/2019:14:43:01] (index) OK EORTIZ
+[12/Mar/2019:14:44:40] (index) OK DSANTOS
+[12/Mar/2019:14:46:04] (index) OK KDOLIVEIRA
+[12/Mar/2019:14:47:20] (index) OK JOLALDE
+[12/Mar/2019:14:50:38] (index) OK ADMINCITAS
+[12/Mar/2019:14:56:28] (index) OK CHUERTAS
+[12/Mar/2019:15:13:05] (index) OK KBLASINI 
+[12/Mar/2019:15:25:02] (index) OK CHUERTAS
+[12/Mar/2019:15:43:03] (index) OK CRIVERA
+[12/Mar/2019:17:30:49] (index) OK DCAMPOS
+[13/Mar/2019:06:34:48] (index) OK ADMINCITAS
+[13/Mar/2019:08:02:22] (index) OK CHUERTAS
+[14/Mar/2019:07:21:54] (index) OK RRIVERA
+[14/Mar/2019:13:27:10] (index) OK LA
+[14/Mar/2019:13:31:49] (index) OK LA
+[14/Mar/2019:15:26:46] (index) OK CHUERTAS
+[15/Mar/2019:13:31:59] (index) OK LA
+[15/Mar/2019:16:16:52] (index) OK LA
+[16/Mar/2019:10:27:11] (index) OK LA
+[16/Mar/2019:10:41:52] (index) OK LA
+[16/Mar/2019:11:55:43] (index) OK LA
+[16/Mar/2019:12:16:09] (index) OK LA
+[16/Mar/2019:12:28:26] (index) OK LA
+[16/Mar/2019:13:38:50] (index) OK LA
+[16/Mar/2019:13:46:01] (index) OK LA
+[16/Mar/2019:15:05:54] (index) OK JOLALDE
+[16/Mar/2019:16:32:56] (index) OK JOLALDE
+[18/Mar/2019:07:10:21] (index) OK RRIVERA
+[18/Mar/2019:08:08:49] (index) OK CHUERTAS
+[18/Mar/2019:11:08:29] (index) OK JOLALDE
+[18/Mar/2019:11:57:43] (index) OK LA
+[20/Mar/2019:07:08:19] (index) OK RRIVERA
+[20/Mar/2019:09:02:56] (index) OK EORTIZ
+[20/Mar/2019:13:13:07] (index) Failed EORTIZ
+[20/Mar/2019:13:13:11] (index) OK EORTIZ
+[20/Mar/2019:15:18:07] (index) OK JOLALDE
+[20/Mar/2019:15:19:53] (index) OK CHUERTAS
+[21/Mar/2019:07:23:50] (index) OK RRIVERA
+[22/Mar/2019:07:12:23] (index) OK RRIVERA
+[22/Mar/2019:07:56:28] (index) OK CCBAY2
+[22/Mar/2019:07:57:40] (index) OK RRIVERA
+[22/Mar/2019:08:12:26] (index) OK JMATTA
+[22/Mar/2019:08:15:21] (index) OK JMATTA
+[22/Mar/2019:08:16:30] (index) OK JMATTA
+[22/Mar/2019:08:18:46] (index) OK JMATTA
+[23/Mar/2019:07:07:04] (index) OK RRIVERA
+[23/Mar/2019:19:48:03] (index) OK JOLALDE
+[25/Mar/2019:07:04:53] (index) OK RRIVERA
+[25/Mar/2019:08:38:14] (index) Failed JOLALDEOLALDE29
+[25/Mar/2019:08:38:22] (index) OK JOLALDE
+[25/Mar/2019:10:58:53] (index) OK JOLALDE
+[26/Mar/2019:09:11:39] (index) OK ADMINCITAS
+[26/Mar/2019:14:59:15] (index) OK DCAMPOS
+[26/Mar/2019:16:33:21] (index) Failed JOLALDDE
+[26/Mar/2019:16:33:33] (index) OK JOLALDE
+[26/Mar/2019:17:10:53] (index) OK JOLALDE
+[26/Mar/2019:17:56:34] (index) OK LA
+[26/Mar/2019:18:50:25] (index) OK JOLALDE
+[27/Mar/2019:07:11:11] (index) OK RRIVERA
+[27/Mar/2019:12:02:48] (index) OK RRIVERA
+[28/Mar/2019:07:10:09] (index) OK RRIVERA
+[28/Mar/2019:08:25:29] (index) OK JOLALDE
+[28/Mar/2019:18:47:31] (index) OK JOLALDE
+[28/Mar/2019:20:18:00] (index) Failed JOLALDE
+[28/Mar/2019:20:18:04] (index) Failed 
+[28/Mar/2019:20:18:17] (index) OK JOLALDE
+[28/Mar/2019:20:28:02] (index) OK JOLALDE
+[29/Mar/2019:07:03:44] (index) OK RRIVERA
+[30/Mar/2019:07:06:31] (index) OK RRIVERA
+[30/Mar/2019:14:24:57] (index) OK JOLALDE
+[30/Mar/2019:15:34:02] (index) OK FABIOLA
+[01/Apr/2019:07:07:20] (index) OK RRIVERA
+[01/Apr/2019:08:03:29] (index) OK CHUERTAS
+[01/Apr/2019:18:01:39] (index) OK JOLALDE
+[01/Apr/2019:18:17:07] (index) OK JOLALDE
+[03/Apr/2019:07:04:34] (index) OK RRIVERA
+[03/Apr/2019:19:01:08] (index) OK JOLALDE
+[03/Apr/2019:20:41:47] (index) Failed LA
+[03/Apr/2019:20:41:54] (index) OK LA
+[04/Apr/2019:07:08:24] (index) OK RRIVERA
+[05/Apr/2019:07:06:26] (index) OK RRIVERA
+[05/Apr/2019:11:12:56] (index) OK JOLALDE
+[05/Apr/2019:15:32:11] (index) OK FABIOLA
+[05/Apr/2019:15:35:14] (index) OK FABIOLA
+[05/Apr/2019:16:42:16] (index) OK FABIOLA
+[05/Apr/2019:17:50:51] (index) OK KDOLIVEIRA
+[05/Apr/2019:18:05:00] (index) OK JOLALDE

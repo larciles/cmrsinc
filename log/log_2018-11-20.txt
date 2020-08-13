@@ -1,0 +1,77 @@
+[2018-11-20 15:44:42.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '11-20-2018' and '11-20-2018' and statfact <>'2'
+[2018-11-20 15:44:42.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '11-20-2018' and '11-20-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-11-20 15:44:43.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '11-20-2018' and '11-20-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-11-20 15:44:43.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '11-20-2018' and '11-20-2018' and cod_subgrupo='CONSULTA' 
+[2018-11-20 15:44:43.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '11-20-2018' and '11-20-2018' and d.coditems like 'TD%' 
+[2018-11-20 15:44:44.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '11-20-2018' and '11-20-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-11-20 15:44:44.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '11-20-2018' and '11-20-2018') and d.coditems like 'LI%' 
+[2018-11-20 18:13:32.000000 192.130.75.214  - [query->log-in] ] Select * from loginpass WHERE login = 'HANCE' and passwork ='hate01' 
+[2018-11-20 18:13:32.000000 192.130.75.214  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'HANCE' 
+[2018-11-20 18:15:53.000000 192.130.75.214  - [query->log-in] ] Select * from loginpass WHERE login = 'HANCE' and passwork ='hate01' 
+[2018-11-20 18:15:53.000000 192.130.75.214  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'HANCE' 
+[2018-11-20 18:16:07.000000 192.130.75.214  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-20 18:16:08.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:16:09.000000 192.130.75.214  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-20 18:16:09.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  MInventario where prod_serv='P' and activo = 1 order by 'desitems'
+[2018-11-20 18:16:10.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-20 18:16:10.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  mseguros where status=1 order by codseguro
+[2018-11-20 18:16:10.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  Medios where del=0 order by codigo
+[2018-11-20 18:17:03.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  MInventario where prod_serv='P' and activo = 1 order by desitems
+[2018-11-20 18:17:03.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-20 18:17:03.000000 192.130.75.214  - [query->HANCE] ] SELECT  * FROM mnotacredito Where numnotcre ='0000888' 
+[2018-11-20 18:17:03.000000 192.130.75.214  - [query->HANCE] ] SELECT  * FROM Dnotacredito Where numnotcre ='0000888' 
+[2018-11-20 18:17:04.000000 192.130.75.214  - [query->HANCE] ] SELECT * from mnotacredito where numnotcre ='0000888' 
+[2018-11-20 18:17:05.000000 192.130.75.214  - [query->HANCE] ] Select * from Mclientes where  codclien='73642'  
+[2018-11-20 18:17:05.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:17:05.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  MInventario where prod_serv='P' and activo = 1 order by 'desitems'
+[2018-11-20 18:17:06.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-20 18:17:06.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  mseguros where status=1 order by codseguro
+[2018-11-20 18:17:44.000000 192.130.75.214  - [query->HANCE] ] SELECT a.usuario, sum( a.subtotal) subtotal, sum(a.descuento) descuento,  (sum(a.total)+sum(a.monto_flete))  monto, sum( a.TotImpuesto) TotImpuesto, sum(a.monto_flete) monto_flete   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '11/20/2018' AND '11/20/2018'  AND  a.statfact=3  And  a.total>=0   group by  usuario  Order by monto desc
+[2018-11-20 18:17:44.000000 192.130.75.214  - [query->HANCE] ] SELECT convert(varchar(10), cast(a.fechafac as date),101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete,a.Historia,a.initials,a.usuario  FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '11/20/2018' AND '11/20/2018' AND  a.statfact=3  And  a.total>0  Order by a.numfactu desc 
+[2018-11-20 18:17:44.000000 192.130.75.214  - [query->HANCE] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '11/20/2018' AND '11/20/2018'  Order By d.modopago 
+[2018-11-20 18:17:44.000000 192.130.75.214  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiarias a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '11/20/2018' AND '11/20/2018' AND a.statfact=3 And  a.total>0  
+[2018-11-20 18:17:44.000000 192.130.75.214  - [query->HANCE] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between   '11/20/2018' AND '11/20/2018' AND  a.statfact=3  And  a.total<0 Order by a.numfactu desc 
+[2018-11-20 18:17:44.000000 192.130.75.214  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '11/20/2018' AND '11/20/2018' AND  a.statfact=3  And  a.total<0  
+[2018-11-20 18:17:44.000000 192.130.75.214  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '11/20/2018' AND '11/20/2018' AND  a.statfact=3   
+[2018-11-20 18:18:17.000000 192.130.75.214  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-20 18:18:18.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:18:24.000000 192.130.75.214  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-20 18:18:25.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:18:49.000000 192.130.75.214  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-20 18:18:50.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:18:52.000000 192.130.75.214  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-20 18:18:53.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:18:59.000000 192.130.75.214  - [query->HANCE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0026784'  ORDER BY  f.nombre_alterno ASC 
+[2018-11-20 18:18:59.000000 192.130.75.214  - [query->HANCE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0026784'
+[2018-11-20 18:18:59.000000 192.130.75.214  - [query->HANCE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0026784' and id_centro='1' and tipo_doc='01' and monto>0
+[2018-11-20 18:18:59.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  MFactura where numfactu='0026784'
+[2018-11-20 18:19:28.000000 192.130.75.214  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-20 18:19:29.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:21:12.000000 192.130.75.214  - [query->HANCE] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%Arocho%Pérez%'  Order  by nombres 
+[2018-11-20 18:21:18.000000 192.130.75.214  - [query->HANCE] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%Arocho%Perez%'  Order  by nombres 
+[2018-11-20 18:21:18.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:21:32.000000 192.130.75.214  - [query->HANCE] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%Arocho%Perez%linda%'  Order  by nombres 
+[2018-11-20 18:21:32.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:21:37.000000 192.130.75.214  - [query->HANCE] ] SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,1 id_centro,id FROM mfactura where codclien='73642' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,2 id_centro,id FROM cma_mfactura where codclien='73642' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,3 id_centro,id FROM MSSMFact where codclien='73642' and statfact<>'2' order by id_centro , id desc, fechafac desc 
+[2018-11-20 18:21:37.000000 192.130.75.214  - [query->HANCE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031017' order by desitems 
+[2018-11-20 18:22:23.000000 192.130.75.214  - [query->HANCE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031017' order by desitems 
+[2018-11-20 18:22:23.000000 192.130.75.214  - [query->HANCE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031017' order by desitems 
+[2018-11-20 18:22:24.000000 192.130.75.214  - [query->HANCE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031017' order by desitems 
+[2018-11-20 18:22:24.000000 192.130.75.214  - [query->HANCE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031017' order by desitems 
+[2018-11-20 18:22:24.000000 192.130.75.214  - [query->HANCE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031017' order by desitems 
+[2018-11-20 18:22:41.000000 192.130.75.214  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-20 18:22:41.000000 192.130.75.214  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-20 18:22:49.000000 192.130.75.214  - [query->HANCE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0031017'  ORDER BY  f.nombre_alterno ASC 
+[2018-11-20 18:22:49.000000 192.130.75.214  - [query->HANCE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0031017'
+[2018-11-20 18:22:49.000000 192.130.75.214  - [query->HANCE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0031017' and id_centro='1' and tipo_doc='01' and monto>0
+[2018-11-20 18:22:49.000000 192.130.75.214  - [query->HANCE] ] SELECT * from  MFactura where numfactu='0031017'

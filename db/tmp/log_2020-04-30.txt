@@ -1,0 +1,811 @@
+[2020-04-30 09:03:38.000000 192.130.75.224  - [query->log-in] ] Select * from loginpass WHERE login = 'MICHELLE' and passwork ='2008' and activo=1 
+
+[2020-04-30 09:03:45.000000 192.130.75.224  - [query->log-in] ] Select * from loginpass WHERE login = 'MICHELLE' and passwork ='nicole2008' and activo=1 
+
+[2020-04-30 09:03:45.000000 192.130.75.224  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'MICHELLE' 
+
+[2020-04-30 09:11:15.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 09:11:15.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 09:11:16.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 09:11:16.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 09:11:48.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='79334' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='79334' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='79334' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 09:11:48.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 09:11:51.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0033074' order by desitems 
+
+[2020-04-30 09:11:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0024382' order by desitems 
+
+[2020-04-30 09:11:55.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0011890' order by desitems 
+
+[2020-04-30 09:11:58.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0010574' order by desitems 
+
+[2020-04-30 09:13:05.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0033074' order by desitems 
+
+[2020-04-30 09:14:16.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 09:14:16.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 09:14:16.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 09:14:17.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 09:45:54.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 09:45:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 09:45:54.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 09:45:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 09:46:04.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 09:46:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 09:46:05.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 09:46:05.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 09:46:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='79334' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='79334' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='79334' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 09:46:07.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 09:46:13.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0033074' order by desitems 
+
+[2020-04-30 09:46:16.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0024382' order by desitems 
+
+[2020-04-30 09:46:17.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0011890' order by desitems 
+
+[2020-04-30 09:46:18.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0011891' order by desitems 
+
+[2020-04-30 11:03:01.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:03:01.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:03:01.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:03:01.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:03:07.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:03:07.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:03:07.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:03:07.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:10:44.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:10:44.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:10:44.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:10:45.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:10:54.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:10:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:10:54.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:10:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:12:19.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='40886' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='40886' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='40886' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:12:19.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039165' order by desitems 
+
+[2020-04-30 11:12:21.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039097' order by desitems 
+
+[2020-04-30 11:12:24.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039075' order by desitems 
+
+[2020-04-30 11:24:33.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:24:33.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:24:34.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:24:34.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:24:45.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:24:45.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:24:45.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:24:46.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:25:55.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:25:55.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:25:55.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:25:55.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:26:56.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='113086' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='113086' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='113086' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:26:56.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039151' order by desitems 
+
+[2020-04-30 11:28:26.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='113086' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='113086' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='113086' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:28:26.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039151' order by desitems 
+
+[2020-04-30 11:28:33.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0032315' order by desitems 
+
+[2020-04-30 11:28:33.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0032315' order by desitems 
+
+[2020-04-30 11:28:34.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031765' order by desitems 
+
+[2020-04-30 11:28:35.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031629' order by desitems 
+
+[2020-04-30 11:28:35.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031514' order by desitems 
+
+[2020-04-30 11:28:36.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031293' order by desitems 
+
+[2020-04-30 11:28:38.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039151' order by desitems 
+
+[2020-04-30 11:28:38.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039151' order by desitems 
+
+[2020-04-30 11:29:14.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:29:15.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:29:15.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:29:15.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:29:22.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='113086' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='113086' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='113086' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:29:22.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 11:32:31.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:32:31.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:32:32.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:32:32.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:33:00.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:33:00.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:33:01.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:33:01.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:33:15.000000 192.130.75.224  - [query->MICHELLE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039151'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-04-30 11:33:15.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039151'
+
+[2020-04-30 11:33:15.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039151' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-04-30 11:33:15.000000 192.130.75.224  - [query->MICHELLE] ] SELECT * from  MFactura where numfactu='0039151'
+
+[2020-04-30 11:33:18.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:33:18.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:33:19.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:33:19.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:33:57.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:33:57.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:33:58.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:33:58.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:34:22.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:34:22.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:34:23.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:34:23.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:34:39.000000 192.130.75.224  - [query->MICHELLE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039151'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-04-30 11:34:39.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039151'
+
+[2020-04-30 11:34:39.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039151' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-04-30 11:34:39.000000 192.130.75.224  - [query->MICHELLE] ] SELECT * from  MFactura where numfactu='0039151'
+
+[2020-04-30 11:34:39.000000 192.130.75.224  - [query->MICHELLE] ] Select s.State from States s where s.Id='64'
+
+[2020-04-30 11:34:43.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:34:43.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:34:44.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:34:44.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:37:37.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:37:37.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:37:38.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:37:38.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:37:51.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='125516' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='125516' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='125516' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:37:51.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 11:38:10.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='128328' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='128328' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='128328' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:38:10.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 11:38:35.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='61248' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='61248' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='61248' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:38:35.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 11:38:45.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039028' order by desitems 
+
+[2020-04-30 11:42:25.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:42:25.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:42:25.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 11:42:25.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 11:43:16.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='6997' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='6997' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='6997' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:43:16.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 11:43:19.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038809' order by desitems 
+
+[2020-04-30 11:43:32.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='6997' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='6997' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='6997' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:43:32.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 11:44:21.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='6997' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='6997' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='6997' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 11:44:21.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 11:44:23.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038809' order by desitems 
+
+[2020-04-30 11:44:24.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037627' order by desitems 
+
+[2020-04-30 11:44:25.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036390' order by desitems 
+
+[2020-04-30 11:44:26.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036390' order by desitems 
+
+[2020-04-30 11:44:27.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036395' order by desitems 
+
+[2020-04-30 11:44:28.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0034753' order by desitems 
+
+[2020-04-30 11:44:29.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036395' order by desitems 
+
+[2020-04-30 11:44:31.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037627' order by desitems 
+
+[2020-04-30 11:44:32.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039164' order by desitems 
+
+[2020-04-30 11:44:48.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037627' order by desitems 
+
+[2020-04-30 11:44:48.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036390' order by desitems 
+
+[2020-04-30 11:44:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='012111' order by desitems 
+
+[2020-04-30 11:44:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='010657' order by desitems 
+
+[2020-04-30 11:44:52.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='001981' order by desitems 
+
+[2020-04-30 11:44:53.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='007039' order by desitems 
+
+[2020-04-30 11:44:53.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='010657' order by desitems 
+
+[2020-04-30 11:44:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='012111' order by desitems 
+
+[2020-04-30 11:44:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='012370' order by desitems 
+
+[2020-04-30 11:44:55.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='015041' order by desitems 
+
+[2020-04-30 11:44:55.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0033599' order by desitems 
+
+[2020-04-30 11:44:56.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0034189' order by desitems 
+
+[2020-04-30 11:44:56.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0034753' order by desitems 
+
+[2020-04-30 11:44:57.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036395' order by desitems 
+
+[2020-04-30 11:44:58.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036390' order by desitems 
+
+[2020-04-30 13:50:03.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 13:50:03.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 13:50:04.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 13:50:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 13:53:29.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 13:53:29.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 13:53:29.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 13:53:30.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 13:53:42.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 13:53:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 13:53:42.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 13:53:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 13:54:03.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='61248' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='61248' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='61248' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 13:54:03.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039028' order by desitems 
+
+[2020-04-30 13:54:08.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038802' order by desitems 
+
+[2020-04-30 14:13:16.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='111957' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='111957' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='111957' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:13:16.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031616' order by desitems 
+
+[2020-04-30 14:13:23.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031616' order by desitems 
+
+[2020-04-30 14:13:24.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031617' order by desitems 
+
+[2020-04-30 14:14:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='53444' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='53444' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='53444' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:14:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031610' order by desitems 
+
+[2020-04-30 14:16:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='76679' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='76679' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='76679' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:16:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037072' order by desitems 
+
+[2020-04-30 14:30:36.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='76679' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='76679' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='76679' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:30:36.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037072' order by desitems 
+
+[2020-04-30 14:30:37.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037072' order by desitems 
+
+[2020-04-30 14:30:39.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036494' order by desitems 
+
+[2020-04-30 14:30:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0019940' order by desitems 
+
+[2020-04-30 14:30:44.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0024881' order by desitems 
+
+[2020-04-30 14:32:00.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='124945' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='124945' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='124945' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:32:00.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036913' order by desitems 
+
+[2020-04-30 14:32:09.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036318' order by desitems 
+
+[2020-04-30 14:32:12.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0035446' order by desitems 
+
+[2020-04-30 14:32:13.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0035300' order by desitems 
+
+[2020-04-30 14:33:32.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='72036' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='72036' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='72036' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:33:32.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036432' order by desitems 
+
+[2020-04-30 14:33:35.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036336' order by desitems 
+
+[2020-04-30 14:44:20.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='60213' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='60213' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='60213' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:44:20.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038374' order by desitems 
+
+[2020-04-30 14:44:30.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='079976' order by desitems 
+
+[2020-04-30 14:44:33.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='089168' order by desitems 
+
+[2020-04-30 14:44:35.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0000956' order by desitems 
+
+[2020-04-30 14:44:36.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037722' order by desitems 
+
+[2020-04-30 14:44:38.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038374' order by desitems 
+
+[2020-04-30 14:44:39.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038374' order by desitems 
+
+[2020-04-30 14:45:10.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='101067' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='101067' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='101067' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:45:10.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038576' order by desitems 
+
+[2020-04-30 14:45:22.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037534' order by desitems 
+
+[2020-04-30 14:45:23.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037081' order by desitems 
+
+[2020-04-30 14:45:24.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036591' order by desitems 
+
+[2020-04-30 14:45:25.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0036022' order by desitems 
+
+[2020-04-30 14:45:26.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0034984' order by desitems 
+
+[2020-04-30 14:45:28.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0034379' order by desitems 
+
+[2020-04-30 14:45:29.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0025642' order by desitems 
+
+[2020-04-30 14:45:30.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0024975' order by desitems 
+
+[2020-04-30 14:45:31.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0024623' order by desitems 
+
+[2020-04-30 14:46:09.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='101067' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='101067' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='101067' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:46:09.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038576' order by desitems 
+
+[2020-04-30 14:47:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='59744' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='59744' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='59744' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:47:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038009' order by desitems 
+
+[2020-04-30 14:47:07.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038009' order by desitems 
+
+[2020-04-30 14:47:30.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038010' order by desitems 
+
+[2020-04-30 14:47:32.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037458' order by desitems 
+
+[2020-04-30 14:47:37.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0035052' order by desitems 
+
+[2020-04-30 14:47:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0033816' order by desitems 
+
+[2020-04-30 14:47:45.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0030620' order by desitems 
+
+[2020-04-30 14:50:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='59743' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='59743' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='59743' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 14:50:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0021120' order by desitems 
+
+[2020-04-30 14:59:09.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 14:59:09.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 14:59:09.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 14:59:10.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 14:59:14.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 14:59:14.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 14:59:15.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 14:59:15.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 15:00:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='59744' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='59744' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='59744' and statfact<>'2'  order by a.fechafac desc
+
+[2020-04-30 15:00:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0038009' order by desitems 
+
+[2020-04-30 22:46:03.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 22:46:03.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 22:46:03.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 22:46:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 23:01:54.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 23:01:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 23:01:54.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 23:01:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 23:03:03.000000 192.130.75.224  - [query->MICHELLE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039164'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-04-30 23:03:03.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039164'
+
+[2020-04-30 23:03:03.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039164' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-04-30 23:03:03.000000 192.130.75.224  - [query->MICHELLE] ] SELECT * from  MFactura where numfactu='0039164'
+
+[2020-04-30 23:03:03.000000 192.130.75.224  - [query->MICHELLE] ] Select s.State from States s where s.Id='67'
+
+[2020-04-30 23:03:06.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 23:03:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 23:03:07.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 23:03:07.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 23:04:54.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 23:04:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 23:04:55.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 23:04:55.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 23:06:08.000000 192.130.75.224  - [query->MICHELLE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039165'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-04-30 23:06:08.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039165'
+
+[2020-04-30 23:06:08.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039165' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-04-30 23:06:08.000000 192.130.75.224  - [query->MICHELLE] ] SELECT * from  MFactura where numfactu='0039165'
+
+[2020-04-30 23:06:14.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 23:06:14.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-04-30 23:06:14.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-04-30 23:06:14.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+

@@ -1,0 +1,85 @@
+
+OBSERVACIONES :
+SELECT        numfactu, fechafac, subtotal, descuento, total, statfact, TotImpuesto, monto_flete, doc, cancelado, 1 AS tipo, general, 'Productos' cod_subgrupo
+FROM            dbo.VentasDiarias_2
+WHERE        statfact <> '2'
+UNION
+SELECT        numfactu, fechafac, subtotal, descuento, total, statfact, TotImpuesto, monto_flete, doc, cancelado, 2 AS tipo, total general, '' cod_subgrupo
+FROM            VentasDiariasCMACST_4
+/* VentasDiariasCMACST1_3  VentasDiariasCMACST_4  */ WHERE statfact <> '2'
+UNION
+SELECT        L.numfactu, fechafac, sum(L.subtotalnew) subtotal, sum(L.descuentonew) AS descuento, sum(L.totalnew) AS total, L.statfact, L.totimpuesto, L.monto_flete, L.doc, L.cancelado, 3 AS tipo, Sum(L.general) AS general, 
+                         'Laser' cod_subgrupo
+FROM            VentasDiariasMSSLA_3 L
+WHERE        statfact <> '2'
+GROUP BY L.numfactu, fechafac, L.statfact, L.totimpuesto, L.monto_flete, L.doc, L.cancelado
+UNION
+SELECT        I.numfactu, fechafac, sum(I.subtotalnew) subtotal, sum(I.descuentonew) AS descuento, sum(I.totalnew) AS total, I.statfact, I.totimpuesto, I.monto_flete, I.doc, I.cancelado, 4 AS tipo, Sum(I.general) AS general, 
+                         'Intravenoso' cod_subgrupo
+FROM            VentasDiariasMSSIV_4 I
+WHERE        statfact <> '2'
+GROUP BY I.numfactu, fechafac, I.statfact, I.totimpuesto, I.monto_flete, I.doc, I.cancelado
+UNION
+SELECT        I.numfactu, fechafac, sum(I.subtotalnew) subtotal, sum(I.descuentonew) AS descuento, sum(I.totalnew) AS total, I.statfact, I.totimpuesto, I.monto_flete, I.doc, I.cancelado, 5 AS tipo, Sum(I.general) AS general, 
+                         'Bloqueo' cod_subgrupo
+FROM            VentasDiariasMSSIV_5 I
+WHERE        statfact <> '2' AND fechafac BETWEEN '11-03-2018' AND '11-03-2018'
+GROUP BY I.numfactu, fechafac, I.statfact, I.totimpuesto, I.monto_flete, I.doc, I.cancelado
+
+
+
+-----------------------
+
+
+--original
+SELECT        dbo.cma_MFactura.numfactu, dbo.cma_MFactura.fechafac, dbo.cma_MFactura.subtotal, dbo.cma_MFactura.descuento, dbo.cma_MFactura.total, dbo.cma_MFactura.statfact, dbo.cma_MFactura.tipopago, 
+                         dbo.cma_MFactura.TotImpuesto, dbo.cma_MFactura.monto_flete, dbo.cma_MFactura.tipo AS doc, dbo.cma_MFactura.cancelado, '01' AS codsuc, dbo.cma_MFactura.id
+FROM            dbo.cma_MFactura
+ UNION ALL
+SELECT        CMA_Mnotacredito.numnotcre AS numfactu, CMA_Mnotacredito.fechanot AS fechafac, CMA_Mnotacredito.subtotal * - 1 AS subtotal, CMA_Mnotacredito.descuento * - 1 AS descuento, CMA_Mnotacredito.totalnot * - 1 AS total, 
+                         CMA_Mnotacredito.statnc AS statfact, CMA_Mnotacredito.tipopago, CMA_Mnotacredito.totimpuesto * - 1 AS totimpuesto, CMA_Mnotacredito.monto_flete * - 1 AS monto_flete, CMA_Mnotacredito.tipo AS Doc, 
+                         CMA_Mnotacredito.cancelado, '01' AS codsuc, CMA_Mnotacredito.id
+FROM            CMA_Mnotacredito
+
+
+--
+--CONTROL 
+SELECT        dbo.cma_MFactura.numfactu, dbo.cma_MFactura.fechafac, dbo.cma_MFactura.subtotal, dbo.cma_MFactura.descuento, dbo.cma_MFactura.total, dbo.cma_MFactura.statfact, dbo.cma_MFactura.tipopago, 
+                         dbo.cma_MFactura.TotImpuesto, dbo.cma_MFactura.monto_flete, dbo.cma_MFactura.tipo AS doc, dbo.cma_MFactura.cancelado, '01' AS codsuc, dbo.cma_MFactura.id
+FROM            dbo.cma_MFactura where fechafac='20190401'
+
+--EXPE Consultas
+create alter view VentasDiariasCMACST_4_NOCM as 
+SELECT  dbo.cma_MFactura.numfactu, dbo.cma_MFactura.fechafac, dbo.cma_MFactura.subtotal, dbo.cma_MFactura.descuento, dbo.cma_MFactura.total, dbo.cma_MFactura.statfact, dbo.cma_MFactura.tipopago, 
+        dbo.cma_MFactura.TotImpuesto, dbo.cma_MFactura.monto_flete, dbo.cma_MFactura.tipo AS doc, dbo.cma_MFactura.cancelado, '01' AS codsuc, dbo.cma_MFactura.id
+FROM    dbo.cma_MFactura 
+where   dbo.cma_MFactura.numfactu in(SELECT numfactu 
+FROM cma_DFactura b 
+WHERE  b.coditems  in (select c.coditems from MInventario c where c.group_a<>'CELULAS MADRE'   or  c.group_a is null  )
+group by numfactu
+ )
+ UNION ALL
+SELECT        CMA_Mnotacredito.numnotcre AS numfactu, CMA_Mnotacredito.fechanot AS fechafac, CMA_Mnotacredito.subtotal * - 1 AS subtotal, CMA_Mnotacredito.descuento * - 1 AS descuento, CMA_Mnotacredito.totalnot * - 1 AS total, 
+                         CMA_Mnotacredito.statnc AS statfact, CMA_Mnotacredito.tipopago, CMA_Mnotacredito.totimpuesto * - 1 AS totimpuesto, CMA_Mnotacredito.monto_flete * - 1 AS monto_flete, CMA_Mnotacredito.tipo AS Doc, 
+                         CMA_Mnotacredito.cancelado, '01' AS codsuc, CMA_Mnotacredito.id
+FROM            CMA_Mnotacredito
+
+
+
+--EXPE Celulas Madre
+create view VentasDiariasCMACST_4_CM as 
+SELECT  dbo.cma_MFactura.numfactu, dbo.cma_MFactura.fechafac, dbo.cma_MFactura.subtotal, dbo.cma_MFactura.descuento, dbo.cma_MFactura.total, dbo.cma_MFactura.statfact, dbo.cma_MFactura.tipopago, 
+        dbo.cma_MFactura.TotImpuesto, dbo.cma_MFactura.monto_flete, dbo.cma_MFactura.tipo AS doc, dbo.cma_MFactura.cancelado, '01' AS codsuc, dbo.cma_MFactura.id
+FROM    dbo.cma_MFactura 
+where  dbo.cma_MFactura.numfactu in(SELECT numfactu 
+FROM cma_DFactura b 
+WHERE  b.coditems  in (select c.coditems from MInventario c where c.group_a='CELULAS MADRE' )
+group by numfactu
+ )
+
+
+
+
+
+
+

@@ -1,0 +1,269 @@
+[2018-06-14 07:26:42.000000 192.130.74.32  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' 
+[2018-06-14 07:26:42.000000 192.130.74.32  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] Select  * from view_displaypagos where fechafac='2018-06-14'
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105605'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='57867'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107003'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107686'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='15197'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107935'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107790'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107297'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='44194'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107235'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107972'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107267'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107167'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107111'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106034'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107925'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='91661'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106560'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107786'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107944'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107070'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107961'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106958'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105734'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105945'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107816'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107233'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107956'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107952'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='67875'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106272'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107271'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106458'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107799'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='102461'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107311'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107940'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='4773'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106527'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107068'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='103349'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107896'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='87622'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107787'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106459'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='34276'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107562'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='49169'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='50989'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105382'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107181'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107968'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='95505'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:49.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106996'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='71785'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107946'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106876'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107820'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107953'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107085'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107945'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='99655'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107971'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='95553'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='46122'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107712'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107907'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107220'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106502'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105595'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107899'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107254'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107414'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='25804'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='104520'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107789'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107265'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105242'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='96222'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107807'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='40893'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107608'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='46864'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='102469'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='97785'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107699'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='49812'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107125'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='103199'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107934'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107909'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107845'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107843'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='104953'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='49813'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105422'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107950'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='104186'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='102896'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107703'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='100145'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107453'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:50.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='17908'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:52.000000 192.130.74.32  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 07:26:53.000000 192.130.74.32  - [query->LA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '6/14/2018'  AND '6/14/2018'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2018-06-14 07:26:53.000000 192.130.74.32  - [query->LA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '6/14/2018'  AND '6/14/2018'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2018-06-14 07:26:58.000000 192.130.74.32  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 07:26:58.000000 192.130.74.32  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 07:26:58.000000 192.130.74.32  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 07:26:58.000000 192.130.74.32  - [query->LA] ] Select  * from view_displaypagos where fechafac='6/14/2018'
+[2018-06-14 07:26:58.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107944'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:58.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='46864'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:58.000000 192.130.74.32  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='102461'and codconsulta <>'07' and ASISTIDOS is null
+[2018-06-14 07:26:59.000000 192.130.74.32  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 07:26:59.000000 192.130.74.32  - [query->LA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '6/14/2018'  AND '6/14/2018'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2018-06-14 07:26:59.000000 192.130.74.32  - [query->LA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '6/14/2018'  AND '6/14/2018'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2018-06-14 10:58:13.000000 192.130.74.201  - [query->log-in] ] Select * from loginpass WHERE login = 'DCAMPOIS' and passwork ='' 
+[2018-06-14 10:58:17.000000 192.130.74.201  - [query->log-in] ] Select * from loginpass WHERE login = 'DCAMPOS' and passwork ='' 
+[2018-06-14 10:58:25.000000 192.130.74.201  - [query->log-in] ] Select * from loginpass WHERE login = 'DCAMPOS' and passwork ='KARINA' 
+[2018-06-14 10:58:25.000000 192.130.74.201  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'DCAMPOS' 
+[2018-06-14 11:00:24.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:00:24.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:00:24.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:00:25.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:00:27.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:00:27.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:00:27.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:00:28.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:00:39.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:00:39.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:00:39.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:00:39.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:01:05.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:01:05.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:01:05.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:01:05.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:01:07.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='107137' and fecha_cita='6/14/2018'  and  CODITEMS ='LI001' 
+[2018-06-14 11:01:07.000000 192.130.74.201  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='107137' and fecha_cita='6/14/2018'  and  CODITEMS ='LI001' 
+[2018-06-14 11:01:07.000000 192.130.74.201  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='69929' and codconsulta='07' group by codclien
+[2018-06-14 11:01:07.000000 192.130.74.201  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='69929' and codconsulta='07' group by codclien
+[2018-06-14 11:01:07.000000 192.130.74.201  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='69929'  
+[2018-06-14 11:01:07.000000 192.130.74.201  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-06-14 11:01:07.000000 192.130.74.201  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-06-14 11:01:07.000000 192.130.74.201  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-06-14 11:01:07.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-06-14 11:01:08.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-06-14 11:01:08.000000 192.130.74.201  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='107137' and codconsulta<>'07' group by codclien
+[2018-06-14 11:01:08.000000 192.130.74.201  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='107137'  and fecha_cita='2018/06/23' and codconsulta<>'07'
+[2018-06-14 11:01:20.000000 192.130.74.201  - [query->DCAMPOS] ] select * from Feriado where FECHA='06/19/2018' and activo = 1 
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='107137' and coditems like 'TD%' 
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='107137' and  fecha_cita='2018-06-14'  and  codconsulta='07' and coditems='LI001'  and codmedico='000' 
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] Select * from mconsultass where codclien='107137' and asistido=0 and coditems like 'LI%' 
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='107137')
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] Select * from mconsultass where codclien='107137' and fecha_cita='06/19/2018'  and coditems like 'LI%' 
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='107137' AND ASISTIDO='0' and  coditems like 'LI%' 
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('107137','6/14/2018','1','06/19/2018' ,'319','KBLASINI','6/14/2018','KAROLA /20.00 AM ','0','0','0','0','1','0','07','LI001','0','0','10:15 AM','06/19/2018','10:45:00')
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:01:25.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:01:49.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:01:49.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:01:49.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:01:49.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:01:59.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:01:59.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:01:59.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:01:59.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:02:01.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-06-14 11:02:01.000000 192.130.74.201  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-06-14 11:02:04.000000 192.130.74.201  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='69172'  
+[2018-06-14 11:02:04.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-06-14 11:02:04.000000 192.130.74.201  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='107152' and codconsulta<>'07' group by codclien
+[2018-06-14 11:02:04.000000 192.130.74.201  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='107152'  and fecha_cita='2018/06/23' and codconsulta<>'07'
+[2018-06-14 11:02:07.000000 192.130.74.201  - [query->DCAMPOS] ] select * from Feriado where FECHA='06/14/2018' and activo = 1 
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] Select count(*) cant from mconsultas where codclien='107152' 
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] Select * from mconsultas WHERE CODCLIEN='107152' AND fecha_cita='2018-06-14' and codmedico='000' 
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] Select * from mconsultas where codclien='107152' and asistido=0 
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='107152' AND ASISTIDO=0
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] UPDATE MCONSULTAS SET FECHA_CITA='06/14/2018',usuario = 'KBLASINI',confirmado='0',noasistido='0',activa='1',codmedico = '317', observacion = 'KAROLA / PRIORIDAD', regusuario='DCAMPOS', llegada='',codconsulta='01' WHERE CODCLIEN='107152' AND ASISTIDO='0' and ID='241350' 
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:02:14.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:02:19.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:02:19.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:02:19.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:02:19.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:02:26.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:02:26.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:02:26.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:02:27.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:02:28.000000 192.130.74.201  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-06-14 11:02:28.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-06-14 11:02:32.000000 192.130.74.201  - [query->DCAMPOS] ] select * from Feriado where FECHA='06/14/2018' and activo = 1 
+[2018-06-14 11:02:36.000000 192.130.74.201  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='19172'  
+[2018-06-14 11:02:36.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-06-14 11:02:36.000000 192.130.74.201  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='22993' and codconsulta<>'07' group by codclien
+[2018-06-14 11:02:36.000000 192.130.74.201  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='22993'  and fecha_cita='2007/11/21' and codconsulta<>'07'
+[2018-06-14 11:02:38.000000 192.130.74.201  - [query->DCAMPOS] ] Select count(*) cant from mconsultas where codclien='22993' 
+[2018-06-14 11:02:38.000000 192.130.74.201  - [query->DCAMPOS] ] Select * from mconsultas WHERE CODCLIEN='22993' AND fecha_cita='2018-06-14' and codmedico='000' 
+[2018-06-14 11:02:38.000000 192.130.74.201  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-06-14 11:02:38.000000 192.130.74.201  - [query->DCAMPOS] ] Select * from mconsultas where codclien='22993' and asistido=0 
+[2018-06-14 11:02:38.000000 192.130.74.201  - [query->DCAMPOS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='22993' AND ASISTIDO=0
+[2018-06-14 11:02:38.000000 192.130.74.201  - [query->DCAMPOS] ] UPDATE MCONSULTAS SET FECHA_CITA='06/14/2018',usuario = 'CCBAY2',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = '.', regusuario='DCAMPOS', llegada='',codconsulta='01' WHERE CODCLIEN='22993' AND ASISTIDO='0' and ID='39020' 
+[2018-06-14 11:02:38.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:02:38.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:02:38.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:02:39.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 11:02:43.000000 192.130.74.201  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-06-14 11:02:43.000000 192.130.74.201  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-06-14 11:02:43.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-06-14 11:02:44.000000 192.130.74.201  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-06-14 17:43:20.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM farmacias.dbo.newconsol2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '06-14-2018' and '06-14-2018' and statfact <>'2'
+[2018-06-14 17:43:22.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM farmacias.dbo.newconsol2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '06-14-2018' and '06-14-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-06-14 17:43:24.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM farmacias.dbo.newconsol2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '06-14-2018' and '06-14-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-06-14 17:43:24.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-14-2018' and '06-14-2018' and cod_subgrupo='CONSULTA' 
+[2018-06-14 17:43:24.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '06-14-2018' and '06-14-2018' and d.coditems like 'TD%' 
+[2018-06-14 17:43:25.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-14-2018' and '06-14-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-06-14 17:43:25.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '06-14-2018' and '06-14-2018') and d.coditems like 'LI%' 
+[2018-06-14 19:17:17.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM farmacias.dbo.newconsol2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '06-14-2018' and '06-14-2018' and statfact <>'2'
+[2018-06-14 19:17:19.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM farmacias.dbo.newconsol2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '06-14-2018' and '06-14-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-06-14 19:17:21.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM farmacias.dbo.newconsol2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '06-14-2018' and '06-14-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-06-14 19:17:21.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-14-2018' and '06-14-2018' and cod_subgrupo='CONSULTA' 
+[2018-06-14 19:17:21.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '06-14-2018' and '06-14-2018' and d.coditems like 'TD%' 
+[2018-06-14 19:17:21.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-14-2018' and '06-14-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-06-14 19:17:22.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '06-14-2018' and '06-14-2018') and d.coditems like 'LI%' 
+[2018-06-14 19:18:23.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '06-14-2018' and '06-14-2018' and medico<>''
+[2018-06-14 19:18:24.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA vp  where fechafac  between '06-14-2018' and '06-14-2018' 
+[2018-06-14 19:18:24.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA vp  where fechafac between '06-14-2018' and '06-14-2018' and medico<>'' group by medico,Dventa
+[2018-06-14 19:18:25.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '06-14-2018' and '06-14-2018' and medico<>'' group by medico
+[2018-06-14 19:18:26.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '06/14/2018' and '06/14/2018' and medico<>''
+[2018-06-14 19:18:26.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '06-14-2018' and '06-14-2018' and medico<>''
+[2018-06-14 19:18:27.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA vp  where fechafac  between '06-14-2018' and '06-14-2018' 
+[2018-06-14 19:18:27.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA vp  where fechafac between '06-14-2018' and '06-14-2018' and medico<>'' group by medico,Dventa
+[2018-06-14 19:18:27.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '06-14-2018' and '06-14-2018' and medico<>'' group by medico
+[2018-06-14 19:18:28.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '06/14/2018' and '06/14/2018' and medico<>''

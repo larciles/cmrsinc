@@ -1,0 +1,609 @@
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-232-7979' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-613-3782' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-536-4558' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-244-5430' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-381-4142' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-702-1555' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-368-1625' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='917-312-3743' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-702-0214' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-702-1555' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-232-7979' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-671-5339' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-438-1457' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-383-8091' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-216-6474' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-567-5515' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-314-0236' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-644-2944' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-432-9996' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-432-9996' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-539-9933' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-427-4912' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-962-7842' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-685-3351' 
+[2018-08-20 10:28:53.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-630-7339' 
+[2018-08-20 10:29:18.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-478-0256' 
+[2018-08-20 10:29:18.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-438-9930' 
+[2018-08-20 10:29:19.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-326-8026' 
+[2018-08-20 10:29:19.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-310-3713' 
+[2018-08-20 10:29:20.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-217-8611' 
+[2018-08-20 10:29:20.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-868-2033' 
+[2018-08-20 10:29:20.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-639-6266' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-228-3313' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-420-4412' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-259-1053' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-565-8199' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-207-2617' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-367-2228' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-216-2000' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-260-8050' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-260-8050' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-420-4412' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-228-3313' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='917-847-3394' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='917-847-3394' 
+[2018-08-20 10:29:21.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-867-1326' 
+[2018-08-20 10:29:29.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-232-7979' 
+[2018-08-20 10:29:29.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-613-3782' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-536-4558' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-244-5430' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-381-4142' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-702-1555' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-368-1625' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='917-312-3743' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-702-0214' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-702-1555' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-232-7979' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-671-5339' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-438-1457' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-383-8091' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-216-6474' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-567-5515' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-314-0236' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-644-2944' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-432-9996' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-432-9996' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-539-9933' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-427-4912' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-962-7842' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-685-3351' 
+[2018-08-20 10:29:30.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-630-7339' 
+[2018-08-20 12:04:52.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-20-2018' and '08-20-2018' and statfact <>'2'
+[2018-08-20 12:04:54.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-20-2018' and '08-20-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-08-20 12:04:57.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-20-2018' and '08-20-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-08-20 12:04:58.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-20-2018' and '08-20-2018' and cod_subgrupo='CONSULTA' 
+[2018-08-20 12:04:58.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-20-2018' and '08-20-2018' and d.coditems like 'TD%' 
+[2018-08-20 12:04:58.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-20-2018' and '08-20-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-08-20 12:04:59.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-20-2018' and '08-20-2018') and d.coditems like 'LI%' 
+[2018-08-20 12:43:40.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-20-2018' and '08-20-2018' and statfact <>'2'
+[2018-08-20 12:43:43.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-20-2018' and '08-20-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-08-20 12:43:44.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-20-2018' and '08-20-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-08-20 12:43:45.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-20-2018' and '08-20-2018' and cod_subgrupo='CONSULTA' 
+[2018-08-20 12:43:45.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-20-2018' and '08-20-2018' and d.coditems like 'TD%' 
+[2018-08-20 12:43:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-20-2018' and '08-20-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-08-20 12:43:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-20-2018' and '08-20-2018') and d.coditems like 'LI%' 
+[2018-08-20 13:56:57.000000 192.130.75.223  - [query->JOLALDE] ] Select SUBSTRING(nombre, 1, 1) + ' ' + apellido medico from Mmedicos where activo<> 0  and Codmedico<>'000' 
+[2018-08-20 13:56:57.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA vp  where fechafac  between '08-20-2018' and '08-20-2018' 
+[2018-08-20 13:56:57.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA vp  where fechafac between '08-20-2018' and '08-20-2018' and medico<>'' group by medico,Dventa
+[2018-08-20 13:56:58.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '08-20-2018' and '08-20-2018' and medico<>'' group by medico
+[2018-08-20 13:56:58.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '08/20/2018' and '08/20/2018' and medico<>''
+[2018-08-20 13:56:59.000000 192.130.75.223  - [query->JOLALDE] ] Select SUBSTRING(nombre, 1, 1) + ' ' + apellido medico from Mmedicos where activo<> 0  and Codmedico<>'000' 
+[2018-08-20 13:56:59.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA vp  where fechafac  between '08-20-2018' and '08-20-2018' 
+[2018-08-20 13:56:59.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA vp  where fechafac between '08-20-2018' and '08-20-2018' and medico<>'' group by medico,Dventa
+[2018-08-20 13:57:00.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '08-20-2018' and '08-20-2018' and medico<>'' group by medico
+[2018-08-20 13:57:00.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '08/20/2018' and '08/20/2018' and medico<>''
+[2018-08-20 13:57:14.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-20-2018' and '08-20-2018' and statfact <>'2'
+[2018-08-20 13:57:16.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-20-2018' and '08-20-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-08-20 13:57:18.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-20-2018' and '08-20-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-08-20 13:57:18.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-20-2018' and '08-20-2018' and cod_subgrupo='CONSULTA' 
+[2018-08-20 13:57:19.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-20-2018' and '08-20-2018' and d.coditems like 'TD%' 
+[2018-08-20 13:57:19.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-20-2018' and '08-20-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-08-20 13:57:20.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-20-2018' and '08-20-2018') and d.coditems like 'LI%' 
+[2018-08-20 16:16:48.000000 192.130.74.2  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' 
+[2018-08-20 16:16:48.000000 192.130.74.2  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+[2018-08-20 16:17:04.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-981-6127' 
+[2018-08-20 16:17:04.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-408-6112' 
+[2018-08-20 16:17:04.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-627-1349' 
+[2018-08-20 16:17:05.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-948-2736' 
+[2018-08-20 16:17:05.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-854-7394' 
+[2018-08-20 16:17:05.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-538-6546' 
+[2018-08-20 16:17:06.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-226-0743' 
+[2018-08-20 16:17:06.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-613-0991' 
+[2018-08-20 16:17:07.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-314-7371' 
+[2018-08-20 16:17:07.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-309-4238' 
+[2018-08-20 16:17:07.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-236-1444' 
+[2018-08-20 16:17:08.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-596-4869' 
+[2018-08-20 16:17:08.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-596-4869' 
+[2018-08-20 16:17:08.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-415-0582' 
+[2018-08-20 16:17:08.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-475-8787' 
+[2018-08-20 16:17:08.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-457-7159' 
+[2018-08-20 16:17:08.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-318-5237' 
+[2018-08-20 16:17:08.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-449-7696' 
+[2018-08-20 16:17:08.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-376-6974' 
+[2018-08-20 16:17:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-547-0591' 
+[2018-08-20 16:17:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-360-9499' 
+[2018-08-20 16:17:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-204-1622' 
+[2018-08-20 16:17:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-619-1678' 
+[2018-08-20 16:17:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-923-4517' 
+[2018-08-20 16:17:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-410-5071' 
+[2018-08-20 16:17:36.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-649-9912' 
+[2018-08-20 16:17:36.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-406-0575' 
+[2018-08-20 16:17:36.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-869-8939' 
+[2018-08-20 16:17:36.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-404-8738' 
+[2018-08-20 16:17:36.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-905-5747' 
+[2018-08-20 16:17:37.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-905-5747' 
+[2018-08-20 16:17:37.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-564-3292' 
+[2018-08-20 16:17:37.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-401-4552' 
+[2018-08-20 16:17:37.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-901-2935' 
+[2018-08-20 16:17:37.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-717-8735' 
+[2018-08-20 16:17:37.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-408-3902' 
+[2018-08-20 16:17:37.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-312-9830' 
+[2018-08-20 16:17:37.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-381-4142' 
+[2018-08-20 16:17:37.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-373-3141' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-678-7389' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-406-9816' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-619-1195' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-645-6504' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-702-0944' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-348-0296' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-907-6403' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-962-4094' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-486-4742' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-564-2572' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-374-6443' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-598-5178' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='305-915-7326' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-938-6383' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-393-2493' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-393-2493' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-206-4953' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-938-1692' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-925-0655' 
+[2018-08-20 16:30:09.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-383-8091' 
+[2018-08-20 16:30:10.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-342-4501' 
+[2018-08-20 16:30:10.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-341-1466' 
+[2018-08-20 16:30:10.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-212-0261' 
+[2018-08-20 16:30:10.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='939-280-5662' 
+[2018-08-20 16:30:10.000000 192.130.74.2  - [query->LA] ] Select  a.nombres,a.Historia,CONVERT(VARCHAR(10), b.fecha_cita,126) fecha_cita,b.id, c.observacion, c.Usuario  from mclientes a 
+ inner join (  SELECT codclien,MAX(ID) AS ID, MAX(fecha_cita)  fecha_cita FROM mconsultas GROUP BY codclien ) b on a.codclien=b.codclien
+  inner join mconsultas c On c.Id=b.ID
+where a.Cedula='787-619-1195' 

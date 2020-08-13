@@ -1,0 +1,41 @@
+CMA 2019-03-28
+OBSERVACIONES :
+
+
+
+
+JS
+
+suero.js
+
+----------------------------------------------------------------------------
+CLASES
+
+getexclusivo.php
+
+
+----------------------------------------------------------------------------
+DATABASE 
+     exclusivos
+
+     USE [farmacias]
+GO
+
+/****** Object:  Table [dbo].[exclusivos]    Script Date: 3/28/2019 10:12:57 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[exclusivos](
+     [id] [int] IDENTITY(1,1) NOT NULL,
+     [Codmedico] [nvarchar](3) NULL,
+     [coditems] [nvarchar](10) NULL,
+     [medico] [nvarchar](100) NULL,
+     [producto] [nvarchar](100) NULL
+) ON [PRIMARY]
+
+GO
+
+-------------------------------------------

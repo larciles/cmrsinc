@@ -1,0 +1,61 @@
+[2019-12-01 13:38:25.000000 192.130.74.162  - [query->MICHELLE] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='11/30/2019' and id_centro = 'S' group by valor  order by valor desc
+
+[2019-12-01 13:38:25.000000 192.130.74.162  - [query->MICHELLE] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWpagosPRCMACST_1  where fechapago='11/30/2019'and codforpa not in('2')   and statfact=3   and id_centro = '2' and cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER')  group by modopago,codforpa  order by modopago
+
+[2019-12-01 13:38:25.000000 192.130.74.162  - [query->MICHELLE] ] SELECT sum(monto) monto, modopago  ,case when  tipo_doc='01' then modopago  when  tipo_doc='04' then 'RETURN CHECK' End  as dmodopago ,codforpa ,tipo_doc
+        FROM VIEWpagosPRCMACST_1  
+        where fechapago='11/30/2019' and 
+        codforpa  in('2')  and 
+        statfact=3   and 
+        id_centro = '2' and 
+        cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER')  
+        group by modopago,codforpa , tipo_doc
+        order by modopago
+
+
+[2019-12-01 13:38:25.000000 192.130.74.162  - [query->MICHELLE] ] SELECT sum(monto) monto, count(*) facturas from VIEWpagosPRCMACST_1 where fechafac='11/30/2019'  and statfact=3 and tipo_doc='01' and  cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER') 
+
+[2019-12-01 13:38:25.000000 192.130.74.162  - [query->MICHELLE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACSTWEB a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '11/30/2019' and a.doc='04' and statfact=3 and  cod_subgrupo  In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER') 
+
+[2019-12-01 13:38:25.000000 192.130.74.162  - [query->MICHELLE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACSTWEB a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '11/30/2019' and a.doc='04' and statfact=3 and  cod_subgrupo  In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER') 
+
+[2019-12-01 13:38:25.000000 192.130.74.162  - [query->MICHELLE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACSTWEB a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '11/30/2019' and a.doc='04' and statfact=3 and  cod_subgrupo  In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER') 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT a.usuario, sum( a.subtotal) subtotal, sum(a.descuento) descuento,  (sum(a.total)+sum(a.monto_flete))  monto, sum( a.TotImpuesto) TotImpuesto, sum(a.monto_flete) monto_flete   FROM  VentasDiariasCMACST1 a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '11/30/2019' AND '11/30/2019'  AND  a.statfact=3  And  a.total>=0 and cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER')  group by  usuario Order by monto desc 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT DISTINCT a.numfactu, convert(varchar(10), cast(a.fechafac as date), 101)  fechapago , a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete,a.usuario,a.Historia, a.initials FROM VentasDiariasCMACST1 a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '11/30/2019' AND '11/30/2019'  AND  a.statfact=3  And  a.total>=0 and cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER') /* and usuario='MICHELLE' */ Order by a.usuario desc 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT d.numfactu, d.modopago From VIEWpagosPRCMACST d WHERE d.fechapago between '11/30/2019' AND '11/30/2019' and cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER') Order By d.modopago
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago = '11/30/2019' AND d.numfactu ='194769' 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago = '11/30/2019' AND d.numfactu ='194756' 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago = '11/30/2019' AND d.numfactu ='194759' 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago = '11/30/2019' AND d.numfactu ='194757' 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago = '11/30/2019' AND d.numfactu ='194776' 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago = '11/30/2019' AND d.numfactu ='194758' 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago = '11/30/2019' AND d.numfactu ='194774' 
+
+[2019-12-01 13:38:26.000000 192.130.74.162  - [query->MICHELLE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago = '11/30/2019' AND d.numfactu ='194787' 
+
+[2019-12-01 13:38:27.000000 192.130.74.162  - [query->MICHELLE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiariasCMACST1 a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '11/30/2019' AND '11/30/2019' AND a.statfact=3 and cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER') And   a.doc='01'  
+
+[2019-12-01 13:38:28.000000 192.130.74.162  - [query->MICHELLE] ] SELECT  distinct a.numfactu, convert(varchar(10)
+ , cast(a.fechafac as date), 101)  fechapago 
+ , a.nombres
+ , a.subtotal
+ , a.descuento
+ , (a.total+a.monto_flete) monto
+ , a.statfact
+ , a.TotImpuesto
+ , a.monto_flete FROM VentasDiariasCMACST1 a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '11/30/2019' AND '11/30/2019' AND  a.statfact=3 and cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER') And  a.total<0  /* and usuario='MICHELLE'  Order by a.numfactu desc */ 
+
+[2019-12-01 13:38:28.000000 192.130.74.162  - [query->MICHELLE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACSTWEB a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '11/30/2019' AND '11/30/2019'  AND  a.statfact=3 and cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER')   And  a.total<0 
+
+[2019-12-01 13:38:29.000000 192.130.74.162  - [query->MICHELLE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST1 a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '11/30/2019' AND '11/30/2019'  AND  a.statfact=3 and cod_subgrupo In('SUEROTERAPIA','CEL MADRE','BLOQUEO','INTRAVENOSO','TERAPIA LASER') 
+

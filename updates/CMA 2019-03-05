@@ -1,0 +1,19 @@
+CMA 2019-03-05
+
+OBSERVACIONES :
+
+NUEVO DE REPORTE DE SOLO CONSULTA DE CELULAS MADRES
+
+\vistas\reportes
+ventascelmaconsulta.php
+repventascelmaconsulta.php
+
+\js
+ventascelmaconsulta.js
+
+
+Agregar en el 
+\vistas\lauouts\
+heaeder.php
+
+   echo '    <li><a href="http://'.$curserver.'/cma/vistas/reportes/ventascelmaconsulta.php"><img src="http://'.$curserver.'/cma/img/new2.png" alt="new" >Solo Consultas Células Madres </a></li> ';

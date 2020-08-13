@@ -1,0 +1,102 @@
+[2019-01-22 11:16:46.000000 192.130.74.20  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '01-01-2019' and '01-21-2019' and statfact <>'2'
+[2019-01-22 11:16:46.000000 192.130.74.20  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '01-01-2019' and '01-21-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-01-22 11:16:46.000000 192.130.74.20  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '01-01-2019' and '01-21-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-01-22 11:16:47.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-01-2019' and '01-21-2019' and cod_subgrupo='CONSULTA' 
+[2019-01-22 11:16:47.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '01-01-2019' and '01-21-2019' and d.coditems like 'TD%' 
+[2019-01-22 11:16:48.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-01-2019' and '01-21-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-01-22 11:16:48.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '01-01-2019' and '01-21-2019') and d.coditems like 'LI%' 
+[2019-01-22 13:45:24.000000 192.130.74.20  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '01-21-2019' and '01-21-2019' and statfact <>'2'
+[2019-01-22 13:45:24.000000 192.130.74.20  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '01-21-2019' and '01-21-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-01-22 13:45:24.000000 192.130.74.20  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '01-21-2019' and '01-21-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-01-22 13:45:24.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-21-2019' and '01-21-2019' and cod_subgrupo='CONSULTA' 
+[2019-01-22 13:45:24.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '01-21-2019' and '01-21-2019' and d.coditems like 'TD%' 
+[2019-01-22 13:45:24.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-21-2019' and '01-21-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-01-22 13:45:25.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '01-21-2019' and '01-21-2019') and d.coditems like 'LI%' 
+[2019-01-22 13:45:40.000000 192.130.74.20  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2'
+[2019-01-22 13:45:41.000000 192.130.74.20  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-01-22 13:45:41.000000 192.130.74.20  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-01-22 13:45:41.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-22-2019' and '01-22-2019' and cod_subgrupo='CONSULTA' 
+[2019-01-22 13:45:42.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '01-22-2019' and '01-22-2019' and d.coditems like 'TD%' 
+[2019-01-22 13:45:42.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-22-2019' and '01-22-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-01-22 13:45:42.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '01-22-2019' and '01-22-2019') and d.coditems like 'LI%' 
+[2019-01-22 13:55:08.000000 192.130.74.20  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2'
+[2019-01-22 13:55:08.000000 192.130.74.20  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-01-22 13:55:08.000000 192.130.74.20  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-01-22 13:55:08.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-22-2019' and '01-22-2019' and cod_subgrupo='CONSULTA' 
+[2019-01-22 13:55:08.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '01-22-2019' and '01-22-2019' and d.coditems like 'TD%' 
+[2019-01-22 13:55:09.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-22-2019' and '01-22-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-01-22 13:55:09.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '01-22-2019' and '01-22-2019') and d.coditems like 'LI%' 
+[2019-01-22 17:09:44.000000 192.130.74.20  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2'
+[2019-01-22 17:09:44.000000 192.130.74.20  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-01-22 17:09:44.000000 192.130.74.20  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-01-22 17:09:44.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-22-2019' and '01-22-2019' and cod_subgrupo='CONSULTA' 
+[2019-01-22 17:09:44.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '01-22-2019' and '01-22-2019' and d.coditems like 'TD%' 
+[2019-01-22 17:09:45.000000 192.130.74.20  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-22-2019' and '01-22-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-01-22 17:09:45.000000 192.130.74.20  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '01-22-2019' and '01-22-2019') and d.coditems like 'LI%' 
+[2019-01-22 18:12:48.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2'
+[2019-01-22 18:12:48.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-01-22 18:12:48.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '01-22-2019' and '01-22-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-01-22 18:12:48.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-22-2019' and '01-22-2019' and cod_subgrupo='CONSULTA' 
+[2019-01-22 18:12:48.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '01-22-2019' and '01-22-2019' and d.coditems like 'TD%' 
+[2019-01-22 18:12:49.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-22-2019' and '01-22-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-01-22 18:12:49.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '01-22-2019' and '01-22-2019') and d.coditems like 'LI%' 

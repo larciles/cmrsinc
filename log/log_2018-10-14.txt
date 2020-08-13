@@ -1,0 +1,2 @@
+[2018-10-14 13:41:46.000000 192.130.74.2  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' 
+[2018-10-14 13:41:46.000000 192.130.74.2  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 

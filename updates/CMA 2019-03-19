@@ -1,0 +1,208 @@
+CMA 2019-03-04
+OBSERVACIONES :
+
+\clases
+
+getallproducts.php
+updatepresupuesto.php
+printpresupuestopdf.php
+presupuestosave.php
+updatemedicopresupuesto.php 
+presupuestoprintpdf.php
+
+vistas\
+
+folder 
+ presupuesto
+
+
+ vistas\layouts
+
+       echo '<li role="separator" class="divider"></li>';
+              if($_SESSION['codperfil']=='01' || $_SESSION['codperfil']=='02' || $_SESSION['codperfil']=='05' && $_SESSION['controlcita']=='0'){
+              echo ' <li><a href="http://'.$curserver.'/cma/vistas/presupuesto/index.php">Presupuesto</a></li> ';              
+            }
+
+
+\js
+presupuesto.js
+listpresupuestos.js
+
+\controller
+
+presupuestocontroller.php
+
+-------------------------
+
+
+nuevas tablas
+
+USE [farmacias]
+GO
+
+/****** Object:  Table [dbo].[presupuesto_m]    Script Date: 3/19/2019 9:01:39 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[presupuesto_m](
+     [numfactu] [nvarchar](10) NOT NULL,
+     [fechafac] [datetime] NULL,
+     [codclien] [nvarchar](15) NULL,
+     [codmedico] [nvarchar](3) NULL,
+     [subtotal] [money] NULL CONSTRAINT [DF_presupuesto_m_subtotal]  DEFAULT ((0)),
+     [descuento] [money] NOT NULL CONSTRAINT [DF_presupuesto_m_descuento]  DEFAULT ((0)),
+     [iva] [money] NOT NULL CONSTRAINT [DF_presupuesto_m_iva]  DEFAULT ((0)),
+     [total] [money] NULL CONSTRAINT [DF_presupuesto_m_total]  DEFAULT ((0)),
+     [statfact] [nvarchar](1) NULL CONSTRAINT [DF_presupuesto_m_statfact]  DEFAULT ((1)),
+     [fechanul] [datetime] NULL,
+     [desanul] [nvarchar](255) NULL,
+     [recipe] [bit] NULL,
+     [cancelado] [nvarchar](1) NULL,
+     [usuario] [nvarchar](15) NULL,
+     [workstation] [nvarchar](15) NULL,
+     [ipaddress] [nvarchar](15) NULL,
+     [fecreg] [datetime] NULL,
+     [horareg] [nvarchar](15) NULL,
+     [monto_abonado] [money] NULL CONSTRAINT [DF_presupuesto_m_monto_abonado]  DEFAULT ((0)),
+     [tipo] [nvarchar](10) NULL CONSTRAINT [DF_presupuesto_m_tipo]  DEFAULT (N'01'),
+     [rowguid] [uniqueidentifier] NOT NULL CONSTRAINT [DF_presupuesto_m_rowguid]  DEFAULT (newid()),
+     [totalpvp] [money] NULL CONSTRAINT [DF_presupuesto_m_totalpvp]  DEFAULT ((0)),
+     [tipopago] [bit] NULL CONSTRAINT [DF_presupuesto_m_tipopago]  DEFAULT ((0)),
+     [codseguro] [int] NULL CONSTRAINT [DF_presupuesto_m_codseguro]  DEFAULT ((0)),
+     [plazo] [int] NULL CONSTRAINT [DF_presupuesto_m_plazo]  DEFAULT ((0)),
+     [vencimiento] [datetime] NULL,
+     [codaltcliente] [nvarchar](20) NULL,
+     [dias_tratamiento] [int] NULL CONSTRAINT [DF_presupuesto_m_dias_tratamiento]  DEFAULT ((0)),
+     [patologia] [int] NULL,
+     [presupuesto] [nvarchar](7) NULL,
+     [Impuesto] [bit] NOT NULL CONSTRAINT [DF_presupuesto_m_Impuesto]  DEFAULT ((1)),
+     [TotImpuesto] [money] NOT NULL CONSTRAINT [DF_presupuesto_m_TotImpuesto]  DEFAULT ((0)),
+     [Alicuota] [float] NULL CONSTRAINT [DF_presupuesto_m_Alicuota]  DEFAULT ((0)),
+     [monto_flete] [money] NULL CONSTRAINT [DF_presupuesto_m_monto_flete]  DEFAULT ((0)),
+     [Id] [int] IDENTITY(1,1) NOT NULL,
+     [medios] [numeric](18, 0) NULL,
+     [medico] [nvarchar](100) NULL,
+     [mediconame] [nvarchar](50) NULL,
+ CONSTRAINT [PK_presupuesto_m] PRIMARY KEY CLUSTERED 
+(
+     [numfactu] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'0=pendiente, 1=pagado,2=abonado' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'presupuesto_m', @level2type=N'COLUMN',@level2name=N'cancelado'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'0="contado" y 1 = "credito"' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'presupuesto_m', @level2type=N'COLUMN',@level2name=N'tipopago'
+GO
+
+
+---------------------------------------------------
+
+
+USE [farmacias]
+GO
+
+/****** Object:  Table [dbo].[presupuesto_d]    Script Date: 3/19/2019 9:04:08 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[presupuesto_d](
+     [numfactu] [nvarchar](10) NOT NULL,
+     [fechafac] [datetime] NULL,
+     [coditems] [nvarchar](10) NOT NULL,
+     [cantidad] [numeric](18, 0) NULL,
+     [precunit] [money] NULL,
+     [tipoitems] [nvarchar](1) NULL CONSTRAINT [DF_presupuesto_d_tipoitems]  DEFAULT (N'P'),
+     [procentaje] [float] NOT NULL CONSTRAINT [DF_presupuesto_d_procentaje]  DEFAULT (0),
+     [descuento] [money] NOT NULL CONSTRAINT [DF_presupuesto_d_descuento]  DEFAULT (0),
+     [codtipre] [nvarchar](2) NULL,
+     [usuario] [nvarchar](15) NULL,
+     [workstation] [nvarchar](15) NULL,
+     [ipaddress] [nvarchar](15) NULL,
+     [fecreg] [datetime] NULL,
+     [horareg] [nvarchar](15) NULL,
+     [Codmedico] [nvarchar](3) NULL,
+     [codtecnico] [nvarchar](2) NULL,
+     [aplicaiva] [nvarchar](1) NULL CONSTRAINT [DF_presupuesto_d_aplicaiva]  DEFAULT (0),
+     [aplicadcto] [nvarchar](1) NULL CONSTRAINT [DF_presupuesto_d_aplicadcto]  DEFAULT (0),
+     [aplicacommed] [nvarchar](1) NULL CONSTRAINT [DF_presupuesto_d_aplicacommed]  DEFAULT (1),
+     [aplicacomtec] [nvarchar](1) NULL CONSTRAINT [DF_presupuesto_d_aplicacomtec]  DEFAULT (0),
+     [tipo] [nvarchar](2) NULL CONSTRAINT [DF_presupuesto_d_tipo]  DEFAULT ('FA'),
+     [rowguid] [uniqueidentifier] NOT NULL CONSTRAINT [DF_presupuesto_d_rowguid]  DEFAULT (newid()),
+     [pvpitem] [money] NULL CONSTRAINT [DF_presupuesto_d_pvpitem]  DEFAULT (0),
+     [dosis] [int] NULL CONSTRAINT [DF_presupuesto_d_dosis]  DEFAULT (0),
+     [cant_sugerida] [numeric](18, 0) NULL CONSTRAINT [DF_presupuesto_d_cant_sugerida]  DEFAULT (0),
+     [costo] [float] NULL CONSTRAINT [DF_presupuesto_d_costo]  DEFAULT (0),
+     [monto_imp] [float] NOT NULL CONSTRAINT [DF_presupuesto_d_monto_imp]  DEFAULT (0),
+     [codseguro] [int] NULL CONSTRAINT [DF_presupuesto_d_codseguro]  DEFAULT (0),
+     [Id] [int] IDENTITY(1,1) NOT NULL,
+     [dstatfact] [nvarchar](1) NULL,
+ CONSTRAINT [PK_presupuesto_d] PRIMARY KEY CLUSTERED 
+(
+     [numfactu] ASC,
+     [coditems] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+....................................
+
+
+
+              ///
+
+var Http = new XMLHttpRequest();
+var url='../../clases/getproducts.php';
+ 
+var params = "coditems="+codprod;
+
+ 
+Http.open( "POST", url, true );
+
+//Http.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+Http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+Http.onreadystatechange=(e)=>{
+ 
+  if (Http.readyState==4 && Http.status==200) {
+
+     var res= JSON.parse( Http.responseText ) ;
+     taxable = res[0].aplicaIva
+     subtotNoTax = (cantidad * precio);
+     if (taxable=="1") {  
+        impuesto = $("input[name='tax[]']")[i].value !=="" ? parseFloat( $("input[name='tax[]']")[i].value ) : 0;
+     }else{
+
+     }
+
+  }else{
+    console.log(e)
+  }
+  
+}
+ 
+
+Http.send(params);
+
+
+---------------------------------------------------
+
+
+create view view_presupuesto_list as
+SELECT        dbo.presupuesto_m.numfactu, dbo.presupuesto_m.fechafac, dbo.MClientes.nombres, dbo.Mmedicos.nombre + ' ' + dbo.Mmedicos.apellido AS Medico, dbo.presupuesto_m.statfact, dbo.presupuesto_m.subtotal, dbo.presupuesto_m.descuento, 
+                         dbo.presupuesto_m.iva AS Impuesto1, dbo.presupuesto_m.total + dbo.presupuesto_m.monto_flete AS total, dbo.Status.Status, dbo.presupuesto_m.totalpvp, dbo.presupuesto_m.TotImpuesto AS Impuesto2, dbo.presupuesto_m.Id, dbo.presupuesto_m.monto_flete, 
+                         dbo.presupuesto_m.TotImpuesto, dbo.presupuesto_m.codclien, dbo.presupuesto_m.usuario, dbo.presupuesto_m.codmedico, dbo.MClientes.Historia
+FROM            dbo.presupuesto_m LEFT OUTER JOIN
+                         dbo.Status ON dbo.presupuesto_m.statfact = dbo.Status.statfact LEFT OUTER JOIN
+                         dbo.Mmedicos ON dbo.presupuesto_m.codmedico = dbo.Mmedicos.Codmedico LEFT OUTER JOIN
+                         dbo.MClientes ON dbo.presupuesto_m.codclien = dbo.MClientes.codclien

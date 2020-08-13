@@ -1,0 +1,31 @@
+CMA 2019-03-09
+OBSERVACIONES :
+
+Estos cambios son para agregar la lista de Precios
+
+NUEVO
+
+\js
+listadeprecios.js
+
+\clases
+baremolst.php
+
+\vistas\reportes
+
+listadeprecios.php
+replistadeprecios.php
+
+
+
+ACTUALIZACIONES
+
+\vistas\layouts
+
+en la seccion de inventario
+
+echo '   <li><a href="http://'.$curserver.'/cma/vistas/reportes/listadeprecios.php">Baremo</a></li>';
+
+
+
+

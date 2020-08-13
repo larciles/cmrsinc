@@ -1,0 +1,431 @@
+.getintra{
+/*    margin-top: 5%;
+    margin-right: 50%;*/
+    position: relative;
+        margin-top: 16%;
+    margin-right: 27%;
+    }
+.gevitc{
+    position: relative;
+    margin-right: 50%;
+    margin-top: 16%;
+}
+
+.td-mls{ width: 25%; }
+.td-hilt{ width: 25%; }
+.td-intra{}
+.td-vitc{
+}
+
+
+.tr-thead > .th-vitc{
+
+}
+.th-gen{
+
+} 
+.th-mls{
+
+}
+.th-gen{
+
+    } 
+.th-hilt{
+
+}
+.th-gen{
+
+    } 
+.th-intra{
+text-align: center;
+}
+.th-gen{
+
+    } 
+.th-vitc{
+text-align: center;
+}
+
+.pacientes-vinculados{
+	display: none;
+}
+.line-note{
+	display: none;	
+}
+
+.row-data{
+	height: 52px;
+}
+
+.t-data{
+	border: 1px solid #ccc;
+	width: 16%;
+}
+.t-time{
+	    width:2%;
+}
+
+.th-titulos{
+	    text-align: center;
+}
+
+.row-inicial{
+        padding-top: 15px;
+}
+
+.azul{
+background-color: #0048a0!important;
+}
+
+.rojo{
+  background-color: #de0f09!important;
+}
+
+.intra{
+    background-color: #2de62d;
+    color: black;
+    font-size: 15px;
+}
+
+.suero{
+  background-color: #6e6f0d;
+  /*cuando esta dentro del form*/
+  margin-top: 3px;
+  font-size: 13px;
+}
+
+.doble-cero{
+    margin-top: 51px!important;
+}
+
+.en-cero{
+    margin-top: 32px!important;
+}
+
+.mas-de-cero{
+  margin-top: -15px!important;
+}
+
+.solo-intra{
+  margin-top: 25px!important;
+}
+
+.solo-intra-suero{
+  margin-top: 10px!important; 
+}
+
+.solo-intra-hilt{
+  margin-top: 5px!important;
+}
+
+.deshabilitado{
+    margin-left: 87%!important;
+  
+}
+
+.deshabilitado >label.lbl-prog {
+     cursor: not-allowed!important;
+}
+
+
+.total-thera{
+    background-color:#233500; /*#5d5b5b;*/
+    color: #fff;
+    border-radius: 6%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.app tbody tr td span.tbldatos  {
+    display: block;
+    
+}
+
+/*.intravc*/
+.app tbody tr td div.intravc  {
+  /*  position: relative;
+        float: right;
+        margin-top: -15%;*/
+}
+
+.intravc{
+  float: right;
+}
+
+.vitc, .intra {
+    width: 84px;
+    height: 18px;
+}
+
+.tbl-hilt{
+  margin-top: 2px;
+}
+
+.tbldatos {
+font-size: 15px;
+}
+
+.wrap-main{
+    position: relative;
+    width: 100%;
+     /*  position:absolute;*/
+    z-index:0;
+}
+
+#bg-text
+{
+    color:#d6d1d187;/*#d3d3d387;*/
+    font-size: 59px;
+    z-index: 0;
+    background-color: transparent;
+    float: right;
+  /*  transform:rotate(300deg);
+    -webkit-transform:rotate(300deg);*/
+}
+
+.backbox{
+    position:absolute;
+    z-index:-1;
+    background: transparent;
+    display:block;
+    min-height:50%; 
+    min-width:50%;
+    margin-left: 24%;
+    top: 20px;
+}
+
+.wrap-laser{
+    float: left;
+    width: 45%;
+}
+
+.vitc{
+  display: block;  
+}
+
+.activo{
+    background: #ebfff9;
+}
+
+.table-active, .table-active>td, .table-active>td.activo, .table-active>th, .table-hover tbody tr:hover {
+    /*background-color: #f5f5f5;;*/
+}
+
+
+/*hover hover tabla*/
+table {
+  overflow: hidden;
+}
+
+td, th {
+  padding: 10px;
+  position: relative;
+  outline: 0;
+}
+
+body:not(.nohover) tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+td:hover::after,
+thead th:not(:empty):hover::after,
+td:focus::after,
+thead th:not(:empty):focus::after { 
+  content: '';  
+  height: 10000px;
+  left: 0;
+  position: absolute;  
+  top: -5000px;
+  width: 100%;
+  z-index: -1;
+}
+
+td:hover::after,
+th:hover::after,
+td.activo:hover::after {
+  background-color: #f5f5f5;
+}
+
+td:focus::after,
+th:focus::after {
+  background-color: lightblue;
+}
+
+/* Focus stuff for mobile */
+td:focus::before,
+tbody th:focus::before {
+  background-color: lightblue;
+  content: '';  
+  height: 100%;
+  top: 0;
+  left: -5000px;
+  position: absolute;  
+  width: 10000px;
+  z-index: -1;
+}
+
+/* fin hove on table*/
+
+.find-out{
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    background: #a7dcba;
+  }
+/**/
+.currentdate{
+  position: relative;
+  background: red;
+  width: 132%;
+  margin-left: -11px;
+  font-weight: bold;
+}
+
+/**/
+.idassoc{
+  width: 135%;
+  margin-left: -32%;
+}
+
+/**/
+.idpaciente{
+  width: 73%;
+}
+
+/**/
+.submitok{
+  position: relative;
+  margin-top: 2%;
+}
+
+/*
+*/
+
+.titulo-3{
+     text-align: center;
+         background: #f0932b;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 1px;
+
+      }
+          .body-3{
+background-color:#ffeaa7;
+    }
+
+
+#xtitulo{
+  position: relative;
+  width: 146%;
+  margin-left: -10%;
+}
+
+.al-limite{
+background: #ff90a542;
+}
+
+.en-buscar{
+  background: #e5fafb;
+}
+
+.lb-td-chk{
+  font-size: 25px;
+}
+
+.fecha-cur-cita{
+  position: relative;
+  width: 157%;    
+  margin-left: -26%;
+}
+
+.altitud-tr{
+  height: 111px; /*85px;*/
+}
+
+.programar{
+clear: both;
+    position: relative;
+    float: left;
+    margin-top: -13px; /*-8px;*/
+    margin-left: 90%;
+}
+.lbl-prog{
+      font-size: 4em;
+    padding: o;
+    padding: 0;
+    border: 0px;
+    margin: -26px;
+}
+
+/*RIBBON*/
+.box {
+/*  width: 200px; height: 300px;
+  position: relative;
+  border: 1px solid #BBB;
+  background: #EEE;*/
+}
+.ribbon {
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+  z-index: 1000;
+  top: 64px;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #79A70A;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #79A70A;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+/*FIN RIBBON*/
+
+
+/*
+rojo : #de0f09;
+azul     background-color: #0048a0;
+
+verde
+    background-color: #2de62d;
+    color: black;
+
+    https://codepen.io/YuvarajTana/pen/auiqx
+*/
+
+/*
+https://www.youtube.com/watch?v=ZFAPrG6Pv6g
+https://www.youtube.com/watch?v=CxnzlYhGd6w
+https://www.youtube.com/watch?v=UtaGNP7k4kA
+*/

@@ -1,0 +1,3 @@
+[2019-02-10 13:37:27.000000 192.130.75.223  - [query->log-in] ] Select * from loginpass WHERE login = 'JOLALDE' and passwork ='olalde29' 
+[2019-02-10 13:37:27.000000 192.130.75.223  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'JOLALDE' 
+[2019-02-10 13:37:39.000000 192.130.75.223  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems

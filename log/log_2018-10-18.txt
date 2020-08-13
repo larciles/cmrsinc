@@ -1,0 +1,972 @@
+[2018-10-18 12:10:33.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2'
+[2018-10-18 12:10:34.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-18 12:10:34.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-18 12:10:34.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-18 12:10:35.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-18-2018' and '10-18-2018' and d.coditems like 'TD%' 
+[2018-10-18 12:10:35.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-18 12:10:35.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-18-2018' and '10-18-2018') and d.coditems like 'LI%' 
+[2018-10-18 12:11:02.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-01-2018' and '10-15-2018' and statfact <>'2'
+[2018-10-18 12:11:02.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-01-2018' and '10-15-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-18 12:11:02.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-01-2018' and '10-15-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-18 12:11:02.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '10-15-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-18 12:11:03.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-01-2018' and '10-15-2018' and d.coditems like 'TD%' 
+[2018-10-18 12:11:03.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '10-15-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-18 12:11:03.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-01-2018' and '10-15-2018') and d.coditems like 'LI%' 
+[2018-10-18 12:11:12.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-01-2018' and '10-18-2018' and statfact <>'2'
+[2018-10-18 12:11:12.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-01-2018' and '10-18-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-18 12:11:13.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-01-2018' and '10-18-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-18 12:11:13.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '10-18-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-18 12:11:13.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-01-2018' and '10-18-2018' and d.coditems like 'TD%' 
+[2018-10-18 12:11:14.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '10-18-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-18 12:11:14.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-01-2018' and '10-18-2018') and d.coditems like 'LI%' 
+[2018-10-18 12:17:57.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2'
+[2018-10-18 12:17:57.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-18 12:17:57.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-18 12:17:57.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-18 12:17:57.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-18-2018' and '10-18-2018' and d.coditems like 'TD%' 
+[2018-10-18 12:17:57.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-18 12:17:58.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-18-2018' and '10-18-2018') and d.coditems like 'LI%' 
+[2018-10-18 12:20:12.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2'
+[2018-10-18 12:20:13.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-18 12:20:13.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-18 12:20:13.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-18 12:20:13.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-18-2018' and '10-18-2018' and d.coditems like 'TD%' 
+[2018-10-18 12:20:13.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-18 12:20:14.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-18-2018' and '10-18-2018') and d.coditems like 'LI%' 
+[2018-10-18 13:27:00.000000 192.130.74.70  - [query->log-in] ] Select * from loginpass WHERE login = 'KSANTIAGO' and passwork ='KS2018' 
+[2018-10-18 13:27:00.000000 192.130.74.70  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'KSANTIAGO' 
+[2018-10-18 13:27:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:27:04.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:27:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:27:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:27:14.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-390-7585%'  Order  by nombres 
+[2018-10-18 13:27:17.000000 192.130.74.70  - [query->KSANTIAGO] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-18 13:27:17.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-18 13:27:17.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 13:27:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where Cedula like '%787-390-7585%'  Order  by nombres 
+[2018-10-18 13:28:09.000000 192.130.74.70  - [query->KSANTIAGO] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-18 13:28:09.000000 192.130.74.70  - [query->KSANTIAGO] ] Update Empresa Set UltimoCliente='112697' Where id=1
+[2018-10-18 13:28:09.000000 192.130.74.70  - [query->KSANTIAGO] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('MIRIAM','RIJOS RODRIGUEZ ','RIJOS RODRIGUEZ  MIRIAM','787-390-7585','787-390-7585','000','','','KATIRIA','','','160','67','','','','0', '0','0','0','112697','2018-10-18','787-390-7585','KATIRIA')
+[2018-10-18 13:28:09.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:28:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 100 * from Mclientes where  codclien = '112697' 
+[2018-10-18 13:28:46.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 13:28:46.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 13:28:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='112697'  and  asistido=0
+[2018-10-18 13:28:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112697' and codconsulta<>'07' group by codclien
+[2018-10-18 13:28:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112697' and codconsulta<>'07' group by codclien
+[2018-10-18 13:28:48.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 13:28:49.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:28:50.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:28:50.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:28:50.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:28:50.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:28:51.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:29:28.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112697' and asistido=0 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112697' 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112697' and asistido=0 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/23/2018'  
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112697','10/18/2018','1','10/23/2018' ,'000','KSANTIAGO','10/18/2018','KATIRIIA ***OFERTA DE 10.00
+50% DE DESC LASER','1','0','0','0','0','0','01')
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/23/2018' and activo = 1 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112697' and asistido=0 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112697' 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112697' and asistido=0 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112697' AND ASISTIDO=0
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/23/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIIA ***OFERTA DE 10.00
+50% DE DESC LASER' WHERE CODCLIEN='112697' AND ASISTIDO='0' and ID='252483' 
+[2018-10-18 13:29:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:29:32.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:29:32.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:29:32.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:29:34.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:29:40.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '71859'  Order  by nombres 
+[2018-10-18 13:29:40.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='100368'  and activa='1' order by forder desc  
+[2018-10-18 13:29:53.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '71858'  Order  by nombres 
+[2018-10-18 13:29:54.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112225'  and activa='1' order by forder desc  
+[2018-10-18 13:30:26.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '71859'  Order  by nombres 
+[2018-10-18 13:30:26.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='100368'  and activa='1' order by forder desc  
+[2018-10-18 13:31:13.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-390-7585%'  Order  by nombres 
+[2018-10-18 13:31:13.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112697'  and activa='1' order by forder desc  
+[2018-10-18 13:31:58.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-517-0900%'  Order  by nombres 
+[2018-10-18 13:31:58.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111573'  and activa='1' order by forder desc  
+[2018-10-18 13:37:51.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-528-3688%'  Order  by nombres 
+[2018-10-18 13:37:55.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:37:55.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:37:55.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:41:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from loginpass WHERE login = 'KSANTIAGO' and passwork ='KS2018' 
+[2018-10-18 13:41:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from Vestaciones WHERE usuario = 'KSANTIAGO' 
+[2018-10-18 13:42:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:42:21.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:42:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:42:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:42:33.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-528-3688%'  Order  by nombres 
+[2018-10-18 13:42:36.000000 192.130.74.70  - [query->KSANTIAGO] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-18 13:42:36.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-18 13:42:36.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 13:42:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where Cedula like '%787-528-3688%'  Order  by nombres 
+[2018-10-18 13:43:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-18 13:43:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Update Empresa Set UltimoCliente='112699' Where id=1
+[2018-10-18 13:43:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('SHARON ','LOZADA LOPEZ','LOZADA LOPEZ SHARON ','787-528-3688','787-528-3688','000','','','KATIRIA','','','160','67','','','','0', '0','0','0','112699','2018-10-18','787-528-3688','KATIRIA')
+[2018-10-18 13:43:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:43:56.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 13:43:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 100 * from Mclientes where  codclien = '112699' 
+[2018-10-18 13:43:56.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 13:43:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='112699'  and  asistido=0
+[2018-10-18 13:43:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112699' and codconsulta<>'07' group by codclien
+[2018-10-18 13:43:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112699' and codconsulta<>'07' group by codclien
+[2018-10-18 13:43:57.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 13:44:00.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:00.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:00.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:01.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:01.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:01.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112699' and asistido=0 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112699' 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112699' and asistido=0 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/19/2018'  
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112699','10/18/2018','1','10/19/2018' ,'000','KSANTIAGO','10/18/2018','KATIRIIA ***OFERTA DE 10.00
+50% DE DESC PQTE DE LASER','1','0','0','0','0','0','01')
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112699' and asistido=0 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112699' 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112699' and asistido=0 
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112699' AND ASISTIDO=0
+[2018-10-18 13:44:21.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/19/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIIA ***OFERTA DE 10.00
+50% DE DESC PQTE DE LASER' WHERE CODCLIEN='112699' AND ASISTIDO='0' and ID='252487' 
+[2018-10-18 13:44:22.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:44:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:44:48.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:44:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:44:49.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:44:53.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '112699'  Order  by nombres 
+[2018-10-18 13:44:57.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '112699'  Order  by nombres 
+[2018-10-18 13:45:03.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-5283688%'  Order  by nombres 
+[2018-10-18 13:45:09.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-528-3688%'  Order  by nombres 
+[2018-10-18 13:45:09.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112699'  and activa='1' order by forder desc  
+[2018-10-18 13:45:25.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIRIIA ***OFERTA DE 5.00 50% DE DESC PQTE DE LASER' where codclien='112699'  and fecha_cita='10/19/2018' 
+[2018-10-18 13:47:24.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:47:24.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:47:24.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:47:25.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:47:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/18/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/18/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-18 13:49:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-995-4695%'  Order  by nombres 
+[2018-10-18 13:49:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%COSTOSO%IRIS%'  Order  by nombres 
+[2018-10-18 13:49:28.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='98355'  and activa='1' order by forder desc  
+[2018-10-18 13:55:58.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIIRIA **OFERTA DE 10.00 50% DE DESC PQTE LASER' where codclien='98355'  and fecha_cita='10/13/2017' 
+[2018-10-18 13:56:27.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 13:56:27.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 13:56:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%%'  Order  by nombres 
+[2018-10-18 13:56:28.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 13:56:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='96505'  and  asistido=0
+[2018-10-18 13:56:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='96505' and codconsulta<>'07' group by codclien
+[2018-10-18 13:56:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select observacion from VIEW_mconsultas_02 where codclien='96505'  and fecha_cita='2018/10/19' and codconsulta<>'07'
+[2018-10-18 13:56:34.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-955-4695%'  Order  by nombres 
+[2018-10-18 13:56:34.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 13:56:34.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='98355'  and  asistido=0
+[2018-10-18 13:56:34.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='98355' and codconsulta<>'07' group by codclien
+[2018-10-18 13:56:34.000000 192.130.74.70  - [query->KSANTIAGO] ] Select observacion from VIEW_mconsultas_02 where codclien='98355'  and fecha_cita='2017/10/13' and codconsulta<>'07'
+[2018-10-18 13:56:42.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='98355' and asistido=0 
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='98355' 
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='98355' and asistido=0 
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='98355' AND ASISTIDO=0
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/19/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIIRIA **OFERTA DE 10.00 50% DE DESC PQTE LASER' WHERE CODCLIEN='98355' AND ASISTIDO='0' and ID='220332' 
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:56:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:56:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:57:16.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-995-4695%'  Order  by nombres 
+[2018-10-18 13:57:24.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-995-4695%'  Order  by nombres 
+[2018-10-18 13:57:31.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:57:31.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:57:31.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:57:33.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:57:42.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-995-4695%'  Order  by nombres 
+[2018-10-18 13:57:52.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '98355'  Order  by nombres 
+[2018-10-18 13:58:01.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '112699'  Order  by nombres 
+[2018-10-18 13:58:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:58:04.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:58:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:58:05.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:58:05.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:58:05.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:58:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:58:14.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '98355'  Order  by nombres 
+[2018-10-18 13:58:39.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '112699'  Order  by nombres 
+[2018-10-18 13:59:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from loginpass WHERE login = 'KSANTIAGO' and passwork ='KS2018' 
+[2018-10-18 13:59:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from Vestaciones WHERE usuario = 'KSANTIAGO' 
+[2018-10-18 13:59:09.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:59:09.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:59:09.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:59:10.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:59:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-528-3688%'  Order  by nombres 
+[2018-10-18 13:59:18.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112699'  and activa='1' order by forder desc  
+[2018-10-18 13:59:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-995-4695%'  Order  by nombres 
+[2018-10-18 13:59:32.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 13:59:32.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 13:59:32.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 13:59:34.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 13:59:41.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-995-4695%'  Order  by nombres 
+[2018-10-18 13:59:53.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-531-3176%'  Order  by nombres 
+[2018-10-18 13:59:53.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='104515'  and activa='1' order by forder desc  
+[2018-10-18 14:00:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%COSTOSE%MERCE%'  Order  by nombres 
+[2018-10-18 14:00:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:00:06.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:00:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:00:08.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:00:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%COSTOSO%MERCE%'  Order  by nombres 
+[2018-10-18 14:00:18.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='98355'  and activa='1' order by forder desc  
+[2018-10-18 14:01:12.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:01:12.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:01:12.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:01:14.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:01:24.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:01:24.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:01:24.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:01:25.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:01:27.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:01:27.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:01:27.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:01:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:01:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:01:30.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:01:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:01:31.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:01:32.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:01:32.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:01:32.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:01:33.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:01:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set confirmado='2',  usuario='KSANTIAGO'  where codclien='112699'  and fecha_cita='10/19/2018' 
+[2018-10-18 14:01:37.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:01:37.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:01:37.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:01:38.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:01:42.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:01:42.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:01:42.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:01:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:01:52.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set confirmado='2',  usuario='KSANTIAGO'  where codclien='98355'  and fecha_cita='10/19/2018' 
+[2018-10-18 14:01:54.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:01:54.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:01:54.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:01:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:06:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-239-5470%'  Order  by nombres 
+[2018-10-18 14:06:28.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='110639'  and activa='1' order by forder desc  
+[2018-10-18 14:06:40.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%CORREA%CARMEN%'  Order  by nombres 
+[2018-10-18 14:06:40.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='45801'  and activa='1' order by forder desc  
+[2018-10-18 14:06:52.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='110497'  and activa='1' order by forder desc  
+[2018-10-18 14:08:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-239-5470%'  Order  by nombres 
+[2018-10-18 14:08:18.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='110639'  and activa='1' order by forder desc  
+[2018-10-18 14:11:01.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIRIA CITA ABIERTA 10/16' where codclien='110639'  and fecha_cita='08/25/2018' 
+[2018-10-18 14:11:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIRIA CITA ABIERTA 10/18' where codclien='110639'  and fecha_cita='08/25/2018' 
+[2018-10-18 14:11:22.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%939-248-5553%'  Order  by nombres 
+[2018-10-18 14:11:22.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112177'  and activa='1' order by forder desc  
+[2018-10-18 14:13:20.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-327-7056%'  Order  by nombres 
+[2018-10-18 14:13:20.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='110544'  and activa='1' order by forder desc  
+[2018-10-18 14:15:22.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIIRIA****OFERTA 10.00 50% DE DESC PQTE LASER' where codclien='110544'  and fecha_cita='08/25/2018' 
+[2018-10-18 14:16:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%%'  Order  by nombres 
+[2018-10-18 14:16:23.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 14:16:23.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 14:16:23.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 14:16:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='96505'  and  asistido=0
+[2018-10-18 14:16:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='96505' and codconsulta<>'07' group by codclien
+[2018-10-18 14:16:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select observacion from VIEW_mconsultas_02 where codclien='96505'  and fecha_cita='2018/10/19' and codconsulta<>'07'
+[2018-10-18 14:16:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-327-7056%'  Order  by nombres 
+[2018-10-18 14:16:30.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 14:16:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='110544'  and  asistido=0
+[2018-10-18 14:16:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='110544' and codconsulta<>'07' group by codclien
+[2018-10-18 14:16:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select observacion from VIEW_mconsultas_02 where codclien='110544'  and fecha_cita='2018/08/25' and codconsulta<>'07'
+[2018-10-18 14:16:33.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/24/2018' and activo = 1 
+[2018-10-18 14:16:34.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/24/2018' and activo = 1 
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/24/2018' and activo = 1 
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='110544' and asistido=0 
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='110544' 
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='110544' and asistido=0 
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='110544' AND ASISTIDO=0
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/24/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIIRIA****OFERTA 10.00 50% DE DESC PQTE LASER' WHERE CODCLIEN='110544' AND ASISTIDO='0' and ID='247428' 
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:16:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:16:36.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:17:16.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '71214'  Order  by nombres 
+[2018-10-18 14:17:17.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='110677'  and activa='1' order by forder desc  
+[2018-10-18 14:17:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-697-1202%'  Order  by nombres 
+[2018-10-18 14:17:30.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111877'  and activa='1' order by forder desc  
+[2018-10-18 14:19:13.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIRIA ***OFERTA DE 10.0020% DESC FARMACIA Y TRAT CITA ABIERTA 10/18' where codclien='111877'  and fecha_cita='09/24/2018' 
+[2018-10-18 14:19:31.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-951-8808%'  Order  by nombres 
+[2018-10-18 14:19:32.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='104671'  and activa='1' order by forder desc  
+[2018-10-18 14:22:34.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIRIA***OFERTA DE 10.00 50% DE DESC PQTE DE LASER NC 10/18' where codclien='104671'  and fecha_cita='10/13/2018' 
+[2018-10-18 14:22:51.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-431-2975%'  Order  by nombres 
+[2018-10-18 14:22:52.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111633'  and activa='1' order by forder desc  
+[2018-10-18 14:23:47.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIRIA- CITA ABIERTA 9/12 C/A 10/18' where codclien='111633'  and fecha_cita='09/12/2018' 
+[2018-10-18 14:24:57.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:24:57.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:24:57.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:25:01.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:25:08.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-964-7751%'  Order  by nombres 
+[2018-10-18 14:25:09.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111106'  and activa='1' order by forder desc  
+[2018-10-18 14:26:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-448-4778%'  Order  by nombres 
+[2018-10-18 14:26:44.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='100153'  and activa='1' order by forder desc  
+[2018-10-18 14:26:49.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='100152'  and activa='1' order by forder desc  
+[2018-10-18 14:27:01.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIRIA' where codclien='100152'  and fecha_cita='12/05/2017' 
+[2018-10-18 14:39:59.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '71217'  Order  by nombres 
+[2018-10-18 14:39:59.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='85319'  and activa='1' order by forder desc  
+[2018-10-18 14:45:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '70500'  Order  by nombres 
+[2018-10-18 14:45:23.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='109263'  and activa='1' order by forder desc  
+[2018-10-18 14:46:38.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-531-9686%'  Order  by nombres 
+[2018-10-18 14:46:40.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:46:40.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:46:40.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:46:42.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:46:49.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-531-9686%'  Order  by nombres 
+[2018-10-18 14:46:52.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 14:46:52.000000 192.130.74.70  - [query->KSANTIAGO] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-18 14:46:52.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-18 14:46:59.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where Cedula like '%787-531-9686%'  Order  by nombres 
+[2018-10-18 14:47:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-18 14:47:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Update Empresa Set UltimoCliente='112705' Where id=1
+[2018-10-18 14:47:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('LUIS A.','RIVERA VILLANUEVA ','RIVERA VILLANUEVA  LUIS A.','787-531-9686','787-531-9686','000','','','KATIRIA','','','160','67','','','','0', '0','0','0','112705','2018-10-18','787-531-9686','KATIRIA')
+[2018-10-18 14:47:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:47:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 100 * from Mclientes where  codclien = '112705' 
+[2018-10-18 14:47:48.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 14:47:48.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 14:47:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='112705'  and  asistido=0
+[2018-10-18 14:47:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112705' and codconsulta<>'07' group by codclien
+[2018-10-18 14:47:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112705' and codconsulta<>'07' group by codclien
+[2018-10-18 14:47:49.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 14:47:51.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:47:51.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:47:51.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:47:51.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:47:52.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:47:52.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:47:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 100 * from Mclientes where  codclien = '112705' 
+[2018-10-18 14:47:56.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 14:47:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='112705'  and  asistido=0
+[2018-10-18 14:47:56.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 14:47:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112705' and codconsulta<>'07' group by codclien
+[2018-10-18 14:47:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112705' and codconsulta<>'07' group by codclien
+[2018-10-18 14:48:17.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112705' and asistido=0 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112705' 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112705' and asistido=0 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/19/2018'  
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112705','10/18/2018','1','10/19/2018' ,'000','KSANTIAGO','10/18/2018','KATIRIA ***OFERTA DE 5.00
+50% DE DESC QTE DE LASER','1','0','0','0','0','0','01')
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112705' and asistido=0 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112705' 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112705' and asistido=0 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112705' AND ASISTIDO=0
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/19/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIA ***OFERTA DE 5.00
+50% DE DESC QTE DE LASER' WHERE CODCLIEN='112705' AND ASISTIDO='0' and ID='252496' 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112705' and asistido=0 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112705' 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112705' and asistido=0 
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112705' AND ASISTIDO=0
+[2018-10-18 14:48:18.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/19/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIA ***OFERTA DE 5.00
+50% DE DESC QTE DE LASER' WHERE CODCLIEN='112705' AND ASISTIDO='0' and ID='252496' 
+[2018-10-18 14:48:19.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:48:22.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:48:22.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:48:22.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:48:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:48:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-531-9686%'  Order  by nombres 
+[2018-10-18 14:48:36.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112705'  and activa='1' order by forder desc  
+[2018-10-18 14:49:50.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:49:50.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:49:50.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:49:51.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:49:52.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:49:52.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:49:52.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:49:53.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:49:57.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:49:57.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:49:57.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:49:58.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:50:00.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:50:00.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:50:00.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:50:02.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:50:16.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set confirmado='2',  usuario='KSANTIAGO'  where codclien='112705'  and fecha_cita='10/19/2018' 
+[2018-10-18 14:50:19.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:50:19.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:50:19.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:50:20.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:54:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 14:54:06.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 14:54:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 14:54:08.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 14:57:20.000000 192.130.74.70  - [query->KSANTIAGO] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/18/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/18/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-18 14:59:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-431-2975%'  Order  by nombres 
+[2018-10-18 14:59:28.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111633'  and activa='1' order by forder desc  
+[2018-10-18 14:59:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-559-9641%'  Order  by nombres 
+[2018-10-18 14:59:49.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111687'  and activa='1' order by forder desc  
+[2018-10-18 15:02:37.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIRIA CITA ABIERTA 9/15 LLAMAR PROXIMA SEMANA PARA COORDINAR CITA 10/18' where codclien='111687'  and fecha_cita='09/17/2018' 
+[2018-10-18 15:03:02.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:03:02.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:03:02.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:03:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:03:10.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '10/18/2018' and '10/18/2018') and a.asistido=3 and a.activa<>'0' and a.usuario='KSANTIAGO' 
+[2018-10-18 15:03:27.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:03:31.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,1 id_centro,id FROM mfactura where codclien='112654' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,2 id_centro,id FROM cma_mfactura where codclien='112654' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,3 id_centro,id FROM MSSMFact where codclien='112654' and statfact<>'2' order by id_centro , id desc, fechafac desc 
+[2018-10-18 15:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT desitems,cantidad FROM VIEW_cma_dfactura_1 where numfactu='173417' order by desitems 
+[2018-10-18 15:03:47.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:03:47.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:03:47.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:03:49.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:09:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%DIAZ%CUBANO%'  Order  by nombres 
+[2018-10-18 15:09:29.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='101110'  and activa='1' order by forder desc  
+[2018-10-18 15:17:09.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '71644'  Order  by nombres 
+[2018-10-18 15:17:09.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111273'  and activa='1' order by forder desc  
+[2018-10-18 15:22:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/18/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/18/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-18 15:22:58.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '10/01/2018' and '10/18/2018') and a.asistido=3 and a.activa<>'0' and a.usuario='KSANTIAGO' 
+[2018-10-18 15:23:10.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:23:10.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:23:10.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:23:12.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:23:26.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT COUNT(*) total FROM VIEW_repconsultas4 a Where (a.fecha_cita between '10/17/2018' and '10/17/2018') and a.activa<>'0' and a.citados=1 and a.usuario='KSANTIAGO' and a.fallecido<>'1' 
+[2018-10-18 15:23:27.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.citados, a.asistido,a.activa,a.usuario, a.fecha_cita, a.hora, convert(varchar(10), cast(a.UltimaAsistida as date), 101)   UltimaAsistida, a.observacion, a.fallecido 
+             FROM VIEW_repconsultas4 a 
+             Where (a.fecha_cita between '10/17/2018' and '10/17/2018') and a.activa<>'0' and a.citados=1 and a.usuario='KSANTIAGO' and a.fallecido<>'1'  order by Medicos, a.fecha_cita desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-10-18 15:25:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '72047'  Order  by nombres 
+[2018-10-18 15:25:44.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112453'  and activa='1' order by forder desc  
+[2018-10-18 15:25:53.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT COUNT(*) total FROM VIEW_repconsultas4 a Where (a.fecha_cita  between '10/16/2018' and '10/16/2018') and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1' 
+[2018-10-18 15:25:53.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT 
+        a.nombres
+       ,a.telfhabit
+       ,a.Medicos
+       ,a.Historia
+       ,a.citados
+       ,a.asistido
+       ,a.activa
+       ,a.usuario
+       ,a.fecha_cita
+       ,a.hora
+       ,convert(varchar(10)
+       ,cast(a.UltimaAsistida as date), 101)  UltimaAsistida
+       ,a.observacion
+       ,a.fallecido 
+       FROM 
+       VIEW_repconsultas4 a 
+       Where 
+        a.fecha_cita  between '10/16/2018' and '10/16/2018' and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1'  order by a.fecha_cita desc, a.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-10-18 15:26:12.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT COUNT(*) total FROM VIEW_repconsultas4 a Where (a.fecha_cita  between '10/15/2018' and '10/16/2018') and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1' 
+[2018-10-18 15:26:12.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT 
+        a.nombres
+       ,a.telfhabit
+       ,a.Medicos
+       ,a.Historia
+       ,a.citados
+       ,a.asistido
+       ,a.activa
+       ,a.usuario
+       ,a.fecha_cita
+       ,a.hora
+       ,convert(varchar(10)
+       ,cast(a.UltimaAsistida as date), 101)  UltimaAsistida
+       ,a.observacion
+       ,a.fallecido 
+       FROM 
+       VIEW_repconsultas4 a 
+       Where 
+        a.fecha_cita  between '10/15/2018' and '10/16/2018' and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1'  order by a.fecha_cita desc, a.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-10-18 15:26:15.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT COUNT(*) total FROM VIEW_repconsultas4 a Where (a.fecha_cita  between '10/15/2018' and '10/15/2018') and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1' 
+[2018-10-18 15:26:15.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT 
+        a.nombres
+       ,a.telfhabit
+       ,a.Medicos
+       ,a.Historia
+       ,a.citados
+       ,a.asistido
+       ,a.activa
+       ,a.usuario
+       ,a.fecha_cita
+       ,a.hora
+       ,convert(varchar(10)
+       ,cast(a.UltimaAsistida as date), 101)  UltimaAsistida
+       ,a.observacion
+       ,a.fallecido 
+       FROM 
+       VIEW_repconsultas4 a 
+       Where 
+        a.fecha_cita  between '10/15/2018' and '10/15/2018' and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1'  order by a.fecha_cita desc, a.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-10-18 15:29:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%VARGAS%REGUERO%'  Order  by nombres 
+[2018-10-18 15:29:23.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='103552'  and activa='1' order by forder desc  
+[2018-10-18 15:29:27.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='41864'  and activa='1' order by forder desc  
+[2018-10-18 15:30:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-400-0406%'  Order  by nombres 
+[2018-10-18 15:30:48.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='93928'  and activa='1' order by forder desc  
+[2018-10-18 15:30:51.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%%'  Order  by nombres 
+[2018-10-18 15:30:51.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 15:30:51.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:30:51.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:30:51.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='96505'  and  asistido=0
+[2018-10-18 15:30:51.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='96505' and codconsulta<>'07' group by codclien
+[2018-10-18 15:30:51.000000 192.130.74.70  - [query->KSANTIAGO] ] Select observacion from VIEW_mconsultas_02 where codclien='96505'  and fecha_cita='2018/10/19' and codconsulta<>'07'
+[2018-10-18 15:30:58.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-400-0406%'  Order  by nombres 
+[2018-10-18 15:30:58.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:30:58.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='93928'  and  asistido=0
+[2018-10-18 15:30:58.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='93928' and codconsulta<>'07' group by codclien
+[2018-10-18 15:30:58.000000 192.130.74.70  - [query->KSANTIAGO] ] Select observacion from VIEW_mconsultas_02 where codclien='93928'  and fecha_cita='2018/10/15' and codconsulta<>'07'
+[2018-10-18 15:31:20.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 15:31:23.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 15:31:23.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 15:31:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='93928' and asistido=0 
+[2018-10-18 15:31:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='93928' 
+[2018-10-18 15:31:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 15:31:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='93928' and asistido=0 
+[2018-10-18 15:31:23.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='93928' AND ASISTIDO=0
+[2018-10-18 15:31:23.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/26/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIA** OFERTA $10.00 / 50% DE DESC. EN LASER ' WHERE CODCLIEN='93928' AND ASISTIDO='0' and ID='211861' 
+[2018-10-18 15:31:24.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:31:24.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:31:24.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:31:25.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT COUNT(*) total FROM VIEW_repconsultas4 a Where (a.fecha_cita  between '10/15/2018' and '10/15/2018') and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1' 
+[2018-10-18 15:31:25.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT 
+        a.nombres
+       ,a.telfhabit
+       ,a.Medicos
+       ,a.Historia
+       ,a.citados
+       ,a.asistido
+       ,a.activa
+       ,a.usuario
+       ,a.fecha_cita
+       ,a.hora
+       ,convert(varchar(10)
+       ,cast(a.UltimaAsistida as date), 101)  UltimaAsistida
+       ,a.observacion
+       ,a.fallecido 
+       FROM 
+       VIEW_repconsultas4 a 
+       Where 
+        a.fecha_cita  between '10/15/2018' and '10/15/2018' and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1'  order by a.fecha_cita desc, a.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-10-18 15:31:26.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:33:34.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '13818'  Order  by nombres 
+[2018-10-18 15:33:34.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='12420'  and activa='1' order by forder desc  
+[2018-10-18 15:35:56.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 15:35:56.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:35:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '13818'  Order  by nombres 
+[2018-10-18 15:35:56.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:35:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='12420'  and  asistido=0
+[2018-10-18 15:35:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='12420' and codconsulta<>'07' group by codclien
+[2018-10-18 15:35:56.000000 192.130.74.70  - [query->KSANTIAGO] ] Select observacion from VIEW_mconsultas_02 where codclien='12420'  and fecha_cita='2018/10/16' and codconsulta<>'07'
+[2018-10-18 15:36:02.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-18 15:36:03.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='12420' and asistido=0 
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='12420' 
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='12420' and asistido=0 
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='12420' AND ASISTIDO=0
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/25/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIA ****OFERTA DE 10.00 50% DE DESC EN PQTE DE LASER' WHERE CODCLIEN='12420' AND ASISTIDO='0' and ID='6091' 
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:36:05.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT COUNT(*) total FROM VIEW_repconsultas4 a Where (a.fecha_cita  between '10/15/2018' and '10/15/2018') and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1' 
+[2018-10-18 15:36:06.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT 
+        a.nombres
+       ,a.telfhabit
+       ,a.Medicos
+       ,a.Historia
+       ,a.citados
+       ,a.asistido
+       ,a.activa
+       ,a.usuario
+       ,a.fecha_cita
+       ,a.hora
+       ,convert(varchar(10)
+       ,cast(a.UltimaAsistida as date), 101)  UltimaAsistida
+       ,a.observacion
+       ,a.fallecido 
+       FROM 
+       VIEW_repconsultas4 a 
+       Where 
+        a.fecha_cita  between '10/15/2018' and '10/15/2018' and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1'  order by a.fecha_cita desc, a.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-10-18 15:36:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:36:20.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  Historia = '71895'  Order  by nombres 
+[2018-10-18 15:36:20.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112084'  and activa='1' order by forder desc  
+[2018-10-18 15:36:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%ACEVEDO%MORALES%'  Order  by nombres 
+[2018-10-18 15:36:44.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112243'  and activa='1' order by forder desc  
+[2018-10-18 15:42:40.000000 192.130.74.70  - [query->KSANTIAGO] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/18/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/18/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-18 15:46:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-235-4221%'  Order  by nombres 
+[2018-10-18 15:46:28.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='104620'  and activa='1' order by forder desc  
+[2018-10-18 15:47:22.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set observacion='KATIRIA ****OFERTA DE 5.00 50% DESC PQTE DE LASER ' where codclien='104620'  and fecha_cita='03/27/2018' 
+[2018-10-18 15:47:24.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 15:47:24.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:47:24.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%%'  Order  by nombres 
+[2018-10-18 15:47:24.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:47:25.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='96505'  and  asistido=0
+[2018-10-18 15:47:25.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='96505' and codconsulta<>'07' group by codclien
+[2018-10-18 15:47:25.000000 192.130.74.70  - [query->KSANTIAGO] ] Select observacion from VIEW_mconsultas_02 where codclien='96505'  and fecha_cita='2018/10/19' and codconsulta<>'07'
+[2018-10-18 15:47:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-235-4221%'  Order  by nombres 
+[2018-10-18 15:47:30.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:47:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='104620'  and  asistido=0
+[2018-10-18 15:47:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='104620' and codconsulta<>'07' group by codclien
+[2018-10-18 15:47:30.000000 192.130.74.70  - [query->KSANTIAGO] ] Select observacion from VIEW_mconsultas_02 where codclien='104620'  and fecha_cita='2018/03/27' and codconsulta<>'07'
+[2018-10-18 15:47:35.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='104620' and asistido=0 
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='104620' 
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='104620' and asistido=0 
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='104620' AND ASISTIDO=0
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/19/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIA ****OFERTA DE 5.00 50% DESC PQTE DE LASER ' WHERE CODCLIEN='104620' AND ASISTIDO='0' and ID='233407' 
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:47:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:47:45.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT COUNT(*) total FROM VIEW_repconsultas4 a Where (a.fecha_cita  between '10/15/2018' and '10/15/2018') and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1' 
+[2018-10-18 15:47:45.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT 
+        a.nombres
+       ,a.telfhabit
+       ,a.Medicos
+       ,a.Historia
+       ,a.citados
+       ,a.asistido
+       ,a.activa
+       ,a.usuario
+       ,a.fecha_cita
+       ,a.hora
+       ,convert(varchar(10)
+       ,cast(a.UltimaAsistida as date), 101)  UltimaAsistida
+       ,a.observacion
+       ,a.fallecido 
+       FROM 
+       VIEW_repconsultas4 a 
+       Where 
+        a.fecha_cita  between '10/15/2018' and '10/15/2018' and a.activa<>'0' and a.asistido<>3  and a.usuario='KSANTIAGO'  and a.fallecido<>'1'  order by a.fecha_cita desc, a.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-10-18 15:47:45.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:47:48.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:47:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-18 15:47:48.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-18 15:47:54.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where Cedula like '%787-235-4221%'  Order  by nombres 
+[2018-10-18 15:48:11.000000 192.130.74.70  - [query->KSANTIAGO] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-18 15:48:11.000000 192.130.74.70  - [query->KSANTIAGO] ] Update Empresa Set UltimoCliente='112710' Where id=1
+[2018-10-18 15:48:11.000000 192.130.74.70  - [query->KSANTIAGO] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('ROSA','RUIZ PEREZ','RUIZ PEREZ ROSA','787-235-4221','787-235-4221','000','','','KATIRIA','','','160','67','','','','0', '0','0','0','112710','2018-10-18','787-235-4221','KATIRIA')
+[2018-10-18 15:48:12.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:48:20.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 100 * from Mclientes where  codclien = '112710' 
+[2018-10-18 15:48:20.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 15:48:20.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 15:48:20.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='112710'  and  asistido=0
+[2018-10-18 15:48:20.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112710' and codconsulta<>'07' group by codclien
+[2018-10-18 15:48:20.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112710' and codconsulta<>'07' group by codclien
+[2018-10-18 15:48:22.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 15:48:23.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:23.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:23.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:24.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:24.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:24.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112710' and asistido=0 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112710' 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112710' and asistido=0 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/19/2018'  
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112710','10/18/2018','1','10/19/2018' ,'000','KSANTIAGO','10/18/2018','KATIRIA ***OFERTA DE 5.00
+50% DE DESC PQTE DE LASER','1','0','0','0','0','0','01')
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112710' and asistido=0 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112710' 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112710' and asistido=0 
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112710' AND ASISTIDO=0
+[2018-10-18 15:48:48.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/19/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIA ***OFERTA DE 5.00
+50% DE DESC PQTE DE LASER' WHERE CODCLIEN='112710' AND ASISTIDO='0' and ID='252503' 
+[2018-10-18 15:48:49.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:49:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:49:43.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:49:43.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:49:45.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:49:52.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-235-4221%'  Order  by nombres 
+[2018-10-18 15:49:52.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='104620'  and activa='1' order by forder desc  
+[2018-10-18 15:50:38.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:50:38.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:50:38.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:50:39.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:50:40.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:50:40.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:50:40.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:50:42.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:50:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:50:44.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:50:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:50:45.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:50:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:50:46.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:50:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:50:47.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:51:00.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set confirmado='2',  usuario='KSANTIAGO'  where codclien='112710'  and fecha_cita='10/19/2018' 
+[2018-10-18 15:51:05.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:51:05.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:51:05.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:51:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:51:14.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:51:14.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:51:14.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:51:16.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:51:52.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:51:52.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:51:52.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:51:53.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 15:52:01.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set confirmado='2',  usuario='KSANTIAGO'  where codclien='104620'  and fecha_cita='10/19/2018' 
+[2018-10-18 15:52:05.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 15:52:05.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 15:52:05.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 15:52:06.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 16:01:39.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-398-1919%'  Order  by nombres 
+[2018-10-18 16:01:45.000000 192.130.74.70  - [query->KSANTIAGO] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-18 16:01:45.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-18 16:01:45.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 16:02:39.000000 192.130.74.70  - [query->KSANTIAGO] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-18 16:02:39.000000 192.130.74.70  - [query->KSANTIAGO] ] Update Empresa Set UltimoCliente='112714' Where id=1
+[2018-10-18 16:02:39.000000 192.130.74.70  - [query->KSANTIAGO] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('CARMEN','TORRES BAEZ','TORRES BAEZ CARMEN','787-398-1919','787-398-1919','000','','','KATIRIA','','','160','67','','','','0', '0','0','0','112714','2018-10-18','787-398-1919','KATIRIA')
+[2018-10-18 16:02:39.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:02:45.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 100 * from Mclientes where  codclien = '112714' 
+[2018-10-18 16:02:45.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 16:02:45.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 16:02:45.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='112714'  and  asistido=0
+[2018-10-18 16:02:45.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112714' and codconsulta<>'07' group by codclien
+[2018-10-18 16:02:45.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112714' and codconsulta<>'07' group by codclien
+[2018-10-18 16:02:47.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 16:03:11.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:11.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:11.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:11.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:12.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:12.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:14.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 100 * from Mclientes where  codclien = '112714' 
+[2018-10-18 16:03:14.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 16:03:14.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 16:03:14.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='112714'  and  asistido=0
+[2018-10-18 16:03:14.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112714' and codconsulta<>'07' group by codclien
+[2018-10-18 16:03:14.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112714' and codconsulta<>'07' group by codclien
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112714' and asistido=0 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112714' 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112714' and asistido=0 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/19/2018'  
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112714','10/18/2018','1','10/19/2018' ,'000','KSANTIAGO','10/18/2018','KATIRIA***OFERTA DE 5.00
+50% DE DESC PQTE DE LASER','1','0','0','0','0','0','01')
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112714' and asistido=0 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112714' 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112714' and asistido=0 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112714' AND ASISTIDO=0
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/19/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIA***OFERTA DE 5.00
+50% DE DESC PQTE DE LASER' WHERE CODCLIEN='112714' AND ASISTIDO='0' and ID='252508' 
+[2018-10-18 16:03:35.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/19/2018' and activo = 1 
+[2018-10-18 16:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112714' and asistido=0 
+[2018-10-18 16:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112714' 
+[2018-10-18 16:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 16:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112714' and asistido=0 
+[2018-10-18 16:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112714' AND ASISTIDO=0
+[2018-10-18 16:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/19/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIRIA***OFERTA DE 5.00
+50% DE DESC PQTE DE LASER' WHERE CODCLIEN='112714' AND ASISTIDO='0' and ID='252508' 
+[2018-10-18 16:03:36.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:04:11.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:04:11.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 16:04:11.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 16:04:12.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 16:04:16.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:04:16.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 16:04:16.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 16:04:17.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 16:04:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:04:18.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 16:04:18.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 16:04:19.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 16:04:22.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:04:22.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 16:04:23.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 16:04:24.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 16:04:26.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:04:26.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 16:04:26.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 16:04:27.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 16:04:29.000000 192.130.74.70  - [query->KSANTIAGO] ] Update  mconsultas  Set confirmado='2',  usuario='KSANTIAGO'  where codclien='112714'  and fecha_cita='10/19/2018' 
+[2018-10-18 16:04:31.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:04:31.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 16:04:31.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 16:04:33.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 16:05:12.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-398-1919%'  Order  by nombres 
+[2018-10-18 16:05:13.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112714'  and activa='1' order by forder desc  
+[2018-10-18 16:23:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:23:44.000000 192.130.74.70  - [query->KSANTIAGO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-18 16:23:44.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-18 16:23:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-18 16:24:07.000000 192.130.74.70  - [query->KSANTIAGO] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/18/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/18/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-18 16:24:09.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2'
+[2018-10-18 16:24:09.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-18 16:24:09.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-18 16:24:10.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-18 16:24:10.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-18-2018' and '10-18-2018' and d.coditems like 'TD%' 
+[2018-10-18 16:24:10.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-18 16:24:10.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-18-2018' and '10-18-2018') and d.coditems like 'LI%' 
+[2018-10-18 16:29:32.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT concat(a.nombre,' ', a.apellido) Medicos,   b.fecha_cita ,b.observacion, b.usuario, b.servicios, c.telfhabit, c.Historia ,c.nombres FROM Mmedicos a INNER JOIN      Mconsultas b ON   a.Codmedico = b.codmedico INNER JOIN      MClientes  c ON        b.codclien = c.codclien Where b.confirmado=2 and b.usuario='KSANTIAGO'  and  b.activa<>'0' and (b.FECHA_cita between '10/19/2018' and '10/19/2018') order by a.nombre
+[2018-10-18 16:29:48.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '10/01/2018' and '10/18/2018') and a.asistido=3 and a.activa<>'0' and a.usuario='KSANTIAGO' 
+[2018-10-18 16:30:27.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT COUNT(*) total FROM VIEW_repconsultas4 a Where (a.fecha_cita between '10/20/2018' and '10/20/2018') and a.activa<>'0' and a.citados=1 and a.usuario='KSANTIAGO' and a.fallecido<>'1' 
+[2018-10-18 16:30:27.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.citados, a.asistido,a.activa,a.usuario, a.fecha_cita, a.hora, convert(varchar(10), cast(a.UltimaAsistida as date), 101)   UltimaAsistida, a.observacion, a.fallecido 
+             FROM VIEW_repconsultas4 a 
+             Where (a.fecha_cita between '10/20/2018' and '10/20/2018') and a.activa<>'0' and a.citados=1 and a.usuario='KSANTIAGO' and a.fallecido<>'1'  order by Medicos, a.fecha_cita desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-10-18 16:34:38.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-327-8880%'  Order  by nombres 
+[2018-10-18 16:34:41.000000 192.130.74.70  - [query->KSANTIAGO] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-18 16:34:41.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-18 16:34:41.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 16:34:46.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 200 * from Mclientes where Cedula like '%787-327-8880%'  Order  by nombres 
+[2018-10-18 16:35:10.000000 192.130.74.70  - [query->KSANTIAGO] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-18 16:35:10.000000 192.130.74.70  - [query->KSANTIAGO] ] Update Empresa Set UltimoCliente='112717' Where id=1
+[2018-10-18 16:35:10.000000 192.130.74.70  - [query->KSANTIAGO] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('EMILIO','RIVERA ARROYO','RIVERA ARROYO EMILIO','787-327-8880','787-327-8880','000','','','KATIRIA','','','160','67','','','','0', '0','0','0','112717','2018-10-18','787-327-8880','KATIRIA')
+[2018-10-18 16:35:10.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 16:35:27.000000 192.130.74.70  - [query->KSANTIAGO] ] Select TOP 100 * from Mclientes where  codclien = '112717' 
+[2018-10-18 16:35:27.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 16:35:28.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-18 16:35:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where  codclien='112717'  and  asistido=0
+[2018-10-18 16:35:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112717' and codconsulta<>'07' group by codclien
+[2018-10-18 16:35:28.000000 192.130.74.70  - [query->KSANTIAGO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112717' and codconsulta<>'07' group by codclien
+[2018-10-18 16:35:29.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-18 16:35:31.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:35:31.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:35:32.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:35:32.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:35:32.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:35:32.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112717' and asistido=0 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112717' 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112717' and asistido=0 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/26/2018'  
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112717','10/18/2018','1','10/26/2018' ,'000','KSANTIAGO','10/18/2018','KATIIRIA ***OFERTA DE 10.00
+50% DE DESC PQTE DE LASER','1','0','0','0','0','0','01')
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112717' and asistido=0 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select count(*) cant from mconsultas where codclien='112717' 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select *  from loginpass where login ='KSANTIAGO' 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] Select * from mconsultas where codclien='112717' and asistido=0 
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112717' AND ASISTIDO=0
+[2018-10-18 16:36:04.000000 192.130.74.70  - [query->KSANTIAGO] ] UPDATE MCONSULTAS SET FECHA_CITA='10/26/2018',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KATIIRIA ***OFERTA DE 10.00
+50% DE DESC PQTE DE LASER' WHERE CODCLIEN='112717' AND ASISTIDO='0' and ID='252511' 
+[2018-10-18 16:36:05.000000 192.130.74.70  - [query->KSANTIAGO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-18 17:07:42.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2'
+[2018-10-18 17:07:42.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-18 17:07:42.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-18-2018' and '10-18-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-18 17:07:43.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-18 17:07:43.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-18-2018' and '10-18-2018' and d.coditems like 'TD%' 
+[2018-10-18 17:07:43.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-18-2018' and '10-18-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-18 17:07:43.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-18-2018' and '10-18-2018') and d.coditems like 'LI%' 

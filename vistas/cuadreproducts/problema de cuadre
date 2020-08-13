@@ -1,0 +1,27 @@
+fechapago	numfactu	statfact	codforpa	codtipotargeta	monto	DesTipoTargeta	nombre	id_centro	workstation	tipo_doc	modopago	trans_electronica	codclien	monto_flete	usuario	montototal
+2018-04-06 00:00:00.000	0026656	3	1	00	-9358.47	CASH	Efectivo	1	FARMACIA01	01	CASH	0	49733	0.00	MICHELLE	-9358.47
+
+
+
+mpagos
+numfactu	fechapago	codforpa	codbanco	codtipotargeta	nro_forpa	monto	monto_abonado	usuario	workstation	ipaddress	fecreg	horareg	id_centro	tipo_doc	Id	idempresa
+0026656	2018-04-06 00:00:00.000	1	NULL	00	NULL	-9358.47	NULL	MICHELLE	Farmacia01	192.130.74.162	2018-04-06 00:00:00.000	1:57:16 PM	1	01	271701	3
+
+
+use farmacias
+
+select * from cuadre where fecha='20180406' and usuario='MICHELLE'
+
+select * from Mpagos where fechapago='20180406' and  numfactu='0026656'  and codtipotargeta='01'
+
+select * from UPDATE  Mpagos SET monto='0' where fechapago='20180406' and  numfactu='0026656'  and codtipotargeta='00'
+
+select * from VentasDiarias where fechafac='20180406'
+
+select * Delete from VIEWPagosPR_W7 where numfactu='0026656' and  codtipotargeta='00'
+select * from VIEWPagosPR_W7 where fechapago='20180406'and codtipotargeta='00'
+
+select sum(monto) x, DesTipoTargeta  from VIEWPagosPR_W7 where fechapago='20180406'
+group by DesTipoTargeta
+
+

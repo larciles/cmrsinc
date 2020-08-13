@@ -1,0 +1,366 @@
+var insert = false;
+var csl=""; //consulta suero laser
+$(function(){
+
+$('#xtitulo').html('<b>Inventario de Servicios</b>');
+
+
+    $('.optradio1').click(function(){     
+      var ele=$(this);
+      csl=ele [0].id;
+      console.log(csl);
+    })
+
+$('.consultar').click(function(){
+  element=$(this);
+  insert = false;
+
+  var idprod = element.parent().parent().attr('id');
+  let index =$(this).parent().parent().index()
+  idprod = $('.idprod')[index].innerText;
+  let prodserv = $('.prodserv')[index].innerText;
+  getproductinfo(idprod,prodserv);
+  
+})
+
+function getproductinfo(idprod,prod_serv){
+   
+   var datasave ={
+         prod_serv
+        ,idprouct :idprod
+    };
+
+    var prodinfo = ajaxGen("../../clases/getproducto.php",datasave);
+    
+   
+    //CODIGO DEL PRODUCTO
+    $('#idprod').val(prodinfo[0].coditems);
+    document.getElementById("idprod").readOnly = true;
+
+    // desitems
+    $('#productname').val(prodinfo[0].desitems);
+    // nombre_alterno
+    $('#prodnamesht').val(prodinfo[0].nombre_alterno); 
+    // fecing
+    $('#fechaing').val(prodinfo[0].ingreso); 
+
+    $('#costo').val(prodinfo[0].costo);     
+
+    if (prodinfo[0].cod_subgrupo=="1") {
+       $("#tipoproduct").trigger('click').prop('checked', true);
+       $("#tipoproduct").trigger('click').prop('checked', true);
+    }else{
+       $("#tipoproduct").trigger('click').prop('checked', false);
+       $("#tipoproduct").trigger('click').prop('checked', false);
+    };
+
+    // Exisminima
+    $('#stockmin').val(prodinfo[0].Exisminima);
+    // Exismaxima    
+    $('#stockmax').val(prodinfo[0].Exismaxima);    
+    //existencia 
+    $('#stockcurrent').val(prodinfo[0].existencia);      
+
+
+    if (prodinfo[0].activo=="1") {
+       $("#activo").trigger('click').prop('checked', true);
+       $("#activo").trigger('click').prop('checked', true);
+    }else{
+       $("#activo").trigger('click').prop('checked', false);
+       $("#activo").trigger('click').prop('checked', false);
+    };
+
+
+    if (prodinfo[0].aplicaIva=="1") {
+       $("#impuesto").trigger('click').prop('checked', true);
+       $("#impuesto").trigger('click').prop('checked', true);
+    }else{
+       $("#impuesto").trigger('click').prop('checked', false);
+       $("#impuesto").trigger('click').prop('checked', false);
+    };
+
+    if (prodinfo[0].aplicadcto=="1") {
+       $("#descuento").trigger('click').prop('checked', true);
+       $("#descuento").trigger('click').prop('checked', true);
+    }else{
+       $("#descuento").trigger('click').prop('checked', false);
+       $("#descuento").trigger('click').prop('checked', false);
+    };
+
+    if (prodinfo[0].aplicaComMed=="1") {
+       $("#commedico").trigger('click').prop('checked', true);
+       $("#commedico").trigger('click').prop('checked', true);
+    }else{
+       $("#commedico").trigger('click').prop('checked', false);
+       $("#commedico").trigger('click').prop('checked', false);
+    };
+
+    if (prodinfo[0].aplicaComTec=="1") {
+       $("#comtec").trigger('click').prop('checked', true);
+       $("#comtec").trigger('click').prop('checked', true);
+    }else{
+       $("#comtec").trigger('click').prop('checked', false);
+       $("#comtec").trigger('click').prop('checked', false);
+    };
+
+   if (prodinfo[0].Inventariable=="1") {
+       $("#inventariable").trigger('click').prop('checked', true);
+       $("#inventariable").trigger('click').prop('checked', true);
+    }else{
+       $("#inventariable").trigger('click').prop('checked', false);
+       $("#inventariable").trigger('click').prop('checked', false);
+    };
+
+
+
+    var res= ajaxGen("../../clases/tipoprecios.php",{});
+    items=  res ;//jQuery.parseJSON(res);     
+    var options;
+    for (var j = 0; j < items.length; j++) { 
+        if (j==0) {
+           options+="<option value='"+items[j].codtipre+"' selected >"+items[j].destipre+"</option>";       
+        }else{
+           options+="<option value='"+items[j].codtipre+"'>"+items[j].destipre+"</option>"; 
+        }
+        ;
+        
+    }
+    $("#idtipprecio").html(options);
+
+
+   let codtipre = $('#idtipprecio').val();
+   let coditems = $('#idprod').val();
+   $('#precio').val('0');
+   let price =  getprecio(codtipre,coditems);
+   if (price !=undefined) {
+     $('#precio').val(price[0].precunit)
+   };
+    
+    // if (prodinfo[0].cod_subgrupo=='CONSULTA'  ) {      
+    //   $('#S-003').prop("checked", true);
+    // } else if(prodinfo[0].cod_subgrupo.toUpperCase()=='SUEROTERAPIA' ){
+    //   $('#S-004').prop("checked", true);
+    // }else if(prodinfo[0].cod_subgrupo.toUpperCase()=='TERAPIA LASER' ){
+    //   $('#M-004').prop("checked", true);
+    // }    ;
+
+   //
+    fixgruposer(prodinfo[0].cod_subgrupo);
+
+
+}
+
+
+  $('#idtipprecio').change(function(event){
+     let codtipre = $(this).val();
+     let coditems =  $('#idprod').val();
+     $('#precio').val('0')
+     let price =  getprecio(codtipre,coditems);
+     if (price !=undefined) {
+       $('#precio').val(price[0].precunit)
+     };
+    
+  })
+
+
+function fixgruposer(cod_subgrupo){
+   let records = getgeuposervicios();
+    if (cod_subgrupo==null) {
+      cod_subgrupo="NO DEFINIDO";
+    };   
+    let  optionsx;
+    for (var j = 0; j < records.length; j++) { 
+         let dbdescript = records[j].cod_subgrupo.toUpperCase();
+
+        if (dbdescript==cod_subgrupo.toUpperCase()) {
+           optionsx+="<option value='"+records[j].Prod_serv+"' selected >"+records[j].cod_subgrupo+"</option>";       
+        }else{
+           optionsx+="<option value='"+records[j].Prod_serv+"'>"+records[j].cod_subgrupo+"</option>"; 
+        };  
+    }
+
+     $("#cod_subgrupo").html(optionsx);
+}
+
+
+function getprecio(codtipre,coditem){
+  var precio= ajaxGen("../../clases/getprecio.php",{codtipre:codtipre,idprouct:coditem});
+  return precio;
+}
+
+function getgeuposervicios(){
+   var gs= ajaxGen("../../clases/getgruposervicios.php",{});
+   return gs; 
+}
+
+
+function ajaxGen(url,data){
+    var res;
+    $.ajax({
+            async:false,    
+            cache:false,   
+            dataType:"html",
+            type: 'POST',   
+            url: url,
+            data:data, 
+            success:  function(respuesta){                        
+                //console.log(respuesta);
+                try{
+                      items= jQuery.parseJSON(respuesta);
+      
+                      if (typeof items!== 'undefined' && items!==null ) { 
+                         if(items.length>0){
+                            res=items;
+                         }
+                      }
+                  }
+                  catch(err){
+
+                  }
+            },
+            beforeSend:function(){},
+            error:function(objXMLHttpRequest){}
+          });
+
+    return res;
+}
+
+
+
+
+$('#prodnew').click(function(){
+  document.getElementById("idprod").readOnly = false;
+  insert = true;
+  var hoy = new Date().toLocaleDateString('en-US', {  
+  month : 'numeric',
+  day   : 'numeric',        
+  year  : 'numeric'
+  }).split(' ').join('/');
+
+
+    $('#idprod').val('');
+    // desitems
+    $('#productname').val('');
+    // nombre_alterno
+    $('#prodnamesht').val(''); 
+    // fecing
+    $('#fechaing').val(hoy); 
+    $('#costo').val(0);  
+    
+    $("#tipoproduct").trigger('click').prop('checked', true);
+    $("#tipoproduct").trigger('click').prop('checked', true);
+      
+    // Exisminima
+    $('#stockmin').val(10);
+    // Exismaxima    
+    $('#stockmax').val(100);    
+    //existencia 
+    $('#stockcurrent').val(0);      
+    // CapsulasXUni en  NTPRODUCTOS (table)
+    $('#cantxunit').val(0);  
+
+    $("#activo").trigger('click').prop('checked', true);
+    $("#activo").trigger('click').prop('checked', true);
+
+    $("#impuesto").trigger('click').prop('checked', true);
+    $("#impuesto").trigger('click').prop('checked', true);
+
+    $("#descuento").trigger('click').prop('checked', true);
+    $("#descuento").trigger('click').prop('checked', true);
+
+    $("#commedico").trigger('click').prop('checked', true);
+    $("#commedico").trigger('click').prop('checked', true);
+
+    $("#comtec").trigger('click').prop('checked', false);
+    $("#comtec").trigger('click').prop('checked', false);
+    
+    var res= ajaxGen("../../clases/tipoprecios.php",{});
+    items=  res ;//jQuery.parseJSON(res);     
+    var options;
+    for (var j = 0; j < items.length; j++) { 
+        if (j==0) {
+           options+="<option value='"+items[j].codtipre+"' selected >"+items[j].destipre+"</option>";       
+        }else{
+           options+="<option value='"+items[j].codtipre+"'>"+items[j].destipre+"</option>"; 
+        };  
+    }
+    $("#idtipprecio").html(options);
+    $('#precio').val('0');
+
+})
+
+
+$('#save').click(function(){
+//MINVENTARIO
+let cod_subgrupo='';
+let coditems     = $('#idprod').val();
+let desitems     = $('#productname').val();
+let activo       = $("#activo").prop('checked') ? "1":"0";
+let Exisminima   = 0;
+let Exismaxima   = 0;   
+let Prod_serv    = $('#cod_subgrupo').val(); //$("input[name=optradio1]:checked").attr("id").substring(0,1);
+let aplicaIva    = $("#impuesto").prop('checked') ? "1":"0";
+let aplicadcto   = $("#descuento").prop('checked') ? "1":"0";
+let aplicaComMed = $("#commedico").prop('checked') ? "1":"0";
+let aplicaComTec = $("#comtec").prop('checked') ? "1":"0";
+let inventariable= $("#inventariable").prop('checked') ? "1":"0";
+
+let codgrupo;     
+cod_subgrupo = $('#cod_subgrupo :selected').text(); 
+
+codgrupo ='003';
+if(cod_subgrupo=='SUEROTERAPIA' || cod_subgrupo=='TERAPIA LASER' || cod_subgrupo=='INTRAVENOSO' || cod_subgrupo=='CEL MADRE'){
+   codgrupo = '004' ; 
+}
+ 
+let costo        = 0;  
+let nombre_alterno = $('#prodnamesht').val(); 
+//MPRECIOS
+let codtipre    = $('#idtipprecio').val();
+let precunit    = $('#precio').val();
+let sugerido    = $('#precio').val();
+
+//NTPRODUCTOS
+let CapsulasXUni = 0;  
+
+
+data = {
+   insert
+  ,coditems
+  ,desitems
+  ,activo
+  ,Exisminima
+  ,Exismaxima
+  ,Prod_serv
+  ,aplicaIva
+  ,aplicadcto
+  ,aplicaComMed
+  ,aplicaComTec
+  ,cod_subgrupo
+  ,costo
+  ,nombre_alterno
+  ,codtipre
+  ,precunit
+  ,sugerido
+  ,CapsulasXUni
+  ,codgrupo
+  ,inventariable
+}
+
+
+var upd = ajaxGen("../../clases/setprodandprice.php",data);
+$('.bd-productos-modal-lg').hide();
+ window.location.reload();
+})
+
+
+$('.prodon').change(function(){
+   var idprod = '';
+   let activo = $(this).prop('checked') == true? '1' : '0';
+   let index  = $(this).parent().parent().parent().index();
+   idprod = $('.idprod')[index].innerText; 
+   var upd = ajaxGen("../../clases/setactiveprod.php",{idprod,activo});
+   
+})
+
+});

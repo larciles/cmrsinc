@@ -1,0 +1,49 @@
+[2020-01-12 10:55:05.000000 192.130.74.30  - [query->YFELICIANO] ] SELECT  b.codclien
+, a.numfactu
+, max(a.coditems) coditems
+, 'consulta' tipo
+, a.fechafac
+, max(b.total) total
+, max(c.initials) usuario
+, max(e.initials) metodo_pago
+, concat(b.codclien, ' ') keypass
+, CONCAT(a.numfactu, ' '
+, max(c.initials), ' '
+, CASE WHEN max(e.initials) IS NULL THEN 'EXO' ELSE max(e.initials) END, ' '
+, max(b.total))           disp
+, max(b.statfact) statfact
+     FROM  cma_DFactura a 
+LEFT JOIN  cma_MFactura b ON a.numfactu = b.numfactu 
+INNER JOIN loginpass c ON b.usuario = c.login 
+LEFT JOIN  Mpagos d ON a.numfactu = d .numfactu AND d .id_centro = 2 
+LEFT JOIN  MTipoTargeta e ON d .codtipotargeta = e.codtipotargeta
+WHERE        a.coditems NOT LIKE '%ST%' and a.fechafac='1/11/2020' and b.statfact=3
+GROUP BY a.numfactu, b.codclien, a.fechafac
+
+[2020-01-12 10:55:05.000000 192.130.74.30  - [query->YFELICIANO] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='1/11/2020' 
+
+[2020-01-12 10:55:05.000000 192.130.74.30  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='1/11/2020' and  activa='1') /*and Historia='71304' */
+
+[2020-01-12 10:55:06.000000 192.130.74.30  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2020-01-12 10:55:06.000000 192.130.74.30  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '1/11/2020'  AND '1/11/2020'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2020-01-12 10:55:06.000000 192.130.74.30  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '1/11/2020'  AND '1/11/2020'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+

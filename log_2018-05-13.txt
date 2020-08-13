@@ -1,0 +1,2 @@
+[2018-05-13 00:40:06.000000 192.130.74.2  - [query] ] Select * from loginpass WHERE login = 'la' and passwork ='2906' 
+[2018-05-13 00:41:26.000000 192.130.74.2  - [query] ] Select * from loginpass WHERE login = 'la' and passwork ='2906' 

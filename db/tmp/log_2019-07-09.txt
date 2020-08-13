@@ -1,0 +1,652 @@
+[2019-07-09 09:13:19.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-07-09 09:13:19.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-07-09 09:14:37.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 09:14:38.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 09:14:38.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 09:14:38.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 09:15:02.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 09:15:02.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 09:16:06.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 09:18:31.000000 192.130.74.97  - [query->WILMA] ] SELECT  a.numnotcre , CONVERT(VARCHAR(10),a.fechanot,101) fechanot , a.subtotal , a.descuento , a.totalnot  total, a.statnc , a.usuario , a.concepto , a.codseguro , a.TotImpuesto , a.monto_flete , a.alicuota , e.seguro , e.dirFiscal  , b.Cedula , b.direccionH , b.nombres , b.telfhabit , b.Historia    , c.cantidad , c.precunit , d.nombre , d.apellido , f.desitems , f.nombre_alterno  FROM  MSSMDev a  INNER JOIN  MClientes        b ON  a.codclien  = b.codclien  INNER JOIN  MSSDDev c ON  a.numnotcre = c.numnotcre  INNER JOIN  Mmedicos         d ON  a.codmedico = d.Codmedico  LEFT OUTER JOIN  mseguros    e ON  a.codseguro = e.codseguro  INNER JOIN   MInventario     f ON  c.coditems  = f.coditems  WHERE  a.numnotcre='000818' 
+
+[2019-07-09 09:18:32.000000 192.130.74.97  - [query->WILMA] ] SELECT * from VIEWPagosDEVMSS where id_centro='3' and numnotcre='000818' 
+
+[2019-07-09 09:18:32.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 11:02:46.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-07-09 11:02:46.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-07-09 11:05:47.000000 192.130.74.97  - [query->WILMA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-09 11:05:47.000000 192.130.74.97  - [query->WILMA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 11:05:47.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-09 11:05:47.000000 192.130.74.97  - [query->WILMA] ] Select  * from view_displaypagos where fechafac='2019-07-09'
+
+[2019-07-09 11:05:47.000000 192.130.74.97  - [query->WILMA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and  activa='1') /*and Historia='71304' */
+
+[2019-07-09 11:05:48.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-09 11:05:49.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019'  AND '7/9/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-07-09 11:05:49.000000 192.130.74.97  - [query->WILMA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '7/9/2019'  AND '7/9/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-07-09 11:06:08.000000 192.130.74.97  - [query->WILMA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-09 11:06:08.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 11:06:09.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 11:06:09.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+
+[2019-07-09 11:06:09.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+
+[2019-07-09 11:06:10.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  tipoprecio order by codtipre
+
+[2019-07-09 11:06:10.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  mseguros where status=1 order by codseguro
+
+[2019-07-09 11:06:10.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  Medios where del=0 order by codigo
+
+[2019-07-09 11:09:11.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2 WHERE numfactu = '186690' and cod_subgrupo = 'CONSULTA'
+
+[2019-07-09 11:09:11.000000 192.130.74.97  - [query->WILMA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  numfactu='186690' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-09 11:09:12.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 11:09:12.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 11:09:34.000000 192.130.74.97  - [query->WILMA] ] SELECT * From  cma_MFactura Where numfactu = '186690'  
+
+[2019-07-09 11:09:34.000000 192.130.74.97  - [query->WILMA] ] UPDATE cma_MFactura SET statfact='2', fechanul='2019-07-09 00:00:00.000',desanul='PCTE NO QUISO ESPERAR Y SE FUé' WHERE numfactu='186690' and statfact in('1','3') 
+
+[2019-07-09 11:09:34.000000 192.130.74.97  - [query->WILMA] ] SELECT * From  cma_DFactura  Where numfactu = '186690'  
+
+[2019-07-09 11:09:34.000000 192.130.74.97  - [query->WILMA] ] SELECT * from kit where coditems='0000000000' 
+
+[2019-07-09 11:09:34.000000 192.130.74.97  - [query->WILMA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  numfactu='186690' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-09 11:09:34.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 11:09:34.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 11:14:50.000000 192.130.74.97  - [query->WILMA] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-07-09 11:14:50.000000 192.130.74.97  - [query->WILMA] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-07-09 11:15:00.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '07-09-2019' and '07-09-2019' 
+
+[2019-07-09 11:15:01.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '07-09-2019' and '07-09-2019' 
+
+[2019-07-09 11:15:02.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '07-09-2019' and '07-09-2019' group by medico,Dventa
+
+[2019-07-09 11:15:03.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total,medico from emt_view vp where fechafac between '07-09-2019' and '07-09-2019' group by medico
+
+[2019-07-09 11:15:05.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total from emt_view vp  where fechafac between '07/09/2019' and '07/09/2019' 
+
+[2019-07-09 11:15:05.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '07-09-2019' and '07-09-2019' 
+
+[2019-07-09 11:15:05.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '07-09-2019' and '07-09-2019' 
+
+[2019-07-09 11:15:06.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '07-09-2019' and '07-09-2019' group by medico,Dventa
+
+[2019-07-09 11:15:06.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total,medico from emt_view vp where fechafac between '07-09-2019' and '07-09-2019' group by medico
+
+[2019-07-09 11:15:06.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total from emt_view vp  where fechafac between '07/09/2019' and '07/09/2019' 
+
+[2019-07-09 11:15:07.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '07-09-2019' and '07-09-2019' 
+
+[2019-07-09 11:15:07.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '07-09-2019' and '07-09-2019' 
+
+[2019-07-09 11:15:07.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '07-09-2019' and '07-09-2019' group by medico,Dventa
+
+[2019-07-09 11:15:07.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total,medico from emt_view vp where fechafac between '07-09-2019' and '07-09-2019' group by medico
+
+[2019-07-09 11:15:08.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total from emt_view vp  where fechafac between '07/09/2019' and '07/09/2019' 
+
+[2019-07-09 11:15:08.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '07-09-2019' and '07-09-2019' 
+
+[2019-07-09 11:15:08.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '07-09-2019' and '07-09-2019' 
+
+[2019-07-09 11:15:08.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '07-09-2019' and '07-09-2019' group by medico,Dventa
+
+[2019-07-09 11:15:09.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total,medico from emt_view vp where fechafac between '07-09-2019' and '07-09-2019' group by medico
+
+[2019-07-09 11:15:09.000000 192.130.74.97  - [query->WILMA] ] Select sum(subtotal) total from emt_view vp  where fechafac between '07/09/2019' and '07/09/2019' 
+
+[2019-07-09 11:16:26.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-08' and '07/09/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-07-09 11:16:26.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-08' and '07/09/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-07-09 11:16:27.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '07-09-2019' and '07-09-2019' and statfact <>'2'
+
+[2019-07-09 11:16:27.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '07-09-2019' and '07-09-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-07-09 11:16:27.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '07-09-2019' and '07-09-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-07-09 11:16:27.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '07-09-2019' and '07-09-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-07-09 11:16:28.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '07-09-2019' and '07-09-2019' and d.coditems like 'TD%' 
+
+[2019-07-09 11:16:28.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '07-09-2019' and '07-09-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-07-09 11:16:28.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '07-09-2019' and '07-09-2019') and d.coditems like 'LI%' 
+
+[2019-07-09 11:16:50.000000 192.130.74.97  - [query->WILMA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-09 11:16:50.000000 192.130.74.97  - [query->WILMA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 11:16:50.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-09 11:16:50.000000 192.130.74.97  - [query->WILMA] ] Select  * from view_displaypagos where fechafac='2019-07-09'
+
+[2019-07-09 11:16:50.000000 192.130.74.97  - [query->WILMA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and  activa='1') /*and Historia='71304' */
+
+[2019-07-09 11:16:51.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-09 11:16:51.000000 192.130.74.97  - [query->WILMA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '7/9/2019'  AND '7/9/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-07-09 11:16:51.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019'  AND '7/9/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-07-09 11:44:53.000000 192.130.74.97  - [query->WILMA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%HERNANDEZ%ORAMA%'  Order  by nombres 
+
+[2019-07-09 11:44:53.000000 192.130.74.97  - [query->WILMA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='120009'  and activa='1' order by forder desc  
+
+[2019-07-09 11:56:14.000000 192.130.74.97  - [query->WILMA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%%'  Order  by nombres 
+
+[2019-07-09 11:56:14.000000 192.130.74.97  - [query->WILMA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='53696'  and activa='1' order by forder desc  
+
+[2019-07-09 11:56:39.000000 192.130.74.97  - [query->WILMA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%MONGE%RIOS%OVIDIA%'  Order  by nombres 
+
+[2019-07-09 11:56:40.000000 192.130.74.97  - [query->WILMA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='119806'  and activa='1' order by forder desc  
+
+[2019-07-09 15:10:45.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-07-09 15:10:45.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-07-09 15:20:38.000000 192.130.74.97  - [query->log-in] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-09 15:20:38.000000 192.130.74.97  - [query->log-in] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-09 15:20:38.000000 192.130.74.97  - [query->log-in] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora between '07:00' and '07:59' order by nombres
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora between '08:00' and '08:59'
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora between '09:00' and '09:59'
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora between '10:00' and '10:59'
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora between '11:00' and '11:59'
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora between '12:00' and '12:59'
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora between '13:00' and '13:59'
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora between '14:00' and '14:59'
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora between '15:00' and '15:59'
+
+[2019-07-09 15:20:39.000000 192.130.74.97  - [query->log-in] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder,codconfirm,horain,horaout,id,llegada,terapias,prioridad,mls,hilt from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and activa='1'  and coditems like 'TD%' and mls>0  and hora >= '16:00'
+
+[2019-07-09 16:34:38.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = ' HANCE' and passwork ='hate01' and activo=1 
+
+[2019-07-09 16:34:42.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'HANCE' and passwork ='hate01' and activo=1 
+
+[2019-07-09 16:34:42.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'HANCE' 
+
+[2019-07-09 16:34:46.000000 192.130.74.97  - [query->HANCE] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-09 16:34:46.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 16:34:46.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 16:34:47.000000 192.130.74.97  - [query->HANCE] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+
+[2019-07-09 16:34:47.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+
+[2019-07-09 16:34:48.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  tipoprecio order by codtipre
+
+[2019-07-09 16:34:48.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  mseguros where status=1 order by codseguro
+
+[2019-07-09 16:34:48.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  Medios where del=0 order by codigo
+
+[2019-07-09 16:34:50.000000 192.130.74.97  - [query->HANCE] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2 WHERE numfactu = '783065' and cod_subgrupo = 'CONSULTA'
+
+[2019-07-09 16:34:51.000000 192.130.74.97  - [query->HANCE] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  numfactu='783065' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-09 16:34:51.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 16:34:51.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 16:34:56.000000 192.130.74.97  - [query->HANCE] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2 Where CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%78305%' and cod_subgrupo = 'CONSULTA' 
+
+[2019-07-09 16:34:58.000000 192.130.74.97  - [query->HANCE] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%78305%' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc  OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-09 16:34:59.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 16:34:59.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 16:35:13.000000 192.130.74.97  - [query->HANCE] ] SELECT * From  cma_MFactura Where numfactu = '186698'  
+
+[2019-07-09 16:35:13.000000 192.130.74.97  - [query->HANCE] ] UPDATE cma_MFactura SET statfact='2', fechanul='2019-07-09 00:00:00.000',desanul='error al facturar' WHERE numfactu='186698' and statfact in('1','3') 
+
+[2019-07-09 16:35:13.000000 192.130.74.97  - [query->HANCE] ] SELECT * From  cma_DFactura  Where numfactu = '186698'  
+
+[2019-07-09 16:35:13.000000 192.130.74.97  - [query->HANCE] ] SELECT * from kit where coditems='0000000000' 
+
+[2019-07-09 16:35:15.000000 192.130.74.97  - [query->HANCE] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%78305%' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc  OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-09 16:35:16.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 16:35:16.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 16:35:16.000000 192.130.74.97  - [query->HANCE] ] SELECT * From  cma_MFactura Where numfactu = '186698'  
+
+[2019-07-09 16:35:19.000000 192.130.74.97  - [query->HANCE] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%78305%' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc  OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-09 16:35:19.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 16:35:19.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 16:35:25.000000 192.130.74.97  - [query->HANCE] ] Select login,concat(Nombre,' ',apellido) usuario from loginpass  where activo ='1' order by usuario
+
+[2019-07-09 16:35:25.000000 192.130.74.97  - [query->HANCE] ] SELECT * FROM Cuadre WHERE fechA='7/9/2019' and id_centro='C' and usuario='HANCE' 
+
+[2019-07-09 16:35:26.000000 192.130.74.97  - [query->HANCE] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='7/9/2019' and a.usuario='' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-07-09 16:35:28.000000 192.130.74.97  - [query->HANCE] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='7/9/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-07-09 16:35:28.000000 192.130.74.97  - [query->HANCE] ] SELECT valor,sum(monto) monto from Cuadre where fechA='7/9/2019'  and Id_centro='C' group by valor
+
+[2019-07-09 16:35:28.000000 192.130.74.97  - [query->HANCE] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='7/9/2019' and Id_centro='C' group by usuario
+
+[2019-07-09 16:35:28.000000 192.130.74.97  - [query->HANCE] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='7/9/2019' and estacion='CMA' and id_centro = 'C'  group by valor order by valor desc
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ]    SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+     INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+     LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='7/9/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(total+monto_flete) monto, count(*) facturas from VentasDiariasCMACST where fechafac='7/9/2019'  and statfact=3 and cod_subgrupo='CONSULTA' 
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '7/9/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '7/9/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '7/9/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete, a.Historia,a.initials    FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019' AND '7/9/2019'  AND  a.statfact=3  And  a.total>=0 and cod_subgrupo='CONSULTA' Order by a.numfactu desc 
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT d.numfactu, d.modopago From VIEWpagosPRCMACST d WHERE d.fechapago between '7/9/2019' AND '7/9/2019' and cod_subgrupo='CONSULTA'  Order By d.modopago
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiariasCMACST a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '7/9/2019' AND '7/9/2019' AND a.statfact=3 and cod_subgrupo='CONSULTA' And   a.total>0  
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between  '7/9/2019' AND '7/9/2019' AND  a.statfact=3 and cod_subgrupo='CONSULTA'   And  a.total<0 Order by a.numfactu desc  
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019' AND '7/9/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA'   And  a.total<0 
+
+[2019-07-09 16:35:30.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019' AND '7/9/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA' 
+
+[2019-07-09 16:36:25.000000 192.130.74.97  - [query->HANCE] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='7/9/2019' and estacion='CMA' and id_centro = 'C'  group by valor order by valor desc
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ]    SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+     INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+     LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='7/9/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(total+monto_flete) monto, count(*) facturas from VentasDiariasCMACST where fechafac='7/9/2019'  and statfact=3 and cod_subgrupo='CONSULTA' 
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '7/9/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '7/9/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '7/9/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete, a.Historia,a.initials    FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019' AND '7/9/2019'  AND  a.statfact=3  And  a.total>=0 and cod_subgrupo='CONSULTA' Order by a.numfactu desc 
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ] SELECT d.numfactu, d.modopago From VIEWpagosPRCMACST d WHERE d.fechapago between '7/9/2019' AND '7/9/2019' and cod_subgrupo='CONSULTA'  Order By d.modopago
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiariasCMACST a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '7/9/2019' AND '7/9/2019' AND a.statfact=3 and cod_subgrupo='CONSULTA' And   a.total>0  
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between  '7/9/2019' AND '7/9/2019' AND  a.statfact=3 and cod_subgrupo='CONSULTA'   And  a.total<0 Order by a.numfactu desc  
+
+[2019-07-09 16:36:27.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019' AND '7/9/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA'   And  a.total<0 
+
+[2019-07-09 16:36:28.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019' AND '7/9/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA' 
+
+[2019-07-09 16:36:53.000000 192.130.74.97  - [query->HANCE] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='7/9/2019' and a.usuario='HANCE' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-07-09 16:36:53.000000 192.130.74.97  - [query->HANCE] ] SELECT * FROM Cuadre WHERE fechA='7/9/2019' and id_centro='C' and usuario='HANCE' 
+
+[2019-07-09 16:36:53.000000 192.130.74.97  - [query->HANCE] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='7/9/2019' and id_centro='C' and usuario='HANCE' group by usuario 
+
+[2019-07-09 16:36:56.000000 192.130.74.97  - [query->HANCE] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='7/9/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-07-09 16:36:56.000000 192.130.74.97  - [query->HANCE] ] SELECT valor,sum(monto) monto from Cuadre where fechA='7/9/2019'  and Id_centro='C' group by valor
+
+[2019-07-09 16:36:56.000000 192.130.74.97  - [query->HANCE] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='7/9/2019' and Id_centro='C' group by usuario
+
+[2019-07-09 16:36:56.000000 192.130.74.97  - [query->HANCE] ] SELECT * FROM Cuadre WHERE fechA='7/9/2019' and id_centro='C' and usuario='HANCE' 
+
+[2019-07-09 16:36:57.000000 192.130.74.97  - [query->HANCE] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='7/9/2019' and a.usuario='HANCE' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-07-09 16:36:57.000000 192.130.74.97  - [query->HANCE] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='7/9/2019' and id_centro='C' and usuario='HANCE' group by usuario 
+
+[2019-07-09 17:10:43.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-07-09 17:10:43.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-07-09 17:11:01.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 17:11:01.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 17:11:01.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-07-09 17:11:02.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 17:11:06.000000 192.130.74.97  - [query->WILMA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-09 17:11:06.000000 192.130.74.97  - [query->WILMA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 17:11:06.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-09 17:11:06.000000 192.130.74.97  - [query->WILMA] ] Select  * from view_displaypagos where fechafac='2019-07-09'
+
+[2019-07-09 17:11:06.000000 192.130.74.97  - [query->WILMA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='2019-07-09' and  activa='1') /*and Historia='71304' */
+
+[2019-07-09 17:11:07.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-09 17:11:07.000000 192.130.74.97  - [query->WILMA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '7/9/2019'  AND '7/9/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-07-09 17:11:07.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019'  AND '7/9/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-07-09 17:11:50.000000 192.130.74.97  - [query->WILMA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-09 17:11:50.000000 192.130.74.97  - [query->WILMA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 17:11:50.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-09 17:11:50.000000 192.130.74.97  - [query->WILMA] ] Select  * from view_displaypagos where fechafac='7/9/2019'
+
+[2019-07-09 17:11:50.000000 192.130.74.97  - [query->WILMA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='7/9/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-07-09 17:11:51.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-09 17:11:51.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019'  AND '7/9/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-07-09 17:11:51.000000 192.130.74.97  - [query->WILMA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '7/9/2019'  AND '7/9/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-07-09 17:12:08.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 17:12:08.000000 192.130.74.97  - [query->WILMA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 17:12:08.000000 192.130.74.97  - [query->WILMA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 17:12:16.000000 192.130.74.97  - [query->WILMA] ] Select TOP 25 * from Mclientes where  Historia ='77902'  
+
+[2019-07-09 17:12:16.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 17:12:16.000000 192.130.74.97  - [query->WILMA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='124222' and codconsulta<>'07' group by codclien
+
+[2019-07-09 17:12:16.000000 192.130.74.97  - [query->WILMA] ] Select observacion from VIEW_mconsultas_02 where codclien='124222'  and fecha_cita='2019/07/09' and codconsulta<>'07'
+
+[2019-07-09 17:12:22.000000 192.130.74.97  - [query->WILMA] ] select * from Feriado where FECHA='07/11/2019' and activo = 1 
+
+[2019-07-09 17:12:24.000000 192.130.74.97  - [query->WILMA] ] Select count(*) cant from mconsultas where codclien='124222' 
+
+[2019-07-09 17:12:24.000000 192.130.74.97  - [query->WILMA] ] Select * from mconsultas WHERE CODCLIEN='124222' AND fecha_cita='2019-07-09' and codmedico='000' 
+
+[2019-07-09 17:12:24.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass where login ='WILMA' 
+
+[2019-07-09 17:12:24.000000 192.130.74.97  - [query->WILMA] ] Select * from mconsultas where codclien='124222' and asistido=0 
+
+[2019-07-09 17:12:24.000000 192.130.74.97  - [query->WILMA] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='124222' AND ASISTIDO=0
+
+[2019-07-09 17:12:24.000000 192.130.74.97  - [query->WILMA] ] UPDATE MCONSULTAS SET FECHA_CITA='07/11/2019',usuario = 'DSANTOS',confirmado='0',noasistido='0',activa='1',codmedico = '320', observacion = 'DELIZMARIE**', regusuario='WILMA', llegada='',codconsulta='03' WHERE CODCLIEN='124222' AND ASISTIDO='0' and ID='276219' 
+
+[2019-07-09 17:28:43.000000 192.130.74.97  - [query->WILMA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-09 17:28:43.000000 192.130.74.97  - [query->WILMA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 17:28:43.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-09 17:28:43.000000 192.130.74.97  - [query->WILMA] ] Select  * from view_displaypagos where fechafac='7/9/2019'
+
+[2019-07-09 17:28:43.000000 192.130.74.97  - [query->WILMA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='7/9/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-07-09 17:28:44.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-09 17:28:44.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '7/9/2019'  AND '7/9/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-07-09 17:28:44.000000 192.130.74.97  - [query->WILMA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '7/9/2019'  AND '7/9/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-07-09 17:29:08.000000 192.130.74.97  - [query->WILMA] ] SELECT * from mconsultas  where codclien='124961' and fecha_cita='2019-07-09' 
+
+[2019-07-09 17:29:08.000000 192.130.74.97  - [query->WILMA] ] UPDATE mconsultas  SET horaout = '17:24:45' where codclien='124961' and fecha_cita='2019-07-09' 
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] SELECT * from mconsultas  where codclien='124961' and fecha_cita='7/9/2019' 
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] UPDATE mconsultas  SET asistido = '3', noasistido = '0' where codclien='124961' and fecha_cita='7/9/2019' 
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] Select TOP 25 * from Mclientes where  Historia ='78315'  
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='78315' and codconsulta<>'07' group by codclien
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='78315' and codconsulta<>'07' group by codclien
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='124961' and codconsulta<>'07' group by codclien
+
+[2019-07-09 17:29:09.000000 192.130.74.97  - [query->WILMA] ] Select observacion from VIEW_mconsultas_02 where codclien='124961'  and fecha_cita='2019/07/09' and codconsulta<>'07'
+
+[2019-07-09 17:29:17.000000 192.130.74.97  - [query->WILMA] ] select * from Feriado where FECHA='07/23/2019' and activo = 1 
+
+[2019-07-09 17:29:18.000000 192.130.74.97  - [query->WILMA] ] Select count(*) cant from mconsultas where codclien='124961' 
+
+[2019-07-09 17:29:18.000000 192.130.74.97  - [query->WILMA] ] Select * from mconsultas WHERE CODCLIEN='124961' AND fecha_cita='2019-07-09' and codmedico='000' 
+
+[2019-07-09 17:29:18.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass where login ='WILMA' 
+
+[2019-07-09 17:29:18.000000 192.130.74.97  - [query->WILMA] ] Select * from mconsultas where codclien='124961' and asistido=0 
+
+[2019-07-09 17:29:18.000000 192.130.74.97  - [query->WILMA] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='124961')
+
+[2019-07-09 17:29:18.000000 192.130.74.97  - [query->WILMA] ] Select * from mconsultas where codclien='124961' and fecha_cita='07/23/2019'  
+
+[2019-07-09 17:29:18.000000 192.130.74.97  - [query->WILMA] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('124961','7/9/2019','1','07/23/2019' ,'320','IMATOS','7/9/2019','IVELISSE MATOS','0','0','0','1','0','0','03')
+

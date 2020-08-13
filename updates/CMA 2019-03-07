@@ -1,0 +1,16 @@
+CMA 2019-03-07
+
+PARA MOSTRAR LA VENTA NETA EL EL REPORTE DE CUADRE DE PRODUCTOS
+
+ACTUALIZACION DE 
+
+\vistas\reportes
+cuadre.php
+
+
+se agregaron estas linenas:
+
+ $pdf->SetXY(5,$pdf->GetY()+4);
+ $pdf->Cell($pdf->GetX()+25,4,'Ventas Netas  ',0,0,'R');
+ $netas = (float) $grantotal[0]['subtotal'] - (float) $grantotal[0]['descuento']  ;
+ $pdf->Cell($pdf->GetX()+42,4,number_format($netas, 2, ".", ","),0,0,'R');

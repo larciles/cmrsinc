@@ -1,0 +1,239 @@
+[2018-11-01 08:19:52.000000 192.130.74.39  - [query->log-in] ] Select * from loginpass WHERE login = 'RRIVERA' and passwork ='2017rr' 
+[2018-11-01 08:19:52.000000 192.130.74.39  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'RRIVERA' 
+[2018-11-01 08:19:55.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-11-01 08:19:55.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-11-01 08:19:55.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-11-01 08:19:57.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-11-01 08:20:02.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '71735'  Order  by nombres 
+[2018-11-01 08:20:02.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111996'  and activa='1' order by forder desc  
+[2018-11-01 08:20:26.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '71735'  Order  by nombres 
+[2018-11-01 08:20:26.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='ROSE MARIE cita abierta no le indicaron que tenia cita 11/1/18**** FAMILIAR HIZO LA CITA LLAMAR TAMBIEN AL 787-593-3071' where codclien='111996'  and fecha_cita='11/02/2018' 
+[2018-11-01 08:20:26.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111996'  and activa='1' order by forder desc  
+[2018-11-01 08:42:25.000000 192.130.74.39  - [query->log-in] ] Select * from loginpass WHERE login = 'RRIVERA' and passwork ='rr2015' 
+[2018-11-01 08:42:40.000000 192.130.74.39  - [query->log-in] ] Select * from loginpass WHERE login = 'RRIVERA' and passwork ='rr2017' 
+[2018-11-01 08:42:53.000000 192.130.74.39  - [query->log-in] ] Select * from loginpass WHERE login = 'RRIVERA' and passwork ='2017rr' 
+[2018-11-01 08:42:53.000000 192.130.74.39  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'RRIVERA' 
+[2018-11-01 08:43:00.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-11-01 08:43:00.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-11-01 08:43:00.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-11-01 08:43:01.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-11-01 08:48:52.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '61835'  Order  by nombres 
+[2018-11-01 08:48:52.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='83496'  and activa='1' order by forder desc  
+[2018-11-01 08:49:08.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultasS Set observacion='sale ocupado 11/1/18.10-12/ENVIARB TEXT Y CONFIRMAR' where codclien='83496'  and fecha_cita='10/31/2018'  and  CODITEMS ='TD01'  
+[2018-11-01 10:01:07.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultasS Set observacion='sale ocupado 11/1/18.10-12/ENVIARB TEXT Y CONFIRMAR' where codclien='83496'  and fecha_cita='10/31/2018'  and  CODITEMS ='TD01'  
+[2018-11-01 10:01:37.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  Historia = '72334'  Order  by nombres 
+[2018-11-01 10:01:37.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='113159'  and activa='1' order by forder desc  
+[2018-11-01 10:01:57.000000 192.130.74.39  - [query->RRIVERA] ] Update  mconsultas  Set observacion='787-315-9799 787-567-9700(HIJO) OTORGAR OFERTA DE CONSULTA MEDICA $10 Y UN 50% DESCUENTO EN LAS TERAPIAS. JOHANNYS	' where codclien='113159'  and fecha_cita='11/13/2018' 
+[2018-11-01 10:02:58.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-11-01 10:03:02.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-11-01 10:03:06.000000 192.130.74.39  - [query->RRIVERA] ] SELECT * FROM [farmacias].[dbo].[MClientes] where codclien='113159' 
+[2018-11-01 10:03:07.000000 192.130.74.39  - [query->RRIVERA] ] Select COD,PAIS from Pais order by PAIS
+[2018-11-01 10:03:07.000000 192.130.74.39  - [query->RRIVERA] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-11-01 10:03:07.000000 192.130.74.39  - [query->RRIVERA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-01 10:03:57.000000 192.130.74.39  - [query->RRIVERA] ] Update MClientes set nombre = 'EDGARDO',apellido = 'CARDONA HERNANDEZ',nombres = 'CARDONA HERNANDEZ EDGARDO'
+                ,Cedula =  '787-567-9700' ,telfhabit = '787-315-9799',codmedico = '327',NACIMIENTO = '01/01/1970'
+                ,Historia = '72334' ,direccionH = '' ,codpostal = ''
+                ,Pais = '160' ,ESTADO = '67' ,Eaddress = '' ,hCiudad = ''
+                ,email = '',sexo = '1' ,inactivo = '0' ,exonerado = '0' ,fallecido = '0', telfofic='787-448-5188'  Where codclien='113159'  
+[2018-11-01 10:03:57.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-11-01 11:51:00.000000 192.130.74.32  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' 
+[2018-11-01 11:51:00.000000 192.130.74.32  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+[2018-11-01 11:51:11.000000 192.130.74.32  - [query->LA] ] SELECT *, REPLACE(CONVERT(CHAR(15), fecing, 101), '', '-') AS ingreso from  MInventario where prod_serv='	' and coditems='BLIA1118	'
+[2018-11-01 11:51:12.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-01-2018' and '11-30-2018' and statfact <>'2'
+[2018-11-01 11:51:13.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-01-2018' and '11-30-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-11-01 11:51:13.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-01-2018' and '11-30-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-11-01 11:51:13.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '11-30-2018' and cod_subgrupo='CONSULTA' 
+[2018-11-01 11:51:14.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-01-2018' and '11-30-2018' and d.coditems like 'TD%' 
+[2018-11-01 11:51:14.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '11-30-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-11-01 11:51:14.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-01-2018' and '11-30-2018') and d.coditems like 'LI%' 
+[2018-11-01 11:51:21.000000 192.130.74.32  - [query->LA] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-01 11:52:05.000000 192.130.74.32  - [query->LA] ] INSERT INTO MInventario
+	(coditems,desitems,activo,Exisminima,Exismaxima,Prod_serv,aplicaIva,aplicadcto,aplicaComMed,aplicaComTec,cod_subgrupo,costo,nombre_alterno,fecing,cod_grupo,Inventariable )
+	VALUES('BLNL1118','BLOQUEO NEUROLOGICO','1','0','0','','1','1','1','0','','0','BLK NEORILOG','2018-11-01','003','1') 
+[2018-11-01 11:52:05.000000 192.130.74.32  - [query->LA] ] INSERT INTO MPrecios 
+	(coditems,codtipre,precunit,sugerido,activo)
+	VALUES('BLNL1118','00','160','160','1')
+[2018-11-01 11:52:05.000000 192.130.74.32  - [query->LA] ] INSERT INTO NTPRODUCTOS 
+	(Cod_prod ,Nombre,CapsulasXUni)
+	VALUES('BLNL1118','BLOQUEO NEUROLOGICO','0')
+[2018-11-01 11:54:36.000000 192.130.74.32  - [query->LA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-11-01 11:54:36.000000 192.130.74.32  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-01 11:54:36.000000 192.130.74.32  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-01 11:54:37.000000 192.130.74.32  - [query->LA] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+[2018-11-01 11:54:37.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+[2018-11-01 11:54:38.000000 192.130.74.32  - [query->LA] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-01 11:54:38.000000 192.130.74.32  - [query->LA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2018-11-01 11:54:38.000000 192.130.74.32  - [query->LA] ] SELECT * from  Medios where del=0 order by codigo
+[2018-11-01 11:54:52.000000 192.130.74.32  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-01 11:54:52.000000 192.130.74.32  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-01 11:54:53.000000 192.130.74.32  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-01 11:54:53.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where prod_serv IN ('M') and activo = 1 and cod_grupo='004' OR  coditems ='TMAG01' order by 'desitems' desc
+[2018-11-01 11:54:53.000000 192.130.74.32  - [query->LA] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-01 11:54:53.000000 192.130.74.32  - [query->LA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2018-11-01 11:54:54.000000 192.130.74.32  - [query->LA] ] SELECT * from  Medios where del=0 order by codigo
+[2018-11-01 11:55:00.000000 192.130.74.32  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-01 11:55:00.000000 192.130.74.32  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-01 11:55:01.000000 192.130.74.32  - [query->LA] ] select * from MInventario where Prod_serv='s' and cod_grupo='004' and cod_subgrupo='SUEROTERAPIA' and activo=1 order by desitems 
+[2018-11-01 11:55:01.000000 192.130.74.32  - [query->LA] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-01 11:55:01.000000 192.130.74.32  - [query->LA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2018-11-01 11:55:01.000000 192.130.74.32  - [query->LA] ] SELECT * from  Medios where del=0 order by codigo
+[2018-11-01 11:56:32.000000 192.130.74.32  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-01 11:56:32.000000 192.130.74.32  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-01 11:56:32.000000 192.130.74.32  - [query->LA] ] select * from MInventario where Prod_serv='s' and cod_grupo='004' and cod_subgrupo='SUEROTERAPIA' and activo=1 order by desitems 
+[2018-11-01 11:56:33.000000 192.130.74.32  - [query->LA] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-01 11:56:33.000000 192.130.74.32  - [query->LA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2018-11-01 11:56:33.000000 192.130.74.32  - [query->LA] ] SELECT * from  Medios where del=0 order by codigo
+[2018-11-01 11:56:42.000000 192.130.74.32  - [query->LA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-11-01 11:56:42.000000 192.130.74.32  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-01 11:56:43.000000 192.130.74.32  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-01 11:56:43.000000 192.130.74.32  - [query->LA] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+[2018-11-01 11:56:43.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+[2018-11-01 11:56:44.000000 192.130.74.32  - [query->LA] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-01 11:56:44.000000 192.130.74.32  - [query->LA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2018-11-01 11:56:44.000000 192.130.74.32  - [query->LA] ] SELECT * from  Medios where del=0 order by codigo
+[2018-11-01 11:57:02.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-01-2018' and '11-01-2018' and statfact <>'2'
+[2018-11-01 11:57:03.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-01-2018' and '11-01-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-11-01 11:57:03.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-01-2018' and '11-01-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-11-01 11:57:03.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '11-01-2018' and cod_subgrupo='CONSULTA' 
+[2018-11-01 11:57:04.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-01-2018' and '11-01-2018' and d.coditems like 'TD%' 
+[2018-11-01 11:57:04.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '11-01-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-11-01 11:57:05.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-01-2018' and '11-01-2018') and d.coditems like 'LI%' 
+[2018-11-01 11:57:11.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='BLNL1118' and  codtipre='00'
+[2018-11-01 11:57:11.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='BLNL1118' 
+[2018-11-01 11:57:11.000000 192.130.74.32  - [query->LA] ] SELECT sum(Porcentaje) percentage from  Impuestos where Activo =1 
+[2018-11-01 11:57:13.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '11-01-2018' and '11-01-2018' and statfact <>'2'
+[2018-11-01 11:57:13.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '11-01-2018' and '11-01-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-11-01 11:57:14.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '11-01-2018' and '11-01-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-11-01 11:57:14.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '11-01-2018' and '11-01-2018' and cod_subgrupo='CONSULTA' 
+[2018-11-01 11:57:14.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '11-01-2018' and '11-01-2018' and d.coditems like 'TD%' 
+[2018-11-01 11:57:15.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '11-01-2018' and '11-01-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-11-01 11:57:15.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '11-01-2018' and '11-01-2018') and d.coditems like 'LI%' 
+[2018-11-01 11:57:18.000000 192.130.74.32  - [query->LA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-11-01 11:57:18.000000 192.130.74.32  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-11-01 11:57:18.000000 192.130.74.32  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-11-01 11:57:18.000000 192.130.74.32  - [query->LA] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+[2018-11-01 11:57:19.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+[2018-11-01 11:57:19.000000 192.130.74.32  - [query->LA] ] SELECT * from  tipoprecio order by codtipre
+[2018-11-01 11:57:19.000000 192.130.74.32  - [query->LA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2018-11-01 11:57:19.000000 192.130.74.32  - [query->LA] ] SELECT * from  Medios where del=0 order by codigo
+[2018-11-01 11:57:25.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='BLIA1118' and  codtipre='00'
+[2018-11-01 11:57:25.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='BLIA1118' 
+[2018-11-01 11:57:25.000000 192.130.74.32  - [query->LA] ] SELECT sum(Porcentaje) percentage from  Impuestos where Activo =1 
+[2018-11-01 11:57:28.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='BLNL1118' and  codtipre='00'
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='BLNL1118' 
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT sum(Porcentaje) percentage from  Impuestos where Activo =1 
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='lifec01' and  codtipre='00'
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='lifec01' 
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='BLNL1118' and  codtipre='00'
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='BLNL1118' 
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT sum(Porcentaje) percentage from  Impuestos where Activo =1 
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='BLIA1118' and  codtipre='00'
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='BLIA1118' 
+[2018-11-01 11:57:29.000000 192.130.74.32  - [query->LA] ] SELECT sum(Porcentaje) percentage from  Impuestos where Activo =1 
+[2018-11-01 11:57:30.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='BLNL1118' and  codtipre='00'
+[2018-11-01 11:57:30.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='BLNL1118' 
+[2018-11-01 11:57:30.000000 192.130.74.32  - [query->LA] ] SELECT sum(Porcentaje) percentage from  Impuestos where Activo =1 
+[2018-11-01 11:57:30.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='lifec01' and  codtipre='00'
+[2018-11-01 11:57:30.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='lifec01' 
+[2018-11-01 11:57:30.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='lifec03' and  codtipre='00'
+[2018-11-01 11:57:30.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='lifec03' 
+[2018-11-01 11:57:31.000000 192.130.74.32  - [query->LA] ] SELECT * from  MPrecios where coditems='lifec01' and  codtipre='00'
+[2018-11-01 11:57:31.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where coditems='lifec01' 
+[2018-11-01 12:25:59.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '11-01-2018' and '11-01-2018' and statfact <>'2'
+[2018-11-01 12:25:59.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '11-01-2018' and '11-01-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-11-01 12:25:59.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '11-01-2018' and '11-01-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-11-01 12:25:59.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '11-01-2018' and '11-01-2018' and cod_subgrupo='CONSULTA' 
+[2018-11-01 12:26:00.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '11-01-2018' and '11-01-2018' and d.coditems like 'TD%' 
+[2018-11-01 12:26:00.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '11-01-2018' and '11-01-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-11-01 12:26:00.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '11-01-2018' and '11-01-2018') and d.coditems like 'LI%' 
+[2018-11-01 13:56:33.000000 192.130.74.39  - [query->log-in] ] Select * from loginpass WHERE login = 'RRIVERA' and passwork ='2017rr' 
+[2018-11-01 13:56:33.000000 192.130.74.39  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'RRIVERA' 
+[2018-11-01 13:56:42.000000 192.130.74.39  - [query->RRIVERA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-11-01 13:56:42.000000 192.130.74.39  - [query->RRIVERA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-11-01 13:56:42.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-11-01 13:56:45.000000 192.130.74.39  - [query->RRIVERA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-11-01 13:56:53.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%pablo%padilla%'  Order  by nombres 
+[2018-11-01 13:57:02.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%padilla%juan%'  Order  by nombres 
+[2018-11-01 13:57:02.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='98955'  and activa='1' order by forder desc  
+[2018-11-01 13:57:31.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%pablo%juan%'  Order  by nombres 
+[2018-11-01 13:57:34.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='81256'  and activa='1' order by forder desc  
+[2018-11-01 13:57:38.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%pablo%'  Order  by nombres 
+[2018-11-01 13:57:38.000000 192.130.74.39  - [query->RRIVERA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='56606'  and activa='1' order by forder desc  
+[2018-11-01 13:58:20.000000 192.130.74.39  - [query->RRIVERA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%padilla%juan%p%'  Order  by nombres 
+[2018-11-01 17:30:35.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '11-01-2018' and '11-01-2018' and statfact <>'2'
+[2018-11-01 17:30:35.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '11-01-2018' and '11-01-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-11-01 17:30:35.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '11-01-2018' and '11-01-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-11-01 17:30:35.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '11-01-2018' and '11-01-2018' and cod_subgrupo='CONSULTA' 
+[2018-11-01 17:30:36.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '11-01-2018' and '11-01-2018' and d.coditems like 'TD%' 
+[2018-11-01 17:30:36.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '11-01-2018' and '11-01-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-11-01 17:30:36.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '11-01-2018' and '11-01-2018') and d.coditems like 'LI%' 
+[2018-11-01 17:30:50.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>''
+[2018-11-01 17:30:50.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '11-01-2018' 
+[2018-11-01 17:30:50.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>'' group by medico,Dventa
+[2018-11-01 17:30:51.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>'' group by medico
+[2018-11-01 17:30:51.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '11/01/2018' and medico<>''
+[2018-11-01 17:30:52.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>''
+[2018-11-01 17:30:52.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '11-01-2018' 
+[2018-11-01 17:30:52.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>'' group by medico,Dventa
+[2018-11-01 17:30:52.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>'' group by medico
+[2018-11-01 17:30:52.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '11/01/2018' and medico<>''
+[2018-11-01 17:30:53.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>''
+[2018-11-01 17:30:53.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '11-01-2018' 
+[2018-11-01 17:30:53.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>'' group by medico,Dventa
+[2018-11-01 17:30:53.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>'' group by medico
+[2018-11-01 17:30:54.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '11/01/2018' and medico<>''
+[2018-11-01 17:30:54.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>''
+[2018-11-01 17:30:54.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '11-01-2018' 
+[2018-11-01 17:30:54.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>'' group by medico,Dventa
+[2018-11-01 17:30:54.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-01-2018' and medico<>'' group by medico
+[2018-11-01 17:30:55.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '11/01/2018' and medico<>''

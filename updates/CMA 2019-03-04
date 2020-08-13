@@ -1,0 +1,113 @@
+CMA 2019-03-04
+OBSERVACIONES :
+
+Estos cambios fueron necesario para poder agregar Clelulas Madre en el reporte de 
+Estadisticas Medicos totales
+
+Las dos vistas creadas NO INCLUYEN las consultas de CELULAS MADRES
+
+
+
+UPDATES 2019-03-04
+
+listafacsueros.js   // 
+
+
+sql views
+
+ALTER TABLE  > 
+
+ VIEWPRODLASERSUEROINTRA
+
+ VIEWPRODLASERSUEROINTRA_2
+
+ viewProLaserSuero
+
+
+CREATE TABLE >
+
+create view  VentasDiariasCMACELMADRESnoCons as
+SELECT        dbo.cma_MFactura.numfactu, dbo.MClientes.nombres, dbo.cma_MFactura.fechafac, dbo.cma_MFactura.codclien, dbo.cma_MFactura.codmedico, dbo.cma_MFactura.subtotal, dbo.cma_MFactura.descuento, 
+                         dbo.cma_MFactura.total, dbo.cma_MFactura.statfact, dbo.cma_MFactura.usuario, dbo.cma_MFactura.tipopago, dbo.cma_MFactura.TotImpuesto, dbo.cma_MFactura.monto_flete, dbo.cma_MFactura.tipo AS doc, 
+                         dbo.cma_MFactura.workstation, dbo.cma_MFactura.cancelado, '01' AS codsuc, dbo.MClientes.medio, c.cod_subgrupo, d .cantidad, SUM(d .cantidad) AS tocantidad, d .coditems, '' numnotcre, dbo.cma_MFactura.id, 
+                         max(dbo.MClientes.Historia) Historia, max(l.initials) initials
+FROM            dbo.cma_MFactura LEFT OUTER JOIN
+                         dbo.MClientes ON dbo.cma_MFactura.codclien = dbo.MClientes.codclien INNER JOIN
+                         dbo.viewtipofacturascma AS c ON dbo.cma_MFactura.numfactu = c.numfactu INNER JOIN
+                         view_cma__detalle_facturas d ON dbo.cma_MFactura.numfactu = d .numfactu LEFT OUTER JOIN
+                         loginpass l ON dbo.cma_MFactura.usuario = l.login
+Where d.coditems<>'CMKCINTRON' and c.cod_subgrupo='CEL MADRES'
+GROUP BY dbo.cma_MFactura.numfactu, dbo.MClientes.nombres, dbo.cma_MFactura.fechafac, dbo.cma_MFactura.codclien, dbo.cma_MFactura.codmedico, dbo.cma_MFactura.subtotal, dbo.cma_MFactura.descuento, 
+                         dbo.cma_MFactura.total, dbo.cma_MFactura.statfact, dbo.cma_MFactura.usuario, dbo.cma_MFactura.tipopago, dbo.cma_MFactura.TotImpuesto, dbo.cma_MFactura.monto_flete, dbo.cma_MFactura.tipo, 
+                         dbo.cma_MFactura.workstation, dbo.cma_MFactura.cancelado, dbo.MClientes.medio, c.cod_subgrupo, d .cantidad, d .coditems, dbo.cma_MFactura.id
+
+UNION ALL
+SELECT        CMA_Mnotacredito.numnotcre AS numfactu, dbo.MClientes.nombres, CMA_Mnotacredito.fechanot AS fechafac, CMA_Mnotacredito.codclien, CMA_Mnotacredito.codmedico, CMA_Mnotacredito.subtotal * - 1 AS subtotal, 
+                         CMA_Mnotacredito.descuento * - 1 AS descuento, CMA_Mnotacredito.totalnot * - 1 AS total, CMA_Mnotacredito.statnc AS statfact, CMA_Mnotacredito.usuario, CMA_Mnotacredito.tipopago, 
+                         CMA_Mnotacredito.totimpuesto * - 1 AS totimpuesto, CMA_Mnotacredito.monto_flete * - 1 AS monto_flete, CMA_Mnotacredito.tipo AS Doc, CMA_Mnotacredito.workstation, CMA_Mnotacredito.cancelado, '01' AS codsuc, 
+                         dbo.MClientes.medio, c.cod_subgrupo, d .cantidad, SUM(d .cantidad) AS tocantidad, d .coditems, CMA_Mnotacredito.numnotcre, CMA_Mnotacredito.id, max(dbo.MClientes.Historia) Historia, max(l.initials) initials
+FROM            CMA_Mnotacredito LEFT JOIN
+                         dbo.MClientes ON CMA_Mnotacredito.codclien = dbo.MClientes.codclien INNER JOIN
+                         dbo.viewtipofacturascma AS c ON CMA_Mnotacredito.numfactu = c.numfactu INNER JOIN
+                         view_cma__detalle_devolucion AS d ON CMA_Mnotacredito.numnotcre = d .numnotcre LEFT OUTER JOIN
+                         loginpass l ON dbo.cma_Mnotacredito.usuario = l.login
+Where d.coditems<>'CMKCINTRON' and c.cod_subgrupo='CEL MADRES'
+GROUP BY CMA_Mnotacredito.numnotcre, dbo.MClientes.nombres, CMA_Mnotacredito.fechanot, CMA_Mnotacredito.codclien, CMA_Mnotacredito.codmedico, CMA_Mnotacredito.subtotal, CMA_Mnotacredito.descuento, 
+                         CMA_Mnotacredito.totalnot, CMA_Mnotacredito.statnc, CMA_Mnotacredito.usuario, CMA_Mnotacredito.tipopago, CMA_Mnotacredito.TotImpuesto, CMA_Mnotacredito.monto_flete, CMA_Mnotacredito.tipo, 
+                         CMA_Mnotacredito.workstation, CMA_Mnotacredito.cancelado, dbo.MClientes.medio, c.cod_subgrupo, d .cantidad, d .coditems, CMA_Mnotacredito.numnotcre, CMA_Mnotacredito.id
+
+
+/-----------------------------------------------------------------------------------------------------------
+create view  VentasDiariasCMACST_2CEMAnoCons as
+
+SELECT        dbo.cma_MFactura.numfactu, dbo.cma_MFactura.fechafac, dbo.cma_MFactura.codmedico, dbo.cma_MFactura.subtotal, dbo.cma_MFactura.descuento, dbo.cma_MFactura.total, dbo.cma_MFactura.statfact, 
+                         dbo.cma_MFactura.TotImpuesto, dbo.cma_MFactura.monto_flete, dbo.cma_MFactura.tipo AS doc, dbo.cma_MFactura.cancelado, '01' AS codsuc, c.cod_subgrupo, c.coditems, '' numnotcre, dbo.cma_MFactura.id, 
+                         dbo.cma_MFactura.mediconame, dbo.cma_MFactura.medico
+FROM            dbo.cma_MFactura INNER JOIN
+                         dbo.cma_DFactura AS c ON dbo.cma_MFactura.numfactu = c.numfactu
+Where c.coditems<>'CMKCINTRON' and c.cod_subgrupo='CEL MADRES'
+GROUP BY dbo.cma_MFactura.numfactu, dbo.cma_MFactura.fechafac, dbo.cma_MFactura.codmedico, dbo.cma_MFactura.subtotal, dbo.cma_MFactura.descuento, dbo.cma_MFactura.total, dbo.cma_MFactura.statfact, 
+                         dbo.cma_MFactura.TotImpuesto, dbo.cma_MFactura.monto_flete, dbo.cma_MFactura.tipo, dbo.cma_MFactura.cancelado, c.cod_subgrupo, c.coditems, dbo.cma_MFactura.id, dbo.cma_MFactura.mediconame, 
+                         dbo.cma_MFactura.medico
+
+UNION ALL
+SELECT        CMA_Mnotacredito.numnotcre AS numfactu, CMA_Mnotacredito.fechanot AS fechafac, CMA_Mnotacredito.codmedico, CMA_Mnotacredito.subtotal * - 1 AS subtotal, CMA_Mnotacredito.descuento * - 1 AS descuento, 
+                         CMA_Mnotacredito.totalnot * - 1 AS total, CMA_Mnotacredito.statnc AS statfact, CMA_Mnotacredito.totimpuesto * - 1 AS totimpuesto, CMA_Mnotacredito.monto_flete * - 1 AS monto_flete, CMA_Mnotacredito.tipo AS Doc, 
+                         CMA_Mnotacredito.cancelado, '01' AS codsuc, c.cod_subgrupo, c.coditems, CMA_Mnotacredito.numnotcre, CMA_Mnotacredito.id, dbo.CMA_Mnotacredito.mediconame, dbo.CMA_Mnotacredito.medico
+FROM            CMA_Mnotacredito INNER JOIN
+                         dbo.CMA_Dnotacredito AS c ON CMA_Mnotacredito.numfactu = c.numnotcre
+Where c.coditems<>'CMKCINTRON' and c.cod_subgrupo='CEL MADRES'
+GROUP BY CMA_Mnotacredito.numnotcre, CMA_Mnotacredito.fechanot, CMA_Mnotacredito.codmedico, CMA_Mnotacredito.subtotal, CMA_Mnotacredito.descuento, CMA_Mnotacredito.totalnot, CMA_Mnotacredito.statnc, 
+                         CMA_Mnotacredito.TotImpuesto, CMA_Mnotacredito.monto_flete, CMA_Mnotacredito.tipo, CMA_Mnotacredito.cancelado, c.cod_subgrupo, c.coditems, CMA_Mnotacredito.numnotcre, CMA_Mnotacredito.id, 
+                         dbo.CMA_Mnotacredito.mediconame, dbo.CMA_Mnotacredito.medico
+
+
+--------------------------------------------------
+
+Pare el reporte de Celulas Madres
+
+
+New 
+en 
+ \vistas\reportes
+ventascelma.php
+repventascelma.php
+
+
+\vistas\layouts
+	header.php 
+	 
+	update this
+	 echo '    <li><a href="http://'.$curserver.'/cma/vistas/reportes/bloqueo.php">Bloqueo</a></li> '; 
+
+	add this
+	echo '    <li><a href="http://'.$curserver.'/cma/vistas/reportes/ventascelma.php"><img src="http://'.$curserver.'/cma/img/new2.png" alt="new" >Ventas Células Madres / Exosomas </a></li> ';
+
+
+
+
+\js
+ventascelma.js
+
+
+

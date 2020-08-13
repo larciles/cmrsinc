@@ -1,0 +1,1008 @@
+[2018-10-24 07:40:46.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-01-2018' and '10-24-2018' and statfact <>'2'
+[2018-10-24 07:40:47.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-01-2018' and '10-24-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-24 07:40:47.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-01-2018' and '10-24-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-24 07:40:48.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '10-24-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-24 07:40:48.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-01-2018' and '10-24-2018' and d.coditems like 'TD%' 
+[2018-10-24 07:40:49.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '10-24-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-24 07:40:49.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-01-2018' and '10-24-2018') and d.coditems like 'LI%' 
+[2018-10-24 08:13:39.000000 192.130.74.41  - [query->log-in] ] Select * from loginpass WHERE login = 'CHUERTAS' and passwork ='ch2017' 
+[2018-10-24 08:13:39.000000 192.130.74.41  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'CHUERTAS' 
+[2018-10-24 08:13:44.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:13:44.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:13:44.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:13:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:13:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:13:48.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:13:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:13:49.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:13:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:13:50.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:13:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:13:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:13:58.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '57377'  Order  by nombres 
+[2018-10-24 08:13:58.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='4105'  and activa='1' order by forder desc  
+[2018-10-24 08:14:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '57377'  Order  by nombres 
+[2018-10-24 08:14:14.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 08:14:14.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 08:14:14.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 08:14:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='4105' and codconsulta<>'07' group by codclien
+[2018-10-24 08:14:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select observacion from VIEW_mconsultas_02 where codclien='4105'  and fecha_cita='2018/10/24' and codconsulta<>'07'
+[2018-10-24 08:14:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where  codclien='4105'  and  asistido=0
+[2018-10-24 08:14:18.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/24/2018' and activo = 1 
+[2018-10-24 08:14:22.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/29/2018' and activo = 1 
+[2018-10-24 08:14:23.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/29/2018' and activo = 1 
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/29/2018' and activo = 1 
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='4105' and asistido=0 
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='4105' 
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='4105' and asistido=0 
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='4105' AND ASISTIDO=0
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='10/29/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '319', observacion = 'CRISTINA / AM' WHERE CODCLIEN='4105' AND ASISTIDO='0' and ID='97485' 
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:14:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:14:25.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:16:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:16:19.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:16:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:16:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:16:41.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%CALO%MORALES%'  Order  by nombres 
+[2018-10-24 08:16:41.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='38909'  and activa='1' order by forder desc  
+[2018-10-24 08:16:48.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 08:16:48.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-24 08:16:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-24 08:17:34.000000 192.130.74.41  - [query->CHUERTAS] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-24 08:17:34.000000 192.130.74.41  - [query->CHUERTAS] ] Update Empresa Set UltimoCliente='112924' Where id=1
+[2018-10-24 08:17:34.000000 192.130.74.41  - [query->CHUERTAS] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('JESUS','CALO MORALES','CALO MORALES JESUS','787-518-8180','787-518-8180','000','','','CRISTINA','','','160','67','','','','0', '0','0','0','112924','2018-10-24','787-518-8180','CRISTINA')
+[2018-10-24 08:17:34.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:17:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 100 * from Mclientes where  codclien = '112924' 
+[2018-10-24 08:17:46.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 08:17:46.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 08:17:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where  codclien='112924'  and  asistido=0
+[2018-10-24 08:17:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112924' and codconsulta<>'07' group by codclien
+[2018-10-24 08:17:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112924' and codconsulta<>'07' group by codclien
+[2018-10-24 08:17:47.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 08:17:49.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:17:49.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:17:49.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:17:49.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:17:50.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:17:50.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:18:04.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112924' and asistido=0 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112924' 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112924' and asistido=0 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/26/2018'  
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112924','10/24/2018','1','10/26/2018' ,'000','CHUERTAS','10/24/2018','CRISTINA / 10-12 AM','1','0','0','0','0','0','01')
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/26/2018' and activo = 1 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112924' and asistido=0 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112924' 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112924' and asistido=0 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112924' AND ASISTIDO=0
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='10/26/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'CRISTINA / 10-12 AM' WHERE CODCLIEN='112924' AND ASISTIDO='0' and ID='252957' 
+[2018-10-24 08:18:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:18:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:18:08.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:18:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:18:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:18:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:18:12.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:18:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:18:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:18:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:18:14.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:18:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:18:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:18:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:18:18.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:18:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:18:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:18:26.000000 192.130.74.41  - [query->CHUERTAS] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/24/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/24/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-24 08:18:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:18:40.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:18:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:18:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:18:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:18:45.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:18:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:18:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:19:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:19:01.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:19:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:19:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:23:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-617-6181%'  Order  by nombres 
+[2018-10-24 08:23:21.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112702'  and activa='1' order by forder desc  
+[2018-10-24 08:23:57.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT COUNT(*) total FROM VIEW_repconsultas4 a Where (a.fecha_cita between '10/25/2018' and '10/25/2018') and a.activa<>'0' and a.citados=1 and a.usuario='CHUERTAS' and a.fallecido<>'1' 
+[2018-10-24 08:23:57.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.citados, a.asistido,a.activa,a.usuario, a.fecha_cita, a.hora, convert(varchar(10), cast(a.UltimaAsistida as date), 101)   UltimaAsistida, a.observacion, a.fallecido 
+             FROM VIEW_repconsultas4 a 
+             Where (a.fecha_cita between '10/25/2018' and '10/25/2018') and a.activa<>'0' and a.citados=1 and a.usuario='CHUERTAS' and a.fallecido<>'1'  order by Medicos, a.fecha_cita desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2018-10-24 08:31:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:31:52.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:31:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:31:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:31:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:31:57.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:31:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:31:58.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:32:06.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '10/23/2018' and '10/23/2018') and a.asistido=3 and a.activa<>'0' and a.usuario='CHUERTAS' 
+[2018-10-24 08:33:30.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:33:30.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:33:30.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:33:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:33:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:33:39.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:33:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:33:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:33:42.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:33:42.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:33:42.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:33:43.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:34:49.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:34:49.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:34:49.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:34:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:35:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:35:12.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:35:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:35:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:36:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:36:18.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:36:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:36:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:38:54.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:38:54.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:38:54.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:38:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:40:37.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%RODRIGUEZ%QUIROS%'  Order  by nombres 
+[2018-10-24 08:40:38.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='32649'  and activa='1' order by forder desc  
+[2018-10-24 08:41:06.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='2910'  and activa='1' order by forder desc  
+[2018-10-24 08:41:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-24 08:41:19.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-24 08:41:19.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 08:42:02.000000 192.130.74.41  - [query->CHUERTAS] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-24 08:42:02.000000 192.130.74.41  - [query->CHUERTAS] ] Update Empresa Set UltimoCliente='112925' Where id=1
+[2018-10-24 08:42:02.000000 192.130.74.41  - [query->CHUERTAS] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('LETICIA','RODRIGUEZ QUIROS','RODRIGUEZ QUIROS LETICIA','787-234-1738','787-234-1738','000','','','CRISTINA','','','160','67','','','','0', '0','0','0','112925','2018-10-24','787-234-1738','CRISTINA')
+[2018-10-24 08:42:03.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:42:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 100 * from Mclientes where  codclien = '112925' 
+[2018-10-24 08:42:13.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 08:42:13.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 08:42:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where  codclien='112925'  and  asistido=0
+[2018-10-24 08:42:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112925' and codconsulta<>'07' group by codclien
+[2018-10-24 08:42:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112925' and codconsulta<>'07' group by codclien
+[2018-10-24 08:42:14.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 08:42:17.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:17.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:17.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:18.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:18.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:18.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:31.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112925' and asistido=0 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112925' 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112925' and asistido=0 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/30/2018'  
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112925','10/24/2018','1','10/30/2018' ,'000','CHUERTAS','10/24/2018','CRISTINA / 10-12 AM','1','0','0','0','0','0','01')
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112925' and asistido=0 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112925' 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112925' and asistido=0 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112925' AND ASISTIDO=0
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='10/30/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'CRISTINA / 10-12 AM' WHERE CODCLIEN='112925' AND ASISTIDO='0' and ID='252959' 
+[2018-10-24 08:42:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:42:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:42:57.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:42:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:42:58.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:43:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:43:01.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:43:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:43:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:43:02.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:43:02.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:43:02.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:43:03.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:43:06.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:43:06.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:43:06.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:43:07.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:43:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:43:24.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:43:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:43:25.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:43:54.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:43:54.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:43:54.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:43:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:44:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:44:15.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:44:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:44:16.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:53:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%PEREZ%NEGRON%'  Order  by nombres 
+[2018-10-24 08:53:12.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='109026'  and activa='1' order by forder desc  
+[2018-10-24 08:53:44.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:53:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:54:02.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,1 id_centro,id FROM mfactura where codclien='41020' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,2 id_centro,id FROM cma_mfactura where codclien='41020' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,3 id_centro,id FROM MSSMFact where codclien='41020' and statfact<>'2' order by id_centro , id desc, fechafac desc 
+[2018-10-24 08:54:02.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0030954' order by desitems 
+[2018-10-24 08:56:59.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,1 id_centro,id FROM mfactura where codclien='41020' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,2 id_centro,id FROM cma_mfactura where codclien='41020' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,3 id_centro,id FROM MSSMFact where codclien='41020' and statfact<>'2' order by id_centro , id desc, fechafac desc 
+[2018-10-24 08:56:59.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0030954' order by desitems 
+[2018-10-24 08:57:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:57:39.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:57:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:57:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:57:44.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:57:44.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:57:44.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:57:44.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:57:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 08:57:45.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 08:57:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 08:57:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 08:58:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-462-2930%'  Order  by nombres 
+[2018-10-24 08:58:40.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='85830'  and activa='1' order by forder desc  
+[2018-10-24 09:01:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/24/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/24/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-24 09:14:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '71951'  Order  by nombres 
+[2018-10-24 09:14:01.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112231'  and activa='1' order by forder desc  
+[2018-10-24 09:14:49.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '71198'  Order  by nombres 
+[2018-10-24 09:14:49.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='110619'  and activa='1' order by forder desc  
+[2018-10-24 09:15:58.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '71949'  Order  by nombres 
+[2018-10-24 09:15:58.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112308'  and activa='1' order by forder desc  
+[2018-10-24 09:16:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '70904'  Order  by nombres 
+[2018-10-24 09:16:50.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='110337'  and activa='1' order by forder desc  
+[2018-10-24 09:19:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:19:10.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:19:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:19:11.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:19:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:19:14.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:19:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:19:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:19:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:19:18.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:19:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:19:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:19:26.000000 192.130.74.41  - [query->CHUERTAS] ] Update  mconsultas  Set confirmado='2',  usuario='CHUERTAS'  where codclien='112898'  and fecha_cita='10/25/2018' 
+[2018-10-24 09:19:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:19:31.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:19:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:19:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:19:36.000000 192.130.74.41  - [query->CHUERTAS] ] Update  mconsultas  Set confirmado='2',  usuario='CHUERTAS'  where codclien='112817'  and fecha_cita='10/25/2018' 
+[2018-10-24 09:19:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:19:39.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:19:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:19:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:19:42.000000 192.130.74.41  - [query->CHUERTAS] ] Update  mconsultas  Set confirmado='2',  usuario='CHUERTAS'  where codclien='112810'  and fecha_cita='10/25/2018' 
+[2018-10-24 09:19:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:19:48.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:19:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:19:49.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:28:27.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%SUAREZ%TORRES%'  Order  by nombres 
+[2018-10-24 09:28:28.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='71173'  and activa='1' order by forder desc  
+[2018-10-24 09:40:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:40:20.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:40:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:40:21.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:40:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:40:24.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:40:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:40:25.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:46:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:46:20.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:46:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:46:21.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:46:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:46:24.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:46:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:46:25.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:46:27.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:46:27.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:46:27.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:46:28.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:46:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:46:29.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:46:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:46:30.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:53:33.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:53:33.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:53:33.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:53:34.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:53:38.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:53:38.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:53:38.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:53:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:53:43.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:53:43.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:53:43.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:53:43.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:53:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:53:48.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:53:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:53:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:53:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:53:50.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:53:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:53:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:54:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:54:04.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:54:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:54:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:56:41.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:56:41.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:56:41.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:56:42.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:56:44.000000 192.130.74.41  - [query->CHUERTAS] ] Update  mconsultas  Set confirmado='2',  usuario='CHUERTAS'  where codclien='112308'  and fecha_cita='10/25/2018' 
+[2018-10-24 09:56:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:56:48.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:56:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:56:49.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:56:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:56:52.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:56:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:56:53.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:56:59.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 09:56:59.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 09:57:03.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '70904'  Order  by nombres 
+[2018-10-24 09:57:04.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 09:57:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where  codclien='110337'  and  asistido=0
+[2018-10-24 09:57:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='110337' and codconsulta<>'07' group by codclien
+[2018-10-24 09:57:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select observacion from VIEW_mconsultas_02 where codclien='110337'  and fecha_cita='2018/10/25' and codconsulta<>'07'
+[2018-10-24 09:57:07.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/24/2018' and activo = 1 
+[2018-10-24 09:57:10.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 09:57:11.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 09:57:11.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/30/2018' and activo = 1 
+[2018-10-24 09:57:11.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='110337' and asistido=0 
+[2018-10-24 09:57:11.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='110337' 
+[2018-10-24 09:57:11.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 09:57:11.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='110337' and asistido=0 
+[2018-10-24 09:57:11.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='110337' AND ASISTIDO=0
+[2018-10-24 09:57:11.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='10/30/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '317', observacion = 'CRISTINA / PM 12-4' WHERE CODCLIEN='110337' AND ASISTIDO='0' and ID='251098' 
+[2018-10-24 09:57:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 09:57:12.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 09:57:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 09:57:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 09:57:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-617-6181%'  Order  by nombres 
+[2018-10-24 09:57:53.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112702'  and activa='1' order by forder desc  
+[2018-10-24 10:00:09.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-661-7279%'  Order  by nombres 
+[2018-10-24 10:00:25.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-664-7279%'  Order  by nombres 
+[2018-10-24 10:04:03.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:04:03.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:04:03.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:04:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:04:06.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:04:06.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:04:06.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:04:07.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:04:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:04:10.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:04:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:04:11.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:04:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:04:14.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:04:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:04:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:04:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:04:18.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:04:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:04:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:04:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:04:22.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:04:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:04:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:05:35.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:05:35.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:05:35.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:05:36.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:05:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:05:39.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:05:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:05:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:05:42.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:05:42.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:05:42.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:05:43.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:30:33.000000 192.130.74.41  - [query->CHUERTAS] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/24/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/24/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-24 10:30:41.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:30:41.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:30:41.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:30:42.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:32:49.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%CINTRON%SANTIAGO%'  Order  by nombres 
+[2018-10-24 10:32:50.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='94092'  and activa='1' order by forder desc  
+[2018-10-24 10:33:00.000000 192.130.74.41  - [query->CHUERTAS] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-24 10:33:00.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-24 10:33:00.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 10:33:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-24 10:33:46.000000 192.130.74.41  - [query->CHUERTAS] ] Update Empresa Set UltimoCliente='112936' Where id=1
+[2018-10-24 10:33:46.000000 192.130.74.41  - [query->CHUERTAS] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('JOSE E','CINTRON SANTIAGO','CINTRON SANTIAGO JOSE E','787-702-7710','787-702-7710','000','','','CRISTINA','','','160','67','','','','0', '0','0','0','112936','2018-10-24','787-702-7710','CRISTINA')
+[2018-10-24 10:33:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:33:59.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 100 * from Mclientes where  codclien = '112936' 
+[2018-10-24 10:33:59.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 10:33:59.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 10:33:59.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where  codclien='112936'  and  asistido=0
+[2018-10-24 10:33:59.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112936' and codconsulta<>'07' group by codclien
+[2018-10-24 10:33:59.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112936' and codconsulta<>'07' group by codclien
+[2018-10-24 10:34:00.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 10:34:01.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:02.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:02.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:02.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:02.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:03.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:13.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:13.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112936' and asistido=0 
+[2018-10-24 10:34:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112936' 
+[2018-10-24 10:34:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 10:34:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112936' and asistido=0 
+[2018-10-24 10:34:13.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/25/2018'  
+[2018-10-24 10:34:13.000000 192.130.74.41  - [query->CHUERTAS] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112936','10/24/2018','1','10/25/2018' ,'000','CHUERTAS','10/24/2018','CRISTINA / AM','1','0','0','0','0','0','01')
+[2018-10-24 10:34:13.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:14.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 10:34:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112936' and asistido=0 
+[2018-10-24 10:34:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112936' 
+[2018-10-24 10:34:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 10:34:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112936' and asistido=0 
+[2018-10-24 10:34:14.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112936' AND ASISTIDO=0
+[2018-10-24 10:34:14.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='10/25/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'CRISTINA / AM' WHERE CODCLIEN='112936' AND ASISTIDO='0' and ID='252976' 
+[2018-10-24 10:34:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:34:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:34:52.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:34:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:34:53.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:34:54.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:34:54.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:34:54.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:34:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:34:56.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:34:56.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:34:56.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:34:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:34:59.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:34:59.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:34:59.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:35:00.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:35:02.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:35:02.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:35:02.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:35:02.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:35:07.000000 192.130.74.41  - [query->CHUERTAS] ] Update  mconsultas  Set confirmado='2',  usuario='CHUERTAS'  where codclien='112936'  and fecha_cita='10/25/2018' 
+[2018-10-24 10:35:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:35:10.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:35:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:35:11.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 10:47:09.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%MUNIZ%RUIZ%'  Order  by nombres 
+[2018-10-24 10:47:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-512-0511%'  Order  by nombres 
+[2018-10-24 10:47:25.000000 192.130.74.41  - [query->CHUERTAS] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-24 10:47:25.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-24 10:47:25.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 10:48:17.000000 192.130.74.41  - [query->CHUERTAS] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-24 10:48:17.000000 192.130.74.41  - [query->CHUERTAS] ] Update Empresa Set UltimoCliente='112939' Where id=1
+[2018-10-24 10:48:17.000000 192.130.74.41  - [query->CHUERTAS] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('DANIEL','MUNIZ RUIZ','MUNIZ RUIZ DANIEL','787-512-0511','787-512-0511','000','','','CRISTINA','','','160','67','','','','0', '0','0','0','112939','2018-10-24','787-512-0511','CRISTINA')
+[2018-10-24 10:48:17.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:48:26.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 100 * from Mclientes where  codclien = '112939' 
+[2018-10-24 10:48:26.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 10:48:27.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where  codclien='112939'  and  asistido=0
+[2018-10-24 10:48:27.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 10:48:27.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112939' and codconsulta<>'07' group by codclien
+[2018-10-24 10:48:27.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112939' and codconsulta<>'07' group by codclien
+[2018-10-24 10:48:28.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 10:48:29.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 10:48:30.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:30.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:30.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:31.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:31.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:31.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:31.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:32.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:32.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112939' and asistido=0 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112939' 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112939' and asistido=0 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='codclien' and fecha_cita='11/02/2018'  
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112939','10/24/2018','1','11/02/2018' ,'000','CHUERTAS','10/24/2018','CRISTINA / 10-12','1','0','0','0','0','0','01')
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112939' and asistido=0 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112939' 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112939' and asistido=0 
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112939' AND ASISTIDO=0
+[2018-10-24 10:48:45.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='11/02/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'CRISTINA / 10-12' WHERE CODCLIEN='112939' AND ASISTIDO='0' and ID='252981' 
+[2018-10-24 10:48:46.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:46.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='11/02/2018' and activo = 1 
+[2018-10-24 10:48:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112939' and asistido=0 
+[2018-10-24 10:48:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112939' 
+[2018-10-24 10:48:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 10:48:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112939' and asistido=0 
+[2018-10-24 10:48:46.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112939' AND ASISTIDO=0
+[2018-10-24 10:48:46.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='11/02/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'CRISTINA / 10-12' WHERE CODCLIEN='112939' AND ASISTIDO='0' and ID='252981' 
+[2018-10-24 10:48:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:59:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 10:59:55.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 10:59:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 10:59:56.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:00:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-370-8585%'  Order  by nombres 
+[2018-10-24 11:00:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-360-8555%'  Order  by nombres 
+[2018-10-24 11:00:26.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%CHEVERES%PEREZ%'  Order  by nombres 
+[2018-10-24 11:00:38.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%CHEVERE%PEREZ%'  Order  by nombres 
+[2018-10-24 11:00:38.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112804'  and activa='1' order by forder desc  
+[2018-10-24 11:00:49.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='68001'  and activa='1' order by forder desc  
+[2018-10-24 11:00:57.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112804'  and activa='1' order by forder desc  
+[2018-10-24 11:03:16.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:03:16.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:03:16.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:03:17.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:03:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:03:19.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:03:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:03:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:03:21.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:03:21.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:03:21.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:03:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:03:25.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:03:25.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:03:25.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:03:26.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:05:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:05:19.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:05:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:05:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:05:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:05:29.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:05:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:05:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:05:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '57377'  Order  by nombres 
+[2018-10-24 11:05:52.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='4105'  and activa='1' order by forder desc  
+[2018-10-24 11:18:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:18:31.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:18:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:18:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:18:35.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:18:35.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:18:35.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:18:36.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:29:43.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '71540'  Order  by nombres 
+[2018-10-24 11:29:44.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111490'  and activa='1' order by forder desc  
+[2018-10-24 11:30:43.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:30:43.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:30:43.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:30:44.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:30:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:30:46.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:30:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:30:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:40:36.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:40:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:40:51.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,1 id_centro,id FROM mfactura where codclien='25220' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,2 id_centro,id FROM cma_mfactura where codclien='25220' and statfact<>'2'  union SELECT codclien,numfactu,CONVERT(VARCHAR(10),fechafac,101) fechafac,total,codmedico,3 id_centro,id FROM MSSMFact where codclien='25220' and statfact<>'2' order by id_centro , id desc, fechafac desc 
+[2018-10-24 11:40:51.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0030290' order by desitems 
+[2018-10-24 11:43:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:43:14.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:43:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:43:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:43:17.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:43:17.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:43:17.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:43:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:43:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:43:19.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:43:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:43:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:43:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/24/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/24/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-24 11:46:27.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:46:27.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:46:27.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:46:28.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 11:46:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 11:46:32.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 11:46:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 11:46:33.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:19:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:19:04.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:19:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:19:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:19:09.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:19:09.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:19:09.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:19:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:19:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:19:15.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:19:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:19:16.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:19:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-585-1229%'  Order  by nombres 
+[2018-10-24 12:19:30.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='96482'  and activa='1' order by forder desc  
+[2018-10-24 12:19:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-312-4330%'  Order  by nombres 
+[2018-10-24 12:19:56.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112902'  and activa='1' order by forder desc  
+[2018-10-24 12:26:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:26:51.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:26:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:26:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:27:06.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:27:06.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:27:06.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:27:06.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:27:56.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:27:56.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:27:56.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:27:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:28:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:28:29.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:28:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:28:30.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:29:00.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:29:00.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:29:00.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:29:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:29:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '72200'  Order  by nombres 
+[2018-10-24 12:29:20.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112949'  and activa='1' order by forder desc  
+[2018-10-24 12:29:37.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:29:37.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:29:37.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:29:38.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:30:23.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:30:23.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:30:23.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:30:24.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:30:38.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:30:38.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:30:38.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:30:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:31:03.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:31:03.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:31:03.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:31:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:31:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:31:31.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:31:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:31:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:31:53.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:31:53.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:31:53.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:31:54.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:32:21.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:32:21.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:32:21.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:32:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:32:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:32:40.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:32:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:32:41.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:39:37.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-914-5324%'  Order  by nombres 
+[2018-10-24 12:39:37.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112544'  and activa='1' order by forder desc  
+[2018-10-24 12:52:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%DIAZ%PERALES%'  Order  by nombres 
+[2018-10-24 12:52:52.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='70590'  and activa='1' order by forder desc  
+[2018-10-24 12:57:07.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '71240'  Order  by nombres 
+[2018-10-24 12:57:07.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111162'  and activa='1' order by forder desc  
+[2018-10-24 12:57:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:57:15.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:57:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:57:16.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:57:27.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 12:57:27.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 12:57:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '71240'  Order  by nombres 
+[2018-10-24 12:57:39.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 12:57:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where  codclien='111162'  and  asistido=0
+[2018-10-24 12:57:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='111162' and codconsulta<>'07' group by codclien
+[2018-10-24 12:57:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select observacion from VIEW_mconsultas_02 where codclien='111162'  and fecha_cita='2018/11/15' and codconsulta<>'07'
+[2018-10-24 12:57:43.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/25/2018' and activo = 1 
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='111162' and asistido=0 
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='111162' 
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='111162' and asistido=0 
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='111162' AND ASISTIDO=0
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='10/25/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '327', observacion = 'CRISTINA / PM SEGUIMIENTO 5' WHERE CODCLIEN='111162' AND ASISTIDO='0' and ID='252326' 
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:57:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:57:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:58:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:58:57.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:58:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:58:58.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 12:59:01.000000 192.130.74.41  - [query->CHUERTAS] ] Update  mconsultas  Set confirmado='2',  usuario='CHUERTAS'  where codclien='111162'  and fecha_cita='10/25/2018' 
+[2018-10-24 12:59:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 12:59:04.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 12:59:04.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 12:59:05.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:24:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:24:08.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:24:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:24:09.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:24:15.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT a.nombres, a.telfhabit, a.Medicos, a.Historia, a.fecha_cita, a.activa, a.asistido, a.usuario, convert(varchar(10), cast(a.ProximaCita as date), 101)  ProximaCita, a.observacion, b.NumeroCitas FROM VIEW_repconsultas3 a INNER JOIN VIEW_repconsultasNCitas b  ON  a.codclien = b.codclien Where (a.fecha_cita between '10/24/2018' and '10/24/2018') and a.asistido=3 and a.activa<>'0' and a.usuario='CHUERTAS' 
+[2018-10-24 14:24:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:24:20.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:24:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:24:21.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:26:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:26:18.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:26:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:26:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:26:44.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%NIEVES%ALBALADEJO%'  Order  by nombres 
+[2018-10-24 14:26:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-24 14:26:48.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-24 14:26:48.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 14:26:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where Cedula like '%787-212-8162%'  Order  by nombres 
+[2018-10-24 14:27:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-24 14:27:32.000000 192.130.74.41  - [query->CHUERTAS] ] Update Empresa Set UltimoCliente='112960' Where id=1
+[2018-10-24 14:27:32.000000 192.130.74.41  - [query->CHUERTAS] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('VIVIANA','NIEVES ALBALADEJO','NIEVES ALBALADEJO VIVIANA','787-212-8162','787-212-8162','000','','','CRISTINA','','','160','67','','','','0', '0','0','0','112960','2018-10-24','787-212-8162','CRISTINA')
+[2018-10-24 14:27:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:27:51.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 14:27:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 100 * from Mclientes where  codclien = '112960' 
+[2018-10-24 14:27:51.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 14:27:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where  codclien='112960'  and  asistido=0
+[2018-10-24 14:27:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112960' and codconsulta<>'07' group by codclien
+[2018-10-24 14:27:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112960' and codconsulta<>'07' group by codclien
+[2018-10-24 14:27:53.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 14:27:54.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:27:54.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:27:54.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:27:55.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:27:55.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:27:55.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112960' and asistido=0 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112960' 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112960' and asistido=0 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/27/2018'  
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112960','10/24/2018','1','10/27/2018' ,'000','CHUERTAS','10/24/2018','CRISTINA / AM 7-10','1','0','0','0','0','0','01')
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/27/2018' and activo = 1 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112960' and asistido=0 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112960' 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112960' and asistido=0 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112960' AND ASISTIDO=0
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='10/27/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'CRISTINA / AM 7-10' WHERE CODCLIEN='112960' AND ASISTIDO='0' and ID='253020' 
+[2018-10-24 14:28:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:28:26.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:28:26.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:28:26.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:28:26.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:28:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:28:29.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:28:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:28:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:28:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:28:31.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:28:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:28:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:28:42.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%RUIZ%ALVAREZ%'  Order  by nombres 
+[2018-10-24 14:28:42.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='15748'  and activa='1' order by forder desc  
+[2018-10-24 14:29:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select COD,PAIS from Pais order by PAIS
+[2018-10-24 14:29:01.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 14:29:01.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-10-24 14:30:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select UltimoCliente from Empresa Where id=1
+[2018-10-24 14:30:01.000000 192.130.74.41  - [query->CHUERTAS] ] Update Empresa Set UltimoCliente='112963' Where id=1
+[2018-10-24 14:30:01.000000 192.130.74.41  - [query->CHUERTAS] ] Insert Into MClientes (nombre ,apellido ,nombres,Cedula ,telfhabit,codmedico
+         ,NACIMIENTO,Historia,celular,direccionH,codpostal,Pais,ESTADO,Eaddress,hCiudad
+         ,email,sexo,inactivo,exonerado,fallecido,codclien,CliDesde,telfofic, usuario )  Values('JOSE','RUIZ ALVAREZ ','RUIZ ALVAREZ  JOSE','787-503-1772','787-503-1772','000','','','CRISTINA','','','160','67','','','','0', '0','0','0','112963','2018-10-24','787-503-1772','CRISTINA')
+[2018-10-24 14:30:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:30:12.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 14:30:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 100 * from Mclientes where  codclien = '112963' 
+[2018-10-24 14:30:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where  codclien='112963'  and  asistido=0
+[2018-10-24 14:30:12.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-10-24 14:30:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112963' and codconsulta<>'07' group by codclien
+[2018-10-24 14:30:12.000000 192.130.74.41  - [query->CHUERTAS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='112963' and codconsulta<>'07' group by codclien
+[2018-10-24 14:30:13.000000 192.130.74.41  - [query->CHUERTAS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-24 14:30:17.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:17.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:17.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:17.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:17.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:18.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:28.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:28.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:28.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112963' and asistido=0 
+[2018-10-24 14:30:28.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112963' 
+[2018-10-24 14:30:28.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 14:30:28.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112963' and asistido=0 
+[2018-10-24 14:30:28.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='codclien' and fecha_cita='10/31/2018'  
+[2018-10-24 14:30:28.000000 192.130.74.41  - [query->CHUERTAS] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('112963','10/24/2018','1','10/31/2018' ,'000','CHUERTAS','10/24/2018','CRISTINA ','1','0','0','0','0','0','01')
+[2018-10-24 14:30:28.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:29.000000 192.130.74.41  - [query->CHUERTAS] ] select * from Feriado where FECHA='10/31/2018' and activo = 1 
+[2018-10-24 14:30:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112963' and asistido=0 
+[2018-10-24 14:30:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select count(*) cant from mconsultas where codclien='112963' 
+[2018-10-24 14:30:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select *  from loginpass where login ='CHUERTAS' 
+[2018-10-24 14:30:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select * from mconsultas where codclien='112963' and asistido=0 
+[2018-10-24 14:30:29.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='112963' AND ASISTIDO=0
+[2018-10-24 14:30:29.000000 192.130.74.41  - [query->CHUERTAS] ] UPDATE MCONSULTAS SET FECHA_CITA='10/31/2018',usuario = 'CHUERTAS',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'CRISTINA ' WHERE CODCLIEN='112963' AND ASISTIDO='0' and ID='253022' 
+[2018-10-24 14:30:29.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:31:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:31:50.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:31:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:31:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:31:53.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:31:53.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:31:53.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:31:54.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:31:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:31:55.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:31:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:31:56.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:32:01.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '71540'  Order  by nombres 
+[2018-10-24 14:32:01.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111490'  and activa='1' order by forder desc  
+[2018-10-24 14:32:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:32:31.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:32:31.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:32:32.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 14:40:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 14:40:46.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 14:40:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 14:40:46.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:12:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select TOP 200 * from Mclientes where  Historia = '72128'  Order  by nombres 
+[2018-10-24 15:12:52.000000 192.130.74.41  - [query->CHUERTAS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='112687'  and activa='1' order by forder desc  
+[2018-10-24 15:15:56.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:15:56.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:15:56.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:15:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:15:59.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:15:59.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:15:59.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:16:00.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:21:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:21:18.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:21:18.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:21:19.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:29:40.000000 192.130.74.41  - [query->CHUERTAS] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='10/24/2018' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='10/24/2018' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2
+[2018-10-24 15:29:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:29:51.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:29:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:29:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:29:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:29:57.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:29:57.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:29:58.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:30:07.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:30:07.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:30:07.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:30:08.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:30:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:30:48.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:30:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:30:49.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:30:53.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:30:53.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:30:53.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:30:54.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:31:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:31:14.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:31:14.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:31:15.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:31:38.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:31:38.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:31:38.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:31:39.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:32:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:32:10.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:32:10.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:32:11.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:32:41.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:32:41.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:32:41.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:32:42.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 15:32:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 15:32:55.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 15:32:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 15:32:55.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 16:06:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 16:06:20.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 16:06:20.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 16:06:21.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 16:06:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-24 16:06:22.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-10-24 16:06:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-24 16:06:22.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-24 17:40:08.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-24-2018' and '10-24-2018' and statfact <>'2'
+[2018-10-24 17:40:09.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-24-2018' and '10-24-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-24 17:40:09.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-24-2018' and '10-24-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-24 17:40:09.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-24-2018' and '10-24-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-24 17:40:10.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-24-2018' and '10-24-2018' and d.coditems like 'TD%' 
+[2018-10-24 17:40:10.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-24-2018' and '10-24-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-24 17:40:11.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-24-2018' and '10-24-2018') and d.coditems like 'LI%' 
+[2018-10-24 17:42:25.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '10-24-2018' and '10-24-2018' and medico<>''
+[2018-10-24 17:42:25.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '10-24-2018' and '10-24-2018' 
+[2018-10-24 17:42:25.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-24-2018' and '10-24-2018' and medico<>'' group by medico,Dventa
+[2018-10-24 17:42:25.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-24-2018' and '10-24-2018' and medico<>'' group by medico
+[2018-10-24 17:42:26.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '10/24/2018' and '10/24/2018' and medico<>''
+[2018-10-24 17:42:26.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '10-24-2018' and '10-24-2018' and medico<>''
+[2018-10-24 17:42:26.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '10-24-2018' and '10-24-2018' 
+[2018-10-24 17:42:27.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-24-2018' and '10-24-2018' and medico<>'' group by medico,Dventa
+[2018-10-24 17:42:27.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-24-2018' and '10-24-2018' and medico<>'' group by medico
+[2018-10-24 17:42:27.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '10/24/2018' and '10/24/2018' and medico<>''
+[2018-10-24 17:59:02.000000 192.130.75.223  - [query->JOLALDE] ]     SELECT COUNT( distinct P.codclien ) vistos,P.codmedico,
+    (
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/24/2018' and '10/24/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/24/2018' and '10/24/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    )  compras ,
+    max( concat(m.nombre+' ',m.apellido)) medico
+    from Mconsultas P
+    inner join Mmedicos m On m.Codmedico=P.codmedico
+    where P.fecha_cita between '10/24/2018' and '10/24/2018' and asistido=3 
+    GROUP BY P.codmedico order by compras desc
+[2018-10-24 17:59:03.000000 192.130.75.223  - [query->JOLALDE] ] SELECT COUNT( distinct P.codclien ) vistos,P.codmedico,
+    (
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/24/2018' and '10/24/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/24/2018' and '10/24/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    )  compras ,
+    max( concat(m.nombre+' ',m.apellido)) medico,
+    CAST ((
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/24/2018' and '10/24/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/24/2018' and '10/24/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    ) AS decimal )/COUNT( distinct P.codclien )  efectividad
+    from Mconsultas P
+    inner join Mmedicos m On m.Codmedico=P.codmedico
+    where P.fecha_cita between '10/24/2018' and '10/24/2018' and asistido=3 
+    GROUP BY P.codmedico order by efectividad desc
+[2018-10-24 17:59:03.000000 192.130.75.223  - [query->JOLALDE] ] SELECT COUNT( distinct P.codclien ) vistos,P.codmedico,
+    (
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/24/2018' and '10/24/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/24/2018' and '10/24/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    )  compras ,
+    max( concat(m.nombre+' ',m.apellido)) medico,
+    CAST ((
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/24/2018' and '10/24/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/24/2018' and '10/24/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    ) AS decimal )/COUNT( distinct P.codclien )  efectividad
+    from Mconsultas P
+    inner join Mmedicos m On m.Codmedico=P.codmedico
+    where P.fecha_cita between '10/24/2018' and '10/24/2018' and asistido=3 
+    GROUP BY P.codmedico order by vistos desc

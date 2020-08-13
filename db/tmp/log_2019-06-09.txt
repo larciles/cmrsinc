@@ -1,0 +1,36 @@
+[2019-06-09 10:09:44.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-27' and '06/08/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-06-09 10:09:45.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-27' and '06/08/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-06-09 10:09:45.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '06-01-2019' and '06-08-2019' and statfact <>'2'
+
+[2019-06-09 10:09:45.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '06-01-2019' and '06-08-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-06-09 10:09:45.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '06-01-2019' and '06-08-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-06-09 10:09:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-01-2019' and '06-08-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-06-09 10:09:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '06-01-2019' and '06-08-2019' and d.coditems like 'TD%' 
+
+[2019-06-09 10:09:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-01-2019' and '06-08-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-06-09 10:09:47.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '06-01-2019' and '06-08-2019') and d.coditems like 'LI%' 
+

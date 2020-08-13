@@ -1,0 +1,48 @@
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.alerta {
+    padding: 20px;
+    background-color: #f49434;
+    color: white;
+}
+
+.alertrecord {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.sin-pagar{
+    /*display: none;*/
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #a40b0beb;
+    /*background: #cb0d0d url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;*/
+    font-weight: bold;
+    color: #ee0d0d;
+}
+
+.misspaid{
+    background-color: orange!important;
+    border: outset;
+}

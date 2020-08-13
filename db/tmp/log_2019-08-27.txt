@@ -1,0 +1,1510 @@
+[2019-08-27 01:51:48.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 01:51:49.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 01:51:50.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 01:51:51.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 01:51:53.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 01:51:54.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 01:51:54.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-01-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 01:51:55.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 01:51:56.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-01-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 09:55:26.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-08-27 09:55:26.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-08-27 11:04:07.000000 192.130.74.97  - [query->WILMA] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-08-27 11:04:07.000000 192.130.74.97  - [query->WILMA] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-08-27 11:55:41.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:42.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:42.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:55:43.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:55:45.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 11:55:45.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:45.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:46.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:55:46.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:55:46.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 11:55:47.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:47.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:47.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:55:47.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:55:48.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 11:55:48.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:48.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:49.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:55:49.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:55:49.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 11:55:50.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:50.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:50.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:55:50.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:55:51.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 11:55:51.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:51.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:51.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:55:52.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:55:52.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 11:55:53.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:53.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:53.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:55:53.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:55:54.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 11:55:54.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:54.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 11:55:54.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:55:55.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:55:55.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 11:58:22.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 11:58:23.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 11:58:24.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:58:25.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:58:27.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/01/2019' and '08/27/2019' 
+
+[2019-08-27 11:58:27.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 11:58:28.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 11:58:28.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 11:58:28.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico
+
+[2019-08-27 11:58:29.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/01/2019' and '08/27/2019' 
+
+[2019-08-27 11:58:40.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 11:58:41.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 11:58:41.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 11:58:41.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 11:58:42.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 11:58:42.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 11:58:43.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-01-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 11:58:43.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 11:58:43.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-01-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 12:19:52.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:19:53.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:19:53.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 12:19:53.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 12:19:53.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 12:19:54.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:19:54.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:19:54.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 12:19:54.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 12:19:55.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 12:19:56.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:19:56.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:19:56.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 12:19:56.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 12:19:57.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 12:19:57.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:19:57.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:19:57.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 12:19:58.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 12:19:58.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 12:20:20.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:20:20.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:20:21.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:20:21.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:21:17.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:21:18.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:21:18.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:21:18.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:21:46.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:21:46.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:21:47.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:23:27.000000 192.130.74.97  - [query->WILMA] ] Update  cma_MFactura Set codmedico='332' where numfactu='189690' and id ='156448'
+
+[2019-08-27 12:23:39.000000 192.130.74.97  - [query->WILMA] ] Update  cma_MFactura Set codmedico='320' where numfactu='189648' and id ='156406'
+
+[2019-08-27 12:23:58.000000 192.130.74.97  - [query->WILMA] ] Update  cma_MFactura Set codmedico='327' where numfactu='189611' and id ='156369'
+
+[2019-08-27 12:24:22.000000 192.130.74.97  - [query->WILMA] ] Update  cma_MFactura Set codmedico='332' where numfactu='189607' and id ='156365'
+
+[2019-08-27 12:24:32.000000 192.130.74.97  - [query->WILMA] ] Update  cma_MFactura Set codmedico='332' where numfactu='189562' and id ='156320'
+
+[2019-08-27 12:25:02.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:25:02.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:25:03.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:25:03.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:25:12.000000 192.130.74.97  - [query->WILMA] ] Update MSSMFact  Set codmedico='317' where numfactu='024268' and id ='24317'
+
+[2019-08-27 12:25:31.000000 192.130.74.97  - [query->WILMA] ] Update MSSMFact  Set codmedico='320' where numfactu='024250' and id ='24299'
+
+[2019-08-27 12:26:19.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:26:20.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:26:20.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:26:21.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:26:30.000000 192.130.74.97  - [query->WILMA] ] Update MFactura Set codmedico='320' where numfactu='0036125' and id ='125835'
+
+[2019-08-27 12:27:25.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:27:25.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:27:25.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:27:26.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:28:56.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:28:56.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:28:57.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:29:12.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:29:12.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:29:13.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:29:13.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:29:31.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:29:31.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:29:31.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:30:08.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:30:09.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:30:09.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:30:09.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:30:18.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:30:18.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:30:37.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:30:37.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:30:37.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:30:44.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:30:44.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:30:44.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:31:14.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:31:15.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:31:15.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 12:31:15.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 12:31:16.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 12:31:16.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:31:16.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 12:31:16.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 12:31:17.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 12:31:17.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 12:31:44.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:31:44.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:31:44.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:31:49.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:31:49.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:31:50.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:31:50.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:32:39.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 12:32:40.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 12:32:40.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 12:32:40.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 12:32:40.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 12:32:41.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 12:32:41.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-27-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 12:32:41.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 12:32:41.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-27-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 12:32:49.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:32:49.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:32:50.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 12:32:50.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 12:47:48.000000 192.130.74.97  - [query->WILMA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-08-27 12:47:48.000000 192.130.74.97  - [query->WILMA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-08-27 12:47:48.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-08-27 12:47:49.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-08-27 12:48:38.000000 192.130.74.97  - [query->WILMA] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%ROSARIO%%%%JOSE%LUIS%'  Order  by nombres 
+
+[2019-08-27 12:48:38.000000 192.130.74.97  - [query->WILMA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='87061'  and activa='1' order by forder desc  
+
+[2019-08-27 12:48:54.000000 192.130.74.97  - [query->WILMA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='98123'  and activa='1' order by forder desc  
+
+[2019-08-27 14:05:03.000000 192.130.75.223  - [query->log-in] ] Select * from loginpass WHERE login = 'JOLALDE' and passwork ='olalde29' and activo=1 
+
+[2019-08-27 14:05:03.000000 192.130.75.223  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'JOLALDE' 
+
+[2019-08-27 14:05:14.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:05:15.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:05:15.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 14:05:15.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 14:05:15.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 14:05:16.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 14:05:16.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-27-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 14:05:17.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 14:05:17.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-27-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 14:09:29.000000 192.130.74.53  - [query->log-in] ] Select * from loginpass WHERE login = 'FABIOLA' and passwork ='aitor2401' and activo=1 
+
+[2019-08-27 14:09:29.000000 192.130.74.53  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'FABIOLA' 
+
+[2019-08-27 14:09:41.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:09:42.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:09:42.000000 192.130.74.53  - [query->FABIOLA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 14:09:43.000000 192.130.74.53  - [query->FABIOLA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 14:09:43.000000 192.130.74.53  - [query->FABIOLA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 14:09:43.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 14:09:43.000000 192.130.74.53  - [query->FABIOLA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-27-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 14:09:44.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 14:09:44.000000 192.130.74.53  - [query->FABIOLA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-27-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 14:10:17.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:10:17.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:10:18.000000 192.130.74.53  - [query->FABIOLA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 14:10:18.000000 192.130.74.53  - [query->FABIOLA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 14:10:19.000000 192.130.74.53  - [query->FABIOLA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 14:10:19.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 14:10:19.000000 192.130.74.53  - [query->FABIOLA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-01-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 14:10:20.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 14:10:20.000000 192.130.74.53  - [query->FABIOLA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-01-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 14:10:26.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:10:27.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:10:27.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 14:10:28.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 14:10:28.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 14:10:29.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 14:10:29.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-01-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 14:10:30.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 14:10:30.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-01-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 14:26:16.000000 192.130.74.53  - [query->FABIOLA] ] SELECT codmedico, max(nombremedico) medico, SUM(cantidad * precunit - Descuento) AS facturas_x_medico FROM  VIEW_Ventas_Medicos WHERE  (fechafac  between '08-27-2019' and '08-27-2019') AND (statfact <> '2') AND (Prod_serv = 'P')  and codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY codmedico 
+
+[2019-08-27 14:26:16.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  a.codmedico ,sum(b.cantidad) unidades_medicos FROM VentasDiarias  a inner join DFactura b On  b.numfactu = a.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (a.fechafac  between '08-27-2019' and '08-27-2019')  and (a.statfact <> '2') AND (a.doc = '01') and a.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) and  c.cod_subgrupo='1'	group by  a.codmedico 
+
+[2019-08-27 14:26:16.000000 192.130.74.53  - [query->FABIOLA] ] SELECT codmedico, SUM(cantidad) AS cantUni ,  SUM(cantidad)/(SELECT COUNT(t.codclien) AS numeroPacientes FROM  dbo.VIEW_Asistidos_0215 t WHERE  (t.fecha_cita BETWEEN '08-27-2019' and '08-27-2019') AND (t.asistido = '3 ') and s.codmedico=t.codmedico GROUP BY codmedico)   unidades_pacientes FROM  dbo.VIEW_Stat_Enl_0215  s WHERE   (fechafac BETWEEN '08-27-2019' and '08-27-2019') AND (cod_subgrupo = '1') and codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY codmedico 
+
+[2019-08-27 14:26:17.000000 192.130.74.53  - [query->FABIOLA] ] SELECT codmedico,  SUM(cantidad)/(SELECT COUNT(t.codclien) AS formula_paciente FROM  dbo.VIEW_Asistidos_0215 t WHERE  (t.fecha_cita BETWEEN  '08-27-2019' and '08-27-2019') AND (t.asistido = '3') and s.codmedico=t.codmedico GROUP BY codmedico)   formula_paciente FROM  dbo.VIEW_Stat_Enl_0215  s WHERE  (fechafac BETWEEN  '08-27-2019' and '08-27-2019') AND (cod_subgrupo = '2') and codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY codmedico 
+
+[2019-08-27 14:26:17.000000 192.130.74.53  - [query->FABIOLA] ] SELECT b.codmedico, COUNT(b.codclien) AS numeroPacientes From VIEW_Asistidos_0215  b WHERE  (b.fecha_cita  between '08-27-2019' and '08-27-2019') AND (b.asistido = '3') and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY b.codmedico 
+
+[2019-08-27 14:26:17.000000 192.130.74.53  - [query->FABIOLA] ] SELECT a.codmedico, SUM(a.cantidad * a.precunit - a.Descuento) /(SELECT COUNT(b.codclien) From VIEW_Asistidos_0215  b WHERE  (b.fecha_cita BETWEEN '08-27-2019' and '08-27-2019') AND (b.asistido = '3') and b.codmedico =a.codmedico  and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY b.codmedico) facturacion_paciente From VIEW_Ventas_Medicos a WHERE  (fechafac BETWEEN '08-27-2019' and '08-27-2019') AND (a.statfact <> '2') AND (a.Prod_serv = 'P') and a.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY a.codmedico 
+
+[2019-08-27 14:26:17.000000 192.130.74.53  - [query->FABIOLA] ] SELECT a.codmedico,sum(b.cantidad) formula_medicos FROM VentasDiarias  a inner join DFactura b On  b.numfactu = a.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (a.fechafac  between  '08-27-2019' and '08-27-2019')  and (a.statfact <> '2') AND (a.doc = '01') and a.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) and  c.cod_subgrupo='2' group by  a.codmedico 
+
+[2019-08-27 14:26:18.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  f.codmedico,sum(b.cantidad) / (SELECT sum(b.cantidad) FROM VentasDiarias  a inner join DFactura b On  b.numfactu = a.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (a.fechafac  between   '08-27-2019' and '08-27-2019')  and (a.statfact <> '2') AND (a.doc = '01') and  c.cod_subgrupo='1'  and a.codmedico =  f.codmedico group by  a.codmedico ) formulas_unidades FROM VentasDiarias  f inner join DFactura b On  b.numfactu = f.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (f.fechafac  between   '08-27-2019' and '08-27-2019')  and (f.statfact <> '2') AND (f.doc = '01') and f.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) and  c.cod_subgrupo='2' group by  f.codmedico 
+
+[2019-08-27 14:26:18.000000 192.130.74.53  - [query->FABIOLA] ] SELECT c.codmedico,( ISNULL(SUM(c.cantidad * c.precunit - c.Descuento),0)  + 
+		ISNULL((SELECT  SUM(l.cantidad * l.precunit - l.Descuento) total_laser From VIEW_Ventas_Medicos_Laser l 
+    	WHERE  (fechafac BETWEEN '08-27-2019' and '08-27-2019') AND (l.statfact <> '2') AND (l.Prod_serv = 'M') and l.codmedico =c.codmedico and   l.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY l.codmedico ),0)  + 
+		ISNULL((SELECT  SUM(b.cantidad * b.precunit - b.Descuento) total_suero  From VIEW_Ventas_Medicos_Suero b 
+    	WHERE  (fechafac BETWEEN '08-27-2019' and '08-27-2019') AND (b.statfact <> '2') AND (b.Prod_serv = 'S') and b.codmedico = c.codmedico  and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY b.codmedico ),0)  ) 
+		/ ISNULL((SELECT COUNT(d.codclien) 
+    	From VIEW_Asistidos_0215  d 
+    	WHERE  (d.fecha_cita BETWEEN '08-27-2019' and '08-27-2019') AND (d.asistido = '3') and d.codmedico =c.codmedico  and d.codmedico in(   select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+		GROUP BY d.codmedico),( ISNULL(SUM(c.cantidad * c.precunit - c.Descuento),0)  + 
+		ISNULL((SELECT  SUM(l.cantidad * l.precunit - l.Descuento) total_laser From VIEW_Ventas_Medicos_Laser l 
+    	WHERE  (fechafac BETWEEN '08-27-2019' and '08-27-2019') AND (l.statfact <> '2') AND (l.Prod_serv = 'M') and l.codmedico =c.codmedico and   l.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY l.codmedico ),0)  + 
+		ISNULL((SELECT  SUM(b.cantidad * b.precunit - b.Descuento) total_suero  From VIEW_Ventas_Medicos_Suero b 
+    	WHERE  (fechafac BETWEEN '08-27-2019' and '08-27-2019') AND (b.statfact <> '2') AND (b.Prod_serv = 'S') and b.codmedico = c.codmedico  and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY b.codmedico ),0)  ) ) total_ventas 
+		From VIEW_Ventas_Medicos c 
+    	WHERE  (fechafac BETWEEN '08-27-2019' and '08-27-2019') AND (c.statfact <> '2') AND (c.Prod_serv = 'P') and c.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY c.codmedico 
+
+[2019-08-27 14:27:20.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:27:21.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:27:21.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:27:21.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:27:22.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 14:27:22.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:27:23.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:27:23.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:27:23.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:27:24.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 14:28:03.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:28:03.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:28:04.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:28:04.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:28:05.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from emt_view vp  where fechafac between '08/01/2019' and '08/27/2019' 
+
+[2019-08-27 14:28:05.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:28:06.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:28:06.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:28:06.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:28:07.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from emt_view vp  where fechafac between '08/01/2019' and '08/27/2019' 
+
+[2019-08-27 14:32:08.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:32:08.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:32:08.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:32:09.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:32:10.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from emt_view vp  where fechafac between '08/01/2019' and '08/27/2019' 
+
+[2019-08-27 14:32:10.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:32:11.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:32:11.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:32:11.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:32:12.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from emt_view vp  where fechafac between '08/01/2019' and '08/27/2019' 
+
+[2019-08-27 14:38:28.000000 192.130.74.97  - [query->WILMA] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-08-27 14:38:28.000000 192.130.74.97  - [query->WILMA] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-08-27 14:38:38.000000 192.130.74.97  - [query->WILMA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-08-27 14:38:38.000000 192.130.74.97  - [query->WILMA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-08-27 14:38:38.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-08-27 14:38:39.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-08-27 14:38:46.000000 192.130.74.97  - [query->WILMA] ] Select TOP 200 * from Mclientes where  Historia = '78861'  Order  by nombres 
+
+[2019-08-27 14:38:46.000000 192.130.74.97  - [query->WILMA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='126115'  and activa='1' order by forder desc  
+
+[2019-08-27 14:40:18.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:40:18.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:40:19.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:40:19.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:40:20.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from emt_view vp  where fechafac between '08/01/2019' and '08/27/2019' 
+
+[2019-08-27 14:40:20.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:40:21.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-01-2019' and '08-27-2019' 
+
+[2019-08-27 14:40:21.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:40:21.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-01-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:40:22.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from emt_view vp  where fechafac between '08/01/2019' and '08/27/2019' 
+
+[2019-08-27 14:40:31.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:40:31.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:40:32.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 14:40:32.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 14:40:32.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 14:40:33.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 14:40:34.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-01-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 14:40:34.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 14:40:35.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-01-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 14:43:30.000000 192.130.74.53  - [query->FABIOLA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-08-27 14:43:30.000000 192.130.74.53  - [query->FABIOLA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-08-27 14:43:30.000000 192.130.74.53  - [query->FABIOLA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-08-27 14:43:32.000000 192.130.74.53  - [query->FABIOLA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-08-27' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-08-27') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-08-27')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-08-27' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-08-27 14:43:33.000000 192.130.74.53  - [query->FABIOLA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-08-27' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-08-27') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-08-27')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-08-27' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-08-27 14:43:33.000000 192.130.74.53  - [query->FABIOLA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-08-27 14:43:38.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:43:39.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 14:43:39.000000 192.130.74.53  - [query->FABIOLA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 14:43:40.000000 192.130.74.53  - [query->FABIOLA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 14:43:40.000000 192.130.74.53  - [query->FABIOLA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 14:43:40.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 14:43:41.000000 192.130.74.53  - [query->FABIOLA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-27-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 14:43:41.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 14:43:41.000000 192.130.74.53  - [query->FABIOLA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-27-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 14:45:13.000000 192.130.74.53  - [query->FABIOLA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:45:13.000000 192.130.74.53  - [query->FABIOLA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:45:13.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:45:14.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:45:14.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 14:45:14.000000 192.130.74.53  - [query->FABIOLA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:45:15.000000 192.130.74.53  - [query->FABIOLA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:45:15.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:45:15.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:45:16.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 14:54:32.000000 192.130.74.53  - [query->FABIOLA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:54:32.000000 192.130.74.53  - [query->FABIOLA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:54:32.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:54:32.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:54:33.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 14:54:33.000000 192.130.74.53  - [query->FABIOLA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:54:34.000000 192.130.74.53  - [query->FABIOLA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 14:54:34.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 14:54:34.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 14:54:34.000000 192.130.74.53  - [query->FABIOLA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 15:11:50.000000 192.130.74.97  - [query->WILMA] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-08-27 15:11:50.000000 192.130.74.97  - [query->WILMA] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-08-27 15:12:14.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 15:12:15.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 15:12:15.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 15:12:15.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 15:12:15.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 15:12:16.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 15:12:16.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-27-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 15:12:16.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 15:12:16.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-27-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 15:12:40.000000 192.130.74.97  - [query->WILMA] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-08-27 15:12:40.000000 192.130.74.97  - [query->WILMA] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-08-27 15:12:52.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 15:12:52.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 15:12:52.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 15:12:52.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 15:12:53.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 15:12:53.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 15:12:54.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 15:12:54.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 15:12:54.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 15:12:54.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 16:16:22.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 16:16:22.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 16:16:22.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 16:16:23.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 16:16:23.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 16:16:24.000000 192.130.74.97  - [query->WILMA] ] Select distinct medico from emt_view vp  where fechafac between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 16:16:24.000000 192.130.74.97  - [query->WILMA] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '08-27-2019' and '08-27-2019' 
+
+[2019-08-27 16:16:24.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico,Dventa
+
+[2019-08-27 16:16:24.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total,medico from emt_view vp where fechafac between '08-27-2019' and '08-27-2019' group by medico
+
+[2019-08-27 16:16:25.000000 192.130.74.97  - [query->WILMA] ] Select sum(total) total from emt_view vp  where fechafac between '08/27/2019' and '08/27/2019' 
+
+[2019-08-27 16:16:52.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 16:16:52.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 16:16:53.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 16:16:53.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 16:16:53.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 16:16:53.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 16:16:54.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-27-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 16:16:54.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 16:16:54.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-27-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 16:19:05.000000 192.130.74.97  - [query->WILMA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-08-27 16:19:05.000000 192.130.74.97  - [query->WILMA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-08-27 16:19:05.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-08-27 16:19:05.000000 192.130.74.97  - [query->WILMA] ] Select  * from view_displaypagos where fechafac='2019-08-27'
+
+[2019-08-27 16:19:05.000000 192.130.74.97  - [query->WILMA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='2019-08-27' and  activa='1') /*and Historia='71304' */
+
+[2019-08-27 16:19:06.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-08-27 16:19:06.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '8/27/2019'  AND '8/27/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-08-27 16:19:06.000000 192.130.74.97  - [query->WILMA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '8/27/2019'  AND '8/27/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-08-27 16:19:18.000000 192.130.74.97  - [query->WILMA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-08-27 16:19:18.000000 192.130.74.97  - [query->WILMA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-08-27 16:19:18.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-08-27 16:19:18.000000 192.130.74.97  - [query->WILMA] ] Select  * from view_displaypagos where fechafac='8/27/2019'
+
+[2019-08-27 16:19:19.000000 192.130.74.97  - [query->WILMA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='8/27/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-08-27 16:19:19.000000 192.130.74.97  - [query->WILMA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-08-27 16:19:19.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '8/27/2019'  AND '8/27/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-08-27 16:19:19.000000 192.130.74.97  - [query->WILMA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '8/27/2019'  AND '8/27/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-08-27 16:19:27.000000 192.130.74.97  - [query->WILMA] ] SELECT * from mconsultas  where codclien='127575' and fecha_cita='2019-08-27' 
+
+[2019-08-27 16:19:27.000000 192.130.74.97  - [query->WILMA] ] UPDATE mconsultas  SET horaout = '16:14:08' where codclien='127575' and fecha_cita='2019-08-27' 
+
+[2019-08-27 16:19:27.000000 192.130.74.97  - [query->WILMA] ] SELECT * from mconsultas  where codclien='127575' and fecha_cita='8/27/2019' 
+
+[2019-08-27 16:19:27.000000 192.130.74.97  - [query->WILMA] ] UPDATE mconsultas  SET asistido = '3', noasistido = '0' where codclien='127575' and fecha_cita='8/27/2019' 
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] Select TOP 25 * from Mclientes where  Historia ='79861'  
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='79861' and codconsulta<>'07' group by codclien
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='79861' and codconsulta<>'07' group by codclien
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='127575' and codconsulta<>'07' group by codclien
+
+[2019-08-27 16:19:28.000000 192.130.74.97  - [query->WILMA] ] Select observacion from VIEW_mconsultas_02 where codclien='127575'  and fecha_cita='2019/08/27' and codconsulta<>'07'
+
+[2019-08-27 16:19:31.000000 192.130.74.97  - [query->WILMA] ] select * from Feriado where FECHA='09/10/2019' and activo = 1 
+
+[2019-08-27 16:19:32.000000 192.130.74.97  - [query->WILMA] ] Select count(*) cant from mconsultas where codclien='127575' 
+
+[2019-08-27 16:19:32.000000 192.130.74.97  - [query->WILMA] ] Select * from mconsultas WHERE CODCLIEN='127575' AND fecha_cita='2019-08-27' and codmedico='000' 
+
+[2019-08-27 16:19:32.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass where login ='WILMA' 
+
+[2019-08-27 16:19:32.000000 192.130.74.97  - [query->WILMA] ] Select * from mconsultas where codclien='127575' and asistido=0 
+
+[2019-08-27 16:19:32.000000 192.130.74.97  - [query->WILMA] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='127575')
+
+[2019-08-27 16:19:32.000000 192.130.74.97  - [query->WILMA] ] Select * from mconsultas where codclien='127575' and fecha_cita='09/10/2019'  
+
+[2019-08-27 16:19:32.000000 192.130.74.97  - [query->WILMA] ] insert into mconsultas  (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta) values ('127575','8/27/2019','1','09/10/2019' ,'320','JMATTA','8/27/2019','JOHANNYS/ PLAN PRIVADO/ 12-4PM','0','0','0','1','0','0','03')
+
+[2019-08-27 16:20:16.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 16:20:17.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 16:20:17.000000 192.130.74.53  - [query->FABIOLA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 16:20:17.000000 192.130.74.53  - [query->FABIOLA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 16:20:18.000000 192.130.74.53  - [query->FABIOLA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 16:20:18.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 16:20:18.000000 192.130.74.53  - [query->FABIOLA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-27-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 16:20:19.000000 192.130.74.53  - [query->FABIOLA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 16:20:19.000000 192.130.74.53  - [query->FABIOLA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-27-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 16:39:02.000000 192.130.74.97  - [query->WILMA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-08-27 16:39:02.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 16:39:02.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 16:39:03.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+
+[2019-08-27 16:39:03.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+
+[2019-08-27 16:39:04.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  tipoprecio order by codtipre
+
+[2019-08-27 16:39:04.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  mseguros where status=1 order by codseguro
+
+[2019-08-27 16:39:04.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  Medios where del=0 order by codigo
+
+[2019-08-27 16:39:10.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2 Where CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%79484%' and cod_subgrupo = 'CONSULTA' 
+
+[2019-08-27 16:39:12.000000 192.130.74.97  - [query->WILMA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%79484%' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc  OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-08-27 16:39:12.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 16:39:12.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 16:39:37.000000 192.130.74.97  - [query->WILMA] ] SELECT * From  cma_MFactura Where numfactu = '189722'  
+
+[2019-08-27 16:39:37.000000 192.130.74.97  - [query->WILMA] ] UPDATE cma_MFactura SET statfact='2', fechanul='2019-08-27 00:00:00.000',desanul='CAMBIO CITA' WHERE numfactu='189722' and statfact in('1','3') 
+
+[2019-08-27 16:39:37.000000 192.130.74.97  - [query->WILMA] ] SELECT * From  cma_DFactura  Where numfactu = '189722'  
+
+[2019-08-27 16:39:37.000000 192.130.74.97  - [query->WILMA] ] SELECT * from kit where coditems='0000000004' 
+
+[2019-08-27 16:39:38.000000 192.130.74.97  - [query->WILMA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%79484%' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc  OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-08-27 16:39:38.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2019-08-27 16:39:38.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-08-27 17:05:27.000000 192.130.74.97  - [query->WILMA] ] Select login,concat(Nombre,' ',apellido) usuario from loginpass  where activo ='1' order by usuario
+
+[2019-08-27 17:05:27.000000 192.130.74.97  - [query->WILMA] ] SELECT * FROM Cuadre WHERE fechA='8/27/2019' and id_centro='C' and usuario='WILMA' 
+
+[2019-08-27 17:05:29.000000 192.130.74.97  - [query->WILMA] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='8/27/2019' and a.usuario='' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-08-27 17:05:31.000000 192.130.74.97  - [query->WILMA] ] SELECT valor,sum(monto) monto from Cuadre where fechA='8/27/2019'  and Id_centro='C' group by valor
+
+[2019-08-27 17:05:33.000000 192.130.74.97  - [query->WILMA] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='8/27/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-08-27 17:05:33.000000 192.130.74.97  - [query->WILMA] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='8/27/2019' and Id_centro='C' group by usuario
+
+[2019-08-27 17:05:33.000000 192.130.74.97  - [query->WILMA] ] SELECT * FROM Cuadre WHERE fechA='8/27/2019' and id_centro='C' and usuario='WILMA' 
+
+[2019-08-27 17:05:33.000000 192.130.74.97  - [query->WILMA] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='8/27/2019' and id_centro='C' and usuario='WILMA' group by usuario 
+
+[2019-08-27 17:05:34.000000 192.130.74.97  - [query->WILMA] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='8/27/2019' and a.usuario='WILMA' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-08-27 17:05:34.000000 192.130.74.97  - [query->WILMA] ] SELECT valor,sum(monto) monto from Cuadre where fechA='8/27/2019'  and Id_centro='C' group by valor
+
+[2019-08-27 17:05:36.000000 192.130.74.97  - [query->WILMA] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='8/27/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-08-27 17:05:36.000000 192.130.74.97  - [query->WILMA] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='8/27/2019' and Id_centro='C' group by usuario
+
+[2019-08-27 17:05:38.000000 192.130.74.97  - [query->WILMA] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='8/27/2019' and estacion='CMA' and id_centro = 'C'  group by valor order by valor desc
+
+[2019-08-27 17:05:40.000000 192.130.74.97  - [query->WILMA] ]    SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+     INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+     LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='8/27/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-08-27 17:05:40.000000 192.130.74.97  - [query->WILMA] ] SELECT sum(total+monto_flete) monto, count(*) facturas from VentasDiariasCMACST where fechafac='8/27/2019'  and statfact=3 and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 17:05:40.000000 192.130.74.97  - [query->WILMA] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '8/27/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-08-27 17:05:40.000000 192.130.74.97  - [query->WILMA] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '8/27/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-08-27 17:05:40.000000 192.130.74.97  - [query->WILMA] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '8/27/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-08-27 17:05:40.000000 192.130.74.97  - [query->WILMA] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete, a.Historia,a.initials    FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '8/27/2019' AND '8/27/2019'  AND  a.statfact=3  And  a.total>=0 and cod_subgrupo='CONSULTA' Order by a.numfactu desc 
+
+[2019-08-27 17:05:40.000000 192.130.74.97  - [query->WILMA] ] SELECT d.numfactu, d.modopago From VIEWpagosPRCMACST d WHERE d.fechapago between '8/27/2019' AND '8/27/2019' and cod_subgrupo='CONSULTA'  Order By d.modopago
+
+[2019-08-27 17:05:41.000000 192.130.74.97  - [query->WILMA] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiariasCMACST a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '8/27/2019' AND '8/27/2019' AND a.statfact=3 and cod_subgrupo='CONSULTA' And   a.total>0  
+
+[2019-08-27 17:05:41.000000 192.130.74.97  - [query->WILMA] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between  '8/27/2019' AND '8/27/2019' AND  a.statfact=3 and cod_subgrupo='CONSULTA'   And  a.total<0 Order by a.numfactu desc  
+
+[2019-08-27 17:05:41.000000 192.130.74.97  - [query->WILMA] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '8/27/2019' AND '8/27/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA'   And  a.total<0 
+
+[2019-08-27 17:05:41.000000 192.130.74.97  - [query->WILMA] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '8/27/2019' AND '8/27/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 17:09:24.000000 192.130.74.97  - [query->WILMA] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='8/27/2019' and id_centro='C' and usuario='WILMA' group by usuario 
+
+[2019-08-27 17:09:24.000000 192.130.74.97  - [query->WILMA] ] SELECT * FROM Cuadre WHERE fechA='8/27/2019' and id_centro='C' and usuario='WILMA' 
+
+[2019-08-27 17:09:26.000000 192.130.74.97  - [query->WILMA] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='8/27/2019' and a.usuario='WILMA' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-08-27 17:09:26.000000 192.130.74.97  - [query->WILMA] ] SELECT valor,sum(monto) monto from Cuadre where fechA='8/27/2019'  and Id_centro='C' group by valor
+
+[2019-08-27 17:09:28.000000 192.130.74.97  - [query->WILMA] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='8/27/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-08-27 17:09:28.000000 192.130.74.97  - [query->WILMA] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='8/27/2019' and Id_centro='C' group by usuario
+
+[2019-08-27 17:09:42.000000 192.130.74.97  - [query->WILMA] ] SELECT * FROM Cuadre WHERE fechA='8/27/2019' and id_centro='C' and usuario='WILMA' 
+
+[2019-08-27 17:09:43.000000 192.130.74.97  - [query->WILMA] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='8/27/2019' and a.usuario='WILMA' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-08-27 17:09:43.000000 192.130.74.97  - [query->WILMA] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='8/27/2019' and id_centro='C' and usuario='WILMA' group by usuario 
+
+[2019-08-27 17:09:44.000000 192.130.74.97  - [query->WILMA] ] SELECT valor,sum(monto) monto from Cuadre where fechA='8/27/2019'  and Id_centro='C' group by valor
+
+[2019-08-27 17:09:46.000000 192.130.74.97  - [query->WILMA] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='8/27/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-08-27 17:09:46.000000 192.130.74.97  - [query->WILMA] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='8/27/2019' and Id_centro='C' group by usuario
+
+[2019-08-27 17:31:10.000000 192.130.74.97  - [query->WILMA] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+
+[2019-08-27 17:31:10.000000 192.130.74.97  - [query->WILMA] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+
+[2019-08-27 17:33:37.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 17:33:38.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 17:33:39.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 17:33:39.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 17:33:39.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 17:33:39.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 17:33:40.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-27-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 17:33:40.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 17:33:40.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-27-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 17:46:05.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 17:46:06.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-08-26' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 17:46:07.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 17:46:07.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 17:46:07.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-27-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 17:46:07.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 17:46:08.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-27-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 17:46:08.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-27-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 17:46:08.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-27-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 17:46:20.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 17:46:20.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-29' and '08/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 17:46:21.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2'
+
+[2019-08-27 17:46:21.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 17:46:22.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '08-01-2019' and '08-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 17:46:22.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 17:46:22.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '08-01-2019' and '08-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 17:46:23.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '08-01-2019' and '08-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 17:46:23.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '08-01-2019' and '08-27-2019') and d.coditems like 'LI%' 
+
+[2019-08-27 17:46:48.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-01' and '07/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 17:46:48.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-07-01' and '07/27/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2019-08-27 17:46:50.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '07-01-2019' and '07-27-2019' and statfact <>'2'
+
+[2019-08-27 17:46:51.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '07-01-2019' and '07-27-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+
+[2019-08-27 17:46:52.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '07-01-2019' and '07-27-2019' and statfact <>'2' group by con.tipo order by con.tipo
+
+[2019-08-27 17:46:53.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '07-01-2019' and '07-27-2019' and cod_subgrupo='CONSULTA' 
+
+[2019-08-27 17:46:53.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '07-01-2019' and '07-27-2019' and d.coditems like 'TD%' 
+
+[2019-08-27 17:46:54.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '07-01-2019' and '07-27-2019' and cod_subgrupo='SUEROTERAPIA' 
+
+[2019-08-27 17:46:54.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '07-01-2019' and '07-27-2019') and d.coditems like 'LI%' 
+

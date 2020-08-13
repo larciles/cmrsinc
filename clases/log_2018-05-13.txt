@@ -1,0 +1,9 @@
+[2018-05-13 00:35:49.000000 192.130.74.2  - [query] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-05-13 00:35:55.000000 192.130.74.2  - [query] ] Select login,concat(Nombre,' ',apellido) usuario from loginpass  where activo ='1' order by usuario
+[2018-05-13 00:35:55.000000 192.130.74.2  - [query] ] SELECT * FROM Cuadre WHERE fechA='5/12/2018' and id_centro='C' and usuario='la' 
+[2018-05-13 00:35:55.000000 192.130.74.2  - [query] ]  SELECT  sum(monto) monto, modopago,codforpa from VIEWpagosPRCMACST where fechapago='5/12/2018' and statfact=3 and cod_subgrupo = 'CONSULTA'  and usuario=''  group by modopago,codforpa order by codforpa 
+[2018-05-13 00:40:12.000000 192.130.74.2  - [query] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-05-13 00:40:35.000000 192.130.74.2  - [query] ] Select COD,PAIS from Pais order by PAIS
+[2018-05-13 00:40:35.000000 192.130.74.2  - [query] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2018-05-13 00:40:35.000000 192.130.74.2  - [query] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-05-13 00:41:32.000000 192.130.74.2  - [query] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id

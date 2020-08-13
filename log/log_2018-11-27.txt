@@ -1,0 +1,1 @@
+[2018-11-27 09:42:23.000000 192.130.75.223  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems

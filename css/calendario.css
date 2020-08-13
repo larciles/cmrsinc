@@ -1,0 +1,119 @@
+font-size: 22px;
+
+-moz-appearance: none;
+-webkit-appearance: none;
+/*display: block;*/
+margin-left: auto;
+margin-right: auto;
+
+  border:0px;
+outline:0px;
+}
+@media (max-width:575px) {
+.display-4 {
+    font-size: 1.5rem;
+}
+.day h5 {
+    background-color: #f8f9fa;
+    padding: 3px 5px 5px;
+    margin: -8px -8px 8px -8px;
+}
+.date {
+    padding-left: 16px;
+}
+}
+
+@media (min-width: 576px) {
+.day {
+    height: 14.2857vw;
+}
+}
+
+.year{
+/*width:32%;
+float: right;
+ font-size: 52px;
+  border:0px;
+outline:0px;*/
+}
+
+.date {
+    padding-left: 16px;
+}
+
+.modal-content{
+	/*background-color: red;*/
+	  font-size: .8rem;
+}
+
+#table_eventos td {
+	/*background-color: red;*/
+   padding:0px; margin:0px;
+}
+
+
+.today {
+/*    width: 100px;
+    height:100px;
+    
+    margin:50px 50px;
+    
+    -webkit-box-shadow:0 0 20px blue; 
+    -moz-box-shadow: 0 0 20px blue; 
+    box-shadow:0 0 20px blue;*/
+    /*text-shadow:5px 5px 10px blue;*/
+}
+
+.con-evento{
+    font-weight: bold;
+    color: #089a93;
+    margin-bottom: 0px;
+}
+
+
+.display-evento{
+
+    font-size: small;
+    display: none;
+}
+.p-con-evento{
+    margin: 0px;
+     font-size: small;
+}
+
+.p-con-evento:hover{
+   color: crimson;
+   font-size: medium;
+   font-weight: bold;
+
+}
+
+.day:hover{
+  border: 1px solid #fe4918;
+  background-color: azure;
+  transform: scale(1.1);
+  box-shadow: 0px 0px  50px #666;
+  transition: all .3s ease;
+  }
+
+  .toggle.btn{
+    height: 28px;
+    background-color: red!important;
+  }
+
+  .header-selection{
+    padding-top:5px;
+    padding-bottom: 5px; 
+  }
+
+  form {
+        margin-top: 4px;
+        margin-bottom: 2px;
+  }
+
+  .hoy-dia{
+   background-color:  #e4efe3;
+    -webkit-box-shadow: 10px 9px 30px -1px rgba(164,237,222,1);
+-moz-box-shadow: 10px 9px 30px -1px rgba(164,237,222,1);
+box-shadow: 10px 9px 30px -1px rgba(164,237,222,1);
+  }

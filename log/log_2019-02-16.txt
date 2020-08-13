@@ -1,0 +1,49 @@
+[2019-02-16 14:25:42.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '02-16-2019' and '02-16-2019' and statfact <>'2'
+[2019-02-16 14:25:42.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '02-16-2019' and '02-16-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-02-16 14:25:42.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '02-16-2019' and '02-16-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-02-16 14:25:43.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '02-16-2019' and '02-16-2019' and cod_subgrupo='CONSULTA' 
+[2019-02-16 14:25:43.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '02-16-2019' and '02-16-2019' and d.coditems like 'TD%' 
+[2019-02-16 14:25:43.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '02-16-2019' and '02-16-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-02-16 14:25:44.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '02-16-2019' and '02-16-2019') and d.coditems like 'LI%' 
+[2019-02-16 16:02:20.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '02-16-2019' and '02-16-2019' and statfact <>'2'
+[2019-02-16 16:02:20.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '02-16-2019' and '02-16-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-02-16 16:02:20.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '02-16-2019' and '02-16-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-02-16 16:02:21.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '02-16-2019' and '02-16-2019' and cod_subgrupo='CONSULTA' 
+[2019-02-16 16:02:21.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '02-16-2019' and '02-16-2019' and d.coditems like 'TD%' 
+[2019-02-16 16:02:22.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '02-16-2019' and '02-16-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-02-16 16:02:22.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '02-16-2019' and '02-16-2019') and d.coditems like 'LI%' 
+[2019-02-16 16:35:25.000000 192.130.74.41  - [query->log-in] ] Select * from loginpass WHERE login = 'CHUERTAS' and passwork ='ch2017' and activo=1
+[2019-02-16 16:35:25.000000 192.130.74.41  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'CHUERTAS' 
+[2019-02-16 16:40:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-02-16 16:40:47.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2019-02-16 16:40:47.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-02-16 16:40:48.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2019-02-16 16:40:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-02-16 16:40:50.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2019-02-16 16:40:50.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-02-16 16:40:51.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2019-02-16 16:40:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-02-16 16:40:52.000000 192.130.74.41  - [query->CHUERTAS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2019-02-16 16:40:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-02-16 16:40:52.000000 192.130.74.41  - [query->CHUERTAS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2019-02-16 16:40:58.000000 192.130.74.41  - [query->CHUERTAS] ] Select distinct a.numfactu, a.nombres, b.observacion, b.usuario,c.telfhabit,c.Historia,c.codclien, CONCAT(e.nombre,' ',e.apellido) medico from VentasDiariasCMACST a inner join Mconsultas b ON  a.codclien=b.codclien  and b.fecha_cita='02/16/2019' inner join MClientes c ON  a.codclien=c.codclien inner join Mmedicos e ON b.codmedico=e.Codmedico where a.fechafac='02/16/2019' and a.cod_subgrupo='CONSULTA' and a.statfact =3 and asistido =0 and confirmado =2

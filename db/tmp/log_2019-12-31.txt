@@ -1,0 +1,104 @@
+[2019-12-31 00:16:24.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT * FROM Cuadre WHERE fechA='12/30/2019' and id_centro='C' and usuario='YFELICIANO' 
+
+[2019-12-31 00:16:26.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='12/30/2019' and a.usuario='YFELICIANO' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-12-31 00:16:26.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='12/30/2019' and id_centro='C' and usuario='YFELICIANO' group by usuario 
+
+[2019-12-31 00:16:26.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT valor,sum(monto) monto from Cuadre where fechA='12/30/2019'  and Id_centro='C' group by valor
+
+[2019-12-31 00:16:28.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='12/30/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-12-31 00:16:28.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='12/30/2019' and Id_centro='C' group by usuario
+
+[2019-12-31 00:16:28.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='12/30/2019' and estacion='CMA' and id_centro = 'C'  group by valor order by valor desc
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ]    SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+     INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+     LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='12/30/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT sum(total+monto_flete) monto, count(*) facturas from VentasDiariasCMACST where fechafac='12/30/2019'  and statfact=3 and cod_subgrupo='CONSULTA' 
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '12/30/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '12/30/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '12/30/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' 
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete, a.Historia,a.initials    FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/30/2019' AND '12/30/2019'  AND  a.statfact=3  And  a.total>=0 and cod_subgrupo='CONSULTA' Order by a.numfactu desc 
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT d.numfactu, d.modopago From VIEWpagosPRCMACST d WHERE d.fechapago between '12/30/2019' AND '12/30/2019' and cod_subgrupo='CONSULTA'  Order By d.modopago
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiariasCMACST a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '12/30/2019' AND '12/30/2019' AND a.statfact=3 and cod_subgrupo='CONSULTA' And   a.total>0  
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between  '12/30/2019' AND '12/30/2019' AND  a.statfact=3 and cod_subgrupo='CONSULTA'   And  a.total<0 Order by a.numfactu desc  
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/30/2019' AND '12/30/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA'   And  a.total<0 
+
+[2019-12-31 00:16:30.000000 192.130.75.220  - [query->YFELICIANO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/30/2019' AND '12/30/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA' 
+
+[2019-12-31 17:18:32.000000 192.130.75.220  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' and activo=1 
+
+[2019-12-31 17:18:32.000000 192.130.75.220  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+
+[2019-12-31 17:18:38.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-12-31 17:18:54.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-12-31 17:20:35.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-12-31 17:21:03.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-12-31 17:22:24.000000 192.130.75.220  - [query->LA] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='132362' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='132362' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='132362' and statfact<>'2'  order by a.fechafac desc
+
+[2019-12-31 17:22:24.000000 192.130.75.220  - [query->LA] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037998' order by desitems 
+
+[2019-12-31 17:22:28.000000 192.130.75.220  - [query->LA] ] SELECT * FROM [farmacias].[dbo].[MClientes] where codclien='132362' 
+
+[2019-12-31 17:22:30.000000 192.130.75.220  - [query->LA] ] Select COD,PAIS from Pais order by PAIS
+
+[2019-12-31 17:22:30.000000 192.130.75.220  - [query->LA] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+
+[2019-12-31 17:22:30.000000 192.130.75.220  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+

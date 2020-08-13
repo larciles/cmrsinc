@@ -1,0 +1,714 @@
+[2019-07-07 19:41:23.000000 192.130.75.220  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' and activo=1 
+
+[2019-07-07 19:41:23.000000 192.130.75.220  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+
+[2019-07-07 19:41:28.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:41:28.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:41:28.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:41:30.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:41:30.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:41:31.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:41:37.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:41:37.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:41:37.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:41:38.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:41:38.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:41:39.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:41:42.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:41:42.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:41:42.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:41:45.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:41:45.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:41:46.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:42:24.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:42:24.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:42:24.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:42:26.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:42:27.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:42:27.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:45:32.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:45:32.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:45:32.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:45:35.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:45:35.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:45:36.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:51:00.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:51:00.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:51:00.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:51:04.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:51:04.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:51:05.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:52:47.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:52:47.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:52:47.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:52:50.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:52:50.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:52:51.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:54:48.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:54:48.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:54:48.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:54:50.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:54:51.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:54:51.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:57:36.000000 192.130.75.220  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' and activo=1 
+
+[2019-07-07 19:57:36.000000 192.130.75.220  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+
+[2019-07-07 19:57:41.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:57:41.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:57:41.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:57:43.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:57:43.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:57:44.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:58:00.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:58:00.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:58:00.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:58:02.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:58:02.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:58:03.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:58:50.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:58:50.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:58:50.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:58:52.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:58:53.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:58:53.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:59:13.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 19:59:13.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 19:59:13.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 19:59:15.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 19:59:16.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 19:59:16.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 19:59:46.000000 192.130.75.220  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-07 19:59:46.000000 192.130.75.220  - [query->LA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-07 19:59:46.000000 192.130.75.220  - [query->LA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+
+[2019-07-07 19:59:46.000000 192.130.75.220  - [query->LA] ] Select TOP 200 * from Mclientes where  Historia = '77906'  Order  by nombres 
+
+[2019-07-07 19:59:47.000000 192.130.75.220  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2019-07-07 19:59:47.000000 192.130.75.220  - [query->LA] ] Select * from mconsultas where  codclien='124021'  and  asistido=0
+
+[2019-07-07 19:59:47.000000 192.130.75.220  - [query->LA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='124021' and codconsulta<>'07' group by codclien
+
+[2019-07-07 19:59:47.000000 192.130.75.220  - [query->LA] ] Select observacion from VIEW_mconsultas_02 where codclien='124021'  and fecha_cita='2019/07/08' and codconsulta<>'07'
+
+[2019-07-07 20:00:14.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 20:00:14.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 20:00:14.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 20:00:17.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 20:00:18.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 20:00:18.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 20:01:23.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 20:01:23.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 20:01:23.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 20:01:26.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 20:01:27.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 20:01:27.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-07-07 20:03:02.000000 192.130.75.220  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-07-07 20:03:02.000000 192.130.75.220  - [query->LA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-07-07 20:03:02.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-07-07 20:03:04.000000 192.130.75.220  - [query->LA] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-07-07 20:03:05.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-07-07' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-07-07') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-07-07')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-07-07' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-07-07 20:03:06.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+

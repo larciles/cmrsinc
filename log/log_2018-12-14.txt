@@ -1,0 +1,183 @@
+[2018-12-14 10:54:33.000000 192.130.74.125  - [query->JOLALDE] ] select 'ST' coditems, 'SUERO TERAPIA Vit C' desitems 
+ Union select 'LS' coditems, 'LASER' desitems 
+ Union select coditems,desitems from  Minventario where prod_serv='P' and activo = 1 order by desitems
+[2018-12-14 10:54:47.000000 192.130.74.125  - [query->JOLALDE] ] select a.numfactu, REPLACE(CONVERT(CHAR(15), a.fechafac, 101), '', '-') AS fechafac, c.nombres,sum(b.cantidad*b.precunit) subtotal , sum(b.descuento) descuento , sum(b.cantidad*b.precunit)-sum(b.descuento)  total  from MSSMFact a
+inner join MSSDFact b on b.coditems in ('BLIA1118','BLNL1118') and b.numfactu=a.numfactu 
+inner join MClientes c on c.codclien=a.codclien
+where a.statfact=3 and a.fechafac between '12/01/2018' and '12/14/2018'
+group by a.numfactu,a.fechafac, c.nombres order by a.fechafac desc
+[2018-12-14 11:02:10.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '12-14-2018' and '12-14-2018' and statfact <>'2'
+[2018-12-14 11:02:11.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '12-14-2018' and '12-14-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-12-14 11:02:11.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '12-14-2018' and '12-14-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-12-14 11:02:11.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '12-14-2018' and '12-14-2018' and cod_subgrupo='CONSULTA' 
+[2018-12-14 11:02:12.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '12-14-2018' and '12-14-2018' and d.coditems like 'TD%' 
+[2018-12-14 11:02:12.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '12-14-2018' and '12-14-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-12-14 11:02:12.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '12-14-2018' and '12-14-2018') and d.coditems like 'LI%' 
+[2018-12-14 11:10:22.000000 192.130.74.125  - [query->JOLALDE] ] select 'ST' coditems, 'SUERO TERAPIA Vit C' desitems 
+ Union select 'LS' coditems, 'LASER' desitems 
+ Union select coditems,desitems from  Minventario where prod_serv='P' and activo = 1 order by desitems
+[2018-12-14 11:10:32.000000 192.130.74.125  - [query->JOLALDE] ] select a.numfactu, REPLACE(CONVERT(CHAR(15), a.fechafac, 101), '', '-') AS fechafac, c.nombres,sum(b.cantidad*b.precunit) subtotal , sum(b.descuento) descuento , sum(b.cantidad*b.precunit)-sum(b.descuento)  total  from MSSMFact a
+inner join MSSDFact b on b.coditems in ('BLIA1118','BLNL1118') and b.numfactu=a.numfactu 
+inner join MClientes c on c.codclien=a.codclien
+where a.statfact=3 and a.fechafac between '11/01/2018' and '12/14/2018'
+group by a.numfactu,a.fechafac, c.nombres order by a.fechafac desc
+[2018-12-14 11:10:56.000000 192.130.74.125  - [query->JOLALDE] ] select a.numfactu, REPLACE(CONVERT(CHAR(15), a.fechafac, 101), '', '-') AS fechafac, c.nombres,sum(b.cantidad*b.precunit) subtotal , sum(b.descuento) descuento , sum(b.cantidad*b.precunit)-sum(b.descuento)  total  from MSSMFact a
+inner join MSSDFact b on b.coditems in ('BLIA1118','BLNL1118') and b.numfactu=a.numfactu 
+inner join MClientes c on c.codclien=a.codclien
+where a.statfact=3 and a.fechafac between '11/01/2018' and '11/30/2018'
+group by a.numfactu,a.fechafac, c.nombres order by a.fechafac desc
+[2018-12-14 11:13:03.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '12-31-2018' and medico<>''
+[2018-12-14 11:13:04.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '12-31-2018' 
+[2018-12-14 11:13:04.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '12-31-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:13:04.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '12-31-2018' and medico<>'' group by medico
+[2018-12-14 11:13:05.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '12/31/2018' and medico<>''
+[2018-12-14 11:13:06.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '12-31-2018' and medico<>''
+[2018-12-14 11:13:06.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '12-31-2018' 
+[2018-12-14 11:13:06.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '12-31-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:13:06.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '12-31-2018' and medico<>'' group by medico
+[2018-12-14 11:13:06.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '12/31/2018' and medico<>''
+[2018-12-14 11:13:23.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>''
+[2018-12-14 11:13:23.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '11-30-2018' 
+[2018-12-14 11:13:23.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:13:24.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>'' group by medico
+[2018-12-14 11:13:24.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '11/30/2018' and medico<>''
+[2018-12-14 11:13:24.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>''
+[2018-12-14 11:13:24.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '11-30-2018' 
+[2018-12-14 11:13:25.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:13:25.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>'' group by medico
+[2018-12-14 11:13:25.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '11/30/2018' and medico<>''
+[2018-12-14 11:20:43.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>''
+[2018-12-14 11:20:43.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '10-01-2018' and '10-31-2018' 
+[2018-12-14 11:20:43.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:20:44.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>'' group by medico
+[2018-12-14 11:20:44.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '10/01/2018' and '10/31/2018' and medico<>''
+[2018-12-14 11:20:45.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>''
+[2018-12-14 11:20:45.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '10-01-2018' and '10-31-2018' 
+[2018-12-14 11:20:45.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:20:45.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>'' group by medico
+[2018-12-14 11:20:46.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '10/01/2018' and '10/31/2018' and medico<>''
+[2018-12-14 11:21:18.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '09-01-2018' and '09-30-2018' and medico<>''
+[2018-12-14 11:21:18.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '09-01-2018' and '09-30-2018' 
+[2018-12-14 11:21:18.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '09-01-2018' and '09-30-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:21:19.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '09-01-2018' and '09-30-2018' and medico<>'' group by medico
+[2018-12-14 11:21:19.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '09/01/2018' and '09/30/2018' and medico<>''
+[2018-12-14 11:21:20.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '09-01-2018' and '09-30-2018' and medico<>''
+[2018-12-14 11:21:20.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '09-01-2018' and '09-30-2018' 
+[2018-12-14 11:21:20.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '09-01-2018' and '09-30-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:21:20.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '09-01-2018' and '09-30-2018' and medico<>'' group by medico
+[2018-12-14 11:21:21.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '09/01/2018' and '09/30/2018' and medico<>''
+[2018-12-14 11:27:53.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>''
+[2018-12-14 11:27:53.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '10-01-2018' and '10-31-2018' 
+[2018-12-14 11:27:53.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:27:53.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>'' group by medico
+[2018-12-14 11:27:53.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '10/01/2018' and '10/31/2018' and medico<>''
+[2018-12-14 11:27:54.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>''
+[2018-12-14 11:27:54.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '10-01-2018' and '10-31-2018' 
+[2018-12-14 11:27:54.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:27:54.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-01-2018' and '10-31-2018' and medico<>'' group by medico
+[2018-12-14 11:27:54.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '10/01/2018' and '10/31/2018' and medico<>''
+[2018-12-14 11:29:43.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>''
+[2018-12-14 11:29:43.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '11-30-2018' 
+[2018-12-14 11:29:44.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:29:44.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>'' group by medico
+[2018-12-14 11:29:44.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '11/30/2018' and medico<>''
+[2018-12-14 11:29:45.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>''
+[2018-12-14 11:29:45.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '11-01-2018' and '11-30-2018' 
+[2018-12-14 11:29:45.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:29:45.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '11-01-2018' and '11-30-2018' and medico<>'' group by medico
+[2018-12-14 11:29:45.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '11/01/2018' and '11/30/2018' and medico<>''
+[2018-12-14 11:31:05.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '08-01-2018' and '08-31-2018' and medico<>''
+[2018-12-14 11:31:06.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '08-01-2018' and '08-31-2018' 
+[2018-12-14 11:31:06.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '08-01-2018' and '08-31-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:31:06.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '08-01-2018' and '08-31-2018' and medico<>'' group by medico
+[2018-12-14 11:31:07.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '08/01/2018' and '08/31/2018' and medico<>''
+[2018-12-14 11:31:07.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '08-01-2018' and '08-31-2018' and medico<>''
+[2018-12-14 11:31:07.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '08-01-2018' and '08-31-2018' 
+[2018-12-14 11:31:08.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '08-01-2018' and '08-31-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:31:08.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '08-01-2018' and '08-31-2018' and medico<>'' group by medico
+[2018-12-14 11:31:08.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '08/01/2018' and '08/31/2018' and medico<>''
+[2018-12-14 11:32:20.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '12-01-2018' and '12-14-2018' and medico<>''
+[2018-12-14 11:32:21.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '12-01-2018' and '12-14-2018' 
+[2018-12-14 11:32:21.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '12-01-2018' and '12-14-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:32:21.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '12-01-2018' and '12-14-2018' and medico<>'' group by medico
+[2018-12-14 11:32:22.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '12/01/2018' and '12/14/2018' and medico<>''
+[2018-12-14 11:32:22.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '12-01-2018' and '12-14-2018' and medico<>''
+[2018-12-14 11:32:22.000000 192.130.74.125  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '12-01-2018' and '12-14-2018' 
+[2018-12-14 11:32:23.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '12-01-2018' and '12-14-2018' and medico<>'' group by medico,Dventa
+[2018-12-14 11:32:23.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '12-01-2018' and '12-14-2018' and medico<>'' group by medico
+[2018-12-14 11:32:23.000000 192.130.74.125  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '12/01/2018' and '12/14/2018' and medico<>''
+[2018-12-14 12:34:18.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:34:48.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:35:03.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:35:08.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:35:18.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:35:25.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:35:31.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:35:36.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:35:50.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:35:58.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:36:24.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:36:31.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:36:35.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 12:36:45.000000 192.130.74.125  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-12-14 13:32:57.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '01-01-2018' and '12-14-2018' and statfact <>'2'
+[2018-12-14 13:32:58.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '01-01-2018' and '12-14-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-12-14 13:32:59.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '01-01-2018' and '12-14-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-12-14 13:33:03.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-01-2018' and '12-14-2018' and cod_subgrupo='CONSULTA' 
+[2018-12-14 13:33:04.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '01-01-2018' and '12-14-2018' and d.coditems like 'TD%' 
+[2018-12-14 13:33:07.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-01-2018' and '12-14-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-12-14 13:33:07.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '01-01-2018' and '12-14-2018') and d.coditems like 'LI%' 
+[2018-12-14 13:36:21.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '01-01-2017' and '12-31-2017' and statfact <>'2'
+[2018-12-14 13:36:21.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '01-01-2017' and '12-31-2017' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-12-14 13:36:22.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '01-01-2017' and '12-31-2017' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-12-14 13:36:26.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-01-2017' and '12-31-2017' and cod_subgrupo='CONSULTA' 
+[2018-12-14 13:36:26.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '01-01-2017' and '12-31-2017' and d.coditems like 'TD%' 
+[2018-12-14 13:36:30.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '01-01-2017' and '12-31-2017' and cod_subgrupo='SUEROTERAPIA' 
+[2018-12-14 13:36:30.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '01-01-2017' and '12-31-2017') and d.coditems like 'LI%' 
+[2018-12-14 14:42:21.000000 192.130.74.125  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '12-14-2018' and '12-14-2018' and statfact <>'2'
+[2018-12-14 14:42:21.000000 192.130.74.125  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '12-14-2018' and '12-14-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-12-14 14:42:21.000000 192.130.74.125  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '12-14-2018' and '12-14-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-12-14 14:42:21.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '12-14-2018' and '12-14-2018' and cod_subgrupo='CONSULTA' 
+[2018-12-14 14:42:22.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '12-14-2018' and '12-14-2018' and d.coditems like 'TD%' 
+[2018-12-14 14:42:22.000000 192.130.74.125  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '12-14-2018' and '12-14-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-12-14 14:42:22.000000 192.130.74.125  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '12-14-2018' and '12-14-2018') and d.coditems like 'LI%' 

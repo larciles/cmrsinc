@@ -1,0 +1,9 @@
+[2018-07-27 09:50:50.000000 192.130.74.32  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' 
+[2018-07-27 09:50:50.000000 192.130.74.32  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+[2018-07-27 09:50:55.000000 192.130.74.32  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-07-27 09:50:56.000000 192.130.74.32  - [query->LA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-07-27 09:50:56.000000 192.130.74.32  - [query->LA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2018-07-27 09:50:57.000000 192.130.74.32  - [query->LA] ] SELECT * from  MInventario where prod_serv='P' and activo = 1 order by 'desitems'
+[2018-07-27 09:50:57.000000 192.130.74.32  - [query->LA] ] SELECT * from  tipoprecio order by codtipre
+[2018-07-27 09:50:57.000000 192.130.74.32  - [query->LA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2018-07-27 09:50:57.000000 192.130.74.32  - [query->LA] ] SELECT * from  Medios where del=0 order by codigo

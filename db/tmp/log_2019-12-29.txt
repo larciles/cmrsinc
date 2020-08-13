@@ -1,0 +1,495 @@
+[2019-12-29 08:25:05.000000 192.130.75.220  - [query->log-in] ] Select * from loginpass WHERE login = 'RANGELYS' and passwork ='ANGELYS312' and activo=1 
+
+[2019-12-29 08:25:05.000000 192.130.75.220  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'RANGELYS' 
+
+[2019-12-29 08:25:19.000000 192.130.75.220  - [query->RANGELYS] ] Select  * from view_displaypagos where fechafac='2019-12-29'
+
+[2019-12-29 08:25:19.000000 192.130.75.220  - [query->RANGELYS] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='2019-12-29' 
+
+[2019-12-29 08:25:19.000000 192.130.75.220  - [query->RANGELYS] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='2019-12-29' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 08:25:19.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 08:25:20.000000 192.130.75.220  - [query->RANGELYS] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/29/2019'  AND '12/29/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 08:25:20.000000 192.130.75.220  - [query->RANGELYS] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/29/2019'  AND '12/29/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-12-29 08:25:46.000000 192.130.75.220  - [query->RANGELYS] ] Select  * from view_displaypagos where fechafac='12/28/2019'
+
+[2019-12-29 08:25:46.000000 192.130.75.220  - [query->RANGELYS] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='12/28/2019' 
+
+[2019-12-29 08:25:46.000000 192.130.75.220  - [query->RANGELYS] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='12/28/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 08:25:47.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 08:25:47.000000 192.130.75.220  - [query->RANGELYS] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/28/2019'  AND '12/28/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 08:25:47.000000 192.130.75.220  - [query->RANGELYS] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/28/2019'  AND '12/28/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-12-29 08:42:53.000000 192.130.75.220  - [query->RANGELYS] ] Select  * from view_displaypagos where fechafac='12/28/2019'
+
+[2019-12-29 08:42:53.000000 192.130.75.220  - [query->RANGELYS] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='12/28/2019' 
+
+[2019-12-29 08:42:53.000000 192.130.75.220  - [query->RANGELYS] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='12/28/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 08:42:54.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 08:42:55.000000 192.130.75.220  - [query->RANGELYS] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/28/2019'  AND '12/28/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 08:42:55.000000 192.130.75.220  - [query->RANGELYS] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/28/2019'  AND '12/28/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-12-29 08:52:46.000000 192.130.75.220  - [query->RANGELYS] ] Select  * from view_displaypagos where fechafac='12/28/2019'
+
+[2019-12-29 08:52:46.000000 192.130.75.220  - [query->RANGELYS] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='12/28/2019' 
+
+[2019-12-29 08:52:46.000000 192.130.75.220  - [query->RANGELYS] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='12/28/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 08:52:47.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 08:52:47.000000 192.130.75.220  - [query->RANGELYS] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/28/2019'  AND '12/28/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 08:52:47.000000 192.130.75.220  - [query->RANGELYS] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/28/2019'  AND '12/28/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-12-29 08:56:23.000000 192.130.75.220  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' and activo=1 
+
+[2019-12-29 08:56:23.000000 192.130.75.220  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+
+[2019-12-29 08:56:29.000000 192.130.75.220  - [query->LA] ] Select *  from MPerfil  
+
+[2019-12-29 08:57:31.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  codperfil='02' where Id='40' 
+
+[2019-12-29 09:00:16.000000 192.130.75.220  - [query->LA] ] Select *  from MPerfil  
+
+[2019-12-29 09:03:38.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  codperfil='02' where Id='70' 
+
+[2019-12-29 09:04:57.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  codperfil='02' where Id='21' 
+
+[2019-12-29 09:05:05.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  codperfil='02' where Id='22' 
+
+[2019-12-29 09:05:11.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  codperfil='02' where Id='48' 
+
+[2019-12-29 09:05:29.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  codperfil='02' where Id='17' 
+
+[2019-12-29 09:05:41.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  codperfil='02' where Id='11' 
+
+[2019-12-29 09:06:09.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  codperfil='02' where Id='44' 
+
+[2019-12-29 09:07:46.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  activo='0' where Id='12' 
+
+[2019-12-29 09:07:46.000000 192.130.75.220  - [query->LA] ] Select *  from MPerfil  
+
+[2019-12-29 09:08:50.000000 192.130.75.220  - [query->LA] ] UPDATE loginpass Set  activo='0' where Id='31' 
+
+[2019-12-29 09:08:51.000000 192.130.75.220  - [query->LA] ] Select *  from MPerfil  
+
+[2019-12-29 09:09:20.000000 192.130.75.220  - [query->LA] ] Select  * from view_displaypagos where fechafac='2019-12-29'
+
+[2019-12-29 09:09:20.000000 192.130.75.220  - [query->LA] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='2019-12-29' 
+
+[2019-12-29 09:09:20.000000 192.130.75.220  - [query->LA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='2019-12-29' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 09:09:20.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 09:09:20.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/29/2019'  AND '12/29/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 09:09:20.000000 192.130.75.220  - [query->LA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/29/2019'  AND '12/29/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-12-29 09:09:35.000000 192.130.75.220  - [query->LA] ] Select  * from view_displaypagos where fechafac='12/28/2019'
+
+[2019-12-29 09:09:35.000000 192.130.75.220  - [query->LA] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='12/28/2019' 
+
+[2019-12-29 09:09:35.000000 192.130.75.220  - [query->LA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='12/28/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 09:09:36.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 09:09:36.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/28/2019'  AND '12/28/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 09:09:36.000000 192.130.75.220  - [query->LA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/28/2019'  AND '12/28/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-12-29 15:50:39.000000 192.130.75.220  - [query->LA] ] Select  * from view_displaypagos where fechafac='12/28/2019'
+
+[2019-12-29 15:50:39.000000 192.130.75.220  - [query->LA] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='12/28/2019' 
+
+[2019-12-29 15:50:40.000000 192.130.75.220  - [query->LA] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='12/28/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 15:50:41.000000 192.130.75.220  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 15:50:41.000000 192.130.75.220  - [query->LA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/28/2019'  AND '12/28/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 15:50:41.000000 192.130.75.220  - [query->LA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/28/2019'  AND '12/28/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-12-29 22:48:02.000000 192.130.75.220  - [query->log-in] ] Select * from loginpass WHERE login = 'RANGELYS' and passwork ='ANGELYS312' and activo=1 
+
+[2019-12-29 22:48:02.000000 192.130.75.220  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'RANGELYS' 
+
+[2019-12-29 22:48:31.000000 192.130.75.220  - [query->RANGELYS] ] Select  * from view_displaypagos where fechafac='2019-12-29'
+
+[2019-12-29 22:48:32.000000 192.130.75.220  - [query->RANGELYS] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='2019-12-29' 
+
+[2019-12-29 22:48:32.000000 192.130.75.220  - [query->RANGELYS] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='2019-12-29' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 22:48:33.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 22:48:33.000000 192.130.75.220  - [query->RANGELYS] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/29/2019'  AND '12/29/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 22:48:33.000000 192.130.75.220  - [query->RANGELYS] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/29/2019'  AND '12/29/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-12-29 22:48:40.000000 192.130.75.220  - [query->RANGELYS] ] Select  * from view_displaypagos where fechafac='12/28/2019'
+
+[2019-12-29 22:48:40.000000 192.130.75.220  - [query->RANGELYS] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='12/28/2019' 
+
+[2019-12-29 22:48:40.000000 192.130.75.220  - [query->RANGELYS] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='12/28/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 22:48:41.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 22:48:41.000000 192.130.75.220  - [query->RANGELYS] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/28/2019'  AND '12/28/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 22:48:41.000000 192.130.75.220  - [query->RANGELYS] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/28/2019'  AND '12/28/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+
+[2019-12-29 23:00:22.000000 192.130.75.220  - [query->RANGELYS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-12-29 23:00:22.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-12-29 23:00:24.000000 192.130.75.220  - [query->RANGELYS] ]  Select  convert(varchar(10), cast(a.fecha_cita as date), 101) fecha_cita, b.Historia,b.nombres,b.telfhabit, CONCAT(c.nombre, ' ',c.apellido) medico,a.usuario  from mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-12-29' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-12-29') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-12-29')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-12-29' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+       order by b.nombres OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+
+[2019-12-29 23:00:24.000000 192.130.75.220  - [query->RANGELYS] ] SELECT COUNT(*) total FROM mconsultas a
+       inner join MClientes b ON  a.codclien= b.codclien
+       inner join Mmedicos c ON  a.codmedico= c.Codmedico
+       where 
+       fecha_cita='2019-12-29' and   
+       codconsulta='01'  and 
+       asistido=3 and
+       a.codclien not in (Select codclien from MFactura where fechafac='2019-12-29') and
+       a.codclien not in (Select codclien from MSSMFact where fechafac='2019-12-29')  and
+       a.codclien not in (
+       select codclien  from cma_MFactura where  fechafac='2019-12-29' and  numfactu  in  (Select numfactu from cma_DFactura where  cod_subgrupo='SUEROTERAPIA'  ))
+
+[2019-12-29 23:00:24.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 23:00:27.000000 192.130.75.220  - [query->RANGELYS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2019-12-29 23:00:27.000000 192.130.75.220  - [query->RANGELYS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2019-12-29 23:00:27.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='96505'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='96505' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='130608'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='130608' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='96767'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='96767' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='131913'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='131913' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132215'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132215' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='131770'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='131770' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132377'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132377' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132343'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132343' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132116'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132116' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132246'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132246' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='15259'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='15259' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132272'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132272' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='52417'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='52417' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='42081'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='42081' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132414'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132414' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132300'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132300' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132338'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132338' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='131881'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='131881' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='132317'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='132317' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='51562'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='51562' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='82096'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='82096' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='128390'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='128390' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='131963'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='131963' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:28.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='99390'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:29.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='99390' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:29.000000 192.130.75.220  - [query->RANGELYS] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='35826'and codconsulta <>'07' and ASISTIDOS is null
+
+[2019-12-29 23:00:29.000000 192.130.75.220  - [query->RANGELYS] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='35826' and a.fechafac='12/28/2019     ' 
+
+[2019-12-29 23:00:29.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 23:00:47.000000 192.130.75.220  - [query->RANGELYS] ] Select  * from view_displaypagos where fechafac='12/28/2019'
+
+[2019-12-29 23:00:47.000000 192.130.75.220  - [query->RANGELYS] ] SELECT  a.codclien, a.numfactu, a.nota FROM cma_MFactura a where fechafac='12/28/2019' 
+
+[2019-12-29 23:00:47.000000 192.130.75.220  - [query->RANGELYS] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='12/28/2019' and  activa='1') /*and Historia='71304' */
+
+[2019-12-29 23:00:48.000000 192.130.75.220  - [query->RANGELYS] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2019-12-29 23:00:48.000000 192.130.75.220  - [query->RANGELYS] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '12/28/2019'  AND '12/28/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+
+[2019-12-29 23:00:48.000000 192.130.75.220  - [query->RANGELYS] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '12/28/2019'  AND '12/28/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+

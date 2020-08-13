@@ -1,0 +1,650 @@
+[2018-09-21 13:57:15.000000 192.130.74.72  - [query->log-in] ] Select * from loginpass WHERE login = 'DCAMPOS' and passwork ='karina' 
+[2018-09-21 13:57:15.000000 192.130.74.72  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'DCAMPOS' 
+[2018-09-21 13:57:22.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 13:57:22.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 13:57:22.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 13:57:23.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 13:57:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 13:57:26.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 13:57:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 13:57:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 13:57:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 13:57:50.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 13:57:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 13:57:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 13:57:52.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 13:57:52.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 13:57:55.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='57926'  
+[2018-09-21 13:57:56.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 13:57:56.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='88056' and codconsulta<>'07' group by codclien
+[2018-09-21 13:57:56.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='88056'  and fecha_cita='2018/10/19' and codconsulta<>'07'
+[2018-09-21 13:57:58.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 13:57:59.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='88056' and coditems like 'TD%' 
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE MCONSULTASS SET codmedico = '000' WHERE CODCLIEN='88056' AND fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='TD01' 
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='88056' and asistido=0 and coditems like 'TD%' 
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='88056')
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='88056' and fecha_cita='09/21/2018'  and coditems like 'TD%' 
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='88056' AND ASISTIDO='0' and coditems like 'TD%'  
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('88056','9/21/2018','1','09/21/2018' ,'000','CCBAY2','9/21/2018','KEILA','1','0','0','0','1','0','07','TD01','2','0','2:00 PM','09/21/2018','14:30:00')
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 13:58:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 13:58:09.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 13:58:13.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 13:58:13.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 13:58:13.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 13:58:13.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 13:58:15.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultass Set  terapias='3' where codclien='88056' and fecha_cita='9/21/2018' and coditems='TD01' and codconsulta='07' 
+[2018-09-21 13:58:26.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultass Set  terapias='1' where codclien='88056' and fecha_cita='9/21/2018' and coditems='TD01' and codconsulta='07' 
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='88056' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='88056' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='57926'  
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='57926' and codconsulta='07' group by codclien
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='57926' and codconsulta='07' group by codclien
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='88056' and codconsulta<>'07' group by codclien
+[2018-09-21 13:58:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='88056'  and fecha_cita='2018/10/19' and codconsulta<>'07'
+[2018-09-21 13:58:41.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/24/2018' and activo = 1 
+[2018-09-21 13:58:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultas where codclien='88056' 
+[2018-09-21 13:58:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultas WHERE CODCLIEN='88056' AND fecha_cita='2018-09-21' and codmedico='000' 
+[2018-09-21 13:58:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 13:58:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultas where codclien='88056' and asistido=0 
+[2018-09-21 13:58:51.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='88056' AND ASISTIDO=0
+[2018-09-21 13:58:51.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE MCONSULTAS SET FECHA_CITA='09/24/2018',usuario = 'CCBAY2',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'KEILA', regusuario='DCAMPOS', llegada='',codconsulta='01' WHERE CODCLIEN='88056' AND ASISTIDO='0' and ID='250652' 
+[2018-09-21 13:58:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 13:58:51.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 13:58:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 13:58:52.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:00:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:00:05.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:00:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:00:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:00:14.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultass Set  terapias='1' where codclien='90018' and fecha_cita='9/21/2018' and coditems='TD01' and codconsulta='07' 
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='90018' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='90018' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='71170'  
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71170' and codconsulta='07' group by codclien
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71170' and codconsulta='07' group by codclien
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='90018' and codconsulta<>'07' group by codclien
+[2018-09-21 14:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='90018'  and fecha_cita='2018/10/05' and codconsulta<>'07'
+[2018-09-21 14:00:35.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 14:01:02.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:01:02.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:01:02.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:01:03.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:01:04.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:01:04.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:01:07.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='71060'  
+[2018-09-21 14:01:07.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='110902' and codconsulta<>'07' group by codclien
+[2018-09-21 14:01:07.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='110902'  and fecha_cita='2018/10/22' and codconsulta<>'07'
+[2018-09-21 14:01:07.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:01:09.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 14:01:13.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:01:18.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='110902' and coditems like 'TD%' 
+[2018-09-21 14:01:18.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='110902' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='TD01'  and codmedico='000' 
+[2018-09-21 14:01:18.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:01:18.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='110902' and asistido=0 and coditems like 'TD%' 
+[2018-09-21 14:01:18.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT maxid= max(id) FROM MCONSULTASS WHERE CODCLIEN='110902' AND ASISTIDO=0 and coditems like 'TD%'
+[2018-09-21 14:01:18.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE MCONSULTASS SET FECHA_CITA='09/21/2018',enddate='09/21/2018',endtime='14:45:00' ,usuario = 'IMATOS',confirmado='0',noasistido='0',activa='1',codmedico = '327', observacion = 'IVELISSE MATOS ', regusuario='DCAMPOS', llegada='', hora='2:15 PM' WHERE CODCLIEN='110902' AND ASISTIDO='0' and ID='79767' 
+[2018-09-21 14:01:18.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:01:18.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:01:18.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:01:19.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:01:23.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:01:23.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:01:23.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:01:23.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:01:26.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultass Set  terapias='1' where codclien='110902' and fecha_cita='9/21/2018' and coditems='TD01' and codconsulta='07' 
+[2018-09-21 14:01:30.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultass Set  terapias='4' where codclien='110902' and fecha_cita='9/21/2018' and coditems='TD01' and codconsulta='07' 
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='110902' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='110902' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71060' and codconsulta='07' group by codclien
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71060' and codconsulta='07' group by codclien
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='71060'  
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='110902' and codconsulta<>'07' group by codclien
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='110902'  and fecha_cita='2018/10/22' and codconsulta<>'07'
+[2018-09-21 14:01:31.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:01:42.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/25/2018' and activo = 1 
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='110902' and coditems like 'TD%' 
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='110902' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='TD01'  and codmedico='000' 
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='110902' and asistido=0 and coditems like 'TD%' 
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='110902')
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='110902' and fecha_cita='09/25/2018'  and coditems like 'TD%' 
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='110902' AND ASISTIDO='0' and coditems like 'TD%'  
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('110902','9/21/2018','1','09/25/2018' ,'327','IMATOS','9/21/2018','IVELISSE MATOS ','0','0','0','0','1','0','07','TD01','1','1','1:15 PM','09/25/2018','13:45:00')
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:01:50.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:01:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:04:24.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:04:24.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:04:24.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:04:25.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:04:26.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:04:26.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:04:29.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='69069'  
+[2018-09-21 14:04:29.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:04:29.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='103515' and codconsulta<>'07' group by codclien
+[2018-09-21 14:04:29.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='103515'  and fecha_cita='2018/10/05' and codconsulta<>'07'
+[2018-09-21 14:04:31.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 14:04:32.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:04:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='103515' and coditems like 'TD%' 
+[2018-09-21 14:04:41.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE MCONSULTASS SET codmedico = '000' WHERE CODCLIEN='103515' AND fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='TD01' 
+[2018-09-21 14:04:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:04:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='103515' and asistido=0 and coditems like 'TD%' 
+[2018-09-21 14:04:41.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='103515')
+[2018-09-21 14:04:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='103515' and fecha_cita='09/21/2018'  and coditems like 'TD%' 
+[2018-09-21 14:04:41.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='103515' AND ASISTIDO='0' and coditems like 'TD%'  
+[2018-09-21 14:04:41.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('103515','9/21/2018','1','09/21/2018' ,'000','CCBAY2','9/21/2018','PROMO DE $5.00 DOLARES DE SEGUIMIENTO Y 20% DE DESCUENTO EN FARMACIA Y TRATAMIENTO KEILA','1','0','0','0','1','0','07','TD01','0','1','2:15 PM','09/21/2018','14:45:00')
+[2018-09-21 14:04:42.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:04:42.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:04:42.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:04:42.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:04:47.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:04:47.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:04:47.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:04:48.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:05:04.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultass Set  terapias='6' where codclien='103515' and fecha_cita='9/21/2018' and coditems='TD01' and codconsulta='07' 
+[2018-09-21 14:05:04.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='103515' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:05:04.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='103515' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='69069' and codconsulta='07' group by codclien
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='69069' and codconsulta='07' group by codclien
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='69069'  
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='103515' and codconsulta<>'07' group by codclien
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='103515'  and fecha_cita='2018/10/05' and codconsulta<>'07'
+[2018-09-21 14:05:05.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:05:08.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/24/2018' and activo = 1 
+[2018-09-21 14:05:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultas where codclien='103515' 
+[2018-09-21 14:05:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultas WHERE CODCLIEN='103515' AND fecha_cita='2018-09-21' and codmedico='000' 
+[2018-09-21 14:05:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:05:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultas where codclien='103515' and asistido=0 
+[2018-09-21 14:05:15.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='103515' AND ASISTIDO=0
+[2018-09-21 14:05:15.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE MCONSULTAS SET FECHA_CITA='09/24/2018',usuario = 'CCBAY2',confirmado='0',noasistido='0',activa='1',codmedico = '000', observacion = 'PROMO DE $5.00 DOLARES DE SEGUIMIENTO Y 20% DE DESCUENTO EN FARMACIA Y TRATAMIENTO KEILA', regusuario='DCAMPOS', llegada='',codconsulta='01' WHERE CODCLIEN='103515' AND ASISTIDO='0' and ID='250676' 
+[2018-09-21 14:05:16.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:05:16.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:05:16.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:05:16.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:05:57.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:05:57.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:05:57.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:05:57.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:05:58.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:05:58.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:06:02.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='68427'  
+[2018-09-21 14:06:02.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:06:02.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='105595' and codconsulta<>'07' group by codclien
+[2018-09-21 14:06:02.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='105595'  and fecha_cita='2018/10/05' and codconsulta<>'07'
+[2018-09-21 14:06:04.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 14:06:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='105595' and coditems like 'TD%' 
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='105595' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='TD01'  and codmedico='000' 
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='105595' and asistido=0 and coditems like 'TD%' 
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='105595')
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='105595' and fecha_cita='09/21/2018'  and coditems like 'TD%' 
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='105595' AND ASISTIDO='0' and coditems like 'TD%'  
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('105595','9/21/2018','1','09/21/2018' ,'317','CCBAY2','9/21/2018','KEILA PROMO $ 5.00 CONSULTA SEGUIMIENTO','0','0','0','0','1','0','07','TD01','0','1','2:15 PM','09/21/2018','14:45:00')
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:06:12.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:06:13.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:06:20.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:06:20.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:06:20.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:06:20.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:06:25.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultass Set  terapias='1' where codclien='105595' and fecha_cita='9/21/2018' and coditems='TD01' and codconsulta='07' 
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='105595' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='105595' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='68427'  
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='68427' and codconsulta='07' group by codclien
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='68427' and codconsulta='07' group by codclien
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='105595' and codconsulta<>'07' group by codclien
+[2018-09-21 14:06:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='105595'  and fecha_cita='2018/10/05' and codconsulta<>'07'
+[2018-09-21 14:06:33.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/24/2018' and activo = 1 
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='105595' and coditems like 'TD%' 
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='105595' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='TD01'  and codmedico='000' 
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='105595' and asistido=0 and coditems like 'TD%' 
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='105595')
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='105595' and fecha_cita='09/24/2018'  and coditems like 'TD%' 
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='105595' AND ASISTIDO='0' and coditems like 'TD%'  
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('105595','9/21/2018','1','09/24/2018' ,'317','CCBAY2','9/21/2018','KEILA PROMO $ 5.00 CONSULTA SEGUIMIENTO','0','0','0','0','1','0','07','TD01','0','1','12:15 PM','09/24/2018','12:45:00')
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:06:41.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:06:42.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:06:55.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:06:55.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:06:55.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:06:56.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:07:04.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultass Set  terapias='4' where codclien='22681' and fecha_cita='9/21/2018' and coditems='TD01' and codconsulta='07' 
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='22681' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='22681' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='71235'  
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71235' and codconsulta='07' group by codclien
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71235' and codconsulta='07' group by codclien
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='22681' and codconsulta<>'07' group by codclien
+[2018-09-21 14:07:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='22681'  and fecha_cita='2018/10/03' and codconsulta<>'07'
+[2018-09-21 14:07:08.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/24/2018' and activo = 1 
+[2018-09-21 14:07:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='22681' and coditems like 'TD%' 
+[2018-09-21 14:07:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='22681' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='TD01'  and codmedico='000' 
+[2018-09-21 14:07:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:07:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='22681' and asistido=0 and coditems like 'TD%' 
+[2018-09-21 14:07:15.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='22681')
+[2018-09-21 14:07:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='22681' and fecha_cita='09/24/2018'  and coditems like 'TD%' 
+[2018-09-21 14:07:15.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='22681' AND ASISTIDO='0' and coditems like 'TD%'  
+[2018-09-21 14:07:15.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('22681','9/21/2018','1','09/24/2018' ,'000','KBLASINI','9/21/2018','KAROLA NO LLAMAR SOLICITO EL 9/10/18 DEVOLUCION DE DINERO CON HANCE...SE ATENDERA PRIMERO CON DOCTOR ANTES DE SEGUIR CON LOS TRATAMIENTOS','0','0','0','0','1','0','07','TD01','3','3','2:15 PM','09/24/2018','14:45:00')
+[2018-09-21 14:07:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:07:15.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:07:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:07:16.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:07:58.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:07:58.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:07:58.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:07:58.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:08:07.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:08:07.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:08:07.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:08:07.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:08:09.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:08:09.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:08:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='68612'  
+[2018-09-21 14:08:14.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:08:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='99655' and codconsulta<>'07' group by codclien
+[2018-09-21 14:08:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='99655'  and fecha_cita='2018/10/02' and codconsulta<>'07'
+[2018-09-21 14:08:17.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 14:08:19.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems in ('TD01','TD03','TD05','TD06','TD09','TD10','TD12','LI001','LI002')  
+[2018-09-21 14:08:20.000000 192.130.74.72  - [query->DCAMPOS] ]  Select * from VIEW_SoloServicios where [cod_subgrupo] ='SUEROTERAPIA' 
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='99655' and coditems like '%ST' 
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE MCONSULTASS SET codmedico = '315' WHERE CODCLIEN='99655' AND fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='25GST' 
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='99655' and asistido=0   and coditems like '%ST'
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='99655')
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='99655' and fecha_cita='09/21/2018'   and coditems like '%ST'
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='99655' AND ASISTIDO='0' and coditems like '%ST' 
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('99655','9/21/2018','1','09/21/2018' ,'315','CDIAZ','9/21/2018','CECI///','1','0','0','0','1','0','07','25GST','0','0','2:15 PM','09/21/2018','14:45:00')
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:08:27.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:08:28.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:08:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:08:35.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:08:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:08:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:08:36.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='99655' and fecha_cita='9/21/2018'  and  CODITEMS ='25GST' 
+[2018-09-21 14:08:36.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='99655' and fecha_cita='9/21/2018'  and  CODITEMS ='25GST' 
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='68612'  
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='68612' and codconsulta='07' group by codclien
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='68612' and codconsulta='07' group by codclien
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems in ('TD01','TD03','TD05','TD06','TD09','TD10','TD12','LI001','LI002')  
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ]  Select * from VIEW_SoloServicios where [cod_subgrupo] ='SUEROTERAPIA' 
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems in ('TD01','TD03','TD05','TD06','TD09','TD10','TD12','LI001','LI002')  
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ]  Select * from VIEW_SoloServicios where [cod_subgrupo] ='SUEROTERAPIA' 
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ]  Select * from VIEW_SoloServicios where [cod_subgrupo] ='SUEROTERAPIA' 
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='99655' and codconsulta<>'07' group by codclien
+[2018-09-21 14:08:37.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='99655'  and fecha_cita='2018/10/02' and codconsulta<>'07'
+[2018-09-21 14:08:39.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 14:08:40.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:08:43.000000 192.130.74.72  - [query->DCAMPOS] ]  Select * from VIEW_SoloServicios where [cod_subgrupo] ='SUEROTERAPIA' 
+[2018-09-21 14:09:40.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 200 * from Mclientes where  Historia = '71492'  Order  by nombres 
+[2018-09-21 14:09:40.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111198'  and activa='1' order by forder desc  
+[2018-09-21 14:12:55.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:12:55.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:12:55.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:12:55.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:13:01.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:13:01.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:13:01.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:13:01.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:13:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:13:08.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:13:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:13:09.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:13:10.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:13:10.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:13:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='57926'  
+[2018-09-21 14:13:14.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:13:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='88056' and codconsulta<>'07' group by codclien
+[2018-09-21 14:13:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='88056'  and fecha_cita='2018/09/24' and codconsulta<>'07'
+[2018-09-21 14:13:43.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 14:13:44.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 14:13:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='88056' and coditems like 'TD%' 
+[2018-09-21 14:13:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='88056' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='LI001'  and codmedico='000' 
+[2018-09-21 14:13:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:13:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='88056' and asistido=0 and coditems like 'LI%' 
+[2018-09-21 14:13:51.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='88056')
+[2018-09-21 14:13:51.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='88056' and fecha_cita='09/21/2018'  and coditems like 'LI%' 
+[2018-09-21 14:13:51.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='88056' AND ASISTIDO='0' and  coditems like 'LI%' 
+[2018-09-21 14:13:51.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('88056','9/21/2018','1','09/21/2018' ,'000','CCBAY2','9/21/2018','KEILA','0','0','0','1','1','0','07','LI001','0','0','2:15 PM','09/21/2018','14:45:00')
+[2018-09-21 14:13:52.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:13:52.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:13:52.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:13:52.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:14:38.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:14:38.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:14:38.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:14:38.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:14:39.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='88056' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 14:14:39.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='88056' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='57926' and codconsulta='07' group by codclien
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='57926' and codconsulta='07' group by codclien
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='57926'  
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='88056' and codconsulta<>'07' group by codclien
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='88056'  and fecha_cita='2018/09/24' and codconsulta<>'07'
+[2018-09-21 14:14:40.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:14:43.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:14:44.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 14:14:55.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/24/2018' and activo = 1 
+[2018-09-21 14:15:01.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='88056' and coditems like 'TD%' 
+[2018-09-21 14:15:01.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='88056' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='LI001'  and codmedico='000' 
+[2018-09-21 14:15:01.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE MCONSULTASS SET codmedico = '000' WHERE CODCLIEN='88056' AND fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='LI001' 
+[2018-09-21 14:15:01.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:15:01.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='88056' and asistido=0 and coditems like 'LI%' 
+[2018-09-21 14:15:01.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='88056')
+[2018-09-21 14:15:01.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='88056' and fecha_cita='09/24/2018'  and coditems like 'LI%' 
+[2018-09-21 14:15:01.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='88056' AND ASISTIDO='0' and  coditems like 'LI%' 
+[2018-09-21 14:15:01.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('88056','9/21/2018','1','09/24/2018' ,'000','CCBAY2','9/21/2018','KEILA','0','0','0','1','1','0','07','LI001','0','0','9:15 PM','09/24/2018','21:45:00')
+[2018-09-21 14:15:02.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:15:02.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:15:02.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:15:03.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:15:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 200 * from Mclientes where  Historia = '71649'  Order  by nombres 
+[2018-09-21 14:15:35.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='109253'  and activa='1' order by forder desc  
+[2018-09-21 14:18:45.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 200 * from Mclientes where  Historia = '71469'  Order  by nombres 
+[2018-09-21 14:18:45.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='98225'  and activa='1' order by forder desc  
+[2018-09-21 14:19:04.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 200 * from Mclientes where  Historia = '71492'  Order  by nombres 
+[2018-09-21 14:19:05.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111198'  and activa='1' order by forder desc  
+[2018-09-21 14:19:56.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '09-21-2018' and '09-21-2018' and statfact <>'2'
+[2018-09-21 14:19:57.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '09-21-2018' and '09-21-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-09-21 14:19:57.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '09-21-2018' and '09-21-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-09-21 14:19:57.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-21-2018' and '09-21-2018' and cod_subgrupo='CONSULTA' 
+[2018-09-21 14:19:58.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '09-21-2018' and '09-21-2018' and d.coditems like 'TD%' 
+[2018-09-21 14:19:59.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '09-21-2018' and '09-21-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-09-21 14:19:59.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '09-21-2018' and '09-21-2018') and d.coditems like 'LI%' 
+[2018-09-21 14:20:37.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '09-21-2018' and '09-21-2018' and medico<>''
+[2018-09-21 14:20:37.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '09-21-2018' and '09-21-2018' 
+[2018-09-21 14:20:37.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '09-21-2018' and '09-21-2018' and medico<>'' group by medico,Dventa
+[2018-09-21 14:20:37.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '09-21-2018' and '09-21-2018' and medico<>'' group by medico
+[2018-09-21 14:20:37.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '09/21/2018' and '09/21/2018' and medico<>''
+[2018-09-21 14:20:38.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '09-21-2018' and '09-21-2018' and medico<>''
+[2018-09-21 14:20:38.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '09-21-2018' and '09-21-2018' 
+[2018-09-21 14:20:38.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '09-21-2018' and '09-21-2018' and medico<>'' group by medico,Dventa
+[2018-09-21 14:20:38.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '09-21-2018' and '09-21-2018' and medico<>'' group by medico
+[2018-09-21 14:20:39.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '09/21/2018' and '09/21/2018' and medico<>''
+[2018-09-21 14:36:46.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 200 * from Mclientes where  Historia = '71489'  Order  by nombres 
+[2018-09-21 14:36:46.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='111413'  and activa='1' order by forder desc  
+[2018-09-21 14:58:19.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:58:19.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:58:19.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:58:19.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:58:21.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:58:21.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:58:25.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='71217'  
+[2018-09-21 14:58:25.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='85319' and codconsulta<>'07' group by codclien
+[2018-09-21 14:58:25.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='85319'  and fecha_cita='2018/09/21' and codconsulta<>'07'
+[2018-09-21 14:58:25.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:58:26.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 14:58:34.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='85319' and coditems like 'TD%' 
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='85319' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='LI001'  and codmedico='000' 
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='85319' and asistido=0 and coditems like 'LI%' 
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='85319')
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='85319' and fecha_cita='09/21/2018'  and coditems like 'LI%' 
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='85319' AND ASISTIDO='0' and  coditems like 'LI%' 
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('85319','9/21/2018','1','09/21/2018' ,'332','KBLASINI','9/21/2018','KAROLA /  ANTES TIENE LA CITA CON EL MEDICO LUEGO VA A LA TERAPIA 
+ATENDIDO POR LA DRA . HERRERA ','0','0','0','0','1','0','07','LI001','1','1','3:00 PM','09/21/2018','15:30:00')
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:58:35.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:58:36.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:58:39.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:58:39.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:58:39.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:58:40.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:58:45.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='85319' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 14:58:45.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='85319' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71217' and codconsulta='07' group by codclien
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71217' and codconsulta='07' group by codclien
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='71217'  
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='85319' and codconsulta<>'07' group by codclien
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='85319'  and fecha_cita='2018/09/21' and codconsulta<>'07'
+[2018-09-21 14:58:46.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:58:58.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/25/2018' and activo = 1 
+[2018-09-21 14:59:04.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultas where codclien='85319' 
+[2018-09-21 14:59:04.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultas WHERE CODCLIEN='85319' AND fecha_cita='2018-09-21' and codmedico='000' 
+[2018-09-21 14:59:04.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 14:59:04.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultas where codclien='85319' and asistido=0 
+[2018-09-21 14:59:04.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='85319' AND ASISTIDO=0
+[2018-09-21 14:59:04.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE MCONSULTAS SET FECHA_CITA='09/25/2018',usuario = 'KBLASINI',confirmado='0',noasistido='0',activa='1',codmedico = '332', observacion = 'KAROLA /  ANTES TIENE LA CITA CON EL MEDICO LUEGO VA A LA TERAPIA 
+ATENDIDO POR LA DRA . HERRERA ', regusuario='DCAMPOS', llegada='',codconsulta='01' WHERE CODCLIEN='85319' AND ASISTIDO='0' and ID='250706' 
+[2018-09-21 14:59:04.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:59:04.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:59:04.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:59:05.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:59:48.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:59:48.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:59:48.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:59:48.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:59:52.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 14:59:52.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 14:59:52.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 14:59:53.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 14:59:54.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 14:59:54.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:59:58.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='46134'  
+[2018-09-21 14:59:58.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 14:59:58.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='67168' and codconsulta<>'07' group by codclien
+[2018-09-21 14:59:59.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='67168'  and fecha_cita='2018/10/22' and codconsulta<>'07'
+[2018-09-21 14:59:59.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems in ('TD01','TD03','TD05','TD06','TD09','TD10','TD12','LI001','LI002')  
+[2018-09-21 15:00:03.000000 192.130.74.72  - [query->DCAMPOS] ]  Select * from VIEW_SoloServicios where [cod_subgrupo] ='SUEROTERAPIA' 
+[2018-09-21 15:00:07.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 15:00:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select count(*) cant from mconsultass where codclien='67168' and coditems like '%ST' 
+[2018-09-21 15:00:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass WHERE CODCLIEN='67168' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='75GST'  and codmedico='000' 
+[2018-09-21 15:00:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select *  from loginpass where login ='DCAMPOS' 
+[2018-09-21 15:00:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='67168' and asistido=0   and coditems like '%ST'
+[2018-09-21 15:00:08.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='67168')
+[2018-09-21 15:00:08.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from mconsultass where codclien='67168' and fecha_cita='09/21/2018'   and coditems like '%ST'
+[2018-09-21 15:00:08.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='67168' AND ASISTIDO='0' and coditems like '%ST' 
+[2018-09-21 15:00:08.000000 192.130.74.72  - [query->DCAMPOS] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('67168','9/21/2018','1','09/21/2018' ,'320','CCBAY1','9/21/2018','.','0','0','0','0','1','0','07','75GST','0','0','3:00 PM','09/21/2018','15:30:00')
+[2018-09-21 15:00:09.000000 192.130.74.72  - [query->DCAMPOS] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:00:09.000000 192.130.74.72  - [query->DCAMPOS] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:00:09.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:00:09.000000 192.130.74.72  - [query->DCAMPOS] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT * from mconsultasS where codclien='67168' and fecha_cita='9/21/2018'  and  CODITEMS ='75GST' 
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='67168' and fecha_cita='9/21/2018'  and  CODITEMS ='75GST' 
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select TOP 25 * from Mclientes where  Historia ='46134'  
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='46134' and codconsulta='07' group by codclien
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='46134' and codconsulta='07' group by codclien
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems in ('TD01','TD03','TD05','TD06','TD09','TD10','TD12','LI001','LI002')  
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ] Select * from VIEW_SoloServicios where coditems in ('TD01','TD03','TD05','TD06','TD09','TD10','TD12','LI001','LI002')  
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ]  Select * from VIEW_SoloServicios where [cod_subgrupo] ='SUEROTERAPIA' 
+[2018-09-21 15:00:14.000000 192.130.74.72  - [query->DCAMPOS] ]  Select * from VIEW_SoloServicios where [cod_subgrupo] ='SUEROTERAPIA' 
+[2018-09-21 15:00:15.000000 192.130.74.72  - [query->DCAMPOS] ]  Select * from VIEW_SoloServicios where [cod_subgrupo] ='SUEROTERAPIA' 
+[2018-09-21 15:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='67168' and codconsulta<>'07' group by codclien
+[2018-09-21 15:00:15.000000 192.130.74.72  - [query->DCAMPOS] ] Select observacion from VIEW_mconsultas_02 where codclien='67168'  and fecha_cita='2018/10/22' and codconsulta<>'07'
+[2018-09-21 15:00:20.000000 192.130.74.72  - [query->DCAMPOS] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 15:00:42.000000 192.130.74.72  - [query->log-in] ] Select * from loginpass WHERE login = 'KDOLIVEIRA' and passwork ='KDO2018' 
+[2018-09-21 15:00:42.000000 192.130.74.72  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'KDOLIVEIRA' 
+[2018-09-21 15:00:49.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:00:49.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:00:49.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:00:50.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:00:52.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:00:52.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:00:52.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:00:53.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:00:58.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:00:58.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:00:58.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:00:58.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:01:12.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:01:12.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:01:12.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:01:13.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT * from mconsultasS where codclien='33223' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='33223' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select TOP 25 * from Mclientes where  Historia ='31304'  
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='31304' and codconsulta='07' group by codclien
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='31304' and codconsulta='07' group by codclien
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='33223' and codconsulta<>'07' group by codclien
+[2018-09-21 15:01:15.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select observacion from VIEW_mconsultas_02 where codclien='33223'  and fecha_cita='2018/09/25' and codconsulta<>'07'
+[2018-09-21 15:01:19.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select * from Feriado where FECHA='09/25/2018' and activo = 1 
+[2018-09-21 15:01:23.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select count(*) cant from mconsultas where codclien='33223' 
+[2018-09-21 15:01:23.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from mconsultas WHERE CODCLIEN='33223' AND fecha_cita='2018-09-21' and codmedico='000' 
+[2018-09-21 15:01:23.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select *  from loginpass where login ='KDOLIVEIRA' 
+[2018-09-21 15:01:23.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from mconsultas where codclien='33223' and asistido=0 
+[2018-09-21 15:01:23.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='33223' AND ASISTIDO=0
+[2018-09-21 15:01:23.000000 192.130.74.72  - [query->KDOLIVEIRA] ] UPDATE MCONSULTAS SET FECHA_CITA='09/25/2018',usuario = 'CCBAY1',confirmado='0',noasistido='0',activa='1',codmedico = '315', observacion = '. VINE CON LUIS RIVERA DE CECI ', regusuario='KDOLIVEIRA', llegada='',codconsulta='01' WHERE CODCLIEN='33223' AND ASISTIDO='0' and ID='249877' 
+[2018-09-21 15:01:23.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:01:23.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:01:23.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:01:24.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:01:40.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:01:40.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:01:40.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:01:40.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:01:46.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT * from mconsultasS where codclien='85319' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 15:01:46.000000 192.130.74.72  - [query->KDOLIVEIRA] ] DELETE FROM  mconsultasS  where codclien='85319' and asistido='0' and fecha_cita>'9/21/2018'
+[2018-09-21 15:01:46.000000 192.130.74.72  - [query->KDOLIVEIRA] ] UPDATE mconsultasS  SET asistido = '0', noasistido = '0' where codclien='85319' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 15:01:47.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT * from mconsultasS where codclien='85319' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 15:01:47.000000 192.130.74.72  - [query->KDOLIVEIRA] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='85319' and fecha_cita='9/21/2018'  and  CODITEMS ='LI001' 
+[2018-09-21 15:01:47.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71217' and codconsulta='07' group by codclien
+[2018-09-21 15:01:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71217' and codconsulta='07' group by codclien
+[2018-09-21 15:01:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select TOP 25 * from Mclientes where  Historia ='71217'  
+[2018-09-21 15:01:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 15:01:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 15:01:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:01:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from VIEW_SoloServicios where coditems like '%LI%' 
+[2018-09-21 15:01:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:01:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='85319' and codconsulta<>'07' group by codclien
+[2018-09-21 15:01:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select observacion from VIEW_mconsultas_02 where codclien='85319'  and fecha_cita='2018/09/25' and codconsulta<>'07'
+[2018-09-21 15:01:50.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select * from Feriado where FECHA='09/27/2018' and activo = 1 
+[2018-09-21 15:01:54.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select count(*) cant from mconsultass where codclien='85319' and coditems like 'TD%' 
+[2018-09-21 15:01:54.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from mconsultass WHERE CODCLIEN='85319' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='LI001'  and codmedico='000' 
+[2018-09-21 15:01:54.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select *  from loginpass where login ='KDOLIVEIRA' 
+[2018-09-21 15:01:54.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from mconsultass where codclien='85319' and asistido=0 and coditems like 'LI%' 
+[2018-09-21 15:01:54.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='85319')
+[2018-09-21 15:01:54.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from mconsultass where codclien='85319' and fecha_cita='09/27/2018'  and coditems like 'LI%' 
+[2018-09-21 15:01:54.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='85319' AND ASISTIDO='0' and  coditems like 'LI%' 
+[2018-09-21 15:01:54.000000 192.130.74.72  - [query->KDOLIVEIRA] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('85319','9/21/2018','1','09/27/2018' ,'332','KBLASINI','9/21/2018','KAROLA /  ANTES TIENE LA CITA CON EL MEDICO LUEGO VA A LA TERAPIA 
+ATENDIDO POR LA DRA . HERRERA ','0','0','0','0','1','0','07','LI001','0','0','2:00 PM','09/27/2018','14:30:00')
+[2018-09-21 15:01:55.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:01:55.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:01:55.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:01:55.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:15:11.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select TOP 200 * from Mclientes where  Historia = '44685'  Order  by nombres 
+[2018-09-21 15:15:12.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='64509'  and activa='1' order by forder desc  
+[2018-09-21 15:17:39.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:17:39.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:17:39.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:17:40.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:17:43.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:17:43.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:17:43.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:17:43.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:17:44.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:17:44.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 15:17:47.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select TOP 25 * from Mclientes where  Historia ='71313'  
+[2018-09-21 15:17:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:17:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='111277' and codconsulta<>'07' group by codclien
+[2018-09-21 15:17:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select observacion from VIEW_mconsultas_02 where codclien='111277'  and fecha_cita='2018/10/09' and codconsulta<>'07'
+[2018-09-21 15:17:48.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 15:17:56.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select count(*) cant from mconsultass where codclien='111277' and coditems like 'TD%' 
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from mconsultass WHERE CODCLIEN='111277' and  fecha_cita='2018-09-21'  and  codconsulta='07' and coditems='TD01'  and codmedico='000' 
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select *  from loginpass where login ='KDOLIVEIRA' 
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from mconsultass where codclien='111277' and asistido=0 and coditems like 'TD%' 
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT usuario From  mconsultas a  Where a.Id=(select max(id) from mconsultas where codclien='111277')
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from mconsultass where codclien='111277' and fecha_cita='09/21/2018'  and coditems like 'TD%' 
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT MAX(ID) maxid from mconsultass a where a.codclien='111277' AND ASISTIDO='0' and coditems like 'TD%'  
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] INSERT into mconsultaSS (codclien,fecha,citados,fecha_cita,codmedico,usuario,fecreg,observacion,primera_control,nocitados,confirmado,citacontrol,servicios,asistido,codconsulta,Coditems,mls,hilt,hora,enddate,endtime) Values ('111277','9/21/2018','1','09/21/2018' ,'327','IMATOS','9/21/2018','IVELISSE MATOS','0','0','0','0','1','0','07','TD01','1','1','3:30 PM','09/21/2018','16:00:00')
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:17:57.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:17:58.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:18:02.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:18:02.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:18:02.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:18:03.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:18:06.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:18:06.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:18:06.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:18:06.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:18:10.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-09-21 15:18:10.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2018-09-21 15:18:10.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-09-21 15:18:10.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] UPDATE mconsultass Set  terapias='8' where codclien='111277' and fecha_cita='9/21/2018' and coditems='TD01' and codconsulta='07' 
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT * from mconsultasS where codclien='111277' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] UPDATE mconsultasS  SET asistido = '3', noasistido = '0' where codclien='111277' and fecha_cita='9/21/2018'  and  CODITEMS ='TD01' 
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select TOP 25 * from Mclientes where  Historia ='71313'  
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71313' and codconsulta='07' group by codclien
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where Cedula='71313' and codconsulta='07' group by codclien
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select * from VIEW_SoloServicios where coditems like '%TD%' 
+[2018-09-21 15:18:16.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:18:17.000000 192.130.74.72  - [query->KDOLIVEIRA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2018-09-21 15:18:17.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='111277' and codconsulta<>'07' group by codclien
+[2018-09-21 15:18:17.000000 192.130.74.72  - [query->KDOLIVEIRA] ] Select observacion from VIEW_mconsultas_02 where codclien='111277'  and fecha_cita='2018/10/09' and codconsulta<>'07'
+[2018-09-21 15:18:25.000000 192.130.74.72  - [query->KDOLIVEIRA] ] select * from Feriado where FECHA='09/21/2018' and activo = 1 

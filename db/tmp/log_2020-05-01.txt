@@ -1,0 +1,853 @@
+[2020-05-01 07:48:11.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'EDGARDO' and passwork ='bolo17' and activo=1 
+
+[2020-05-01 07:48:11.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'EDGARDO' 
+
+[2020-05-01 07:48:18.000000 192.130.74.97  - [query->EDGARDO] ] Select login,concat(Nombre,' ',apellido) usuario from loginpass  where activo ='1' order by usuario
+
+[2020-05-01 07:48:37.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/28/2020' and a.doc='04' and usuario='EDGARDO' and  statfact=3
+
+[2020-05-01 07:48:38.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/28/2020' and usuario='EDGARDO' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:48:38.000000 192.130.74.97  - [query->EDGARDO] ] SELECT * from cuadre WHERE fecha='04/28/2020' and usuario='EDGARDO' and id_centro = '1' order by valor desc
+
+[2020-05-01 07:48:38.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='04/28/2020' and id_centro='1' and usuario='EDGARDO' group by usuario 
+
+[2020-05-01 07:48:38.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto from MFactura where fechafac='04/28/2020'  and usuario='EDGARDO' and  statfact=3  
+
+[2020-05-01 07:48:40.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='04/28/2020' and id_centro = '1' group by valor order by valor desc
+
+[2020-05-01 07:48:40.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/28/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:48:40.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='04/28/2020' and Id_centro='1' group by usuario
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='04/28/2020' and id_centro = '1'  group by valor order by valor desc
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/28/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto, count(*) facturas   from MFactura where fechafac='04/28/2020'  and statfact=3 
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/28/2020' and a.doc='04' and statfact=3  
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/28/2020' and a.doc='04' and statfact=3  
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/28/2020' and a.doc='04' and statfact=3  
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date),101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete,a.Historia,a.initials  FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '04/28/2020' AND '04/28/2020'  And  a.total>=0  Order by a.numfactu desc 
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/28/2020' AND '04/28/2020'  Order By d.modopago 
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/28/2020' AND '04/28/2020' and numfactu='0039160'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/28/2020' AND '04/28/2020' and numfactu='0039159'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/28/2020' AND '04/28/2020' and numfactu='0039158'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:48:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/28/2020' AND '04/28/2020' and numfactu='0039157'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:48:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/28/2020' AND '04/28/2020' and numfactu='0039156'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:48:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/28/2020' AND '04/28/2020' and numfactu='0039155'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:48:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiarias a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '04/28/2020' AND '04/28/2020' AND a.statfact=3 And  a.total>=0  
+
+[2020-05-01 07:48:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between   '04/28/2020' AND '04/28/2020' AND  a.statfact=3  And  a.total<0 Order by a.numfactu desc 
+
+[2020-05-01 07:48:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '04/28/2020' AND '04/28/2020' AND  a.statfact=3  And  a.total<0  
+
+[2020-05-01 07:48:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '04/28/2020' AND '04/28/2020' AND  a.statfact=3   
+
+[2020-05-01 07:48:55.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='04/29/2020' and id_centro = '1' group by valor order by valor desc
+
+[2020-05-01 07:48:55.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/29/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:48:55.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/29/2020' and a.doc='04' and  statfact=3
+
+[2020-05-01 07:48:55.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='04/29/2020' and Id_centro='1' group by usuario
+
+[2020-05-01 07:48:55.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto from MFactura where fechafac='04/29/2020' and  statfact=3  
+
+[2020-05-01 07:48:55.000000 192.130.74.97  - [query->EDGARDO] ] SELECT * from cuadre WHERE fecha='04/29/2020' and usuario='EDGARDO' and id_centro = '1' order by valor desc
+
+[2020-05-01 07:48:56.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/29/2020' and usuario='EDGARDO' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:48:56.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='04/29/2020' and id_centro='1' and usuario='EDGARDO' group by usuario 
+
+[2020-05-01 07:48:56.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='04/29/2020' and id_centro = '1' group by valor order by valor desc
+
+[2020-05-01 07:48:56.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/29/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:48:56.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='04/29/2020' and Id_centro='1' group by usuario
+
+[2020-05-01 07:48:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='04/29/2020' and id_centro = '1'  group by valor order by valor desc
+
+[2020-05-01 07:48:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/29/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:48:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto, count(*) facturas   from MFactura where fechafac='04/29/2020'  and statfact=3 
+
+[2020-05-01 07:48:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/29/2020' and a.doc='04' and statfact=3  
+
+[2020-05-01 07:48:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/29/2020' and a.doc='04' and statfact=3  
+
+[2020-05-01 07:48:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/29/2020' and a.doc='04' and statfact=3  
+
+[2020-05-01 07:48:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date),101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete,a.Historia,a.initials  FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '04/29/2020' AND '04/29/2020'  And  a.total>=0  Order by a.numfactu desc 
+
+[2020-05-01 07:48:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/29/2020' AND '04/29/2020'  Order By d.modopago 
+
+[2020-05-01 07:48:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/29/2020' AND '04/29/2020' and numfactu='0039163'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:48:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/29/2020' AND '04/29/2020' and numfactu='0039162'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:48:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/29/2020' AND '04/29/2020' and numfactu='0039161'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:48:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiarias a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '04/29/2020' AND '04/29/2020' AND a.statfact=3 And  a.total>=0  
+
+[2020-05-01 07:48:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between   '04/29/2020' AND '04/29/2020' AND  a.statfact=3  And  a.total<0 Order by a.numfactu desc 
+
+[2020-05-01 07:48:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '04/29/2020' AND '04/29/2020' AND  a.statfact=3  And  a.total<0  
+
+[2020-05-01 07:48:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '04/29/2020' AND '04/29/2020' AND  a.statfact=3   
+
+[2020-05-01 07:49:07.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='04/30/2020' and id_centro = '1' group by valor order by valor desc
+
+[2020-05-01 07:49:07.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/30/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:49:07.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/30/2020' and a.doc='04' and  statfact=3
+
+[2020-05-01 07:49:07.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='04/30/2020' and Id_centro='1' group by usuario
+
+[2020-05-01 07:49:07.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto from MFactura where fechafac='04/30/2020' and  statfact=3  
+
+[2020-05-01 07:49:07.000000 192.130.74.97  - [query->EDGARDO] ] SELECT * from cuadre WHERE fecha='04/30/2020' and usuario='EDGARDO' and id_centro = '1' order by valor desc
+
+[2020-05-01 07:49:08.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/30/2020' and usuario='EDGARDO' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:49:08.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='04/30/2020' and id_centro='1' and usuario='EDGARDO' group by usuario 
+
+[2020-05-01 07:49:08.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='04/30/2020' and id_centro = '1' group by valor order by valor desc
+
+[2020-05-01 07:49:08.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/30/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:49:08.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='04/30/2020' and Id_centro='1' group by usuario
+
+[2020-05-01 07:49:09.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='04/30/2020' and id_centro = '1'  group by valor order by valor desc
+
+[2020-05-01 07:49:09.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='04/30/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-01 07:49:09.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto, count(*) facturas   from MFactura where fechafac='04/30/2020'  and statfact=3 
+
+[2020-05-01 07:49:09.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/30/2020' and a.doc='04' and statfact=3  
+
+[2020-05-01 07:49:09.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/30/2020' and a.doc='04' and statfact=3  
+
+[2020-05-01 07:49:09.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '04/30/2020' and a.doc='04' and statfact=3  
+
+[2020-05-01 07:49:09.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date),101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete,a.Historia,a.initials  FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '04/30/2020' AND '04/30/2020'  And  a.total>=0  Order by a.numfactu desc 
+
+[2020-05-01 07:49:10.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/30/2020' AND '04/30/2020'  Order By d.modopago 
+
+[2020-05-01 07:49:10.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/30/2020' AND '04/30/2020' and numfactu='0039165'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:49:10.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '04/30/2020' AND '04/30/2020' and numfactu='0039164'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-01 07:49:10.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiarias a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '04/30/2020' AND '04/30/2020' AND a.statfact=3 And  a.total>=0  
+
+[2020-05-01 07:49:10.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between   '04/30/2020' AND '04/30/2020' AND  a.statfact=3  And  a.total<0 Order by a.numfactu desc 
+
+[2020-05-01 07:49:10.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '04/30/2020' AND '04/30/2020' AND  a.statfact=3  And  a.total<0  
+
+[2020-05-01 07:49:10.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '04/30/2020' AND '04/30/2020' AND  a.statfact=3   
+
+[2020-05-01 07:50:10.000000 192.130.74.97  - [query->EDGARDO] ] SELECT desitems,coditems,SUM(t.ventas) ventas,SUM(compra) compras,SUM(devcompra) AS devcompra,SUM(anulaciones) AS devVentas,SUM(ne) AS NE,SUM(nc) AS NC,SUM(ajustespos) AS Ajustes_mas,SUM(ajustesneg) AS Ajustes_neg,(SELECT isnull(SUM(DC.existencia),0) From DCierreInventario DC WHERE coditems=t.coditems AND fechacierre='04/30/2020') AS existencia FROM TEST011516 t WHERE (fechacierre BETWEEN '04/30/2020' AND '05/30/2020') GROUP BY desitems,coditems ORDER BY desitems
+
+[2020-05-01 07:51:05.000000 192.130.74.97  - [query->EDGARDO] ] SELECT desitems,coditems,SUM(t.ventas) ventas,SUM(compra) compras,SUM(devcompra) AS devcompra,SUM(anulaciones) AS devVentas,SUM(ne) AS NE,SUM(nc) AS NC,SUM(ajustespos) AS Ajustes_mas,SUM(ajustesneg) AS Ajustes_neg,(SELECT isnull(SUM(DC.existencia),0) From DCierreInventario DC WHERE coditems=t.coditems AND fechacierre='04/01/2020') AS existencia FROM TEST011516 t WHERE (fechacierre BETWEEN '04/01/2020' AND '05/30/2020') GROUP BY desitems,coditems ORDER BY desitems
+
+[2020-05-01 07:51:16.000000 192.130.74.97  - [query->EDGARDO] ] SELECT desitems,coditems,(SELECT isnull(SUM(D.cantidad),0)+SUM(t.ventas) FROM dfactura D RIGHT JOIN mfactura ON D.numfactu=mfactura.numfactu WHERE coditems=t.coditems AND D.fechafac='05/01/2020') AS ventas,(SELECT isnull(SUM(C.cantidad),0)+SUM(t.compra) FROM dcompra C LEFT JOIN mcompra E ON C.factcomp=E.factcomp WHERE coditems=t.coditems AND E.fechapost='04/01/2020') AS compras,(SELECT isnull(SUM(V.cantidad),0)+SUM(t.devcompra) FROM devcompra V WHERE coditems=t.coditems AND fecreg='05/01/2020') AS devcompra,(SELECT isnull(SUM(D.cantidad),0)+SUM(t.anulaciones) FROM dfactura D RIGHT JOIN mfactura M ON D.numfactu=M.numfactu WHERE coditems=t.coditems AND M.fechanul='05/01/2020' AND M.statfact='2') AS devVentas,(SELECT isnull(SUM(N.cantidad),0)+SUM(t.ne) FROM notentdetalle N RIGHT JOIN notaentrega M ON N.numnotent=M.numnotent WHERE coditems=t.coditems AND M.fechanot='05/01/2020' AND M.statunot<>'2') AS NE,(SELECT isnull(SUM(D.cantidad),0)+SUM(t.nc) FROM dnotacredito D RIGHT JOIN mnotacredito M ON D.numnotcre=M.numnotcre WHERE coditems=t.coditems AND M.fechanot='05/01/2020' AND M.statnc<>'2') AS NC,(SELECT isnull(SUM(D.cantidad),0)+SUM(ajustespos) FROM dajustes D WHERE coditems=t.coditems AND fechajust='05/01/2020' AND D.cantidad>0) AS Ajustes_mas,(SELECT isnull(SUM(P.cantidad),0)+SUM(ajustesneg) FROM dajustes P WHERE coditems=t.coditems AND fechajust='05/01/2020' AND P.cantidad<0) AS Ajustes_neg,(SELECT isnull(SUM(I.existencia),0) From DCierreInventario I WHERE coditems=t.coditems AND fechacierre='04/01/2020') AS existencia FROM TEST011516 t WHERE(fechacierre BETWEEN '04/01/2020' AND '05/01/2020') GROUP BY desitems,coditems ORDER BY desitems
+
+[2020-05-01 07:51:20.000000 192.130.74.97  - [query->EDGARDO] ] SELECT desitems,coditems,(SELECT isnull(SUM(D.cantidad),0)+SUM(t.ventas) FROM dfactura D RIGHT JOIN mfactura ON D.numfactu=mfactura.numfactu WHERE coditems=t.coditems AND D.fechafac='05/01/2020') AS ventas,(SELECT isnull(SUM(C.cantidad),0)+SUM(t.compra) FROM dcompra C LEFT JOIN mcompra E ON C.factcomp=E.factcomp WHERE coditems=t.coditems AND E.fechapost='05/01/2020') AS compras,(SELECT isnull(SUM(V.cantidad),0)+SUM(t.devcompra) FROM devcompra V WHERE coditems=t.coditems AND fecreg='05/01/2020') AS devcompra,(SELECT isnull(SUM(D.cantidad),0)+SUM(t.anulaciones) FROM dfactura D RIGHT JOIN mfactura M ON D.numfactu=M.numfactu WHERE coditems=t.coditems AND M.fechanul='05/01/2020' AND M.statfact='2') AS devVentas,(SELECT isnull(SUM(N.cantidad),0)+SUM(t.ne) FROM notentdetalle N RIGHT JOIN notaentrega M ON N.numnotent=M.numnotent WHERE coditems=t.coditems AND M.fechanot='05/01/2020' AND M.statunot<>'2') AS NE,(SELECT isnull(SUM(D.cantidad),0)+SUM(t.nc) FROM dnotacredito D RIGHT JOIN mnotacredito M ON D.numnotcre=M.numnotcre WHERE coditems=t.coditems AND M.fechanot='05/01/2020' AND M.statnc<>'2') AS NC,(SELECT isnull(SUM(D.cantidad),0)+SUM(ajustespos) FROM dajustes D WHERE coditems=t.coditems AND fechajust='05/01/2020' AND D.cantidad>0) AS Ajustes_mas,(SELECT isnull(SUM(P.cantidad),0)+SUM(ajustesneg) FROM dajustes P WHERE coditems=t.coditems AND fechajust='05/01/2020' AND P.cantidad<0) AS Ajustes_neg,(SELECT isnull(SUM(I.existencia),0) From DCierreInventario I WHERE coditems=t.coditems AND fechacierre='05/01/2020') AS existencia FROM TEST011516 t WHERE(fechacierre BETWEEN '05/01/2020' AND '05/01/2020') GROUP BY desitems,coditems ORDER BY desitems
+
+[2020-05-01 08:01:30.000000 192.130.74.162  - [query->log-in] ] Select * from loginpass WHERE login = 'EDGARDO' and passwork ='bolo17' and activo=1 
+
+[2020-05-01 08:01:30.000000 192.130.74.162  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'EDGARDO' 
+
+[2020-05-01 08:01:40.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:01:40.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:01:40.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:01:40.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:21:02.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:21:02.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:21:02.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:21:02.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:21:10.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039157'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:21:10.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039157'
+
+[2020-05-01 08:21:10.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039157' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:21:10.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039157'
+
+[2020-05-01 08:21:10.000000 192.130.74.162  - [query->EDGARDO] ] Select s.State from States s where s.Id='68'
+
+[2020-05-01 08:21:47.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:21:47.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:21:47.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:21:48.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:21:51.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039157'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:21:51.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039157'
+
+[2020-05-01 08:21:51.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039157' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:21:51.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039157'
+
+[2020-05-01 08:21:51.000000 192.130.74.162  - [query->EDGARDO] ] Select s.State from States s where s.Id='68'
+
+[2020-05-01 08:21:54.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:21:54.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:21:54.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:21:54.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:25:05.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:25:05.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:25:05.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:25:06.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:25:20.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039159'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:25:20.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039159'
+
+[2020-05-01 08:25:20.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039159' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:25:20.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039159'
+
+[2020-05-01 08:25:20.000000 192.130.74.162  - [query->EDGARDO] ] Select s.State from States s where s.Id='64'
+
+[2020-05-01 08:32:08.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039159'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:32:08.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039159'
+
+[2020-05-01 08:32:08.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039159' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:32:08.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039159'
+
+[2020-05-01 08:32:08.000000 192.130.74.162  - [query->EDGARDO] ] Select s.State from States s where s.Id='64'
+
+[2020-05-01 08:32:21.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:32:21.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:32:21.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:32:21.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:32:23.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039159'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:32:23.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039159'
+
+[2020-05-01 08:32:23.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039159' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:32:23.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039159'
+
+[2020-05-01 08:32:23.000000 192.130.74.162  - [query->EDGARDO] ] Select s.State from States s where s.Id='64'
+
+[2020-05-01 08:32:26.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:32:26.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:32:26.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:32:26.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:33:47.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:33:47.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:33:47.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:33:47.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:33:51.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039161'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:33:51.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039161'
+
+[2020-05-01 08:33:51.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039161' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:33:51.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039161'
+
+[2020-05-01 08:33:54.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:33:54.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:33:54.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:33:54.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:44:14.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:44:14.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:44:14.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:44:14.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:47:02.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039162'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:47:02.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039162'
+
+[2020-05-01 08:47:02.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039162' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:47:02.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039162'
+
+[2020-05-01 08:47:05.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:47:05.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:47:05.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:47:05.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:48:12.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:48:12.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:48:12.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:48:12.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:49:47.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039162'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:49:47.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039162'
+
+[2020-05-01 08:49:47.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039162' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:49:47.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039162'
+
+[2020-05-01 08:49:50.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:49:50.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:49:50.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:49:50.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:54:38.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039163'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:54:38.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039163'
+
+[2020-05-01 08:54:38.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039163' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:54:38.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039163'
+
+[2020-05-01 08:54:38.000000 192.130.74.162  - [query->EDGARDO] ] Select s.State from States s where s.Id='67'
+
+[2020-05-01 08:57:39.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:57:39.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:57:39.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:57:39.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:57:42.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039164'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:57:42.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039164'
+
+[2020-05-01 08:57:42.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039164' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:57:42.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039164'
+
+[2020-05-01 08:57:42.000000 192.130.74.162  - [query->EDGARDO] ] Select s.State from States s where s.Id='67'
+
+[2020-05-01 08:57:44.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:57:44.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:57:45.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 08:57:45.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 08:59:42.000000 192.130.74.162  - [query->EDGARDO] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039165'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 08:59:42.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039165'
+
+[2020-05-01 08:59:42.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039165' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 08:59:42.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MFactura where numfactu='0039165'
+
+[2020-05-01 09:06:34.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:06:34.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MProveedores  order by Desprov 
+
+[2020-05-01 09:06:34.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:08:16.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from empresa where id_centro='1' 
+
+[2020-05-01 09:08:16.000000 192.130.74.162  - [query->EDGARDO] ] UPDATE empresa SET UltimoAjuste ='0000203' where id_centro='1' 
+
+[2020-05-01 09:08:16.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from majustes  WHERE codajus = '0000203' 
+
+[2020-05-01 09:08:16.000000 192.130.74.162  - [query->EDGARDO] ] INSERT INTO dajustes (coditems , cantidad , fechajust,usuario, fecreg , horareg ,codajus)                 VALUES  ('EXOS01' ,'-10','05/01/2020' ,'EDGARDO' , '05/01/2020', '09:08:16',   '0000203' )
+
+[2020-05-01 09:08:16.000000 192.130.74.162  - [query->EDGARDO] ] UPDATE MInventario SET  existencia = existencia + -10 Where coditems ='EXOS01' 
+
+[2020-05-01 09:09:10.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 09:09:10.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 09:09:10.000000 192.130.74.162  - [query->EDGARDO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 09:09:10.000000 192.130.74.162  - [query->EDGARDO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 09:09:20.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:09:20.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MProveedores  order by Desprov 
+
+[2020-05-01 09:09:20.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:09:38.000000 192.130.74.162  - [query->EDGARDO] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE prod_serv in( 'P','h')  and Activo in('1','3') or ( Prod_serv='M' and Inventariable=1 )  order by cod_grupo desc ,desitems
+
+[2020-05-01 09:09:56.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:10:10.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:10:10.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MProveedores  order by Desprov 
+
+[2020-05-01 09:10:10.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:11:45.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:11:58.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from empresa where id_centro='1' 
+
+[2020-05-01 09:11:58.000000 192.130.74.162  - [query->EDGARDO] ] UPDATE empresa SET UltimoAjuste ='0000204' where id_centro='1' 
+
+[2020-05-01 09:11:58.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from majustes  WHERE codajus = '0000204' 
+
+[2020-05-01 09:11:58.000000 192.130.74.162  - [query->EDGARDO] ] INSERT INTO dajustes (coditems , cantidad , fechajust,usuario, fecreg , horareg ,codajus)                 VALUES  ('26' ,'-10','05/01/2020' ,'EDGARDO' , '05/01/2020', '09:11:58',   '0000204' )
+
+[2020-05-01 09:11:58.000000 192.130.74.162  - [query->EDGARDO] ] UPDATE MInventario SET  existencia = existencia + -10 Where coditems ='26' 
+
+[2020-05-01 09:11:58.000000 192.130.74.162  - [query->EDGARDO] ] INSERT INTO dajustes (coditems , cantidad , fechajust,usuario, fecreg , horareg ,codajus)                 VALUES  ('9774' ,'-3','05/01/2020' ,'EDGARDO' , '05/01/2020', '09:11:58',   '0000204' )
+
+[2020-05-01 09:11:58.000000 192.130.74.162  - [query->EDGARDO] ] UPDATE MInventario SET  existencia = existencia + -3 Where coditems ='9774' 
+
+[2020-05-01 09:12:06.000000 192.130.75.224  - [query->log-in] ] Select * from loginpass WHERE login = 'MICHELLE' and passwork ='' and activo=1 
+
+[2020-05-01 09:12:18.000000 192.130.75.224  - [query->log-in] ] Select * from loginpass WHERE login = 'MICHELLE' and passwork ='nicole2008' and activo=1 
+
+[2020-05-01 09:12:18.000000 192.130.75.224  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'MICHELLE' 
+
+[2020-05-01 09:12:26.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 09:12:27.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 09:12:27.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 09:12:27.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from  MInventario where prod_serv='P' or Inventariable='1' order by desitems 
+
+[2020-05-01 09:12:27.000000 192.130.74.162  - [query->EDGARDO] ] SELECT  * FROM majustes Where codajus ='0001765' 
+
+[2020-05-01 09:12:27.000000 192.130.74.162  - [query->EDGARDO] ] SELECT  * FROM dajustes Where codajus ='0001765' 
+
+[2020-05-01 09:12:27.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *, CONVERT(VARCHAR(10),fechajus,101) fecha from majustes where codajus='0001765'  
+
+[2020-05-01 09:12:27.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:12:27.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 09:12:31.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:12:31.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MProveedores  order by Desprov 
+
+[2020-05-01 09:12:31.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:12:40.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='91592' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='91592' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='91592' and statfact<>'2'  order by a.fechafac desc
+
+[2020-05-01 09:12:40.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037906' order by desitems 
+
+[2020-05-01 09:13:40.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0017755' order by desitems 
+
+[2020-05-01 09:13:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0023470' order by desitems 
+
+[2020-05-01 09:13:44.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0026918' order by desitems 
+
+[2020-05-01 09:13:46.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0026918' order by desitems 
+
+[2020-05-01 09:13:46.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0026918' order by desitems 
+
+[2020-05-01 09:13:48.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0030288' order by desitems 
+
+[2020-05-01 09:13:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0030287' order by desitems 
+
+[2020-05-01 09:13:51.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0032893' order by desitems 
+
+[2020-05-01 09:13:53.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0032892' order by desitems 
+
+[2020-05-01 09:13:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037012' order by desitems 
+
+[2020-05-01 09:13:56.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037907' order by desitems 
+
+[2020-05-01 09:13:58.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037906' order by desitems 
+
+[2020-05-01 09:14:03.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037907' order by desitems 
+
+[2020-05-01 09:14:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0037012' order by desitems 
+
+[2020-05-01 09:14:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0032892' order by desitems 
+
+[2020-05-01 09:14:08.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0032893' order by desitems 
+
+[2020-05-01 09:14:13.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from MInventario where prod_serv in( 'P','I','h') and activo in('1','3') or ( Prod_serv='M' and Inventariable=1 ) order by cod_grupo DESC, desitems 
+
+[2020-05-01 09:14:23.000000 192.130.74.162  - [query->EDGARDO] ] SELECT * from empresa where id_centro='1' 
+
+[2020-05-01 09:14:23.000000 192.130.74.162  - [query->EDGARDO] ] UPDATE empresa SET UltimoAjuste ='0000205' where id_centro='1' 
+
+[2020-05-01 09:14:23.000000 192.130.74.162  - [query->EDGARDO] ] SELECT *  from majustes  WHERE codajus = '0000205' 
+
+[2020-05-01 09:14:23.000000 192.130.74.162  - [query->EDGARDO] ] INSERT INTO dajustes (coditems , cantidad , fechajust,usuario, fecreg , horareg ,codajus)                 VALUES  ('124' ,'-2','05/01/2020' ,'EDGARDO' , '05/01/2020', '09:14:23',   '0000205' )
+
+[2020-05-01 09:14:23.000000 192.130.74.162  - [query->EDGARDO] ] UPDATE MInventario SET  existencia = existencia + -2 Where coditems ='124' 
+
+[2020-05-01 09:14:23.000000 192.130.74.162  - [query->EDGARDO] ] INSERT INTO dajustes (coditems , cantidad , fechajust,usuario, fecreg , horareg ,codajus)                 VALUES  ('78' ,'-2','05/01/2020' ,'EDGARDO' , '05/01/2020', '09:14:23',   '0000205' )
+
+[2020-05-01 09:14:23.000000 192.130.74.162  - [query->EDGARDO] ] UPDATE MInventario SET  existencia = existencia + -2 Where coditems ='78' 
+
+[2020-05-01 10:10:30.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='64397' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='64397' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='64397' and statfact<>'2'  order by a.fechafac desc
+
+[2020-05-01 10:10:31.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0031637' order by desitems 
+
+[2020-05-01 10:10:50.000000 192.130.75.224  - [query->MICHELLE] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+
+[2020-05-01 10:10:50.000000 192.130.75.224  - [query->MICHELLE] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+
+[2020-05-01 10:10:50.000000 192.130.75.224  - [query->MICHELLE] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+
+[2020-05-01 10:10:51.000000 192.130.75.224  - [query->MICHELLE] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+
+[2020-05-01 10:11:04.000000 192.130.75.224  - [query->MICHELLE] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%787-649-5774%'  Order  by nombres 
+
+[2020-05-01 10:11:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='64397'  and activa='1' order by forder desc  
+
+[2020-05-01 10:14:08.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:14:08.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:14:08.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:14:09.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:44:29.000000 192.130.75.224  - [query->MICHELLE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039166'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 10:44:29.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039166'
+
+[2020-05-01 10:44:29.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039166' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 10:44:29.000000 192.130.75.224  - [query->MICHELLE] ] SELECT * from  MFactura where numfactu='0039166'
+
+[2020-05-01 10:44:33.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:44:33.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:44:33.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:44:34.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:46:45.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:46:45.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:46:46.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:46:46.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:47:19.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:47:19.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:47:19.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:47:19.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:47:55.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:47:55.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:47:55.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:47:56.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:48:36.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:48:36.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:48:36.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:48:36.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:48:57.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:48:57.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:48:57.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:48:57.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:51:05.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:51:05.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:51:06.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:51:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:51:14.000000 192.130.75.224  - [query->MICHELLE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039167'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 10:51:14.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039167'
+
+[2020-05-01 10:51:14.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039167' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 10:51:14.000000 192.130.75.224  - [query->MICHELLE] ] SELECT * from  MFactura where numfactu='0039167'
+
+[2020-05-01 10:51:17.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:51:17.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:51:18.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:51:18.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:51:40.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:51:40.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:51:40.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:51:41.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:51:50.000000 192.130.75.224  - [query->MICHELLE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039168'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 10:51:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039168'
+
+[2020-05-01 10:51:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039168' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 10:51:50.000000 192.130.75.224  - [query->MICHELLE] ] SELECT * from  MFactura where numfactu='0039168'
+
+[2020-05-01 10:51:53.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:51:53.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 10:51:54.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 10:51:54.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 11:05:03.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 11:05:03.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 11:05:04.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 11:05:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 11:13:04.000000 192.130.75.224  - [query->MICHELLE] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039169'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-01 11:13:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039169'
+
+[2020-05-01 11:13:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039169' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-01 11:13:04.000000 192.130.75.224  - [query->MICHELLE] ] SELECT * from  MFactura where numfactu='0039169'
+
+[2020-05-01 11:13:08.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 11:13:08.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 11:13:08.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 11:13:08.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 11:13:33.000000 192.130.75.224  - [query->MICHELLE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2020-04-27' and '05/01/2020' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2020-05-01 11:13:37.000000 192.130.75.224  - [query->MICHELLE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2020-04-27' and '05/01/2020' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2020-05-01 11:13:39.000000 192.130.75.224  - [query->MICHELLE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-01-2020' and '05-01-2020' and statfact ='3'
+
+[2020-05-01 11:13:40.000000 192.130.75.224  - [query->MICHELLE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-01-2020' and '05-01-2020' and statfact ='3' group by con.tipo,con.doc order by con.tipo
+
+[2020-05-01 11:13:41.000000 192.130.75.224  - [query->MICHELLE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-01-2020' and '05-01-2020' and statfact ='3' group by con.tipo order by con.tipo
+
+[2020-05-01 11:13:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-01-2020' and '05-01-2020' and cod_subgrupo='CONSULTA' 
+
+[2020-05-01 11:13:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact='3' and m.fechafac between '05-01-2020' and '05-01-2020' and d.coditems like 'TD%' 
+
+[2020-05-01 11:13:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-01-2020' and '05-01-2020' and cod_subgrupo='SUEROTERAPIA' 
+
+[2020-05-01 11:13:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact='3' and (m.fechafac between '05-01-2020' and '05-01-2020') and d.coditems like 'LI%' 
+
+[2020-05-01 11:18:24.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 11:18:24.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 11:18:25.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 11:18:25.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 20:45:25.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 20:45:25.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 20:45:25.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 20:45:26.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 20:45:35.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 20:45:36.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 20:45:36.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 20:45:36.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 20:48:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='70935' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='70935' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='70935' and statfact<>'2'  order by a.fechafac desc
+
+[2020-05-01 20:48:06.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039170' order by desitems 
+
+[2020-05-01 20:48:09.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='089413' order by desitems 
+
+[2020-05-01 20:48:15.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='112443' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='112443' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='112443' and statfact<>'2'  order by a.fechafac desc
+
+[2020-05-01 20:48:15.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039170' order by desitems 
+
+[2020-05-01 20:48:35.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='112443' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='112443' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='112443' and statfact<>'2'  order by a.fechafac desc
+
+[2020-05-01 20:48:35.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039170' order by desitems 
+
+[2020-05-01 20:48:40.000000 192.130.75.224  - [query->MICHELLE] ] SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,1 id_centro,a.id,b.nombres
+    FROM mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='70935' and statfact<>'2'   order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,2 id_centro,a.id ,b.nombres
+    FROM cma_mfactura a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='70935' and statfact<>'2'  order by a.fechafac desc
+    SELECT a.codclien,a.numfactu,CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.fechafac as fecha,total,a.codmedico,3 id_centro,a.id ,b.nombres
+    FROM MSSMFact a
+    inner join MClientes b On a.codclien=b.codclien
+    where a.codclien='70935' and statfact<>'2'  order by a.fechafac desc
+
+[2020-05-01 20:48:40.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0039170' order by desitems 
+
+[2020-05-01 20:48:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='0030757' order by desitems 
+
+[2020-05-01 20:49:29.000000 192.130.75.224  - [query->MICHELLE] ] SELECT desitems,cantidad FROM view_dfactura_1 where numfactu='089413' order by desitems 
+
+[2020-05-01 21:31:26.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 21:31:26.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-01 21:31:27.000000 192.130.75.224  - [query->MICHELLE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-01 21:31:27.000000 192.130.75.224  - [query->MICHELLE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+

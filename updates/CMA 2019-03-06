@@ -1,0 +1,31 @@
+CMA 2019-03-06
+
+Cambio para agregar lista citado de celulas madres
+
+nuevo
+
+\js
+
+repcemacitados.js
+
+\clases
+getrepcitadoscema.php
+
+
+vistas\control
+
+cemacitados.php
+repcitadoscema.php
+
+
+actualizar
+control.php
+
+
+           <li><a data-toggle="tab" href="#cemacitados" id="13">Células Madres Citados</a></li>
+
+           <div id="cemacitados" class="tab-pane fade">     <?php include('cemacitados.php');?>     </div>
+
+           <script src="../../js/repcemacitados.js"></script>
+      
+

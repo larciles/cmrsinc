@@ -1,0 +1,1609 @@
+[2019-05-17 09:19:42.000000 192.130.74.18  - [query->log-in] ] Select * from loginpass WHERE login = 'YFELICIANO' and passwork ='2017yf' and activo=1 
+[2019-05-17 09:19:42.000000 192.130.74.18  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'YFELICIANO' 
+[2019-05-17 09:19:45.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:19:45.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:19:45.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:19:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='2019-05-17'
+[2019-05-17 09:19:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='2019-05-17' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:19:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:19:46.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:19:46.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:19:52.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:19:52.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:19:52.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:19:52.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:19:52.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:19:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:19:53.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:19:53.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:19:56.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from mconsultas  where codclien='6831' and fecha_cita='2019-05-17' 
+[2019-05-17 09:19:56.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE mconsultas  SET llegada = ''  where codclien='6831' and fecha_cita='2019-05-17' 
+[2019-05-17 09:20:24.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2019-05-17 09:20:24.000000 192.130.74.18  - [query->YFELICIANO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 09:20:25.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:20:25.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+[2019-05-17 09:20:25.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+[2019-05-17 09:20:26.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 09:20:26.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 09:20:26.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 09:20:30.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2 Where CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%10777%' and cod_subgrupo = 'CONSULTA' 
+[2019-05-17 09:20:32.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%10777%' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc  OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2019-05-17 09:20:32.000000 192.130.74.18  - [query->YFELICIANO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 09:20:32.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:20:33.000000 192.130.74.18  - [query->YFELICIANO] ]  SELECT     a.numfactu, a.nombres, a.fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.usuario, a.TotImpuesto, a.monto_flete, a.doc, a.cod_subgrupo,     c.desestac,     b.nombre   FROM       VentasDiariasCMACSTRep a    INNER JOIN   MDocumentos b ON  a.doc = b.codtipodoc   INNER JOIN  vestaciones  c ON  a.workstation = c.Workstation   where numfactu='184109'   ORDER BY   c.desestac ASC,   a.doc ASC,   a.numfactu ASC 
+[2019-05-17 09:20:34.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT   a.numfactu,  CONVERT(VARCHAR(10),a.fechafac,101) fechafac,  a.descuento, a.subtotal, a.total, a.statfact, a.usuario, a.codseguro, c.cantidad, c.precunit, b.direccionH, b.Historia, b.nombres, e.seguro, d.desitems, f.TipoDePago ,c.coditems, d.nombre_alterno
+ FROM  CMA_MFactura a     INNER JOIN   MClientes   b ON  a.codclien = b.codclien     INNER JOIN  CMA_DFactura  c ON  a.numfactu = c.numfactu    LEFT OUTER JOIN  mseguros e ON  a.codseguro = e.codseguro  INNER JOIN  MInventario   d ON  c.coditems = d.coditems    LEFT OUTER JOIN  viewTipoPagoServicios f ON   c.numfactu = f.numfactu Where a.numfactu='184109' 
+[2019-05-17 09:20:57.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:20:57.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:20:57.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:20:58.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:20:58.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:20:58.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:20:58.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:20:58.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:21:01.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:21:01.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:21:01.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:21:02.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:21:02.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:21:02.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:21:02.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:21:02.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:21:11.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from mconsultas  where codclien='113345' and fecha_cita='2019-05-17' 
+[2019-05-17 09:21:11.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE mconsultas  SET llegada = '09:21:11' where codclien='113345' and fecha_cita='2019-05-17' 
+[2019-05-17 09:22:00.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE Mconsultas Set  codmedico='327' where codclien='113345' and fecha_cita='5/17/2019'
+[2019-05-17 09:22:00.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT count(*) ncitas from Mconsultas where codclien='113345' and fecha_cita<'5/17/2019'  
+[2019-05-17 09:22:00.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE cma_MFactura Set codmedico='327' where codclien='113345' and fechafac='5/17/2019' and codmedico='000' 
+[2019-05-17 09:22:00.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico from Mconsultas where codclien='113345' and  ( codmedico='000' or  codmedico='') 
+[2019-05-17 09:22:00.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico from Mconsultass where codclien='113345' and  ( codmedico='000' or  codmedico='') 
+[2019-05-17 09:22:01.000000 192.130.74.18  - [query->YFELICIANO] ]   Select * from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and Historia='73561'  and llegada<>'' and ( Historia<>'' or historia <> 'No asign') 
+[2019-05-17 09:22:02.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2019-05-17 09:22:02.000000 192.130.74.18  - [query->YFELICIANO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 09:22:03.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:22:03.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+[2019-05-17 09:22:03.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+[2019-05-17 09:22:04.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 09:22:04.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 09:22:04.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 09:22:04.000000 192.130.74.18  - [query->YFELICIANO] ] Select TOP 25 * from Mclientes where  Historia ='73561'  
+[2019-05-17 09:22:04.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:22:04.000000 192.130.74.18  - [query->YFELICIANO] ] Select * from cma_MFactura where fechafac='2019-05-17' and codclien='113345' 
+[2019-05-17 09:22:06.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MPrecios where coditems='0000000005' and  codtipre='00'
+[2019-05-17 09:22:06.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where coditems='0000000005' 
+[2019-05-17 09:22:27.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MPrecios where coditems='0000000005' and  codtipre='00'
+[2019-05-17 09:22:27.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where coditems='0000000005' 
+[2019-05-17 09:22:27.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from empresa where id_centro='2' 
+[2019-05-17 09:22:27.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE empresa SET UltimaFactura ='184113' where id_centro='2' 
+[2019-05-17 09:22:27.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE MClientes SET numfactu='184113',fechafac='05/17/2019 ' where codclien ='113345' 
+[2019-05-17 09:22:27.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT *  from cma_MFactura  WHERE numfactu = '184113' 
+[2019-05-17 09:22:27.000000 192.130.74.18  - [query->YFELICIANO] ] INSERT INTO  cma_MFactura (numfactu,fechafac,codclien,codmedico,recipe,usuario,fecreg,horareg,statfact,cancelado,monto_abonado,tipopago,codseguro,plazo,vencimiento,subtotal,total,TotImpuesto,descuento,alicuota,iva,impuesto,workstation,ipaddress,medios) Values ('184113','05/17/2019','113345','315','1','YFELICIANO','2019-05-17 09:22:27','09:22:27','1','0','0','0','','0' ,'05/17/2019','5','5','0','$0','0','0','0',  'LASERTERAPYPC', '','0' )
+[2019-05-17 09:22:27.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where coditems='0000000005' 
+[2019-05-17 09:22:28.000000 192.130.74.18  - [query->YFELICIANO] ] INSERT INTO cma_DFactura   (numfactu        ,fechafac    ,coditems   ,cantidad    ,precunit ,codtipre      ,usuario   ,fecreg     ,horareg, aplicaiva  ,aplicadcto   ,aplicacommed  ,aplicacomtec     ,costo   ,monto_imp ,descuento,  codseguro  ,procentaje    ,percentage     ,workstation    , ipaddress)                 VALUES  ('184113','05/17/2019','0000000005', '1','5.00','00','YFELICIANO','2019-05-17 09:22:27','09:22:28','','0' ,'','','0.0','0'     ,'0','','0','0', 'LASERTERAPYPC', '')
+[2019-05-17 09:22:32.000000 192.130.74.18  - [query->YFELICIANO] ] DELETE  from mpagos where numfactu='184113' and id_centro = '2' and tipo_doc = '01'  
+[2019-05-17 09:22:33.000000 192.130.74.18  - [query->YFELICIANO] ] DELETE  from idcard where factura='184113' and idcompany = '2' and tipo_doc = '01'  
+[2019-05-17 09:22:33.000000 192.130.74.18  - [query->YFELICIANO] ] INSERT Into MPagos (numfactu,fechapago,codforpa,monto,usuario,fecreg,horareg,id_centro,codtipotargeta,tipo_doc,idempresa,workstation,cnumber)  Values ('184113','05/17/2019','1','5','YFELICIANO','05/17/2019','09:22:33','2','00','01','2','ATENCION02','' )
+[2019-05-17 09:22:33.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE cma_mfactura set monto_abonado=monto_abonado+'5',cancelado='1', statfact='3' where numfactu='184113'
+[2019-05-17 09:22:33.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:22:33.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:22:33.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:22:34.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:22:34.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:22:34.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT   a.numfactu,  CONVERT(VARCHAR(10),a.fechafac,101) fechafac,  a.descuento, a.subtotal, a.total, a.statfact, a.usuario, a.codseguro, c.cantidad, c.precunit, b.direccionH, b.Historia, b.nombres, e.seguro, d.desitems, f.TipoDePago ,c.coditems, d.nombre_alterno
+ FROM  CMA_MFactura a     INNER JOIN   MClientes   b ON  a.codclien = b.codclien     INNER JOIN  CMA_DFactura  c ON  a.numfactu = c.numfactu    LEFT OUTER JOIN  mseguros e ON  a.codseguro = e.codseguro  INNER JOIN  MInventario   d ON  c.coditems = d.coditems    LEFT OUTER JOIN  viewTipoPagoServicios f ON   c.numfactu = f.numfactu Where a.numfactu='184113' 
+[2019-05-17 09:22:34.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:22:34.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:22:34.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:23:07.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * FROM [farmacias].[dbo].[MClientes] where codclien='113345' 
+[2019-05-17 09:23:08.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:23:08.000000 192.130.74.18  - [query->YFELICIANO] ] Select COD,PAIS from Pais order by PAIS
+[2019-05-17 09:23:08.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2019-05-17 09:23:12.000000 192.130.74.18  - [query->YFELICIANO] ] Update MClientes set nombre = 'ANA MARIA',apellido = 'RIVERA RIVERA',nombres = 'RIVERA RIVERA ANA MARIA'
+                ,Cedula =  '787-282-0821' ,telfhabit = '787-282-0821',codmedico = '315',NACIMIENTO = '01/01/1970'
+                ,Historia = '73561' ,direccionH = 'SAN JUAN , PR KMB ' ,codpostal = ''
+                ,Pais = '160' ,ESTADO = '67' ,Eaddress = '' ,hCiudad = 'ITALIA '
+                ,email = 'KMB',sexo = '0' ,inactivo = '0' ,exonerado = '0' ,fallecido = '0', telfofic='787-412-1048'  Where codclien='113345'  
+[2019-05-17 09:23:12.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:23:12.000000 192.130.74.18  - [query->YFELICIANO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2019-05-17 09:23:12.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='84271'and codconsulta <>'07' and ASISTIDOS is null
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='84271' and a.fechafac='05/17/2019     ' 
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='26150'and codconsulta <>'07' and ASISTIDOS is null
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='26150' and a.fechafac='05/17/2019     ' 
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='120106'and codconsulta <>'07' and ASISTIDOS is null
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='120106' and a.fechafac='05/17/2019     ' 
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='13037'and codconsulta <>'07' and ASISTIDOS is null
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='13037' and a.fechafac='05/17/2019     ' 
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='122284'and codconsulta <>'07' and ASISTIDOS is null
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='122284' and a.fechafac='05/17/2019     ' 
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='113345'and codconsulta <>'07' and ASISTIDOS is null
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='113345' and a.fechafac='05/17/2019     ' 
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='121928'and codconsulta <>'07' and ASISTIDOS is null
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='121928' and a.fechafac='05/17/2019     ' 
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='98032'and codconsulta <>'07' and ASISTIDOS is null
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='98032' and a.fechafac='05/17/2019     ' 
+[2019-05-17 09:23:13.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:23:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:23:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:23:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:23:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:23:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:23:17.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:23:17.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:23:17.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:23:22.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:23:22.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:23:22.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:23:22.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:23:22.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:23:22.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:23:23.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:23:23.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:23:24.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * FROM [farmacias].[dbo].[MClientes] where codclien='6831' 
+[2019-05-17 09:23:24.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:23:24.000000 192.130.74.18  - [query->YFELICIANO] ] Select COD,PAIS from Pais order by PAIS
+[2019-05-17 09:23:24.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT [State],[Abre],[PAIS],[COD],[Id]  FROM [farmacias].[dbo].[States] where pais ='160' order by State
+[2019-05-17 09:23:31.000000 192.130.74.18  - [query->YFELICIANO] ] Update MClientes set nombre = 'ALBA',apellido = 'TORRES MARRERO',nombres = 'TORRES MARRERO ALBA'
+                ,Cedula =  '787-371-4025' ,telfhabit = '787-371-4025',codmedico = '320',NACIMIENTO = '05/01/2013'
+                ,Historia = '10777' ,direccionH = 'p.r.                                                                                                                                                                                                                                                           ' ,codpostal = 'Ninguno'
+                ,Pais = '160' ,ESTADO = '67' ,Eaddress = 'p.r.                                                                                                                                                                                                                                                           ' ,hCiudad = ''
+                ,email = '@',sexo = '1' ,inactivo = '0' ,exonerado = '0' ,fallecido = '0', telfofic=''  Where codclien='6831'  
+[2019-05-17 09:23:31.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:23:31.000000 192.130.74.18  - [query->YFELICIANO] ] select codconsulta,descons,codcons,coditems from VIEW_ConsultaServicios 
+[2019-05-17 09:23:31.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:23:31.000000 192.130.74.18  - [query->YFELICIANO] ] select convert(varchar(10), cast(fecha_cita as date), 111)  fecha_cita from VIEW_mconsultas_02 where codclien='6831'and codconsulta <>'07' and ASISTIDOS is null
+[2019-05-17 09:23:31.000000 192.130.74.18  - [query->YFELICIANO] ] select a.numfactu,a.total,c.initials usuario,e.initials metodo_pago, CONCAT(a.numfactu,' ',c.initials, ' ',e.initials) disp from cma_MFactura a inner join cma_DFactura b on  a.numfactu=b.numfactu and a.fechafac=b.fechafac inner join loginpass c on a.usuario = c.login inner join Mpagos d on a.numfactu=d.numfactu and d.id_centro=2 inner join MTipoTargeta e on d.codtipotargeta=e.codtipotargeta where codclien='6831' and a.fechafac='05/17/2019     ' 
+[2019-05-17 09:23:32.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:23:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:23:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:23:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:23:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:23:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:23:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:23:35.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:23:35.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:35:27.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:35:27.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:35:27.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:35:27.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:35:28.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:35:28.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:35:28.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:35:28.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:35:44.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from mconsultas  where codclien='121252' and fecha_cita='2019-05-17' 
+[2019-05-17 09:35:44.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE mconsultas  SET llegada = '09:35:44' where codclien='121252' and fecha_cita='2019-05-17' 
+[2019-05-17 09:36:04.000000 192.130.74.18  - [query->YFELICIANO] ]   Select * from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and Historia='76555'  and llegada<>'' and ( Historia<>'' or historia <> 'No asign') 
+[2019-05-17 09:36:05.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2019-05-17 09:36:05.000000 192.130.74.18  - [query->YFELICIANO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 09:36:05.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:36:06.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+[2019-05-17 09:36:06.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+[2019-05-17 09:36:07.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 09:36:07.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 09:36:07.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 09:36:07.000000 192.130.74.18  - [query->YFELICIANO] ] Select TOP 25 * from Mclientes where  Historia ='76555'  
+[2019-05-17 09:36:07.000000 192.130.74.18  - [query->YFELICIANO] ] Select * from cma_MFactura where fechafac='2019-05-17' and codclien='121252' 
+[2019-05-17 09:36:07.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:36:10.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MPrecios where coditems='0000000004' and  codtipre='00'
+[2019-05-17 09:36:10.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where coditems='0000000004' 
+[2019-05-17 09:36:13.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from empresa where id_centro='2' 
+[2019-05-17 09:36:13.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE empresa SET UltimaFactura ='184114' where id_centro='2' 
+[2019-05-17 09:36:13.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE MClientes SET numfactu='184114',fechafac='05/17/2019 ' where codclien ='121252' 
+[2019-05-17 09:36:13.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT *  from cma_MFactura  WHERE numfactu = '184114' 
+[2019-05-17 09:36:13.000000 192.130.74.18  - [query->YFELICIANO] ] INSERT INTO  cma_MFactura (numfactu,fechafac,codclien,codmedico,recipe,usuario,fecreg,horareg,statfact,cancelado,monto_abonado,tipopago,codseguro,plazo,vencimiento,subtotal,total,TotImpuesto,descuento,alicuota,iva,impuesto,workstation,ipaddress,medios) Values ('184114','05/17/2019','121252','327','1','YFELICIANO','2019-05-17 09:36:13','09:36:13','1','0','0','0','','0' ,'05/17/2019','0','0','0','$0','0','0','0',  'LASERTERAPYPC', '','0' )
+[2019-05-17 09:36:13.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where coditems='0000000004' 
+[2019-05-17 09:36:13.000000 192.130.74.18  - [query->YFELICIANO] ] INSERT INTO cma_DFactura   (numfactu        ,fechafac    ,coditems   ,cantidad    ,precunit ,codtipre      ,usuario   ,fecreg     ,horareg, aplicaiva  ,aplicadcto   ,aplicacommed  ,aplicacomtec     ,costo   ,monto_imp ,descuento,  codseguro  ,procentaje    ,percentage     ,workstation    , ipaddress)                 VALUES  ('184114','05/17/2019','0000000004', '1','0.00','00','YFELICIANO','2019-05-17 09:36:13','09:36:13','','1' ,'','','0.0','0'     ,'0','','0','0', 'LASERTERAPYPC', '')
+[2019-05-17 09:36:19.000000 192.130.74.18  - [query->YFELICIANO] ] DELETE  from mpagos where numfactu='184114' and id_centro = '2' and tipo_doc = '01'  
+[2019-05-17 09:36:19.000000 192.130.74.18  - [query->YFELICIANO] ] DELETE  from idcard where factura='184114' and idcompany = '2' and tipo_doc = '01'  
+[2019-05-17 09:36:19.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE cma_mfactura set monto_abonado=monto_abonado+'0',cancelado='1', statfact='3' where numfactu='184114'
+[2019-05-17 09:36:19.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT   a.numfactu,  CONVERT(VARCHAR(10),a.fechafac,101) fechafac,  a.descuento, a.subtotal, a.total, a.statfact, a.usuario, a.codseguro, c.cantidad, c.precunit, b.direccionH, b.Historia, b.nombres, e.seguro, d.desitems, f.TipoDePago ,c.coditems, d.nombre_alterno
+ FROM  CMA_MFactura a     INNER JOIN   MClientes   b ON  a.codclien = b.codclien     INNER JOIN  CMA_DFactura  c ON  a.numfactu = c.numfactu    LEFT OUTER JOIN  mseguros e ON  a.codseguro = e.codseguro  INNER JOIN  MInventario   d ON  c.coditems = d.coditems    LEFT OUTER JOIN  viewTipoPagoServicios f ON   c.numfactu = f.numfactu Where a.numfactu='184114' 
+[2019-05-17 09:36:19.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:36:19.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:36:19.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:36:20.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:36:20.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:36:20.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:36:20.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:36:20.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:38:52.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:38:52.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:38:52.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:38:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:38:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:38:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:38:53.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:38:53.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:39:00.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:39:00.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:39:00.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:39:01.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:39:01.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:39:01.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:39:01.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:39:01.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:39:14.000000 192.130.74.18  - [query->YFELICIANO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%rivera%picard%betzaida%'  Order  by nombres 
+[2019-05-17 09:39:21.000000 192.130.74.18  - [query->YFELICIANO] ] Select TOP 200 * from Mclientes where  CONCAT(nombres,Cedula) like '%rivera%pi%'  Order  by nombres 
+[2019-05-17 09:39:22.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='52441'  and activa='1' order by forder desc  
+[2019-05-17 09:39:33.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='120869'  and activa='1' order by forder desc  
+[2019-05-17 09:43:02.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:43:02.000000 192.130.74.18  - [query->YFELICIANO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:43:02.000000 192.130.74.18  - [query->YFELICIANO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:43:06.000000 192.130.74.18  - [query->YFELICIANO] ] Select TOP 25 * from Mclientes where  Historia ='76620'  
+[2019-05-17 09:43:06.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:43:06.000000 192.130.74.18  - [query->YFELICIANO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='120869' and codconsulta<>'07' group by codclien
+[2019-05-17 09:43:06.000000 192.130.74.18  - [query->YFELICIANO] ] Select observacion from VIEW_mconsultas_02 where codclien='120869'  and fecha_cita='2019/05/17' and codconsulta<>'07'
+[2019-05-17 09:43:12.000000 192.130.74.18  - [query->YFELICIANO] ] select * from Feriado where FECHA='05/21/2019' and activo = 1 
+[2019-05-17 09:43:50.000000 192.130.74.18  - [query->YFELICIANO] ] Select count(*) cant from mconsultas where codclien='120869' 
+[2019-05-17 09:43:50.000000 192.130.74.18  - [query->YFELICIANO] ] Select * from mconsultas WHERE CODCLIEN='120869' AND fecha_cita='2019-05-17' and codmedico='000' 
+[2019-05-17 09:43:50.000000 192.130.74.18  - [query->YFELICIANO] ] Select *  from loginpass where login ='YFELICIANO' 
+[2019-05-17 09:43:50.000000 192.130.74.18  - [query->YFELICIANO] ] Select * from mconsultas where codclien='120869' and asistido=0 
+[2019-05-17 09:43:50.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='120869' AND ASISTIDO=0
+[2019-05-17 09:43:50.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE MCONSULTAS SET FECHA_CITA='05/21/2019',usuario = 'KBLASINI',confirmado='0',noasistido='0',activa='1',codmedico = '320', observacion = 'KAROLA / AM asegurar bien que el dr este presente ', regusuario='YFELICIANO', llegada='',codconsulta='03' WHERE CODCLIEN='120869' AND ASISTIDO='0' and ID='271270' 
+[2019-05-17 09:43:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:43:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:43:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:43:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:43:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:43:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:43:53.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:43:53.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:43:59.000000 192.130.74.18  - [query->YFELICIANO] ] Select TOP 200 * from Mclientes where  Historia = '76620'  Order  by nombres 
+[2019-05-17 09:43:59.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT cedula,nombres,REPLACE(CONVERT(CHAR(15), fecha_cita, 101), '', '-') AS fecha_cita, REPLACE(CONVERT(varchar(5), hora, 109), '', '') AS hora,telfhabit,CITADOS,CONFIRMADO,ASISTIDOS,NO_ASISTIO,descons,observacion,Medico,codclien,fecha,codmedico,codconsulta,citacontrol,activa,usuario,primera_control,nocitados,Historia,exonerado,coditems, fecha_cita as FOrder  from VIEW_mconsultas_02  where codclien='120869'  and activa='1' order by forder desc  
+[2019-05-17 09:44:10.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:44:10.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:44:10.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:44:10.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:44:10.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:44:10.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:44:10.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:44:10.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:44:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:44:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:44:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:44:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:44:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:44:16.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:44:17.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:44:17.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:44:17.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:44:17.000000 192.130.74.18  - [query->YFELICIANO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:44:17.000000 192.130.74.18  - [query->YFELICIANO] ] select * from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:44:21.000000 192.130.74.18  - [query->YFELICIANO] ] Select TOP 25 * from Mclientes where  Historia ='344446'  
+[2019-05-17 09:44:24.000000 192.130.74.18  - [query->YFELICIANO] ] Select TOP 25 * from Mclientes where  Historia ='34446'  
+[2019-05-17 09:44:24.000000 192.130.74.18  - [query->YFELICIANO] ] Select max(convert(varchar(10), cast(fecha_cita as date), 111)  ) fecha_cita  from  VIEW_mconsultas_02 where codclien='46207' and codconsulta<>'07' group by codclien
+[2019-05-17 09:44:24.000000 192.130.74.18  - [query->YFELICIANO] ] Select observacion from VIEW_mconsultas_02 where codclien='46207'  and fecha_cita='2019/05/21' and codconsulta<>'07'
+[2019-05-17 09:44:24.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:44:34.000000 192.130.74.18  - [query->YFELICIANO] ] select * from Feriado where FECHA='05/17/2019' and activo = 1 
+[2019-05-17 09:44:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select count(*) cant from mconsultas where codclien='46207' 
+[2019-05-17 09:44:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select * from mconsultas WHERE CODCLIEN='46207' AND fecha_cita='2019-05-17' and codmedico='000' 
+[2019-05-17 09:44:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select *  from loginpass where login ='YFELICIANO' 
+[2019-05-17 09:44:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select * from mconsultas where codclien='46207' and asistido=0 
+[2019-05-17 09:44:35.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT maxid= max(id) FROM MCONSULTAS WHERE CODCLIEN='46207' AND ASISTIDO=0
+[2019-05-17 09:44:35.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE MCONSULTAS SET FECHA_CITA='05/17/2019',usuario = 'KSANTIAGO',confirmado='0',noasistido='0',activa='1',codmedico = '329', observacion = 'KATIRIA TARIFA ESPECIAL 10.00  (787)501-9264', regusuario='YFELICIANO', llegada='',codconsulta='03' WHERE CODCLIEN='46207' AND ASISTIDO='0' and ID='272212' 
+[2019-05-17 09:44:38.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:44:38.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:44:38.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:44:39.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:44:39.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:44:39.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:44:39.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:44:39.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:44:41.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from mconsultas  where codclien='46207' and fecha_cita='2019-05-17' 
+[2019-05-17 09:44:41.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE mconsultas  SET llegada = '09:44:41' where codclien='46207' and fecha_cita='2019-05-17' 
+[2019-05-17 09:44:42.000000 192.130.74.18  - [query->YFELICIANO] ]   Select * from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and Historia='34446'  and llegada<>'' and ( Historia<>'' or historia <> 'No asign') 
+[2019-05-17 09:44:44.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2019-05-17 09:44:44.000000 192.130.74.18  - [query->YFELICIANO] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 09:44:44.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:44:45.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+[2019-05-17 09:44:45.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+[2019-05-17 09:44:45.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 09:44:45.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 09:44:46.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 09:44:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select TOP 25 * from Mclientes where  Historia ='34446'  
+[2019-05-17 09:44:46.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 09:44:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select * from cma_MFactura where fechafac='2019-05-17' and codclien='46207' 
+[2019-05-17 09:45:16.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MPrecios where coditems='0000000004' and  codtipre='00'
+[2019-05-17 09:45:16.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where coditems='0000000004' 
+[2019-05-17 09:45:25.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from empresa where id_centro='2' 
+[2019-05-17 09:45:25.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE empresa SET UltimaFactura ='184115' where id_centro='2' 
+[2019-05-17 09:45:25.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE MClientes SET numfactu='184115',fechafac='05/17/2019 ' where codclien ='46207' 
+[2019-05-17 09:45:25.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT *  from cma_MFactura  WHERE numfactu = '184115' 
+[2019-05-17 09:45:25.000000 192.130.74.18  - [query->YFELICIANO] ] INSERT INTO  cma_MFactura (numfactu,fechafac,codclien,codmedico,recipe,usuario,fecreg,horareg,statfact,cancelado,monto_abonado,tipopago,codseguro,plazo,vencimiento,subtotal,total,TotImpuesto,descuento,alicuota,iva,impuesto,workstation,ipaddress,medios) Values ('184115','05/17/2019','46207','329','1','YFELICIANO','2019-05-17 09:45:25','09:45:25','1','0','0','0','','0' ,'05/17/2019','0','0','0','$0','0','0','0',  'LASERTERAPYPC', '','0' )
+[2019-05-17 09:45:25.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from  MInventario where coditems='0000000004' 
+[2019-05-17 09:45:25.000000 192.130.74.18  - [query->YFELICIANO] ] INSERT INTO cma_DFactura   (numfactu        ,fechafac    ,coditems   ,cantidad    ,precunit ,codtipre      ,usuario   ,fecreg     ,horareg, aplicaiva  ,aplicadcto   ,aplicacommed  ,aplicacomtec     ,costo   ,monto_imp ,descuento,  codseguro  ,procentaje    ,percentage     ,workstation    , ipaddress)                 VALUES  ('184115','05/17/2019','0000000004', '1','0.00','00','YFELICIANO','2019-05-17 09:45:25','09:45:25','','1' ,'','','0.0','0'     ,'0','','0','0', 'LASERTERAPYPC', '')
+[2019-05-17 09:45:29.000000 192.130.74.18  - [query->YFELICIANO] ] DELETE  from mpagos where numfactu='184115' and id_centro = '2' and tipo_doc = '01'  
+[2019-05-17 09:45:29.000000 192.130.74.18  - [query->YFELICIANO] ] DELETE  from idcard where factura='184115' and idcompany = '2' and tipo_doc = '01'  
+[2019-05-17 09:45:29.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE cma_mfactura set monto_abonado=monto_abonado+'0',cancelado='1', statfact='3' where numfactu='184115'
+[2019-05-17 09:45:29.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT   a.numfactu,  CONVERT(VARCHAR(10),a.fechafac,101) fechafac,  a.descuento, a.subtotal, a.total, a.statfact, a.usuario, a.codseguro, c.cantidad, c.precunit, b.direccionH, b.Historia, b.nombres, e.seguro, d.desitems, f.TipoDePago ,c.coditems, d.nombre_alterno
+ FROM  CMA_MFactura a     INNER JOIN   MClientes   b ON  a.codclien = b.codclien     INNER JOIN  CMA_DFactura  c ON  a.numfactu = c.numfactu    LEFT OUTER JOIN  mseguros e ON  a.codseguro = e.codseguro  INNER JOIN  MInventario   d ON  c.coditems = d.coditems    LEFT OUTER JOIN  viewTipoPagoServicios f ON   c.numfactu = f.numfactu Where a.numfactu='184115' 
+[2019-05-17 09:45:29.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:45:29.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:45:29.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:45:30.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:45:30.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:45:30.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:45:30.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:45:30.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:45:38.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:45:38.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:45:38.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:45:38.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:45:38.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:45:38.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:45:39.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:45:39.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:45:44.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from mconsultas  where codclien='122471' and fecha_cita='2019-05-17' 
+[2019-05-17 09:45:44.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE mconsultas  SET llegada = '09:45:44' where codclien='122471' and fecha_cita='2019-05-17' 
+[2019-05-17 09:46:31.000000 192.130.74.18  - [query->YFELICIANO] ] Select * From MClientes Where  Historia='77101' 
+[2019-05-17 09:46:31.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE MClientes Set  Historia='77101' where codclien='122471' 
+[2019-05-17 09:46:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:46:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:46:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:46:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:46:35.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:46:36.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:46:36.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:46:36.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:46:39.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT * from mconsultas  where codclien='122521' and fecha_cita='2019-05-17' 
+[2019-05-17 09:46:39.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE mconsultas  SET llegada = '09:46:38' where codclien='122521' and fecha_cita='2019-05-17' 
+[2019-05-17 09:46:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:46:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:46:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:46:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:46:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:46:47.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:46:47.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:46:47.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:46:57.000000 192.130.74.18  - [query->YFELICIANO] ] Select * From MClientes Where  Historia='' 
+[2019-05-17 09:47:40.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:47:40.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:47:40.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:47:40.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:47:40.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:47:40.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:47:40.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:47:40.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:47:54.000000 192.130.74.18  - [query->YFELICIANO] ] Select * From MClientes Where  Historia='' 
+[2019-05-17 09:47:58.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:47:58.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:47:58.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:47:59.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:47:59.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:48:01.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:48:01.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:48:01.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:48:33.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:48:33.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:48:33.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:48:33.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:48:34.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:48:34.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:48:34.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:48:34.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:49:13.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:49:13.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:49:13.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:49:13.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:49:13.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:49:13.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:49:14.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:49:14.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:49:31.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:49:31.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:49:31.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:49:31.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:49:31.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:49:32.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:49:32.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:49:32.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:50:32.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:50:32.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:50:32.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:50:32.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:50:32.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:50:33.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:50:33.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:50:33.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:50:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:50:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:50:46.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:50:47.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:50:47.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:50:47.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:50:47.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:50:47.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:50:49.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:50:49.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:50:49.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:50:49.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:50:49.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:50:50.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:50:50.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:50:50.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:50:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:50:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:50:53.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:50:54.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:50:54.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:50:54.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:50:54.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 09:50:54.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:51:03.000000 192.130.74.18  - [query->YFELICIANO] ] Select * From MClientes Where  Historia='77101' 
+[2019-05-17 09:51:04.000000 192.130.74.18  - [query->YFELICIANO] ] UPDATE MClientes Set  Historia='77101' where codclien='122471' 
+[2019-05-17 09:51:19.000000 192.130.74.18  - [query->YFELICIANO] ] Select * From MClientes Where  Historia='' 
+[2019-05-17 09:51:36.000000 192.130.74.18  - [query->YFELICIANO] ] Select * From MClientes Where  Historia='' 
+[2019-05-17 09:51:40.000000 192.130.74.18  - [query->YFELICIANO] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2019-05-17 09:51:40.000000 192.130.74.18  - [query->YFELICIANO] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2019-05-17 09:51:40.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2019-05-17 09:51:41.000000 192.130.74.18  - [query->YFELICIANO] ] Select  * from view_displaypagos where fechafac='5/17/2019'
+[2019-05-17 09:51:41.000000 192.130.74.18  - [query->YFELICIANO] ] Select codclien,Historia, convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita 
+  from VIEW_mconsultas_02 
+  where  codconsulta <>'07' and 
+  ASISTIDO =0   and 
+  codclien in (SELECT codclien from VIEW_mconsultas_02 where fecha_cita='5/17/2019' and  activa='1') /*and Historia='71304' */
+[2019-05-17 09:51:43.000000 192.130.74.18  - [query->YFELICIANO] ] Select 'Todos' as Descripcion, 1 as id  
+union  
+select 'Consultas' as Descripcion, 2 as id  
+union  
+select 'Sueroterapia' as Descripcion, 3 as id  
+union  
+select 'Laser' as Descripcion, 4 as id  
+union 
+select 'Intravenoso' as Descripcion, 5 as id  
+union 
+select 'Bloqueo' as Descripcion, 6 as id  
+union 
+select 'Celulas Madres' as Descripcion, 7 as id  
+order by id
+[2019-05-17 09:51:43.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019'  AND '5/17/2019'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2019-05-17 09:51:43.000000 192.130.74.18  - [query->YFELICIANO] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '5/17/2019'  AND '5/17/2019'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT a.usuario, sum( a.subtotal) subtotal, sum(a.descuento) descuento,  (sum(a.total)+sum(a.monto_flete))  monto, sum( a.TotImpuesto) TotImpuesto, sum(a.monto_flete) monto_flete   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/16/2019' AND '05/16/2019'  AND  a.statfact=3  And  a.total>=0 and  coditems  in ( 'CMKCINTRON','CMKCINT1CO','CMKCINTSEG' ) and cod_subgrupo ='CEL MADRE'    group by  usuario Order by monto desc 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete,a.usuario,a.Historia, a.initials FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/16/2019' AND '05/16/2019'  AND  a.statfact=3  And  a.total>=0 and  coditems  in ( 'CMKCINTRON','CMKCINT1CO','CMKCINTSEG' ) and cod_subgrupo ='CEL MADRE'  /* and usuario='JOLALDE' */ Order by  a.numfactu   desc 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT d.numfactu, d.modopago From VIEWpagosPRCMACST d WHERE d.fechapago between '05/16/2019' AND '05/16/2019'  and cod_subgrupo ='CEL MADRE'   Order By d.modopago
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago BETWEEN '05/16/2019' AND '05/16/2019'  AND d.numfactu ='184100' 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago BETWEEN '05/16/2019' AND '05/16/2019'  AND d.numfactu ='184094' 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago BETWEEN '05/16/2019' AND '05/16/2019'  AND d.numfactu ='184101' 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago BETWEEN '05/16/2019' AND '05/16/2019'  AND d.numfactu ='184078' 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago BETWEEN '05/16/2019' AND '05/16/2019'  AND d.numfactu ='184093' 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT d.DesTipoTargeta, d.monto From VIEWpagosPRCMA d WHERE d.fechapago BETWEEN '05/16/2019' AND '05/16/2019'  AND d.numfactu ='184097' 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiariasCMACST a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '05/16/2019' AND '05/16/2019' AND a.statfact=3 and  coditems  in ( 'CMKCINTRON','CMKCINT1CO','CMKCINTSEG' ) and cod_subgrupo ='CEL MADRE'   And   a.doc='01'  
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between  '05/16/2019' AND '05/16/2019' AND  a.statfact=3 and  coditems  in ( 'CMKCINTRON','CMKCINT1CO','CMKCINTSEG' ) and cod_subgrupo ='CEL MADRE'     And  a.total<0  /* and usuario='JOLALDE'  Order by a.numfactu desc */ 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/16/2019' AND '05/16/2019'  AND  a.statfact=3 and  coditems  in ( 'CMKCINTRON','CMKCINT1CO','CMKCINTSEG' ) and cod_subgrupo ='CEL MADRE'     And  a.total<0 
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/16/2019' AND '05/16/2019'  AND  a.statfact=3 and  coditems  in ( 'CMKCINTRON','CMKCINT1CO','CMKCINTSEG' ) and cod_subgrupo ='CEL MADRE'   
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] 
+select  distinct z.numfactu, b.fechafac,convert(varchar(10), cast(b.fechafac as date), 101) fecha,nombres,
+ (
+ select  sum(a.cantidad*a.precunit) 
+ from cma_DFactura a 
+ where z.numfactu=a.numfactu
+ ) subtotal,
+ (
+ select  sum(descuento)
+ from cma_DFactura a 
+ where z.numfactu=a.numfactu
+ ) descuento,
+
+ (
+ select  (sum(a.cantidad*a.precunit) -sum(descuento))
+ from cma_DFactura a 
+ where z.numfactu=a.numfactu
+ ) total
+
+ from cma_DFactura z
+ inner join cma_MFactura b On z.numfactu=b.numfactu  
+ inner join MInventario c On c.coditems=z.coditems
+ inner join MClientes d On d.codclien=b.codclien   
+ where b.fechafac between   '05/16/2019' and '05/16/2019'  and b.statfact=3  AND b.codmedico='333' and z.coditems  not in ( 'CMKCINTRON','CMKCINT1CO','CMKCINTSEG' ,'0000000000')
+
+union all
+
+  select  distinct z.numnotcre, b.fechanot,convert(varchar(10), cast(b.fechanot as date), 101) fecha,nombres,
+ (
+ select  sum(a.cantidad*a.precunit) *-1
+ from CMA_Dnotacredito a 
+ where z.numnotcre=a.numnotcre
+ ) subtotal,
+ (
+ select  sum(descuento) *-1
+ from CMA_Dnotacredito a 
+ where z.numnotcre=a.numnotcre 
+ ) descuento,
+
+ (
+ select  (sum(a.cantidad*a.precunit) -sum(descuento)) *-1
+ from CMA_Dnotacredito a 
+ where z.numnotcre=a.numnotcre
+ ) total
+
+ from CMA_Dnotacredito z
+ inner join CMA_Mnotacredito b On z.numnotcre=b.numnotcre
+ inner join MInventario c On c.coditems=z.coditems
+ inner join MClientes d On d.codclien=b.codclien   
+ where b.fechanot between  '05/16/2019' and '05/16/2019'  and b.statnc=3  AND b.codmedico='333' and z.coditems  not in ( 'CMKCINTRON','CMKCINT1CO','CMKCINTSEG' ,'0000000000')
+ order by numfactu desc
+
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT sum(a.subtotal) subtotal, SUM(a.descuento) descuento,0 impuesto, 0 envio, sum(a.total) total from cma_MFactura a  inner join MClientes b On a.codclien=b.codclien  where a.fechafac between '05/16/2019' and '05/16/2019' and a.codmedico='333' and a.statfact=3 and a.numfactu in (select distinct numfactu from cma_DFactura a where  a.fechafac between '05/16/2019' and '05/16/2019' and a.cod_subgrupo in('CEL MADRE','INTRAVENOSO','TERAPIA LASER') and a.coditems in( select b.coditems from exclusivos b where b.Codmedico='333'  ))
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/16/2019' AND '05/16/2019'  AND  a.statfact=3 and  coditems  in ( 'CMKCINTRON','CMKCINT1CO','CMKCINTSEG' ) and cod_subgrupo ='CEL MADRE'  
+union all
+SELECT sum(a.subtotal) subtotal, SUM(a.descuento) descuento,0 impuesto, 0 envio, sum(a.total) total from cma_MFactura a  inner join MClientes b On a.codclien=b.codclien  where a.fechafac between '05/16/2019' and '05/16/2019' and a.codmedico='333' and a.statfact=3 and a.numfactu in (select distinct numfactu from cma_DFactura a where  a.fechafac between '05/16/2019' and '05/16/2019' and a.cod_subgrupo in('CEL MADRE','INTRAVENOSO','TERAPIA LASER') and a.coditems in( select b.coditems from exclusivos b where b.Codmedico='333'  ))
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT b.desitems,  a.* from cma_DFactura a inner join MInventario b On a.coditems=b.coditems where numfactu='184104'
+[2019-05-17 11:13:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT b.desitems,  a.* from cma_DFactura a inner join MInventario b On a.coditems=b.coditems where numfactu='184100'
+[2019-05-17 11:16:36.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-04-29' and '05/16/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 11:16:37.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-04-29' and '05/16/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 11:16:38.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-01-2019' and '05-16-2019' and statfact <>'2'
+[2019-05-17 11:16:40.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-01-2019' and '05-16-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 11:16:41.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-01-2019' and '05-16-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 11:16:42.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-01-2019' and '05-16-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 11:16:42.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-01-2019' and '05-16-2019' and d.coditems like 'TD%' 
+[2019-05-17 11:16:43.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-01-2019' and '05-16-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 11:16:44.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-01-2019' and '05-16-2019') and d.coditems like 'LI%' 
+[2019-05-17 11:31:44.000000 192.130.75.223  - [query->JOLALDE] ] SELECT codmedico, max(nombremedico) medico, SUM(cantidad * precunit - Descuento) AS facturas_x_medico FROM  VIEW_Ventas_Medicos WHERE  (fechafac  between '05-17-2019' and '05-17-2019') AND (statfact <> '2') AND (Prod_serv = 'P')  and codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY codmedico 
+[2019-05-17 11:31:44.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  a.codmedico ,sum(b.cantidad) unidades_medicos FROM VentasDiarias  a inner join DFactura b On  b.numfactu = a.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (a.fechafac  between '05-17-2019' and '05-17-2019')  and (a.statfact <> '2') AND (a.doc = '01') and a.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) and  c.cod_subgrupo='1'	group by  a.codmedico 
+[2019-05-17 11:31:45.000000 192.130.75.223  - [query->JOLALDE] ] SELECT codmedico, SUM(cantidad) AS cantUni ,  SUM(cantidad)/(SELECT COUNT(t.codclien) AS numeroPacientes FROM  dbo.VIEW_Asistidos_0215 t WHERE  (t.fecha_cita BETWEEN '05-17-2019' and '05-17-2019') AND (t.asistido = '3 ') and s.codmedico=t.codmedico GROUP BY codmedico)   unidades_pacientes FROM  dbo.VIEW_Stat_Enl_0215  s WHERE   (fechafac BETWEEN '05-17-2019' and '05-17-2019') AND (cod_subgrupo = '1') and codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY codmedico 
+[2019-05-17 11:31:45.000000 192.130.75.223  - [query->JOLALDE] ] SELECT codmedico,  SUM(cantidad)/(SELECT COUNT(t.codclien) AS formula_paciente FROM  dbo.VIEW_Asistidos_0215 t WHERE  (t.fecha_cita BETWEEN  '05-17-2019' and '05-17-2019') AND (t.asistido = '3') and s.codmedico=t.codmedico GROUP BY codmedico)   formula_paciente FROM  dbo.VIEW_Stat_Enl_0215  s WHERE  (fechafac BETWEEN  '05-17-2019' and '05-17-2019') AND (cod_subgrupo = '2') and codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY codmedico 
+[2019-05-17 11:31:45.000000 192.130.75.223  - [query->JOLALDE] ] SELECT b.codmedico, COUNT(b.codclien) AS numeroPacientes From VIEW_Asistidos_0215  b WHERE  (b.fecha_cita  between '05-17-2019' and '05-17-2019') AND (b.asistido = '3') and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY b.codmedico 
+[2019-05-17 11:31:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT a.codmedico, SUM(a.cantidad * a.precunit - a.Descuento) /(SELECT COUNT(b.codclien) From VIEW_Asistidos_0215  b WHERE  (b.fecha_cita BETWEEN '05-17-2019' and '05-17-2019') AND (b.asistido = '3') and b.codmedico =a.codmedico  and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY b.codmedico) facturacion_paciente From VIEW_Ventas_Medicos a WHERE  (fechafac BETWEEN '05-17-2019' and '05-17-2019') AND (a.statfact <> '2') AND (a.Prod_serv = 'P') and a.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY a.codmedico 
+[2019-05-17 11:31:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT a.codmedico,sum(b.cantidad) formula_medicos FROM VentasDiarias  a inner join DFactura b On  b.numfactu = a.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (a.fechafac  between  '05-17-2019' and '05-17-2019')  and (a.statfact <> '2') AND (a.doc = '01') and a.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) and  c.cod_subgrupo='2' group by  a.codmedico 
+[2019-05-17 11:31:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  f.codmedico,sum(b.cantidad) / (SELECT sum(b.cantidad) FROM VentasDiarias  a inner join DFactura b On  b.numfactu = a.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (a.fechafac  between   '05-17-2019' and '05-17-2019')  and (a.statfact <> '2') AND (a.doc = '01') and  c.cod_subgrupo='1'  and a.codmedico =  f.codmedico group by  a.codmedico ) formulas_unidades FROM VentasDiarias  f inner join DFactura b On  b.numfactu = f.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (f.fechafac  between   '05-17-2019' and '05-17-2019')  and (f.statfact <> '2') AND (f.doc = '01') and f.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) and  c.cod_subgrupo='2' group by  f.codmedico 
+[2019-05-17 11:31:47.000000 192.130.75.223  - [query->JOLALDE] ] SELECT c.codmedico,( ISNULL(SUM(c.cantidad * c.precunit - c.Descuento),0)  + 
+		ISNULL((SELECT  SUM(l.cantidad * l.precunit - l.Descuento) total_laser From VIEW_Ventas_Medicos_Laser l 
+    	WHERE  (fechafac BETWEEN '05-17-2019' and '05-17-2019') AND (l.statfact <> '2') AND (l.Prod_serv = 'M') and l.codmedico =c.codmedico and   l.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY l.codmedico ),0)  + 
+		ISNULL((SELECT  SUM(b.cantidad * b.precunit - b.Descuento) total_suero  From VIEW_Ventas_Medicos_Suero b 
+    	WHERE  (fechafac BETWEEN '05-17-2019' and '05-17-2019') AND (b.statfact <> '2') AND (b.Prod_serv = 'S') and b.codmedico = c.codmedico  and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY b.codmedico ),0)  ) 
+		/ ISNULL((SELECT COUNT(d.codclien) 
+    	From VIEW_Asistidos_0215  d 
+    	WHERE  (d.fecha_cita BETWEEN '05-17-2019' and '05-17-2019') AND (d.asistido = '3') and d.codmedico =c.codmedico  and d.codmedico in(   select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+		GROUP BY d.codmedico),( ISNULL(SUM(c.cantidad * c.precunit - c.Descuento),0)  + 
+		ISNULL((SELECT  SUM(l.cantidad * l.precunit - l.Descuento) total_laser From VIEW_Ventas_Medicos_Laser l 
+    	WHERE  (fechafac BETWEEN '05-17-2019' and '05-17-2019') AND (l.statfact <> '2') AND (l.Prod_serv = 'M') and l.codmedico =c.codmedico and   l.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY l.codmedico ),0)  + 
+		ISNULL((SELECT  SUM(b.cantidad * b.precunit - b.Descuento) total_suero  From VIEW_Ventas_Medicos_Suero b 
+    	WHERE  (fechafac BETWEEN '05-17-2019' and '05-17-2019') AND (b.statfact <> '2') AND (b.Prod_serv = 'S') and b.codmedico = c.codmedico  and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY b.codmedico ),0)  ) ) total_ventas 
+		From VIEW_Ventas_Medicos c 
+    	WHERE  (fechafac BETWEEN '05-17-2019' and '05-17-2019') AND (c.statfact <> '2') AND (c.Prod_serv = 'P') and c.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY c.codmedico 
+[2019-05-17 11:32:06.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '05-01-2019' and '05-16-2019' 
+[2019-05-17 11:32:08.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '05-01-2019' and '05-16-2019' 
+[2019-05-17 11:32:09.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(subtotal) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '05-01-2019' and '05-16-2019' group by medico,Dventa
+[2019-05-17 11:32:10.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(subtotal) total,medico from emt_view vp where fechafac between '05-01-2019' and '05-16-2019' group by medico
+[2019-05-17 11:32:11.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(subtotal) total from emt_view vp  where fechafac between '05/01/2019' and '05/16/2019' 
+[2019-05-17 11:32:12.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from emt_view vp  where fechafac between '05-01-2019' and '05-16-2019' 
+[2019-05-17 11:32:12.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct UPPER(Dventa) Dventa from emt_view  vp  where fechafac  between '05-01-2019' and '05-16-2019' 
+[2019-05-17 11:32:12.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(subtotal) total,medico,UPPER(Dventa) Dventa from emt_view vp where fechafac between '05-01-2019' and '05-16-2019' group by medico,Dventa
+[2019-05-17 11:32:12.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(subtotal) total,medico from emt_view vp where fechafac between '05-01-2019' and '05-16-2019' group by medico
+[2019-05-17 11:32:13.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(subtotal) total from emt_view vp  where fechafac between '05/01/2019' and '05/16/2019' 
+[2019-05-17 11:34:35.000000 192.130.75.223  - [query->JOLALDE] ] SELECT codmedico, max(nombremedico) medico, SUM(cantidad * precunit - Descuento) AS facturas_x_medico FROM  VIEW_Ventas_Medicos WHERE  (fechafac  between '05-01-2019' and '05-17-2019') AND (statfact <> '2') AND (Prod_serv = 'P')  and codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY codmedico 
+[2019-05-17 11:34:35.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  a.codmedico ,sum(b.cantidad) unidades_medicos FROM VentasDiarias  a inner join DFactura b On  b.numfactu = a.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (a.fechafac  between '05-01-2019' and '05-17-2019')  and (a.statfact <> '2') AND (a.doc = '01') and a.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) and  c.cod_subgrupo='1'	group by  a.codmedico 
+[2019-05-17 11:34:36.000000 192.130.75.223  - [query->JOLALDE] ] SELECT codmedico, SUM(cantidad) AS cantUni ,  SUM(cantidad)/(SELECT COUNT(t.codclien) AS numeroPacientes FROM  dbo.VIEW_Asistidos_0215 t WHERE  (t.fecha_cita BETWEEN '05-01-2019' and '05-17-2019') AND (t.asistido = '3 ') and s.codmedico=t.codmedico GROUP BY codmedico)   unidades_pacientes FROM  dbo.VIEW_Stat_Enl_0215  s WHERE   (fechafac BETWEEN '05-01-2019' and '05-17-2019') AND (cod_subgrupo = '1') and codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY codmedico 
+[2019-05-17 11:34:36.000000 192.130.75.223  - [query->JOLALDE] ] SELECT codmedico,  SUM(cantidad)/(SELECT COUNT(t.codclien) AS formula_paciente FROM  dbo.VIEW_Asistidos_0215 t WHERE  (t.fecha_cita BETWEEN  '05-01-2019' and '05-17-2019') AND (t.asistido = '3') and s.codmedico=t.codmedico GROUP BY codmedico)   formula_paciente FROM  dbo.VIEW_Stat_Enl_0215  s WHERE  (fechafac BETWEEN  '05-01-2019' and '05-17-2019') AND (cod_subgrupo = '2') and codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY codmedico 
+[2019-05-17 11:34:36.000000 192.130.75.223  - [query->JOLALDE] ] SELECT b.codmedico, COUNT(b.codclien) AS numeroPacientes From VIEW_Asistidos_0215  b WHERE  (b.fecha_cita  between '05-01-2019' and '05-17-2019') AND (b.asistido = '3') and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY b.codmedico 
+[2019-05-17 11:34:36.000000 192.130.75.223  - [query->JOLALDE] ] SELECT a.codmedico, SUM(a.cantidad * a.precunit - a.Descuento) /(SELECT COUNT(b.codclien) From VIEW_Asistidos_0215  b WHERE  (b.fecha_cita BETWEEN '05-01-2019' and '05-17-2019') AND (b.asistido = '3') and b.codmedico =a.codmedico  and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY b.codmedico) facturacion_paciente From VIEW_Ventas_Medicos a WHERE  (fechafac BETWEEN '05-01-2019' and '05-17-2019') AND (a.statfact <> '2') AND (a.Prod_serv = 'P') and a.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) GROUP BY a.codmedico 
+[2019-05-17 11:34:36.000000 192.130.75.223  - [query->JOLALDE] ] SELECT a.codmedico,sum(b.cantidad) formula_medicos FROM VentasDiarias  a inner join DFactura b On  b.numfactu = a.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (a.fechafac  between  '05-01-2019' and '05-17-2019')  and (a.statfact <> '2') AND (a.doc = '01') and a.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) and  c.cod_subgrupo='2' group by  a.codmedico 
+[2019-05-17 11:34:37.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  f.codmedico,sum(b.cantidad) / (SELECT sum(b.cantidad) FROM VentasDiarias  a inner join DFactura b On  b.numfactu = a.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (a.fechafac  between   '05-01-2019' and '05-17-2019')  and (a.statfact <> '2') AND (a.doc = '01') and  c.cod_subgrupo='1'  and a.codmedico =  f.codmedico group by  a.codmedico ) formulas_unidades FROM VentasDiarias  f inner join DFactura b On  b.numfactu = f.numfactu inner join MInventario c On  b.coditems = c.coditems WHERE   (f.fechafac  between   '05-01-2019' and '05-17-2019')  and (f.statfact <> '2') AND (f.doc = '01') and f.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) and  c.cod_subgrupo='2' group by  f.codmedico 
+[2019-05-17 11:34:38.000000 192.130.75.223  - [query->JOLALDE] ] SELECT c.codmedico,( ISNULL(SUM(c.cantidad * c.precunit - c.Descuento),0)  + 
+		ISNULL((SELECT  SUM(l.cantidad * l.precunit - l.Descuento) total_laser From VIEW_Ventas_Medicos_Laser l 
+    	WHERE  (fechafac BETWEEN '05-01-2019' and '05-17-2019') AND (l.statfact <> '2') AND (l.Prod_serv = 'M') and l.codmedico =c.codmedico and   l.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY l.codmedico ),0)  + 
+		ISNULL((SELECT  SUM(b.cantidad * b.precunit - b.Descuento) total_suero  From VIEW_Ventas_Medicos_Suero b 
+    	WHERE  (fechafac BETWEEN '05-01-2019' and '05-17-2019') AND (b.statfact <> '2') AND (b.Prod_serv = 'S') and b.codmedico = c.codmedico  and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY b.codmedico ),0)  ) 
+		/ ISNULL((SELECT COUNT(d.codclien) 
+    	From VIEW_Asistidos_0215  d 
+    	WHERE  (d.fecha_cita BETWEEN '05-01-2019' and '05-17-2019') AND (d.asistido = '3') and d.codmedico =c.codmedico  and d.codmedico in(   select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+		GROUP BY d.codmedico),( ISNULL(SUM(c.cantidad * c.precunit - c.Descuento),0)  + 
+		ISNULL((SELECT  SUM(l.cantidad * l.precunit - l.Descuento) total_laser From VIEW_Ventas_Medicos_Laser l 
+    	WHERE  (fechafac BETWEEN '05-01-2019' and '05-17-2019') AND (l.statfact <> '2') AND (l.Prod_serv = 'M') and l.codmedico =c.codmedico and   l.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY l.codmedico ),0)  + 
+		ISNULL((SELECT  SUM(b.cantidad * b.precunit - b.Descuento) total_suero  From VIEW_Ventas_Medicos_Suero b 
+    	WHERE  (fechafac BETWEEN '05-01-2019' and '05-17-2019') AND (b.statfact <> '2') AND (b.Prod_serv = 'S') and b.codmedico = c.codmedico  and b.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY b.codmedico ),0)  ) ) total_ventas 
+		From VIEW_Ventas_Medicos c 
+    	WHERE  (fechafac BETWEEN '05-01-2019' and '05-17-2019') AND (c.statfact <> '2') AND (c.Prod_serv = 'P') and c.codmedico in(  select Codmedico from Mmedicos where activo=1  and Codmedico<>'000' ) 
+    	GROUP BY c.codmedico 
+[2019-05-17 11:35:16.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 11:35:16.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 11:35:17.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2'
+[2019-05-17 11:35:18.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 11:35:19.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 11:35:20.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 11:35:20.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-17-2019' and '05-17-2019' and d.coditems like 'TD%' 
+[2019-05-17 11:35:21.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 11:35:21.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-17-2019' and '05-17-2019') and d.coditems like 'LI%' 
+[2019-05-17 13:10:45.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 13:10:45.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 13:10:45.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2'
+[2019-05-17 13:10:45.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 13:10:46.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 13:10:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 13:10:46.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-17-2019' and '05-17-2019' and d.coditems like 'TD%' 
+[2019-05-17 13:10:47.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 13:10:47.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-17-2019' and '05-17-2019') and d.coditems like 'LI%' 
+[2019-05-17 13:11:17.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-04-29' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 13:11:17.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-04-29' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 13:11:19.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-01-2019' and '05-17-2019' and statfact <>'2'
+[2019-05-17 13:11:20.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-01-2019' and '05-17-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 13:11:22.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-01-2019' and '05-17-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 13:11:22.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-01-2019' and '05-17-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 13:11:23.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-01-2019' and '05-17-2019' and d.coditems like 'TD%' 
+[2019-05-17 13:11:23.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-01-2019' and '05-17-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 13:11:24.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-01-2019' and '05-17-2019') and d.coditems like 'LI%' 
+[2019-05-17 13:26:50.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 13:26:50.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 13:26:50.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2'
+[2019-05-17 13:26:50.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 13:26:51.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 13:26:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 13:26:51.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-17-2019' and '05-17-2019' and d.coditems like 'TD%' 
+[2019-05-17 13:26:52.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 13:26:52.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-17-2019' and '05-17-2019') and d.coditems like 'LI%' 
+[2019-05-17 15:24:31.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+[2019-05-17 15:24:31.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+[2019-05-17 15:24:43.000000 192.130.74.97  - [query->WILMA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2019-05-17 15:24:43.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:24:43.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:24:44.000000 192.130.74.97  - [query->WILMA] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+[2019-05-17 15:24:44.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+[2019-05-17 15:24:44.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 15:24:44.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 15:24:45.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 15:24:51.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 15:24:51.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 15:24:52.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2'
+[2019-05-17 15:24:52.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 15:24:52.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 15:24:52.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 15:24:53.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-17-2019' and '05-17-2019' and d.coditems like 'TD%' 
+[2019-05-17 15:24:53.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 15:24:53.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-17-2019' and '05-17-2019') and d.coditems like 'LI%' 
+[2019-05-17 15:37:02.000000 192.130.74.97  - [query->WILMA] ] Select * from loginpass WHERE login = 'HANCE' and passwork ='hate01' and activo=1 
+[2019-05-17 15:37:02.000000 192.130.74.97  - [query->WILMA] ] Select * from Vestaciones WHERE usuario = 'HANCE' 
+[2019-05-17 15:37:08.000000 192.130.74.97  - [query->HANCE] ] Select login,concat(Nombre,' ',apellido) usuario from loginpass  where activo ='1' order by usuario
+[2019-05-17 15:37:08.000000 192.130.74.97  - [query->HANCE] ] SELECT * FROM Cuadre WHERE fechA='5/17/2019' and id_centro='C' and usuario='HANCE' 
+[2019-05-17 15:37:09.000000 192.130.74.97  - [query->HANCE] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='5/17/2019' and a.usuario='' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+[2019-05-17 15:37:11.000000 192.130.74.97  - [query->HANCE] ] SELECT * from cuadre WHERE fecha='5/17/2019' and id_centro = 'C' and usuario= 'HANCE' order by valor desc
+[2019-05-17 15:37:12.000000 192.130.74.97  - [query->HANCE] ]    SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+     INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+     LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='5/17/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null and a.usuario='HANCE' 
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+[2019-05-17 15:37:12.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(total+monto_flete) monto, count(*) facturas from VentasDiariasCMACST where fechafac='5/17/2019'  and statfact=3 and cod_subgrupo='CONSULTA' and usuario='HANCE'  
+[2019-05-17 15:37:12.000000 192.130.74.97  - [query->HANCE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '5/17/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' and usuario='HANCE' 
+[2019-05-17 15:37:12.000000 192.130.74.97  - [query->HANCE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '5/17/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' and usuario='HANCE' 
+[2019-05-17 15:37:12.000000 192.130.74.97  - [query->HANCE] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiariasCMACST a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '5/17/2019' and a.doc='04' and statfact=3 and  cod_subgrupo ='CONSULTA' and usuario='HANCE' 
+[2019-05-17 15:37:13.000000 192.130.74.97  - [query->HANCE] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete, a.Historia,a.initials    FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019' AND '5/17/2019'  AND  a.statfact=3  And  a.total>=0 and cod_subgrupo='CONSULTA' and usuario='HANCE' Order by a.numfactu desc 
+[2019-05-17 15:37:13.000000 192.130.74.97  - [query->HANCE] ] SELECT d.numfactu, d.modopago From VIEWpagosPRCMACST d WHERE d.fechapago between '5/17/2019' AND '5/17/2019' and cod_subgrupo='CONSULTA'  Order By d.modopago
+[2019-05-17 15:37:13.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiariasCMACST a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '5/17/2019' AND '5/17/2019' AND a.statfact=3 and cod_subgrupo='CONSULTA' And  a.total>0 and usuario='HANCE' 
+[2019-05-17 15:37:13.000000 192.130.74.97  - [query->HANCE] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between  '5/17/2019' AND '5/17/2019' AND  a.statfact=3 and cod_subgrupo='CONSULTA' and usuario='HANCE' And  a.total<0 Order by a.numfactu desc  
+[2019-05-17 15:37:13.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019' AND '5/17/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA' and usuario='HANCE' And  a.total<0 
+[2019-05-17 15:37:13.000000 192.130.74.97  - [query->HANCE] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '5/17/2019' AND '5/17/2019'  AND  a.statfact=3 and cod_subgrupo='CONSULTA' and  usuario='HANCE'  
+[2019-05-17 15:37:28.000000 192.130.74.97  - [query->HANCE] ] SELECT valor,sum(monto) monto from Cuadre where fechA='5/17/2019'  and Id_centro='C' group by valor
+[2019-05-17 15:37:30.000000 192.130.74.97  - [query->HANCE] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago  , max(d.codforpa) codforpa
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='5/17/2019' AND   a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+[2019-05-17 15:37:30.000000 192.130.74.97  - [query->HANCE] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='5/17/2019' and Id_centro='C' group by usuario
+[2019-05-17 15:37:30.000000 192.130.74.97  - [query->HANCE] ] SELECT * FROM Cuadre WHERE fechA='5/17/2019' and id_centro='C' and usuario='HANCE' 
+[2019-05-17 15:37:30.000000 192.130.74.97  - [query->HANCE] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='5/17/2019' and id_centro='C' and usuario='HANCE' group by usuario 
+[2019-05-17 15:37:32.000000 192.130.74.97  - [query->HANCE] ] SELECT 
+       SUM( a.total) monto ,ISNULL ( d.desTipoTargeta , 'EXCENTO') modopago, max(d.codforpa) codforpa  
+       FROM  
+       VentasDiariasCMACST a  
+	   INNER JOIN MDocumentos   b ON a.doc = b.codtipodoc  
+	   LEFT JOIN VIEWpagosPRCMA d ON a.numfactu = d.numfactu  
+       WHERE
+       a.fechafac ='5/17/2019' and a.usuario='HANCE' AND  a.cod_subgrupo = 'CONSULTA' and  a.statfact=3  and d.desTipoTargeta is  not null
+       GROUP BY  
+       desTipoTargeta  
+       Order by 
+       desTipoTargeta 
+[2019-05-17 15:39:14.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'HANCE' and passwork ='hate01' and activo=1 
+[2019-05-17 15:39:14.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'HANCE' 
+[2019-05-17 15:39:19.000000 192.130.74.97  - [query->HANCE] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 Where cod_subgrupo = 'CONSULTA' Order by numfactu Desc OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2019-05-17 15:39:19.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:39:19.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:39:20.000000 192.130.74.97  - [query->HANCE] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2
+[2019-05-17 15:39:20.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  MInventario where prod_serv='S' and activo = 1 and cod_grupo in('003','002') 
+[2019-05-17 15:39:20.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 15:39:20.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 15:39:21.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 15:39:26.000000 192.130.74.97  - [query->HANCE] ] SELECT COUNT(*) total FROM VIEW_CMA_Mfactura_2 Where CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%76798%' and cod_subgrupo = 'CONSULTA' 
+[2019-05-17 15:39:28.000000 192.130.74.97  - [query->HANCE] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%76798%' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc  OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2019-05-17 15:39:28.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:39:28.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:39:38.000000 192.130.74.97  - [query->HANCE] ] SELECT * From  cma_MFactura Where numfactu = '184156'  
+[2019-05-17 15:39:38.000000 192.130.74.97  - [query->HANCE] ] UPDATE cma_MFactura SET statfact='2', fechanul='2019-05-17 00:00:00.000',desanul='' WHERE numfactu='184156' and statfact in('1','3') 
+[2019-05-17 15:39:38.000000 192.130.74.97  - [query->HANCE] ] SELECT * From  cma_DFactura  Where numfactu = '184156'  
+[2019-05-17 15:39:38.000000 192.130.74.97  - [query->HANCE] ] SELECT * from kit where coditems='0000000004' 
+[2019-05-17 15:39:39.000000 192.130.74.97  - [query->HANCE] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac,numfactu, nombres, Medico,statfact,subtotal,descuento,total,id,Status,numnotcre,usuario,historia,codmedico  FROM VIEW_CMA_Mfactura_2 WHERE  CONCAT(numfactu,nombres,Medico,historia,Status,usuario) like '%76798%' and cod_subgrupo = 'CONSULTA' Order by numfactu Desc  OFFSET 0 ROWS FETCH NEXT 25  ROWS ONLY
+[2019-05-17 15:39:39.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:39:40.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:43:08.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:43:08.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:43:09.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:43:09.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  MInventario where prod_serv IN ('M') and activo = 1 and cod_grupo='004' OR  coditems ='TMAG01' order by 'desitems' desc
+[2019-05-17 15:43:09.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 15:43:10.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 15:43:10.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 15:43:16.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:43:16.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:43:28.000000 192.130.74.97  - [query->HANCE] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:43:28.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:43:31.000000 192.130.74.97  - [query->HANCE] ] SELECT  * FROM MSSDFact Where numfactu ='022626' 
+[2019-05-17 15:43:31.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  MInventario where prod_serv='M' and activo = 1 order by ULTLOTE
+[2019-05-17 15:43:31.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 15:43:31.000000 192.130.74.97  - [query->HANCE] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 15:43:31.000000 192.130.74.97  - [query->HANCE] ] SELECT  * FROM MSSMFact Where numfactu ='022626' 
+[2019-05-17 15:43:31.000000 192.130.74.97  - [query->HANCE] ] SELECT  * FROM MSSDFact Where numfactu ='022626' 
+[2019-05-17 15:43:31.000000 192.130.74.97  - [query->HANCE] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac2,* from  MSSMFact where numfactu='022626' 
+[2019-05-17 15:43:32.000000 192.130.74.97  - [query->HANCE] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:43:32.000000 192.130.74.97  - [query->HANCE] ] Select * from Mclientes where  codclien='122471'  
+[2019-05-17 15:43:49.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'HANCEADM' and passwork ='hate01' and activo=1 
+[2019-05-17 15:43:49.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'HANCEADM' 
+[2019-05-17 15:43:52.000000 192.130.74.97  - [query->HANCEADM] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:43:53.000000 192.130.74.97  - [query->HANCEADM] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:43:53.000000 192.130.74.97  - [query->HANCEADM] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:43:54.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  MInventario where prod_serv IN ('M') and activo = 1 and cod_grupo='004' OR  coditems ='TMAG01' order by 'desitems' desc
+[2019-05-17 15:43:54.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 15:43:54.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 15:43:54.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 15:43:58.000000 192.130.74.97  - [query->HANCEADM] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:43:58.000000 192.130.74.97  - [query->HANCEADM] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:44:00.000000 192.130.74.97  - [query->HANCEADM] ] SELECT  * FROM MSSDFact Where numfactu ='022626' 
+[2019-05-17 15:44:00.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  MInventario where prod_serv='M' and activo = 1 order by ULTLOTE
+[2019-05-17 15:44:00.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 15:44:00.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 15:44:00.000000 192.130.74.97  - [query->HANCEADM] ] SELECT  * FROM MSSMFact Where numfactu ='022626' 
+[2019-05-17 15:44:00.000000 192.130.74.97  - [query->HANCEADM] ] SELECT  * FROM MSSDFact Where numfactu ='022626' 
+[2019-05-17 15:44:00.000000 192.130.74.97  - [query->HANCEADM] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac2,* from  MSSMFact where numfactu='022626' 
+[2019-05-17 15:44:01.000000 192.130.74.97  - [query->HANCEADM] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:44:01.000000 192.130.74.97  - [query->HANCEADM] ] Select * from Mclientes where  codclien='122471'  
+[2019-05-17 15:44:04.000000 192.130.75.223  - [query->log-in] ] Select * from loginpass WHERE login = 'JOLALDE' and passwork ='olalde29' and activo=1 
+[2019-05-17 15:44:04.000000 192.130.75.223  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'JOLALDE' 
+[2019-05-17 15:44:05.000000 192.130.74.97  - [query->HANCEADM] ] SELECT *  from MSSMFact  WHERE numfactu = '022626' 
+[2019-05-17 15:44:05.000000 192.130.74.97  - [query->HANCEADM] ] UPDATE  MSSMFact Set codclien = '122471' ,codmedico ='315' ,fecreg = '2019-05-17' ,horareg = '15:44:05' ,vencimiento = '2019-05-17' ,subtotal = '260' ,total= '260' ,TotImpuesto = '0' ,descuento = '0' ,alicuota = '0' ,iva = '0',impuesto = '0' WHERE numfactu = '022626'  
+[2019-05-17 15:44:05.000000 192.130.74.97  - [query->HANCEADM] ] DELETE from MSSDFact Where numfactu= '022626' 
+[2019-05-17 15:44:05.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  MInventario where coditems='LI001' 
+[2019-05-17 15:44:05.000000 192.130.74.97  - [query->HANCEADM] ] INSERT INTO MSSDFact   (numfactu        ,fechafac    ,coditems   ,cantidad    ,precunit ,codtipre      ,usuario   ,fecreg     ,horareg, aplicaiva  ,aplicadcto   ,aplicacommed  ,aplicacomtec     ,costo   ,monto_imp ,descuento,  codseguro  ,procentaje  ,workstation    , ipaddress)                 VALUES  ('022626','2019-05-17','LI001', '1','120.00','00','HANCEADM','2019-05-17','15:44:05','','1' ,'','','0.0','0'     ,'0','','0', '', '')
+[2019-05-17 15:44:05.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  MInventario where coditems='TD01' 
+[2019-05-17 15:44:05.000000 192.130.74.97  - [query->HANCEADM] ] INSERT INTO MSSDFact   (numfactu        ,fechafac    ,coditems   ,cantidad    ,precunit ,codtipre      ,usuario   ,fecreg     ,horareg, aplicaiva  ,aplicadcto   ,aplicacommed  ,aplicacomtec     ,costo   ,monto_imp ,descuento,  codseguro  ,procentaje  ,workstation    , ipaddress)                 VALUES  ('022626','2019-05-17','TD01', '2','70.00','00','HANCEADM','2019-05-17','15:44:05','','0' ,'','','0.0','0'     ,'0','','0', '', '')
+[2019-05-17 15:44:07.000000 192.130.74.97  - [query->HANCEADM] ] Select monto *-1 pago, *  FROM mpagos where id_centro='3'  and tipo_doc='01' and numfactu = '022626' and monto !=0 
+[2019-05-17 15:44:14.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 15:44:14.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 15:44:14.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2'
+[2019-05-17 15:44:15.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 15:44:15.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 15:44:15.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 15:44:16.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-17-2019' and '05-17-2019' and d.coditems like 'TD%' 
+[2019-05-17 15:44:16.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 15:44:16.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-17-2019' and '05-17-2019') and d.coditems like 'LI%' 
+[2019-05-17 15:44:23.000000 192.130.74.97  - [query->HANCEADM] ] DELETE  from mpagos where numfactu='022626' and id_centro = '3' and tipo_doc = '01'  
+[2019-05-17 15:44:23.000000 192.130.74.97  - [query->HANCEADM] ] DELETE  from idcard where factura='022626' and idcompany = '3' and tipo_doc = '01'  
+[2019-05-17 15:44:23.000000 192.130.74.97  - [query->HANCEADM] ] INSERT Into MPagos (numfactu,fechapago,codforpa,monto,usuario,fecreg,horareg,id_centro,codtipotargeta,tipo_doc,idempresa,workstation,cnumber)  Values ('022626','2019-05-17','4','260','HANCEADM','2019-05-17','15:44:23','3','02','01','3','','8201' )
+[2019-05-17 15:44:23.000000 192.130.74.97  - [query->HANCEADM] ] INSERT Into idcard (cnumber,factura,fecha,codforpa,monto,usuario,hora,idcompany,tipotarjeta,tipo_doc) Values ('8201','022626','2019-05-17','4','260','HANCEADM','15:44:23','3','02','01' )
+[2019-05-17 15:44:23.000000 192.130.74.97  - [query->HANCEADM] ] UPDATE MSSMFact set monto_abonado=monto_abonado+'260',cancelado='1', statfact='3' where numfactu='022626'
+[2019-05-17 15:44:24.000000 192.130.74.97  - [query->HANCEADM] ] UPDATE MSSMDev Set  monto_abonado='260', statnc='3' , cancelado='1' where numnotcre='022626' 
+[2019-05-17 15:44:24.000000 192.130.74.97  - [query->HANCEADM] ] SELECT   a.numfactu,  CONVERT(VARCHAR(10),a.fechafac,101) fechafac,a.descuento,a.Alicuota, a.subtotal, a.total, a.statfact, a.usuario, a.codseguro, c.cantidad, c.precunit, b.direccionH, b.telfhabit, b.Historia, b.nombres, e.seguro, d.desitems,d.nombre_alterno, f.modopago FROM  MSSMFact a 	 INNER JOIN  MClientes b ON  a.codclien = b.codclien    INNER JOIN  MSSDFact  c ON  a.numfactu = c.numfactu    LEFT OUTER JOIN  mseguros e ON  a.codseguro = e.codseguro  INNER JOIN  MInventario   d ON  c.coditems = d.coditems    LEFT OUTER JOIN  viewTipoPagoLaser f ON c.numfactu = f.numfactu Where a.numfactu='022626' 
+[2019-05-17 15:44:33.000000 192.130.74.97  - [query->HANCEADM] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:44:33.000000 192.130.74.97  - [query->HANCEADM] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:44:34.000000 192.130.74.97  - [query->HANCEADM] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:44:34.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  MInventario where prod_serv IN ('M') and activo = 1 and cod_grupo='004' OR  coditems ='TMAG01' order by 'desitems' desc
+[2019-05-17 15:44:35.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 15:44:35.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 15:44:35.000000 192.130.74.97  - [query->HANCEADM] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 15:44:41.000000 192.130.74.97  - [query->HANCEADM] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 15:44:41.000000 192.130.74.97  - [query->HANCEADM] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 15:44:43.000000 192.130.74.97  - [query->HANCEADM] ] SELECT   a.numfactu,  CONVERT(VARCHAR(10),a.fechafac,101) fechafac,a.descuento,a.Alicuota, a.subtotal, a.total, a.statfact, a.usuario, a.codseguro, c.cantidad, c.precunit, b.direccionH, b.telfhabit, b.Historia, b.nombres, e.seguro, d.desitems,d.nombre_alterno, f.modopago FROM  MSSMFact a     INNER JOIN  MClientes b ON  a.codclien = b.codclien    INNER JOIN  MSSDFact  c ON  a.numfactu = c.numfactu    LEFT OUTER JOIN  mseguros e ON  a.codseguro = e.codseguro  INNER JOIN  MInventario   d ON  c.coditems = d.coditems    LEFT OUTER JOIN  viewTipoPagoLaser f ON c.numfactu = f.numfactu Where a.numfactu='022626' 
+[2019-05-17 15:44:43.000000 192.130.74.97  - [query->HANCEADM] ] SELECT  * from idcard a
+        inner join MTipoTargeta t on a.tipotarjeta=t.codtipotargeta
+        where a.factura='022626' and a.idcompany='3'
+[2019-05-17 16:35:18.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+[2019-05-17 16:35:18.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+[2019-05-17 17:38:51.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 17:38:51.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 17:38:51.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2'
+[2019-05-17 17:38:52.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 17:38:52.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 17:38:52.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 17:38:52.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-17-2019' and '05-17-2019' and d.coditems like 'TD%' 
+[2019-05-17 17:38:53.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 17:38:53.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-17-2019' and '05-17-2019') and d.coditems like 'LI%' 
+[2019-05-17 18:10:12.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:10:12.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:10:13.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:10:13.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:10:34.000000 192.130.74.97  - [query->WILMA] ] Select login,concat(Nombre,' ',apellido) usuario from loginpass  where activo ='1' order by usuario
+[2019-05-17 18:10:38.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:10:39.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:10:39.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:10:40.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:10:43.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:10:43.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:10:43.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:10:44.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  MInventario where prod_serv IN ('M') and activo = 1 and cod_grupo='004' OR  coditems ='TMAG01' order by 'desitems' desc
+[2019-05-17 18:10:44.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 18:10:44.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 18:10:44.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 18:11:02.000000 192.130.74.97  - [query->WILMA] ] SELECT  * FROM MSSDFact Where numfactu ='022631' 
+[2019-05-17 18:11:02.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  MInventario where prod_serv='M' and activo = 1 order by ULTLOTE
+[2019-05-17 18:11:02.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 18:11:02.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 18:11:02.000000 192.130.74.97  - [query->WILMA] ] SELECT  * FROM MSSMFact Where numfactu ='022631' 
+[2019-05-17 18:11:02.000000 192.130.74.97  - [query->WILMA] ] SELECT  * FROM MSSDFact Where numfactu ='022631' 
+[2019-05-17 18:11:02.000000 192.130.74.97  - [query->WILMA] ] SELECT CONVERT(VARCHAR(10),fechafac,101) fechafac2,* from  MSSMFact where numfactu='022631' 
+[2019-05-17 18:11:03.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:11:03.000000 192.130.74.97  - [query->WILMA] ] Select * from Mclientes where  codclien='122588'  
+[2019-05-17 18:11:15.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:11:15.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:11:16.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:11:16.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  MInventario where prod_serv IN ('M') and activo = 1 and cod_grupo='004' OR  coditems ='TMAG01' order by 'desitems' desc
+[2019-05-17 18:11:16.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 18:11:17.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 18:11:17.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 18:11:46.000000 192.130.74.97  - [query->WILMA] ] SELECT * From  MSSMFact Where numfactu = '022631'  
+[2019-05-17 18:11:46.000000 192.130.74.97  - [query->WILMA] ] UPDATE MSSMFact SET statfact='2', fechanul='2019-05-17 00:00:00.000',desanul='transaccion no paso por maquina' WHERE numfactu='022631' and statfact in('1','3') 
+[2019-05-17 18:11:46.000000 192.130.74.97  - [query->WILMA] ] SELECT * From  MSSDFact  Where numfactu = '022631'  
+[2019-05-17 18:11:46.000000 192.130.74.97  - [query->WILMA] ] SELECT * from kit where coditems='TDSP' 
+[2019-05-17 18:11:59.000000 192.130.74.97  - [query->WILMA] ] SELECT * From  MSSMFact Where numfactu = '022631'  
+[2019-05-17 18:12:05.000000 192.130.74.97  - [query->WILMA] ] SELECT * From  MSSMFact Where numfactu = '022631'  
+[2019-05-17 18:12:15.000000 192.130.74.97  - [query->WILMA] ] SELECT * From  MSSMFact Where numfactu = '022631'  
+[2019-05-17 18:12:25.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:12:26.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:12:26.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:12:26.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:12:28.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:12:28.000000 192.130.74.97  - [query->WILMA] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+[2019-05-17 18:12:29.000000 192.130.74.97  - [query->WILMA] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+[2019-05-17 18:12:29.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  MInventario where prod_serv IN ('M') and activo = 1 and cod_grupo='004' OR  coditems ='TMAG01' order by 'desitems' desc
+[2019-05-17 18:12:29.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  tipoprecio order by codtipre
+[2019-05-17 18:12:30.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  mseguros where status=1 order by codseguro
+[2019-05-17 18:12:30.000000 192.130.74.97  - [query->WILMA] ] SELECT * from  Medios where del=0 order by codigo
+[2019-05-17 18:42:11.000000 192.130.74.97  - [query->WILMA] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+[2019-05-17 18:42:11.000000 192.130.74.97  - [query->WILMA] ] Select * from Vestaciones WHERE usuario = 'WILMA' 
+[2019-05-17 18:42:17.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 18:42:17.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 18:42:17.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2'
+[2019-05-17 18:42:18.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 18:42:18.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 18:42:18.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 18:42:18.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-17-2019' and '05-17-2019' and d.coditems like 'TD%' 
+[2019-05-17 18:42:18.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 18:42:19.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-17-2019' and '05-17-2019') and d.coditems like 'LI%' 
+[2019-05-17 18:42:27.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 18:42:27.000000 192.130.74.97  - [query->WILMA] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2019-05-13' and '05/17/2019' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+[2019-05-17 18:42:27.000000 192.130.74.97  - [query->WILMA] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2'
+[2019-05-17 18:42:27.000000 192.130.74.97  - [query->WILMA] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2019-05-17 18:42:28.000000 192.130.74.97  - [query->WILMA] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '05-17-2019' and '05-17-2019' and statfact <>'2' group by con.tipo order by con.tipo
+[2019-05-17 18:42:28.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='CONSULTA' 
+[2019-05-17 18:42:28.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '05-17-2019' and '05-17-2019' and d.coditems like 'TD%' 
+[2019-05-17 18:42:28.000000 192.130.74.97  - [query->WILMA] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '05-17-2019' and '05-17-2019' and cod_subgrupo='SUEROTERAPIA' 
+[2019-05-17 18:42:28.000000 192.130.74.97  - [query->WILMA] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '05-17-2019' and '05-17-2019') and d.coditems like 'LI%' 
+[2019-05-17 18:44:13.000000 192.130.74.97  - [query->WILMA] ] Select * from loginpass WHERE login = 'WILMA' and passwork ='0516' and activo=1 
+[2019-05-17 18:44:13.000000 192.130.74.97  - [query->WILMA] ] Select * from Vestaciones WHERE usuario = 'WILMA' 

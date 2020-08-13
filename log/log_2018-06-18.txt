@@ -1,0 +1,67 @@
+[2018-06-18 11:27:02.000000 192.130.74.44  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM farmacias.dbo.newconsol2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '06-18-2018' and '06-18-2018' and statfact <>'2'
+[2018-06-18 11:27:04.000000 192.130.74.44  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM farmacias.dbo.newconsol2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '06-18-2018' and '06-18-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-06-18 11:27:06.000000 192.130.74.44  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM farmacias.dbo.newconsol2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '06-18-2018' and '06-18-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-06-18 11:27:07.000000 192.130.74.44  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-18-2018' and '06-18-2018' and cod_subgrupo='CONSULTA' 
+[2018-06-18 11:27:07.000000 192.130.74.44  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '06-18-2018' and '06-18-2018' and d.coditems like 'TD%' 
+[2018-06-18 11:27:07.000000 192.130.74.44  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-18-2018' and '06-18-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-06-18 11:27:07.000000 192.130.74.44  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '06-18-2018' and '06-18-2018') and d.coditems like 'LI%' 
+[2018-06-18 15:52:21.000000 192.130.74.44  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-06-18 15:54:44.000000 192.130.74.44  - [query->JOLALDE] ] SELECT sum( D.cantidad) cantidad,  M.coditems, M.desitems, M.nombre_alterno, max(f.fechafac) FROM DFactura D INNER JOIN MInventario  M ON D.coditems = M.coditems  inner join MFactura f On d.numfactu =  f.numfactu  where f.statfact<>2  and f.fechafac between '06/01/2018'  and '06/18/2018' group by M.coditems, M.desitems, M.nombre_alterno ORDER BY cantidad desc 
+[2018-06-18 16:02:56.000000 192.130.74.44  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-06-18 16:03:44.000000 192.130.74.44  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-06-18 16:04:03.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='BRAIN PLUS' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:04:03.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =0 where coditems='BRAIN PLUS' and purchaseOrder='PO 184' 
+[2018-06-18 16:04:10.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='15100706' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:04:10.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =0 where coditems='15100706' and purchaseOrder='PO 184' 
+[2018-06-18 16:04:15.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='110' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:04:15.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =0 where coditems='110' and purchaseOrder='PO 184' 
+[2018-06-18 16:04:22.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='easytropi' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:04:22.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =5000 where coditems='easytropi' and purchaseOrder='PO 184' 
+[2018-06-18 16:04:40.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='99776' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:04:40.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =1000 where coditems='99776' and purchaseOrder='PO 184' 
+[2018-06-18 16:04:55.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='99753' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:04:55.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =1000 where coditems='99753' and purchaseOrder='PO 184' 
+[2018-06-18 16:06:29.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='41' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:06:29.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =0 where coditems='41' and purchaseOrder='PO 184' 
+[2018-06-18 16:06:33.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='124' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:06:33.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =0 where coditems='124' and purchaseOrder='PO 184' 
+[2018-06-18 16:06:38.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='44' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:06:38.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =0 where coditems='44' and purchaseOrder='PO 184' 
+[2018-06-18 16:06:48.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='NO20150909' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:06:48.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =0 where coditems='NO20150909' and purchaseOrder='PO 184' 
+[2018-06-18 16:18:38.000000 192.130.74.44  - [query->JOLALDE] ] delete purchaseOM WHERE pon = 'PO 182'
+[2018-06-18 16:18:38.000000 192.130.74.44  - [query->JOLALDE] ] delete purchaseorder   where purchaseOrder= 'PO 182' 
+[2018-06-18 16:18:38.000000 192.130.74.44  - [query->JOLALDE] ] Select CODITEMS,DESITEMS, Existencia from MInventario WHERE (prod_serv = 'P')  and Activo=1 order by desitems
+[2018-06-18 16:37:14.000000 192.130.74.44  - [query->JOLALDE] ] SELECT compra FROM purchaseorder  where coditems='easytropi' and purchaseOrder='PO 184' and type='pr' 
+[2018-06-18 16:37:14.000000 192.130.74.44  - [query->JOLALDE] ] UPDATE purchaseorder SET compra =10000 where coditems='easytropi' and purchaseOrder='PO 184' 
+[2018-06-18 16:37:47.000000 192.130.74.44  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM farmacias.dbo.newconsol2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '06-18-2018' and '06-18-2018' and statfact <>'2'
+[2018-06-18 16:37:49.000000 192.130.74.44  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM farmacias.dbo.newconsol2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '06-18-2018' and '06-18-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-06-18 16:37:51.000000 192.130.74.44  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM farmacias.dbo.newconsol2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '06-18-2018' and '06-18-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-06-18 16:37:52.000000 192.130.74.44  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-18-2018' and '06-18-2018' and cod_subgrupo='CONSULTA' 
+[2018-06-18 16:37:52.000000 192.130.74.44  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '06-18-2018' and '06-18-2018' and d.coditems like 'TD%' 
+[2018-06-18 16:37:52.000000 192.130.74.44  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '06-18-2018' and '06-18-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-06-18 16:37:52.000000 192.130.74.44  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '06-18-2018' and '06-18-2018') and d.coditems like 'LI%' 

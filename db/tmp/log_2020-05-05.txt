@@ -1,0 +1,232 @@
+[2020-05-05 07:31:26.000000 192.130.74.97  - [query->log-in] ] Select * from loginpass WHERE login = 'EDGARDO' and passwork ='bolo17' and activo=1 
+
+[2020-05-05 07:31:26.000000 192.130.74.97  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'EDGARDO' 
+
+[2020-05-05 07:31:36.000000 192.130.74.97  - [query->EDGARDO] ] Select login,concat(Nombre,' ',apellido) usuario from loginpass  where activo ='1' order by usuario
+
+[2020-05-05 07:31:40.000000 192.130.74.97  - [query->EDGARDO] ] SELECT * from cuadre WHERE fecha='05/01/2020' and usuario='EDGARDO' and id_centro = '1' order by valor desc
+
+[2020-05-05 07:31:40.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='05/01/2020' and usuario='EDGARDO' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-05 07:31:40.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/01/2020' and a.doc='04' and usuario='EDGARDO' and  statfact=3
+
+[2020-05-05 07:31:40.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='05/01/2020' and id_centro='1' and usuario='EDGARDO' group by usuario 
+
+[2020-05-05 07:31:40.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto from MFactura where fechafac='05/01/2020'  and usuario='EDGARDO' and  statfact=3  
+
+[2020-05-05 07:31:41.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='05/01/2020' and id_centro = '1' group by valor order by valor desc
+
+[2020-05-05 07:31:41.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='05/01/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-05 07:31:41.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='05/01/2020' and Id_centro='1' group by usuario
+
+[2020-05-05 07:31:42.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='05/01/2020' and id_centro = '1'  group by valor order by valor desc
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='05/01/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto, count(*) facturas   from MFactura where fechafac='05/01/2020'  and statfact=3 
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/01/2020' and a.doc='04' and statfact=3  
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/01/2020' and a.doc='04' and statfact=3  
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/01/2020' and a.doc='04' and statfact=3  
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date),101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete,a.Historia,a.initials  FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/01/2020' AND '05/01/2020'  And  a.total>=0  Order by a.numfactu desc 
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/01/2020' AND '05/01/2020'  Order By d.modopago 
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/01/2020' AND '05/01/2020' and numfactu='0039170'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/01/2020' AND '05/01/2020' and numfactu='0039169'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/01/2020' AND '05/01/2020' and numfactu='0039168'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/01/2020' AND '05/01/2020' and numfactu='0039167'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/01/2020' AND '05/01/2020' and numfactu='0039166'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:31:43.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiarias a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '05/01/2020' AND '05/01/2020' AND a.statfact=3 And  a.total>=0  
+
+[2020-05-05 07:31:44.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between   '05/01/2020' AND '05/01/2020' AND  a.statfact=3  And  a.total<0 Order by a.numfactu desc 
+
+[2020-05-05 07:31:44.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/01/2020' AND '05/01/2020' AND  a.statfact=3  And  a.total<0  
+
+[2020-05-05 07:31:44.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/01/2020' AND '05/01/2020' AND  a.statfact=3   
+
+[2020-05-05 07:31:54.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='05/04/2020' and id_centro = '1' group by valor order by valor desc
+
+[2020-05-05 07:31:54.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='05/04/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-05 07:31:54.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/04/2020' and a.doc='04' and  statfact=3
+
+[2020-05-05 07:31:54.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='05/04/2020' and Id_centro='1' group by usuario
+
+[2020-05-05 07:31:54.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto from MFactura where fechafac='05/04/2020' and  statfact=3  
+
+[2020-05-05 07:31:55.000000 192.130.74.97  - [query->EDGARDO] ] SELECT * from cuadre WHERE fecha='05/04/2020' and usuario='EDGARDO' and id_centro = '1' order by valor desc
+
+[2020-05-05 07:31:55.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='05/04/2020' and usuario='EDGARDO' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-05 07:31:55.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto FROM Cuadre WHERE fechA='05/04/2020' and id_centro='1' and usuario='EDGARDO' group by usuario 
+
+[2020-05-05 07:31:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT * from cuadre WHERE fecha='05/04/2020' and id_centro = '1' and usuario='EDGARDO'  order by valor desc
+
+[2020-05-05 07:31:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='05/04/2020' and statfact=3 and usuario='EDGARDO'  group by modopago,codforpa  order by modopago
+
+[2020-05-05 07:31:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto, count(*) facturas   from MFactura where fechafac='05/04/2020'  and statfact=3 and usuario='EDGARDO'  
+
+[2020-05-05 07:31:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/04/2020' and a.doc='04' and statfact=3 and usuario='EDGARDO' 
+
+[2020-05-05 07:31:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/04/2020' and a.doc='04' and statfact=3 and usuario='EDGARDO' 
+
+[2020-05-05 07:31:57.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/04/2020' and a.doc='04' and statfact=3 and usuario='EDGARDO' 
+
+[2020-05-05 07:31:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date),101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete,a.Historia,a.initials  FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/04/2020' AND '05/04/2020'  And  a.total>=0 and a.usuario='EDGARDO'  Order by a.numfactu desc 
+
+[2020-05-05 07:31:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020'  Order By d.modopago 
+
+[2020-05-05 07:31:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiarias a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '05/04/2020' AND '05/04/2020' AND a.statfact=3 And  a.total>=0 and a.usuario='EDGARDO' 
+
+[2020-05-05 07:31:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between   '05/04/2020' AND '05/04/2020' AND  a.statfact=3  And  a.total<0 and a.usuario='EDGARDO'  Order by a.numfactu desc 
+
+[2020-05-05 07:31:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/04/2020' AND '05/04/2020' AND  a.statfact=3  And  a.total<0 and a.usuario='EDGARDO' 
+
+[2020-05-05 07:31:58.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/04/2020' AND '05/04/2020' AND  a.statfact=3  and a.usuario='EDGARDO' 
+
+[2020-05-05 07:33:27.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='05/04/2020' and id_centro = '1' group by valor order by valor desc
+
+[2020-05-05 07:33:28.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='05/04/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-05 07:33:28.000000 192.130.74.97  - [query->EDGARDO] ] SELECT usuario,sum(monto*valor) monto from Cuadre where fechA='05/04/2020' and Id_centro='1' group by usuario
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT valor,sum(monto) monto from cuadre WHERE fecha='05/04/2020' and id_centro = '1'  group by valor order by valor desc
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(monto) monto, modopago,codforpa FROM VIEWPagosPR_W7  where fechapago='05/04/2020' and statfact=3  group by modopago,codforpa  order by modopago
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(total+monto_flete) monto, count(*) facturas   from MFactura where fechafac='05/04/2020'  and statfact=3 
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/04/2020' and a.doc='04' and statfact=3  
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/04/2020' and a.doc='04' and statfact=3  
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum( a.total) monto, count(*) facturas FROM VentasDiarias a INNER JOIN  MDocumentos b ON  a.doc = b.codtipodoc WHERE  a.fechafac = '05/04/2020' and a.doc='04' and statfact=3  
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date),101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento,  (a.total+a.monto_flete)  monto, a.statfact, a.TotImpuesto, a.monto_flete,a.Historia,a.initials  FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/04/2020' AND '05/04/2020'  And  a.total>=0  Order by a.numfactu desc 
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020'  Order By d.modopago 
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020' and numfactu='0039179'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020' and numfactu='0039178'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:33:30.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020' and numfactu='0039177'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020' and numfactu='0039176'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020' and numfactu='0039175'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020' and numfactu='0039174'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020' and numfactu='0039173'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020' and numfactu='0039172'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT d.numfactu, d.modopago From VIEWpagosPR d WHERE d.fechapago between '05/04/2020' AND '05/04/2020' and numfactu='0039171'  group by  d.numfactu,d.modopago Order By d.modopago
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete)) total FROM VentasDiarias a INNER JOIN MDocumentos b ON a.doc = b.codtipodoc WHERE a.fechafac between '05/04/2020' AND '05/04/2020' AND a.statfact=3 And  a.total>=0  
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT convert(varchar(10), cast(a.fechafac as date), 101)  fechapago ,a.numfactu, a.nombres, a.subtotal, a.descuento, (a.total+a.monto_flete) monto, a.statfact, a.TotImpuesto, a.monto_flete   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between   '05/04/2020' AND '05/04/2020' AND  a.statfact=3  And  a.total<0 Order by a.numfactu desc 
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/04/2020' AND '05/04/2020' AND  a.statfact=3  And  a.total<0  
+
+[2020-05-05 07:33:31.000000 192.130.74.97  - [query->EDGARDO] ] SELECT sum(a.subtotal) subtotal , sum(a.descuento) descuento, sum( a.TotImpuesto) impuesto , sum(a.monto_flete) envio , sum( (a.total+a.monto_flete))  total   FROM  VentasDiarias a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '05/04/2020' AND '05/04/2020' AND  a.statfact=3   
+
+[2020-05-05 07:33:34.000000 192.130.74.162  - [query->log-in] ] Select * from loginpass WHERE login = 'WORTIZ' and passwork ='wo2016' and activo=1 
+
+[2020-05-05 07:33:34.000000 192.130.74.162  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'WORTIZ' 
+
+[2020-05-05 07:38:16.000000 192.130.74.162  - [query->WORTIZ] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-05 07:38:16.000000 192.130.74.162  - [query->WORTIZ] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-05 07:38:16.000000 192.130.74.162  - [query->WORTIZ] ] Select *  from loginpass   where activo ='1'  /* amd login ='' */ 
+
+[2020-05-05 07:38:16.000000 192.130.74.162  - [query->WORTIZ] ] SELECT codmedico,Concat(nombre,' ',apellido) medico  FROM Mmedicos where activo =1 order by nombre
+
+[2020-05-05 07:38:46.000000 192.130.74.162  - [query->WORTIZ] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039166'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-05 07:38:46.000000 192.130.74.162  - [query->WORTIZ] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039166'
+
+[2020-05-05 07:38:46.000000 192.130.74.162  - [query->WORTIZ] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039166' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-05 07:38:46.000000 192.130.74.162  - [query->WORTIZ] ] SELECT * from  MFactura where numfactu='0039166'
+
+[2020-05-05 07:54:21.000000 192.130.74.162  - [query->WORTIZ] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039169'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-05 07:54:21.000000 192.130.74.162  - [query->WORTIZ] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039169'
+
+[2020-05-05 07:54:21.000000 192.130.74.162  - [query->WORTIZ] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039169' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-05 07:54:21.000000 192.130.74.162  - [query->WORTIZ] ] SELECT * from  MFactura where numfactu='0039169'
+
+[2020-05-05 08:19:25.000000 192.130.74.162  - [query->WORTIZ] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039173'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-05 08:19:25.000000 192.130.74.162  - [query->WORTIZ] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039173'
+
+[2020-05-05 08:19:25.000000 192.130.74.162  - [query->WORTIZ] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039173' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-05 08:19:25.000000 192.130.74.162  - [query->WORTIZ] ] SELECT * from  MFactura where numfactu='0039173'
+
+[2020-05-05 08:23:36.000000 192.130.74.162  - [query->WORTIZ] ]  SELECT  a.numfactu, CONVERT(VARCHAR(10),a.fechafac,101) fechafac, a.subtotal, a.descuento, a.total, a.statfact, a.desanul, a.codseguro, a.TotImpuesto, a.Alicuota, a.monto_flete,a.usuario,  c.cantidad, c.precunit, c.descuento descuentod,  b.Cedula, b.direccionH, b.nombres, b.telfhabit,b.Historia, e.nombre, e.apellido,  d.pago,  f.desitems, f.nombre_alterno , b.hCiudad,b.codpostal,b.ESTADO,b.Pais  FROM  MFactura a  INNER JOIN MClientes b ON  a.codclien = b.codclien  INNER JOIN DFactura c ON  a.numfactu = c.numfactu  LEFT OUTER JOIN  VIEWPagoTotal d ON  a.numfactu = d.numfactu  LEFT OUTER JOIN  Mmedicos e ON  a.codmedico = e.Codmedico  INNER JOIN  MInventario f ON  c.coditems = f.coditems  WHERE  a.numfactu = '0039171'  ORDER BY  f.nombre_alterno ASC 
+
+[2020-05-05 08:23:36.000000 192.130.74.162  - [query->WORTIZ] ] SELECT *  from  VIEW_ImpxFact where numfactu='0039171'
+
+[2020-05-05 08:23:36.000000 192.130.74.162  - [query->WORTIZ] ] SELECT *  from  VIEWPAGOSFAC_W7 where numfactu='0039171' and id_centro='1' and tipo_doc='01' and monto>0
+
+[2020-05-05 08:23:36.000000 192.130.74.162  - [query->WORTIZ] ] SELECT * from  MFactura where numfactu='0039171'
+
+[2020-05-05 08:59:52.000000 192.130.74.97  - [query->EDGARDO] ] SELECT desitems,coditems,SUM(t.ventas) ventas,SUM(compra) compras,SUM(devcompra) AS devcompra,SUM(anulaciones) AS devVentas,SUM(ne) AS NE,SUM(nc) AS NC,SUM(ajustespos) AS Ajustes_mas,SUM(ajustesneg) AS Ajustes_neg,(SELECT isnull(SUM(DC.existencia),0) From DCierreInventario DC WHERE coditems=t.coditems AND fechacierre='04/30/2020') AS existencia FROM TEST011516 t WHERE (fechacierre BETWEEN '04/30/2020' AND '04/30/2020') GROUP BY desitems,coditems ORDER BY desitems
+
+[2020-05-05 17:03:17.000000 192.130.75.224  - [query->MICHELLE] ] Select * from loginpass WHERE login = 'MICHELLE' and passwork ='nicole' and activo=1 
+
+[2020-05-05 17:03:24.000000 192.130.75.224  - [query->MICHELLE] ] Select * from loginpass WHERE login = 'MICHELLE' and passwork ='nicole2008' and activo=1 
+
+[2020-05-05 17:03:24.000000 192.130.75.224  - [query->MICHELLE] ] Select * from Vestaciones WHERE usuario = 'MICHELLE' 
+
+[2020-05-05 17:03:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2020-03-30' and '04/30/2020' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2020-05-05 17:03:42.000000 192.130.75.224  - [query->MICHELLE] ] SELECT  sum(general) total
+            FROM consolidated_view con 
+           /* inner join divisions E ON con.tipo =E.cod*/
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '2020-03-30' and '04/30/2020' and statfact <>'2' group by con.fechafac  ORDER BY con.fechafac 
+
+[2020-05-05 17:03:43.000000 192.130.75.224  - [query->MICHELLE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM consolidated_view con
+          where con.fechafac between '04-01-2020' and '04-30-2020' and statfact ='3'
+
+[2020-05-05 17:03:43.000000 192.130.75.224  - [query->MICHELLE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM consolidated_view con 
+            inner join divisions E ON con.tipo =E.cod
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '04-01-2020' and '04-30-2020' and statfact ='3' group by con.tipo,con.doc order by con.tipo
+
+[2020-05-05 17:03:43.000000 192.130.75.224  - [query->MICHELLE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM consolidated_view con 
+          inner join  divisions E ON con.tipo =E.cod
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '04-01-2020' and '04-30-2020' and statfact ='3' group by con.tipo order by con.tipo
+
+[2020-05-05 17:03:43.000000 192.130.75.224  - [query->MICHELLE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '04-01-2020' and '04-30-2020' and cod_subgrupo='CONSULTA' 
+
+[2020-05-05 17:03:43.000000 192.130.75.224  - [query->MICHELLE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact='3' and m.fechafac between '04-01-2020' and '04-30-2020' and d.coditems like 'TD%' 
+
+[2020-05-05 17:03:44.000000 192.130.75.224  - [query->MICHELLE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '04-01-2020' and '04-30-2020' and cod_subgrupo='SUEROTERAPIA' 
+
+[2020-05-05 17:03:44.000000 192.130.75.224  - [query->MICHELLE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact='3' and (m.fechafac between '04-01-2020' and '04-30-2020') and d.coditems like 'LI%' 
+

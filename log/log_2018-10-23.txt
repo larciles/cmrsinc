@@ -1,0 +1,489 @@
+[2018-10-23 08:07:48.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-01-2018' and '10-23-2018' and statfact <>'2'
+[2018-10-23 08:07:48.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-01-2018' and '10-23-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-23 08:07:48.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-01-2018' and '10-23-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-23 08:07:49.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '10-23-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-23 08:07:49.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-01-2018' and '10-23-2018' and d.coditems like 'TD%' 
+[2018-10-23 08:07:50.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-01-2018' and '10-23-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-23 08:07:50.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-01-2018' and '10-23-2018') and d.coditems like 'LI%' 
+[2018-10-23 13:19:39.000000 192.130.74.2  - [query->log-in] ] Select * from loginpass WHERE login = 'LA' and passwork ='2906' 
+[2018-10-23 13:19:39.000000 192.130.74.2  - [query->log-in] ] Select * from Vestaciones WHERE usuario = 'LA' 
+[2018-10-23 13:19:46.000000 192.130.74.2  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-23 13:19:46.000000 192.130.74.2  - [query->LA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-23 13:19:46.000000 192.130.74.2  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] Select  * from view_displaypagos where fechafac='2018-10-23'
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112243'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112727'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112280'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='100368'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112184'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106479'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112601'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112364'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112659'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111930'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112789'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107349'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112229'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112755'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='108133'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112675'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:47.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112766'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='104022'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110498'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111573'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112604'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112851'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112701'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112807'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='79309'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112741'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112883'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112686'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112599'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111141'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112801'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110014'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='36076'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112837'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='76586'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='52873'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='90553'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111782'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='87331'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112158'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112660'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106440'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='65816'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112653'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='40770'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='101889'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='34790'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112225'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='16900'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105259'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='79703'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112875'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112282'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='45476'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112412'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112383'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='75658'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112083'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:48.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110233'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112868'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='97357'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112740'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='24416'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112684'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112797'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112082'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112084'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='100773'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112671'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110211'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='103185'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='30981'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112303'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='99455'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='75929'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112613'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112803'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112726'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='45002'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110044'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112845'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='109176'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='51778'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111637'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='101162'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112791'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111548'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112697'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112584'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112616'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='99442'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112233'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='80812'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112635'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111928'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112769'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112309'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112151'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:49.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112327'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112014'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111135'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112779'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112642'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112531'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112860'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='103982'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112664'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110903'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112870'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112232'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112628'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='8668'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112802'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111995'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='73171'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110058'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111272'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:50.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112878'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:51.000000 192.130.74.2  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-23 13:19:51.000000 192.130.74.2  - [query->LA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '10/23/2018'  AND '10/23/2018'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2018-10-23 13:19:54.000000 192.130.74.2  - [query->LA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '10/23/2018'  AND '10/23/2018'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] Select  * from view_displaypagos where fechafac='2018-10-23'
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112243'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112727'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112280'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='100368'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112184'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106479'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112601'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112364'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112659'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111930'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112789'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107349'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112229'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112755'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='108133'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112675'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112766'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='104022'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110498'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111573'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112604'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112851'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112701'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112807'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='79309'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112741'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112883'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112686'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112599'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111141'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112801'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110014'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='36076'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112837'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='76586'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='52873'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='90553'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111782'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='87331'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112158'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112660'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106440'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='65816'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112653'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='40770'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='101889'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='34790'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112225'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:19:59.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='16900'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105259'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='79703'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112875'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112282'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='45476'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112412'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112383'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='75658'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112083'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110233'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112868'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='97357'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112740'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='24416'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112684'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112797'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112082'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112084'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='100773'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112671'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110211'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='103185'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='30981'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112303'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='99455'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='75929'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112613'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112803'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112726'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='45002'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110044'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112845'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='109176'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='51778'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111637'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='101162'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112791'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111548'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112697'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:00.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112584'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112616'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='99442'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112233'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='80812'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112635'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111928'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112769'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112309'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112151'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112327'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112014'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111135'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112779'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112642'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112531'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112860'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='103982'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112664'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110903'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112870'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112232'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112628'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='8668'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112802'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111995'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='73171'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110058'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111272'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112878'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 13:20:02.000000 192.130.74.2  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-23 13:20:02.000000 192.130.74.2  - [query->LA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '10/23/2018'  AND '10/23/2018'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2018-10-23 13:20:05.000000 192.130.74.2  - [query->LA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '10/23/2018'  AND '10/23/2018'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2018-10-23 14:17:00.000000 192.130.74.2  - [query->LA] ] Select codmedico,(nombre+' ' +apellido) as medico from mmedicos where activo='1'
+[2018-10-23 14:17:00.000000 192.130.74.2  - [query->LA] ] Select codcons,descons from VIEW_SoloConsulta where codcons in ('01','03') 
+[2018-10-23 14:17:00.000000 192.130.74.2  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  order by id
+[2018-10-23 14:17:00.000000 192.130.74.2  - [query->LA] ] Select  * from view_displaypagos where fechafac='2018-10-23'
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112243'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112727'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112280'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='100368'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112184'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106479'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112601'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112364'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112659'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111930'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112789'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='107349'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112229'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112755'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='108133'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112675'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112766'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='104022'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110498'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111573'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112604'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112851'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112701'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112807'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='79309'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112741'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112883'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112686'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112599'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111141'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112801'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110014'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='36076'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112837'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='76586'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='90553'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111782'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='87331'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112158'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112660'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='106440'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='65816'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112653'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='40770'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='101889'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='34790'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112225'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='16900'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:01.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='105259'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='79703'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112875'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112282'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='45476'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112412'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112383'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='75658'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112083'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112868'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='97357'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112740'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='24416'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112684'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112797'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112082'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112084'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='100773'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112671'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110211'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='103185'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='30981'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112303'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='99455'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='75929'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112613'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112803'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112726'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='45002'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110044'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112845'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='109176'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='51778'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111637'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='101162'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112791'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111548'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112697'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112584'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112616'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='99442'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112233'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='80812'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112635'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111928'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112769'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112309'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112151'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112327'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112014'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111135'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112779'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112642'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112531'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112860'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='103982'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112664'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110903'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112870'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112232'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112628'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='8668'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112802'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111995'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='73171'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='110058'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='111272'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:02.000000 192.130.74.2  - [query->LA] ] select convert(varchar(10), cast(fecha_cita as date), 101)  fecha_cita from VIEW_mconsultas_02 where codclien='112878'and codconsulta <>'07' and ASISTIDOS is null
+[2018-10-23 14:17:03.000000 192.130.74.2  - [query->LA] ] Select 'Todos' as Descripcion, 1 as id  union  select 'Consultas' as Descripcion, 2 as id  union  select 'Sueroterapia' as Descripcion, 3 as id  union  select 'Laser' as Descripcion, 4 as id  union select 'Intravenoso' as Descripcion, 5 as id  order by id
+[2018-10-23 14:17:04.000000 192.130.74.2  - [query->LA] ] SELECT COUNT(*) abiertas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc   WHERE a.fechafac between '10/23/2018'  AND '10/23/2018'  AND  a.statfact=1  And  a.total>0 and cod_subgrupo='CONSULTA'  
+[2018-10-23 14:17:06.000000 192.130.74.2  - [query->LA] ] SELECT nombres, COUNT(*) as facturas FROM VentasDiariasCMACST a INNER JOIN MDocumentos  b ON a.doc = b.codtipodoc WHERE a.fechafac between  '10/23/2018'  AND '10/23/2018'  AND  a.statfact<>2 And a.total>=0 and cod_subgrupo='CONSULTA' group by nombres having COUNT(*) >1 
+[2018-10-23 17:03:13.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-23-2018' and '10-23-2018' and statfact <>'2'
+[2018-10-23 17:03:13.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-23-2018' and '10-23-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-23 17:03:13.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-23-2018' and '10-23-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-23 17:03:14.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-23-2018' and '10-23-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-23 17:03:15.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-23-2018' and '10-23-2018' and d.coditems like 'TD%' 
+[2018-10-23 17:03:15.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-23-2018' and '10-23-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-23 17:03:16.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-23-2018' and '10-23-2018') and d.coditems like 'LI%' 
+[2018-10-23 17:11:39.000000 192.130.75.223  - [query->JOLALDE] ]     SELECT COUNT( distinct P.codclien ) vistos,P.codmedico,
+    (
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/23/2018' and '10/23/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/23/2018' and '10/23/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    )  compras ,
+    max( concat(m.nombre+' ',m.apellido)) medico
+    from Mconsultas P
+    inner join Mmedicos m On m.Codmedico=P.codmedico
+    where P.fecha_cita between '10/23/2018' and '10/23/2018' and asistido=3 
+    GROUP BY P.codmedico order by compras desc
+[2018-10-23 17:11:39.000000 192.130.75.223  - [query->JOLALDE] ] SELECT COUNT( distinct P.codclien ) vistos,P.codmedico,
+    (
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/23/2018' and '10/23/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/23/2018' and '10/23/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    )  compras ,
+    max( concat(m.nombre+' ',m.apellido)) medico,
+    CAST ((
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/23/2018' and '10/23/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/23/2018' and '10/23/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    ) AS decimal )/COUNT( distinct P.codclien )  efectividad
+    from Mconsultas P
+    inner join Mmedicos m On m.Codmedico=P.codmedico
+    where P.fecha_cita between '10/23/2018' and '10/23/2018' and asistido=3 
+    GROUP BY P.codmedico order by efectividad desc
+[2018-10-23 17:11:40.000000 192.130.75.223  - [query->JOLALDE] ] SELECT COUNT( distinct P.codclien ) vistos,P.codmedico,
+    (
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/23/2018' and '10/23/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/23/2018' and '10/23/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    )  compras ,
+    max( concat(m.nombre+' ',m.apellido)) medico,
+    CAST ((
+    select COUNT( distinct s.codclien ) compras  from view_percentstats s where s.fechafac between '10/23/2018' and '10/23/2018' and s.codmedico=P.codmedico
+     AND s.codclien in (
+        select distinct codclien  from Mconsultas where fecha_cita between '10/23/2018' and '10/23/2018'and asistido=3   and codmedico= s.codmedico 
+    )
+    
+    ) AS decimal )/COUNT( distinct P.codclien )  efectividad
+    from Mconsultas P
+    inner join Mmedicos m On m.Codmedico=P.codmedico
+    where P.fecha_cita between '10/23/2018' and '10/23/2018' and asistido=3 
+    GROUP BY P.codmedico order by vistos desc
+[2018-10-23 17:12:31.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '10-23-2018' and '10-23-2018' and medico<>''
+[2018-10-23 17:12:31.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '10-23-2018' and '10-23-2018' 
+[2018-10-23 17:12:31.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-23-2018' and '10-23-2018' and medico<>'' group by medico,Dventa
+[2018-10-23 17:12:32.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-23-2018' and '10-23-2018' and medico<>'' group by medico
+[2018-10-23 17:12:32.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '10/23/2018' and '10/23/2018' and medico<>''
+[2018-10-23 17:12:33.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct medico from VIEWPRODLASERSUEROINTRA vp  where fechafac between '10-23-2018' and '10-23-2018' and medico<>''
+[2018-10-23 17:12:33.000000 192.130.75.223  - [query->JOLALDE] ] Select distinct Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac  between '10-23-2018' and '10-23-2018' 
+[2018-10-23 17:12:33.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico,Dventa from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-23-2018' and '10-23-2018' and medico<>'' group by medico,Dventa
+[2018-10-23 17:12:34.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total,medico from VIEWPRODLASERSUEROINTRA_2 vp  where fechafac between '10-23-2018' and '10-23-2018' and medico<>'' group by medico
+[2018-10-23 17:12:34.000000 192.130.75.223  - [query->JOLALDE] ] Select sum(total) total from viewProLaserSuero vp  where fechafac between '10/23/2018' and '10/23/2018' and medico<>''
+[2018-10-23 18:45:01.000000 192.130.75.223  - [query->JOLALDE] ] Select  max('Total Ventas Generales') nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total 
+          FROM newconsol3_2 con
+          where con.fechafac between '10-23-2018' and '10-23-2018' and statfact <>'2'
+[2018-10-23 18:45:02.000000 192.130.75.223  - [query->JOLALDE] ] Select  concat( max(E.Nombre),' ',MAX(D.abreviatura)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+            FROM newconsol3_2 con 
+            inner join Divisiones E ON con.tipo =E.id
+            inner join MDocumentos D ON con.doc= D.codtipodoc 
+            where con.fechafac between '10-23-2018' and '10-23-2018' and statfact <>'2' group by con.tipo,con.doc order by con.tipo
+[2018-10-23 18:45:02.000000 192.130.75.223  - [query->JOLALDE] ] Select  max(concat('Total US$ ',' ',E.Nombre)) nombre,sum(con.subtotal) subtotal,sum(con.descuento) descuento, sum(con.subtotal) - sum(con.descuento) neto, sum(con.TotImpuesto) TotImpuesto,sum(con.monto_flete) envio , sum(general) total,con.tipo  
+          FROM newconsol3_2 con 
+          inner join  Divisiones E ON con.tipo =E.id
+          inner join MDocumentos D ON con.doc= D.codtipodoc 
+          where con.fechafac between '10-23-2018' and '10-23-2018' and statfact <>'2' group by con.tipo order by con.tipo
+[2018-10-23 18:45:02.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-23-2018' and '10-23-2018' and cod_subgrupo='CONSULTA' 
+[2018-10-23 18:45:03.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Aplicados ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and m.fechafac between '10-23-2018' and '10-23-2018' and d.coditems like 'TD%' 
+[2018-10-23 18:45:03.000000 192.130.75.223  - [query->JOLALDE] ] SELECT  cod_subgrupo, monto  from View_GrupoConsultas where fechafac between  '10-23-2018' and '10-23-2018' and cod_subgrupo='SUEROTERAPIA' 
+[2018-10-23 18:45:04.000000 192.130.75.223  - [query->JOLALDE] ] SELECT max('Laser Intra. Vendidos ')  tit , sum(d.cantidad) laser from MSSMFact m inner join MSSDFact d ON m.numfactu=d.numfactu where m.statfact<>'2' and (m.fechafac between '10-23-2018' and '10-23-2018') and d.coditems like 'LI%' 
